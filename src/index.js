@@ -11,8 +11,7 @@ const db = require("./config/db");
 
 // Connect to DB
 db.connect();
-
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(methodOverride('_method'))
 app.engine(
@@ -25,7 +24,7 @@ app.engine(
   })
 );
 app.set("view engine", "hbs");
-app.set("views", path.join(__dirname, "resources\\views"));
+app.set('views', path.join(__dirname, 'resources', 'views'));
 
 route(app);
 

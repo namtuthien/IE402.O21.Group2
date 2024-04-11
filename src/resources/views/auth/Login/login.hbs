@@ -1,0 +1,101 @@
+<head>
+   <link rel="stylesheet" href="/scss/login.scss" />
+</head>
+<section class="vh-100 main">
+  <div class="container-fluid h-custom">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-md-9 col-lg-6 col-xl-5 d-flex flex-column  justify-content-center align-items-center">
+        <img src="/image/logo3D.png" class="img-fluid" alt="Logo 3D" />
+        <p class="text-center fs-4 text-white">Book a tour. Pour a joy</p>
+      </div>
+      <div class="col-md-8 col-lg-6 col-xl-4">
+        <form id="formLogin" method="post" class="bg-white p-5 rounded">
+          <div
+            class=" flex-row align-items-center justify-content-center justify-content-lg-start"
+          >
+          
+          <!-- Email input -->
+          <div class="form-outline mb-4">
+            <label class="form-label fs-5" for="form3Example3">Email address</label>
+            <input
+              name="email"
+              type="email"
+              id="form3Example3"
+              class="form-control form-control-lg"
+              placeholder="Enter a valid email address"
+            />
+           
+          </div>
+
+          <!-- Password input -->
+          <div class="form-outline mb-3">
+            <label class="form-label fs-5" for="form3Example4">Password</label>
+            <input
+              name="password"
+              type="password"
+              id="form3Example4"
+              class="form-control form-control-lg"
+              placeholder="Enter password"
+            />
+           
+          </div>
+
+          <div class="d-flex justify-content-between align-items-center">
+            <!-- Checkbox -->
+            <div class="form-check mb-0 d-flex align-items-center">
+              <input
+                class="form-check-input me-2"
+                type="checkbox"
+                value=""
+                id="form2Example3"
+              />
+              <label class="form-check-label fs-5" for="form2Example3">
+                Remember me
+              </label>
+            </div>
+            <a href="#!" class=" forgot-password-txt fs-5">Forgot password?</a>
+          </div>
+
+          <div class="text-center text-lg-start mt-4 pt-2">
+            <button
+              type="submit"
+              class="btn btn-primary btn-lg px-4 btn-login"
+            >Login</button>
+            <p class="small fw-bold mt-2 pt-1 mb-0 fs-5">Don't have an account?
+              <a href="#!" class="link-danger fs-5">Register</a></p>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+
+</section>
+<script>
+  const btnLogin = $('.btn-login');
+  const formLogin = $("#formLogin");
+
+  const email = $('input[name="email"]');
+  const password = $('input[name="password"]');
+
+  console.log(btnLogin)
+  email.on('input', checkInputs);
+  password.on('input', checkInputs);
+
+  function checkInputs() {
+    const emailValue = email.val().trim();
+    const passwordValue = password.val().trim();
+    if (emailValue !== '' && passwordValue !== '') {
+      btnLogin.prop("disabled", false);
+    }  
+    else {
+      btnLogin.prop("disabled", true); 
+    }
+}
+
+
+checkInputs();
+
+  
+    
+</script>
