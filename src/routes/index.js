@@ -1,6 +1,7 @@
-const tourRouter = require("./tour");
-function route(app) {
+const tourRouter = require("./tour.route");
+
+const route = (app) => {
   app.use("/tour", tourRouter);
-}
+};
 
 module.exports = route;

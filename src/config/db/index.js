@@ -1,12 +1,12 @@
 const mongoose = require("mongoose");
 
-async function connect() {
+const connect = async () => {
   try {
-    await mongoose.connect("mongodb+srv://Nhom2Tour:Nhom2Tour@twotour.1szwhqn.mongodb.net/");
-    console.log("connection created!");
+    await mongoose.connect(process.env.MONGO_CONNECTION_STRING);
+    console.log("Connected to MongoDB");
   } catch (error) {
     console.log(error);
   }
-}
+};
 
 module.exports = { connect };

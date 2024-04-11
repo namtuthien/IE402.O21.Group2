@@ -1,32 +1,53 @@
+// import libs
 const express = require("express");
-const path = require("path");
-const methodOverride = require("method-override")
+const dotenv = require("dotenv");
 const handlebars = require("express-handlebars");
-const app = express();
-const bodyParser = require('body-parser');
-const port = 3000;
+const methodOverride = require("method-override");
+const bodyParser = require("body-parser");
+const path = require("path");
 
+// import configs
+const { HOST, PORT, db } = require("./config");
+
+// import routes
 const route = require("./routes");
-const db = require("./config/db");
 
-// Connect to DB
+// config .env
+dotenv.config();
+
+// run app
+const app = express();
+
+// connect to DB
 db.connect();
 
-app.use(express.static(path.join(__dirname, "public")));
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(methodOverride('_method'))
+// set view engine
 app.engine(
   "hbs",
   handlebars.engine({
     extname: ".hbs",
-    helpers:{
-      sum:(a,b) => a+b
-    }
+    helpers: {
+      sum: (a, b) => a + b,
+    },
+    partialsDir: "components",
   })
 );
 app.set("view engine", "hbs");
-app.set("views", path.join(__dirname, "resources\\views"));
+app.set("views", path.join(__dirname, "resources", "views"));
 
+// set static folder
+app.use(express.static(path.join(__dirname, "resources", "styles")));
+app.use(express.static(path.join(__dirname, "resources", "scripts")));
+app.use(express.static(path.join(__dirname, "public")));
+
+// use body parser
+app.use(bodyParser.urlencoded({ extended: true }));
+
+// use method override
+app.use(methodOverride("_method"));
+
+// import router
 route(app);
 
-app.listen(port, () => console.log("test"));
+// start server
+app.listen(PORT, () => console.log(`Application is running at: http://${HOST}:${PORT}`));
