@@ -1,0 +1,320 @@
+{
+    "searchParameters": {
+        "q": "Khu cắm trại",
+        "hl": "vi",
+        "type": "maps",
+        "page": 1,
+        "ll": "@11.940147238020286,108.45809725440188,11z",
+        "engine": "google"
+    },
+    "places": [
+        {
+            "position": 1,
+            "title": "Bãi cắm trại Ancamp (đèo Khánh Lê)",
+            "address": "Long lanh, Lạc Dương, Lâm Đồng, Việt Nam",
+            "latitude": 12.1695081,
+            "longitude": 108.6695491,
+            "rating": 4.9,
+            "ratingCount": 21,
+            "type": "Khu cắm trại",
+            "types": [
+                "Khu cắm trại"
+            ],
+            "phoneNumber": "+84 976 143 386",
+            "cid": "4657884444494512902",
+            "placeId": "ChIJ6eixOwupcTERBsPpRjkhpEA"
+        },
+        {
+            "position": 2,
+            "title": "Farm Trang Trại Dưa Lưới Trâm Vàng",
+            "address": "RQM7+H8V, Thôn, 2, Tân Lập, Ninh Sơn, Ninh Thuận, Việt Nam",
+            "latitude": 11.8339886,
+            "longitude": 108.7632924,
+            "rating": 5,
+            "ratingCount": 1,
+            "type": "Khu cắm trại",
+            "types": [
+                "Khu cắm trại"
+            ],
+            "phoneNumber": "+84 343 736 419",
+            "cid": "12124235455113069571",
+            "placeId": "ChIJqWicKRIfcTERAwQ20-jvQag"
+        },
+        {
+            "position": 3,
+            "title": "Sơn Lâm Thủy Tặc Trại",
+            "address": "5MFF+W7F Sơn Lâm Thủy Tặc Xóm, Đạ Chais, Lạc Dương, Lâm Đồng, Việt Nam",
+            "latitude": 12.174818499999999,
+            "longitude": 108.6731683,
+            "rating": 5,
+            "ratingCount": 1,
+            "type": "Khu cắm trại",
+            "types": [
+                "Khu cắm trại"
+            ],
+            "cid": "8767070425819719325",
+            "placeId": "ChIJMYGqHQCpcTERnSbRMxrkqnk"
+        },
+        {
+            "position": 4,
+            "title": "Cu Weed Hills",
+            "address": "WFP9+8X8, Phường 10, Thành phố Đà Lạt, Lâm Đồng, Việt Nam",
+            "latitude": 11.935775,
+            "longitude": 108.469945,
+            "rating": 4.7,
+            "ratingCount": 11,
+            "type": "Khu cắm trại",
+            "types": [
+                "Khu cắm trại"
+            ],
+            "cid": "9506331555625215568",
+            "placeId": "ChIJ-66sMqITcTERUKYg4i5G7YM"
+        },
+        {
+            "position": 5,
+            "title": "Cắm Trại BBQ Chuẩn Mỹ",
+            "address": "4/2 3 Tháng 4, Phường 3, Thành phố Đà Lạt, Lâm Đồng, Việt Nam",
+            "latitude": 11.933245099999999,
+            "longitude": 108.44497039999999,
+            "type": "Khu cắm trại",
+            "types": [
+                "Khu cắm trại"
+            ],
+            "cid": "345802243713828558",
+            "placeId": "ChIJ3Y1bIqQTcTERzoYY-06JzAQ"
+        },
+        {
+            "position": 6,
+            "title": "RŌM ECO CAMPSITE - Khu cắm trại bán hoang dã",
+            "address": "W8WJ+6C, Tà Nung, Thành phố Đà Lạt, Lâm Đồng, Việt Nam",
+            "latitude": 11.945569599999999,
+            "longitude": 108.33107969999999,
+            "rating": 5,
+            "ratingCount": 1,
+            "type": "Khu cắm trại",
+            "types": [
+                "Khu cắm trại"
+            ],
+            "cid": "15566711598056131922",
+            "placeId": "ChIJs_-Oc_lvcTERUs0W87gRCNg"
+        },
+        {
+            "position": 7,
+            "title": "Khu Cắm Trại",
+            "address": "ĐT722, Lạc Dương, Lâm Đồng, Việt Nam",
+            "latitude": 12.018404499999999,
+            "longitude": 108.3728045,
+            "rating": 4.3,
+            "ratingCount": 122,
+            "type": "Trại thiếu nhi",
+            "types": [
+                "Trại thiếu nhi"
+            ],
+            "cid": "6775041619720765464",
+            "placeId": "ChIJ_SU5RaZzcTERGIDxGXXIBV4"
+        },
+        {
+            "position": 8,
+            "title": "Khu dã ngoại Nam Qua",
+            "address": "VCH8+6FQ, Phường 4, Thành phố Đà Lạt, Lâm Đồng, Việt Nam",
+            "latitude": 11.8780802,
+            "longitude": 108.4162308,
+            "rating": 3.6,
+            "ratingCount": 118,
+            "type": "Khu cắm trại",
+            "types": [
+                "Khu cắm trại"
+            ],
+            "cid": "9157402209993876028",
+            "placeId": "ChIJnaV9DB1rcTERPOIPwMqgFX8"
+        },
+        {
+            "position": 9,
+            "title": "Đỉnh Đồi Đa Phú",
+            "address": "Hẻm 1 Đa Phú, Phường 7, Thành phố Đà Lạt, Lâm Đồng, Việt Nam",
+            "latitude": 11.986514399999999,
+            "longitude": 108.40699699999999,
+            "rating": 4.6,
+            "ratingCount": 20,
+            "type": "Khu cắm trại",
+            "types": [
+                "Khu cắm trại"
+            ],
+            "cid": "5350856560072851666",
+            "placeId": "ChIJF4oqjDdtcTER0gA2-7APQko"
+        },
+        {
+            "position": 10,
+            "title": "Đảo lê sáng",
+            "address": "274, Phú Hội, Đức Trọng, Việt Nam",
+            "latitude": 11.687709,
+            "longitude": 108.31952869999999,
+            "rating": 4.4,
+            "ratingCount": 9,
+            "type": "Khu cắm trại",
+            "types": [
+                "Khu cắm trại"
+            ],
+            "phoneNumber": "+84 947 699 792",
+            "cid": "831561164358708386",
+            "placeId": "ChIJ1QKpOWFFcTERomycInlMigs"
+        },
+        {
+            "position": 11,
+            "title": "Farm Nidukuri",
+            "address": "4GHQ+99, Xã Đạ Nhim, Lạc Dương, Lâm Đồng, Việt Nam",
+            "latitude": 12.128385,
+            "longitude": 108.538454,
+            "rating": 5,
+            "ratingCount": 2,
+            "type": "Khu cắm trại",
+            "types": [
+                "Khu cắm trại"
+            ],
+            "cid": "3271425803799399259",
+            "placeId": "ChIJpW_6TwAJcTERW4uCkG9wZi0"
+        },
+        {
+            "position": 12,
+            "title": "Đồi gió Phước Bình bãi trại Mây adventure",
+            "address": "Phước Bình, Bác Ái, Ninh Thuận, Việt Nam",
+            "latitude": 12.132057099999999,
+            "longitude": 108.74208399999999,
+            "rating": 5,
+            "ratingCount": 6,
+            "type": "Khu cắm trại",
+            "types": [
+                "Khu cắm trại"
+            ],
+            "website": "http://mayadventure.vn/",
+            "phoneNumber": "+84 853 225 711",
+            "cid": "9647989724956481408",
+            "placeId": "ChIJmaIdxeoBcTERgFemoImL5IU"
+        },
+        {
+            "position": 13,
+            "title": "BUI DU GARDEN",
+            "address": "XC28+R2, Phường 5, Thành phố Đà Lạt, Lâm Đồng, Việt Nam",
+            "latitude": 11.952044299999999,
+            "longitude": 108.41502179999999,
+            "rating": 5,
+            "ratingCount": 1,
+            "type": "Khu cắm trại",
+            "types": [
+                "Khu cắm trại"
+            ],
+            "cid": "5161301174320173870",
+            "placeId": "ChIJS9eA2t9tcTERLhMpghKgoEc"
+        },
+        {
+            "position": 14,
+            "title": "Khu nghỉ dưỡng Nguyễn du nam ban",
+            "address": "nam ban, Lâm Hà, Lâm Đồng 670000, Việt Nam",
+            "latitude": 11.9493125,
+            "longitude": 108.4328025,
+            "rating": 5,
+            "ratingCount": 2,
+            "type": "Khu cắm trại",
+            "types": [
+                "Khu cắm trại"
+            ],
+            "cid": "11851324202665988530",
+            "placeId": "ChIJ97xtU0ITcTERslHlQZJceKQ"
+        },
+        {
+            "position": 15,
+            "title": "Camping house Trường Vân",
+            "address": "2C84+2J, Lát, Lạc Dương, Lâm Đồng, Việt Nam",
+            "latitude": 12.015020999999999,
+            "longitude": 108.40651989999999,
+            "rating": 4,
+            "ratingCount": 1,
+            "type": "Khu cắm trại",
+            "types": [
+                "Khu cắm trại"
+            ],
+            "cid": "5759450646474053606",
+            "placeId": "ChIJbanCfdRzcTER5td6HNmt7U8"
+        },
+        {
+            "position": 16,
+            "title": "Hoa Tranh Garden",
+            "address": "XC36+X73, Phường 5, Thành phố Đà Lạt, Lâm Đồng, Việt Nam",
+            "latitude": 11.954877399999999,
+            "longitude": 108.4106746,
+            "rating": 5,
+            "ratingCount": 1,
+            "type": "Khu cắm trại",
+            "types": [
+                "Khu cắm trại"
+            ],
+            "website": "https://m.facebook.com/100087217933924/",
+            "cid": "5214743662990333488",
+            "placeId": "ChIJZRWTr79tcTERMBZCi7t9Xkg"
+        },
+        {
+            "position": 17,
+            "title": "Dalat Camp",
+            "address": "284V+F7, Lát, Lạc Dương, Lâm Đồng 66000, Việt Nam",
+            "latitude": 12.006522799999999,
+            "longitude": 108.3432017,
+            "rating": 4.4,
+            "ratingCount": 185,
+            "type": "Điểm thu hút khách du lịch",
+            "types": [
+                "Điểm thu hút khách du lịch"
+            ],
+            "website": "https://www.facebook.com/DalatCamp",
+            "phoneNumber": "+84 903 119 440",
+            "cid": "8416971244147389617",
+            "placeId": "ChIJT50fdX5zcTERsTQVZMAWz3Q"
+        },
+        {
+            "position": 18,
+            "title": "Đồi Chu Tước",
+            "address": "WG8F+P49, Xã, Xuân Thọ, Lâm Đồng, Việt Nam",
+            "latitude": 11.916789,
+            "longitude": 108.52285839999999,
+            "rating": 5,
+            "ratingCount": 7,
+            "type": "Khu cắm trại",
+            "types": [
+                "Khu cắm trại"
+            ],
+            "cid": "16720583234244924908",
+            "placeId": "ChIJ0bXJFyERcTER7FWFstxxC-g"
+        },
+        {
+            "position": 19,
+            "title": "Liêng Rơwoa Camp - Trại Thác Voi",
+            "address": "TT. Nam Ban, Lâm Hà, Lâm Đồng, Việt Nam",
+            "latitude": 11.8220768,
+            "longitude": 108.3323303,
+            "rating": 4.8,
+            "ratingCount": 8,
+            "type": "Khu cắm trại",
+            "types": [
+                "Khu cắm trại"
+            ],
+            "website": "http://www.facebook.com/thacvoicamp",
+            "phoneNumber": "+84 909 172 991",
+            "cid": "7267532029078134759",
+            "placeId": "ChIJeeLn-P1DcTER59_5GuB122Q"
+        },
+        {
+            "position": 20,
+            "title": "Ba cây thông hồ Suối Vàng",
+            "address": "299J+FV6, Thị trấn Lạc Dương, Lạc Dương, Lâm Đồng, Việt Nam",
+            "latitude": 12.0186715,
+            "longitude": 108.3821329,
+            "rating": 4.7,
+            "ratingCount": 44,
+            "type": "Khu cắm trại",
+            "types": [
+                "Khu cắm trại"
+            ],
+            "cid": "996644238479516351",
+            "placeId": "ChIJ9-jscs5zcTERv-ICiqfK1A0"
+        }
+    ]
+}

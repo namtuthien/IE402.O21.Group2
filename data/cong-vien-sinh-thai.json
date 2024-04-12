@@ -1,0 +1,76 @@
+{
+    "searchParameters": {
+        "q": "Công viên sinh thái",
+        "hl": "vi",
+        "type": "maps",
+        "page": 1,
+        "ll": "@11.940147238020286,108.45809725440188,11z",
+        "engine": "google"
+    },
+    "places": [
+        {
+            "position": 1,
+            "title": "Công viên du lịch sinh thái Hóc Môn",
+            "address": "106 Xuân Thới Thượng, 6, Hóc Môn, Thành phố Hồ Chí Minh, Việt Nam",
+            "latitude": 10.857752,
+            "longitude": 106.5817266,
+            "rating": 4.4,
+            "ratingCount": 279,
+            "type": "Công viên",
+            "types": [
+                "Công viên"
+            ],
+            "website": "https://facebook.com/congviendulichsinhthaihocmon",
+            "phoneNumber": "+84 932 162 182",
+            "cid": "5196505160657278019",
+            "placeId": "ChIJAZJk38ErdTERQxR2TumxHUg"
+        },
+        {
+            "position": 2,
+            "title": "Làng sinh thái hữu cơ Lâm Hà",
+            "address": "Q5JC+C5R, Phúc Thọ, Lâm Hà, Lâm Đồng, Việt Nam",
+            "latitude": 11.7811179,
+            "longitude": 108.1703775,
+            "rating": 5,
+            "ratingCount": 2,
+            "type": "Công viên nghỉ mát",
+            "types": [
+                "Công viên nghỉ mát"
+            ],
+            "cid": "14477325354607376168",
+            "placeId": "ChIJKYVF3GldcTERKPcgs7TK6cg"
+        },
+        {
+            "position": 3,
+            "title": "Khu nghỉ dưỡng sinh thái Thanh Hoàng",
+            "address": "Unnamed Road, Mê Linh, Lâm Hà, Lâm Đồng, Việt Nam",
+            "latitude": 11.8935534,
+            "longitude": 108.322548,
+            "rating": 5,
+            "ratingCount": 3,
+            "type": "Công viên",
+            "types": [
+                "Công viên",
+                "Cửa hàng tạp phẩm"
+            ],
+            "phoneNumber": "+84 937 189 568",
+            "cid": "16742436472625627538",
+            "placeId": "ChIJ8apbfMFrcTERkgFlQUQVWeg"
+        },
+        {
+            "position": 4,
+            "title": "Công viên Golf Valley",
+            "address": "WCVR+QHP, Phường 2, Thành phố Đà Lạt, Lâm Đồng, Việt Nam",
+            "latitude": 11.9444622,
+            "longitude": 108.44145089999999,
+            "rating": 3,
+            "ratingCount": 4,
+            "type": "Công viên sinh thái",
+            "types": [
+                "Công viên sinh thái"
+            ],
+            "cid": "13581420569262513374",
+            "placeId": "ChIJo7S7QUMTcTER3lwT4Azmerw"
+        }
+    ]
+}

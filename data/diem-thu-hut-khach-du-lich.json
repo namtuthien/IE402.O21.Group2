@@ -1,0 +1,332 @@
+{
+    "searchParameters": {
+        "q": "Điểm thu hút khách du lịch",
+        "hl": "vi",
+        "type": "maps",
+        "page": 1,
+        "ll": "@11.940147238020286,108.45809725440188,11z",
+        "engine": "google"
+    },
+    "places": [
+        {
+            "position": 1,
+            "title": "Dốc Nhà Bồ",
+            "address": "Hồ Xuân Hương 400m, 42A Đường Nguyên Tử Lực ( cách cửa Vườn Hoa Thành Phố, Phường 8, Thành phố Đà Lạt, Lâm Đồng, Việt Nam",
+            "latitude": 11.9551442,
+            "longitude": 108.4504491,
+            "rating": 4.8,
+            "ratingCount": 23,
+            "type": "Điểm thu hút khách du lịch",
+            "types": [
+                "Điểm thu hút khách du lịch",
+                "Trung tâm thiền"
+            ],
+            "phoneNumber": "+84 908 664 265",
+            "cid": "15921444464983469174",
+            "placeId": "ChIJHXpCc8UTcTERduxyrmJV9Nw"
+        },
+        {
+            "position": 2,
+            "title": "Du lịch Đà Lạt toàn cảnh (trú Minh Tâm hotel)",
+            "address": "WFR5+588 Minh tâm hotel, Lê Văn Tám, Phường 10, Thành phố Đà Lạt, Lâm Đồng, Việt Nam",
+            "latitude": 11.9404192,
+            "longitude": 108.45831319999999,
+            "type": "Điểm thu hút khách du lịch",
+            "types": [
+                "Điểm thu hút khách du lịch"
+            ],
+            "cid": "9250087654927898293",
+            "placeId": "ChIJNYE4G6UTcTERtRY0jbbpXoA"
+        },
+        {
+            "position": 3,
+            "title": "KHU DU LỊCH ĐẢO THỎ",
+            "address": "2932+628, Unnamed Road, Lạc Dương, Lâm Đồng, Việt Nam",
+            "latitude": 12.0030299,
+            "longitude": 108.35008219999999,
+            "rating": 5,
+            "ratingCount": 1,
+            "type": "Điểm thu hút khách du lịch",
+            "types": [
+                "Điểm thu hút khách du lịch"
+            ],
+            "cid": "17689805319423312049",
+            "placeId": "ChIJzcn5I39zcTERscAKojbQfvU"
+        },
+        {
+            "position": 4,
+            "title": "Khu Du Lịch Lá Phong Đà Lạt",
+            "address": "45 Đường Đặng Thái Thân, Phường 3, Thành phố Đà Lạt, Lâm Đồng, Việt Nam",
+            "latitude": 11.9288229,
+            "longitude": 108.4512551,
+            "rating": 4.1,
+            "ratingCount": 3156,
+            "type": "Điểm thu hút khách du lịch",
+            "types": [
+                "Điểm thu hút khách du lịch"
+            ],
+            "phoneNumber": "+84 907 592 603",
+            "description": "Khu rừng có hàng nghìn cây phong, anh đào và tùng bách cùng quán cà phê, khu cắm trại và nhà trọ dưới mặt đất.",
+            "cid": "3162938822105498960",
+            "placeId": "ChIJKbqQUD4TcTERUAXkyRkE5Ss"
+        },
+        {
+            "position": 5,
+            "title": "KHU DU LỊCH VƯỜN THIỀN VI DIỆU THỨC",
+            "address": "Phi Tô, Lạc Dương, Lâm Đồng, Việt Nam",
+            "latitude": 12.0016875,
+            "longitude": 108.3505625,
+            "rating": 4.9,
+            "ratingCount": 9,
+            "type": "Điểm thu hút khách du lịch",
+            "types": [
+                "Điểm thu hút khách du lịch"
+            ],
+            "cid": "5672468997217497562",
+            "placeId": "ChIJzfDcSiNzcTER2rGQun-ouE4"
+        },
+        {
+            "position": 6,
+            "title": "Khu Du Lịch Đá Tiên",
+            "address": "Phường 4, Thành phố Đà Lạt, Lâm Đồng, Việt Nam",
+            "latitude": 11.882684699999999,
+            "longitude": 108.417638,
+            "rating": 4.2,
+            "ratingCount": 758,
+            "type": "Điểm thu hút khách du lịch",
+            "types": [
+                "Điểm thu hút khách du lịch"
+            ],
+            "cid": "5580855036724363025",
+            "placeId": "ChIJc4lrOTZrcTEREb_nVhYuc00"
+        },
+        {
+            "position": 7,
+            "title": "Cầu chữ Y",
+            "address": "WCWX+QHQ, Đ. Trần Quốc Toản, Phường 1, Thành phố Đà Lạt, Lâm Đồng, Việt Nam",
+            "latitude": 11.9469561,
+            "longitude": 108.448993,
+            "rating": 4.8,
+            "ratingCount": 9,
+            "type": "Điểm thu hút khách du lịch",
+            "types": [
+                "Điểm thu hút khách du lịch"
+            ],
+            "cid": "2167225985852908428",
+            "placeId": "ChIJEwyflvkTcTERjCPCOo2IEx4"
+        },
+        {
+            "position": 8,
+            "title": "Thung lũng hoa cẩm tú cầu",
+            "address": "XCHW+736, Thị trấn Lạc Dương, Lạc Dương, Lâm Đồng, Việt Nam",
+            "latitude": 11.9781744,
+            "longitude": 108.44513459999999,
+            "rating": 4.5,
+            "ratingCount": 474,
+            "type": "Điểm thu hút khách du lịch",
+            "types": [
+                "Điểm thu hút khách du lịch"
+            ],
+            "phoneNumber": "+84 796 598 957",
+            "cid": "17932309056383209904",
+            "placeId": "ChIJxToUMi8NcTERsNE9zBNc3Pg"
+        },
+        {
+            "position": 9,
+            "title": "Bắc Thang Lên Hỏi Ông Trời",
+            "address": "Tuý Sơn, Xuân Thọ, Thành phố Đà Lạt, Lâm Đồng, Việt Nam",
+            "latitude": 11.9372475,
+            "longitude": 108.53155919999999,
+            "rating": 3.6,
+            "ratingCount": 206,
+            "type": "Điểm thu hút khách du lịch",
+            "types": [
+                "Điểm thu hút khách du lịch"
+            ],
+            "website": "https://m.facebook.com/cloudshunting/",
+            "cid": "11350771037926787199",
+            "placeId": "ChIJrSiKs8QRcTERfwhruh4Khp0"
+        },
+        {
+            "position": 10,
+            "title": "Khu Du Lịch Sinh Thái Hiệp Lực",
+            "address": "XFH4+WJJ, Vòng Lâm Viên, Phường 8, Thành phố Đà Lạt, Lâm Đồng, Việt Nam",
+            "latitude": 11.9798352,
+            "longitude": 108.4565216,
+            "rating": 3.9,
+            "ratingCount": 113,
+            "type": "Điểm thu hút khách du lịch",
+            "types": [
+                "Điểm thu hút khách du lịch"
+            ],
+            "phoneNumber": "+84 933 063 480",
+            "cid": "9980224919928934837",
+            "placeId": "ChIJXWSJRZcScTERtZHd6q_hgIo"
+        },
+        {
+            "position": 11,
+            "title": "Khu du lịch ĐÀ LẠT SẮC MÀU - Làng hoa Vạn Thành",
+            "address": "40 Vạn Thành, Phường 5, Thành phố Đà Lạt, Lâm Đồng 66113, Việt Nam",
+            "latitude": 11.947042699999999,
+            "longitude": 108.41315159999999,
+            "rating": 4.3,
+            "ratingCount": 718,
+            "type": "Điểm thu hút khách du lịch",
+            "types": [
+                "Điểm thu hút khách du lịch",
+                "Đại lý du lịch tham quan"
+            ],
+            "website": "https://www.facebook.com/kdldalatsacmau",
+            "phoneNumber": "+84 931 119 903",
+            "cid": "4666295753738128266",
+            "placeId": "ChIJIQS8K8BtcTERiot50kMDwkA"
+        },
+        {
+            "position": 12,
+            "title": "Hồ du lịch Đạ Sar",
+            "address": "P48P+H86 Hồ Đạ Sar, Liên Hà, Lâm Hà, Lâm Đồng, Việt Nam",
+            "latitude": 11.7164205,
+            "longitude": 108.1357651,
+            "rating": 5,
+            "ratingCount": 2,
+            "type": "Điểm thu hút khách du lịch",
+            "types": [
+                "Điểm thu hút khách du lịch"
+            ],
+            "phoneNumber": "+84 902 976 406",
+            "cid": "16116586131699948254",
+            "placeId": "ChIJ00wCFNtZcTER3lr2i7Kdqd8"
+        },
+        {
+            "position": 13,
+            "title": "Thung Lũng Hồng",
+            "address": "Vạn Thành, Suối Hến, Thành phố Đà Lạt, Lâm Đồng 670000, Việt Nam",
+            "latitude": 11.953636699999999,
+            "longitude": 108.3878829,
+            "rating": 4.6,
+            "ratingCount": 99,
+            "type": "Điểm thu hút khách du lịch",
+            "types": [
+                "Điểm thu hút khách du lịch"
+            ],
+            "website": "https://www.thunglunghong.com/",
+            "phoneNumber": "+84 888 620 444",
+            "cid": "13411831214033979969",
+            "placeId": "ChIJ41ZV_1xtcTERQcr9I25lILo"
+        },
+        {
+            "position": 14,
+            "title": "KDL Sinh Thái Hồ Suối Dứa",
+            "address": "P78W+VP7, Tân Hội, Đức Trọng, Lâm Đồng, Việt Nam",
+            "latitude": 11.717376999999999,
+            "longitude": 108.2977365,
+            "rating": 5,
+            "ratingCount": 1,
+            "type": "Điểm thu hút khách du lịch",
+            "types": [
+                "Điểm thu hút khách du lịch"
+            ],
+            "phoneNumber": "+84 963 318 779",
+            "cid": "6531573950547869192",
+            "placeId": "ChIJhxelJ-RFcTERCL6Z-ubPpFo"
+        },
+        {
+            "position": 15,
+            "title": "Khu Du Lịch Sinh Thái Hoa Sơn Điền Trang",
+            "address": "Tiểu khu 159 Phường 5 hướng đi đèo, 159 ĐT725, P. 5, Thành phố Đà Lạt, Lâm Đồng 670000, Việt Nam",
+            "latitude": 11.9338538,
+            "longitude": 108.3761498,
+            "rating": 3.9,
+            "ratingCount": 3680,
+            "type": "Điểm thu hút khách du lịch",
+            "types": [
+                "Điểm thu hút khách du lịch",
+                "Đại lý du lịch tham quan",
+                "Đại lý du lịch"
+            ],
+            "website": "https://hoasondientrang.com/",
+            "phoneNumber": "+84 868 588 886",
+            "cid": "2762253960309042758",
+            "placeId": "ChIJtwY5-l5scTERRu6ig1d_VSY"
+        },
+        {
+            "position": 16,
+            "title": "KHU DU LỊCH LĂNG NGUYỄN HỮU HÀO",
+            "address": "WCR9+92J, Phường 5, Thành phố Đà Lạt, Lâm Đồng, Việt Nam",
+            "latitude": 11.9409511,
+            "longitude": 108.4175222,
+            "rating": 4.6,
+            "ratingCount": 9,
+            "type": "Điểm thu hút khách du lịch",
+            "types": [
+                "Điểm thu hút khách du lịch"
+            ],
+            "cid": "3812324782411027910",
+            "placeId": "ChIJQ53AH8JtcTERxhUH6DAZ6DQ"
+        },
+        {
+            "position": 17,
+            "title": "Khu Du Lịch Thác Pongour",
+            "address": "Thôn Tân Nghĩa, Đức Trọng, Lâm Đồng, Việt Nam",
+            "latitude": 11.689304199999999,
+            "longitude": 108.2656291,
+            "rating": 4.4,
+            "ratingCount": 3439,
+            "type": "Điểm thu hút khách du lịch",
+            "types": [
+                "Điểm thu hút khách du lịch"
+            ],
+            "phoneNumber": "+84 962 096 839",
+            "cid": "9280240154432551472",
+            "placeId": "ChIJAQAAUBhFcTERMLpEa0AJyoA"
+        },
+        {
+            "position": 18,
+            "title": "Vườn hoa cải trắng - hướng dương",
+            "address": "Tà Nung, Thành phố Đà Lạt, Lâm Đồng, Việt Nam",
+            "latitude": 11.900116299999999,
+            "longitude": 108.3479512,
+            "rating": 4,
+            "ratingCount": 90,
+            "type": "Điểm thu hút khách du lịch",
+            "types": [
+                "Điểm thu hút khách du lịch"
+            ],
+            "cid": "7299929293106902337",
+            "placeId": "ChIJX5DZPO5rcTERQfUa8QOPTmU"
+        },
+        {
+            "position": 19,
+            "title": "Nông Trại Hoa Huyền Vũ Đà Lạt",
+            "address": "XC96+6X7, Phường 7, Thành phố Đà Lạt, Lâm Đồng 670000, Việt Nam",
+            "latitude": 11.9680625,
+            "longitude": 108.4124375,
+            "rating": 5,
+            "ratingCount": 314,
+            "type": "Điểm thu hút khách du lịch",
+            "types": [
+                "Điểm thu hút khách du lịch"
+            ],
+            "phoneNumber": "+84 854 868 616",
+            "cid": "5441795735795994218",
+            "placeId": "ChIJSSuvFJttcTERag5bzGMkhUs"
+        },
+        {
+            "position": 20,
+            "title": "Điểm tham quan du lịch Nhà máy Trà Atisô & Rượu Vang Vĩnh Tiến",
+            "address": "81D Hoàng Văn Thụ ( Vạn Thành, Cam Ly, Phường 5, Thành phố Đà Lạt, Lâm Đồng, Việt Nam",
+            "latitude": 11.948440399999999,
+            "longitude": 108.40301489999999,
+            "rating": 4.3,
+            "ratingCount": 255,
+            "type": "Điểm thu hút khách du lịch",
+            "types": [
+                "Điểm thu hút khách du lịch"
+            ],
+            "website": "http://vinhtiendalat.vn/",
+            "phoneNumber": "+84 263 3822 777",
+            "cid": "8588729386771083766",
+            "placeId": "ChIJf7hmQrptcTER9vFySt9LMXc"
+        }
+    ]
+}

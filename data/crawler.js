@@ -5,10 +5,10 @@ const fs = require("fs");
 const axios = require("axios");
 
 let data = JSON.stringify({
-  q: "khách sạn nghỉ dưỡng",
+  q: "Thắng cảnh",
   hl: "vi",
   ll: "@11.940147238020286,108.45809725440188,11z",
-  page: 2,
+  page: 1,
 });
 
 let config = {
@@ -25,7 +25,7 @@ axios(config)
   .then((response) => {
     // Write response data to a JSON file synchronously
     try {
-      fs.writeFileSync("./data/khach-san-nghi-duong-2.json", JSON.stringify(response.data));
+      fs.writeFileSync("./data/thang-canh.json", JSON.stringify(response.data));
       console.log("Response data has been saved to khu-nghi-duong.json");
     } catch (err) {
       console.error("Error writing file:", err);
