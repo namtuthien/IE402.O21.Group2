@@ -29,7 +29,10 @@ app.engine(
     helpers: {
       sum: (a, b) => a + b,
     },
-    partialsDir: "components",
+    partialsDir: [
+      path.join(__dirname, "resources", "views", "partials"),
+      path.join(__dirname, "resources", "views", "components"),
+    ],
   })
 );
 app.set("view engine", "hbs");
