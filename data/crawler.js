@@ -1,9 +1,12 @@
+// set environment
 const dotenv = require("dotenv");
 dotenv.config();
 
+// import libs
 const fs = require("fs");
 const axios = require("axios");
 
+// config search params
 let data = JSON.stringify({
   q: "Thắng cảnh",
   hl: "vi",
@@ -11,21 +14,22 @@ let data = JSON.stringify({
   page: 1,
 });
 
+// config fetch data
 let config = {
   method: "post",
   url: "https://google.serper.dev/maps",
   headers: {
-    "X-API-KEY": "b1ae1b2deb21e87e4e98f3a68674258eed59e61a",
+    "X-API-KEY": process.env.SERP_API_KEY,
     "Content-Type": "application/json",
   },
   data: data,
 };
 
+// fetch data
 axios(config)
   .then((response) => {
-    // Write response data to a JSON file synchronously
     try {
-      fs.writeFileSync("./data/thang-canh.json", JSON.stringify(response.data));
+      fs.writeFileSync("./data/jsons/thang-canh.json", JSON.stringify(response.data));
       console.log("Response data has been saved to khu-nghi-duong.json");
     } catch (err) {
       console.error("Error writing file:", err);
