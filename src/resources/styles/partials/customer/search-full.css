@@ -88,14 +88,22 @@
     background-color: var(--white);
 }
 
+.search-box__search-location {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    gap: 1rem;
+}
+
 .search-box__input-field {
     height: 48px;
-    padding: 0 1.5rem;
+    padding: 0 1rem;
     border-radius: 0.5rem;
+    outline: 1px solid var(--outline1);
+    position: relative;
     display: flex;
     align-items: center;
     gap: 1rem;
-    outline: 1px solid var(--outline1);
 }
 
 .search-box__input-field:focus-within {
@@ -116,6 +124,29 @@
 .search-box__date-container {
     display: flex;
     gap: 1rem;
+}
+
+.search-box__location {
+    padding: 0;
+}
+
+.search-box__location-icon {
+    position: absolute;
+    left: 1rem;
+}
+
+.search-box__location-btn {
+    width: 100%;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-indent: 3rem;
+}
+
+.search-box__location-list {
+    width: 100%;
+    background-color: var(--white);
 }
 
 .search-box__date-input {
