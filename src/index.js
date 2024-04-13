@@ -41,8 +41,9 @@ app.set("views", path.join(__dirname, "resources", "views"));
 // set static folder
 app.use(express.static(path.join(__dirname, "resources", "styles")));
 app.use(express.static(path.join(__dirname, "resources", "scripts")));
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname, "..", "public")));
 app.use("/", express.static("./node_modules/bootstrap/dist/"));
+app.use("/", express.static("./node_modules/material-icons/iconfont/"));
 
 // use body parser
 app.use(bodyParser.urlencoded({ extended: true }));
