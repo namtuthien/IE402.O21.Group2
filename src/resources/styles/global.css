@@ -48,3 +48,7 @@
     --bs-body-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     --bs-body-bg: var(--background1);
 }
+
+body {
+    position: relative;
+}
