@@ -7,9 +7,14 @@
 
     <title>2Tour. {{pageTitle}}</title>
 
+    <link rel="icon" type="image/x-icon" href="/imgs/favicon.ico">
+
     <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" />
 
     <link rel="stylesheet" href="/global.css">
+    <link rel="stylesheet" href="/partials/customer/search-full.css">
+    <link rel="stylesheet" href="/partials/customer/header.css">
+    <link rel="stylesheet" href="/partials/customer/footer.css">
     <link rel="stylesheet" href="{{style}}">
 
 </head>
@@ -20,9 +25,11 @@
 
     {{{body}}}
 
+    {{> customer/footer }}
+
     <script type="module" src="{{script}}"></script>
 
-    <script src="/js/bootstrap.js"></script>
+    <script src="/js/bootstrap.bundle.min.js"></script>
 
 </body>
 
