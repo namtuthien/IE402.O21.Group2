@@ -2,16 +2,16 @@
   <div class="container-fluid h-custom">
     <div class="row d-flex justify-content-center align-items-center h-100">
       <div class="col-md-9 col-lg-6 col-xl-5 d-flex flex-column  justify-content-center align-items-center">
-        <img src="/image/logo3D.png" class="img-fluid" alt="Logo 3D" />
+        <img src="/imgs/logo3D.png" class="img-fluid" alt="Logo 3D" />
         <p class="text-center fs-4 text-white">Đặt một chuyến du lịch. Có một niềm vui</p>
       </div>
       <div class="col-md-8 col-lg-6 col-xl-4">
-        <form id="formLogin" method="post" class="bg-white p-5 rounded">
+        <form id="formLogin" method="post" class="formlogin bg-white p-5 rounded">
           <div
             class=" flex-row align-items-center justify-content-center justify-content-lg-start"
           >
             {{#if message}}
-              <p class="text-danger">{{message}}</p>
+              <p class="text-danger ">{{message}}</p>
             {{/if}}
           <!-- Email input -->
           <div class="form-outline mb-4">
@@ -27,7 +27,7 @@
           </div>
 
           <!-- Password input -->
-          <div class="form-outline mb-3">
+          <div class="form-outline mb-3 formlogin__field-password">
             <label class="form-label fs-5" for="form3Example4">Mật khẩu</label>
             <input
               name="password"
@@ -35,8 +35,11 @@
               id="form3Example4"
               class="form-control form-control-lg"
               placeholder="Nhập mật khẩu"
+              
             />
-           
+           <span class="material-icons-outlined formlogin__icon-visibility formlogin__icon-eye">
+              visibility
+            </span>
           </div>
 
           <div class="d-flex justify-content-between align-items-center">

@@ -45,3 +45,15 @@
   width: 100%;
   background-color: #058c7f;
 }
+.formlogin__field-password {
+  position:relative;
+}
+.formlogin__icon-visibility {
+  position: absolute;
+  content: "";
+  top: 50px;
+  right: 10px;
+}
+.formlogin__icon-visibility:hover{
+  cursor: pointer;
+}

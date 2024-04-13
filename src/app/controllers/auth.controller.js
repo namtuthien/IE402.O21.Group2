@@ -10,6 +10,7 @@ class AuthController {
       script: "/pages/auth/login.js",
     });
   }
+
   isValidEmail(email) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -89,6 +90,7 @@ class AuthController {
       res.status(500).send({ message: "Đăng nhập thất bại, vui lòng kiểm tra lại thông tin" });
     }
   }
+  
 }
 
 module.exports = new AuthController();
