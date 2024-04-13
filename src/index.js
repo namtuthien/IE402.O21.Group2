@@ -4,6 +4,7 @@ const dotenv = require("dotenv");
 const handlebars = require("express-handlebars");
 const methodOverride = require("method-override");
 const bodyParser = require("body-parser");
+const cookieParser = require('cookie-parser');
 const path = require("path");
 
 // import configs
@@ -46,6 +47,9 @@ app.use("/", express.static("./node_modules/bootstrap/dist/"));
 
 // use body parser
 app.use(bodyParser.urlencoded({ extended: true }));
+
+// use cookie parser
+app.use(cookieParser());
 
 // use method override
 app.use(methodOverride("_method"));

@@ -10,18 +10,20 @@
           <div
             class=" flex-row align-items-center justify-content-center justify-content-lg-start"
           >
-          
+            {{#if message}}
+              <p class="text-danger">{{message}}</p>
+            {{/if}}
           <!-- Email input -->
           <div class="form-outline mb-4">
             <label class="form-label fs-5" for="form3Example3">Email</label>
             <input
               name="email"
-              type="email"
+              type="text"
               id="form3Example3"
               class="form-control form-control-lg"
               placeholder="Nhập địa chỉ email"
             />
-           
+        
           </div>
 
           <!-- Password input -->
@@ -43,8 +45,9 @@
               <input
                 class="form-check-input me-2"
                 type="checkbox"
-                value=""
+                value="on"
                 id="form2Example3"
+                name="remember"
               />
               <label class="form-check-label fs-5 text-body" for="form2Example3">
                 Ghi nhớ

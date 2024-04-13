@@ -6,6 +6,7 @@ const User = new Schema({
   _id: { type: ObjectId },
   name: { type: String },
   email: { type: String },
+  password:{type:String},
   phone_number: { type: String },
   user_role: { type: String },
   is_authenticated: { type: Boolean },
