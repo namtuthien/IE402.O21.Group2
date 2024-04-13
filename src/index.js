@@ -29,7 +29,10 @@ app.engine(
     helpers: {
       sum: (a, b) => a + b,
     },
-    partialsDir: "components",
+    partialsDir: [
+      path.join(__dirname, "resources", "views", "partials"),
+      path.join(__dirname, "resources", "views", "components"),
+    ],
   })
 );
 app.set("view engine", "hbs");
@@ -39,6 +42,7 @@ app.set("views", path.join(__dirname, "resources", "views"));
 app.use(express.static(path.join(__dirname, "resources", "styles")));
 app.use(express.static(path.join(__dirname, "resources", "scripts")));
 app.use(express.static(path.join(__dirname, "public")));
+app.use("/", express.static("./node_modules/bootstrap/dist/"));
 
 // use body parser
 app.use(bodyParser.urlencoded({ extended: true }));
