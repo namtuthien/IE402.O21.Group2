@@ -6,7 +6,3 @@ const mongooseToObject = (item) => {
   return item ? item.toObject() : item;
 };
 
-module.exports = {
-  multipleMongooseToObject,
-  mongooseToObject,
-};
