@@ -20,11 +20,27 @@
     --outline1: #EBEBF0;
     --outline2: #FF4343;
     --outline3: #EAEAEA;
+    --outline4: #5392F9;
+
+    /* black */
+    --black1: rgba(0, 0, 0, 0.2);
+
+    /* blue */
+    --blue1: #377DFF;
+
+    /* orange */
+    --orange1: #EA4C2D;
+
+    /* green */
+    --green1: #00AC47;
+
+    /* pink */
+    --pink1: #FF685F;
+
+    /* yellow */
+    --yellow1: #FFC107;
 
     /* reset bootstrap variables */
     --bs-body-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     --bs-body-bg: var(--background1);
-
-    /* black */
-    --black1: rgba(0, 0, 0, 0.2);
 }
