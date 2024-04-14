@@ -1,6 +1,6 @@
-const { multipleMongooseToObject, mongooseToObject } = require("./mongoose");
+const { multipleMongooseToObject, mongooseToObject } = require('./mongoose');
 
 module.exports = {
-  multipleMongooseToObject,
-  mongooseToObject,
+    multipleMongooseToObject,
+    mongooseToObject,
 };
