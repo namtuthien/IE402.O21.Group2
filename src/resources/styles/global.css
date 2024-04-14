@@ -25,6 +25,10 @@
     /* black */
     --black1: rgba(0, 0, 0, 0.2);
 
+    /* gray */
+    --gray1: #333333;
+    --gray2: rgba(44, 42, 42, 0.7);
+
     /* blue */
     --blue1: #377DFF;
 
@@ -43,4 +47,8 @@
     /* reset bootstrap variables */
     --bs-body-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     --bs-body-bg: var(--background1);
+}
+
+body {
+    position: relative;
 }

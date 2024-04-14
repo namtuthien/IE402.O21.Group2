@@ -36,11 +36,27 @@
                 </button>
             </div>
             <div class="search-box__container">
-                <div class="search-box__search search-box__input-field">
-                    <span class="material-icons-round search-box__input-field-icon">
-                        search
-                    </span>
-                    <input class="search-box__search-input" type="text" placeholder="Chọn địa điểm">
+                <div class="search-box__search-location">
+                    <div class="search-box__location search-box__input-field dropdown">
+                        <span class="search-box__location-icon material-icons-round search-box__input-field-icon">
+                            location_on
+                        </span>
+                        <button class="search-box__location-btn btn dropdown-toggle" type="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Bạn đang ở đâu?
+                        </button>
+                        <ul class="search-box__location-list dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Đà Lạt</a></li>
+                            <li><a class="dropdown-item" href="#">Hồ Chí Minh</a></li>
+                            <li><a class="dropdown-item" href="#">Hà Nội</a></li>
+                        </ul>
+                    </div>
+                    <div class="search-box__search search-box__input-field">
+                        <span class="material-icons-round search-box__input-field-icon">
+                            search
+                        </span>
+                        <input class="search-box__search-input" type="text" placeholder="Bạn muốn đi đâu?">
+                    </div>
                 </div>
                 <div class="search-box__date-container">
                     <div class="search-box__input-field search-box__date-input">
