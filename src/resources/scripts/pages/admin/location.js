@@ -1,4 +1,4 @@
-fetch(`/admin/map/getLocations`)
+fetch(`/api/location/getLocations`)
   .then((response) => {
     if (!response.ok) {
       throw new Error("Network response was not ok");

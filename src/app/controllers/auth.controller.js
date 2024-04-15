@@ -7,15 +7,6 @@ const bcrypt = require("bcryptjs");
 const User = require("../models/user.model");
 
 class AuthController {
-  // [GET] /login
-  showLoginForm(req, res, next) {
-    res.render("pages/auth/login", {
-      pageTitle: "Đăng nhập",
-      style: "/pages/auth/login.css",
-      script: "/pages/auth/login.js",
-    });
-  }
-
   // validate email
   isValidEmail(email) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;

@@ -2,16 +2,6 @@
 const Location = require("../models/location.model");
 
 class LocationController {
-  // [GET] /admin/map
-  show(req, res, next) {
-    res.render("./pages/admin/location/index", {
-      pageTitle: "Location",
-      style: "/pages/admin/test.css",
-      script: "/pages/admin/location.js",
-      layout: "main",
-    });
-  }
-
   async getLocations(req, res, next) {
     try {
       const locations = await Location.find();

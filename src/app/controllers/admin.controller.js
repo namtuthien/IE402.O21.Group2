@@ -1,3 +1,13 @@
-class AdminController {}
+class Admin {
+  // [GET] /admin/map
+  show(req, res, next) {
+    res.render("./pages/admin/map/index", {
+      pageTitle: "Location",
+      style: "/pages/admin/test.css",
+      script: "/pages/admin/location.js",
+      layout: "main",
+    });
+  }
+}
 
-module.exports = new AdminController();
+module.exports = new Admin();

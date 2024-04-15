@@ -1,9 +1,8 @@
 const express = require("express");
 const router = express.Router();
 
-const LocationController = require("../../app/controllers/location.controller");
+const AdminController = require("../../app/controllers/admin.controller");
 
-router.get("/getLocations", LocationController.getLocations);
-router.get("/", LocationController.show);
+router.get("/", AdminController.show);
 
 module.exports = router;
