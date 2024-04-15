@@ -1,16 +1,11 @@
-const tourRouter = require('./tour.route');
-
-const authRouter = require('./auth.route');
-
-const siteRouter = require('./site.route');
-
-const locationRouter = require('./location.route');
+const authRouter = require("./auth");
+const adminRouter = require("./admin");
+const customerRouter = require("./customer");
 
 const route = (app) => {
-    app.use('/tour', tourRouter);
-    app.use('/auth', authRouter);
-    app.use('/', siteRouter);
-    app.use('/location', locationRouter);
+  app.use("/admin", adminRouter);
+  app.use("/", authRouter);
+  app.use("/", customerRouter);
 };
 
 module.exports = route;
