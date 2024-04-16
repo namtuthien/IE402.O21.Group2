@@ -1,0 +1,572 @@
+{
+    "search_metadata": {
+        "id": "661ed32dc90e0a3efb779687",
+        "status": "Success",
+        "json_endpoint": "https://serpapi.com/searches/f35927f1e8e81682/661ed32dc90e0a3efb779687.json",
+        "created_at": "2024-04-16 19:36:13 UTC",
+        "processed_at": "2024-04-16 19:36:13 UTC",
+        "google_maps_url": "https://www.google.com/maps/search/Khu+c%E1%BA%AFm+tr%E1%BA%A1i/@11.940147238020286,108.45809725440188,11z?hl=vi",
+        "raw_html_file": "https://serpapi.com/searches/f35927f1e8e81682/661ed32dc90e0a3efb779687.html",
+        "total_time_taken": 0.93
+    },
+    "search_parameters": {
+        "engine": "google_maps",
+        "type": "search",
+        "q": "Khu cắm trại",
+        "ll": "@11.940147238020286,108.45809725440188,11z",
+        "google_domain": "google.com",
+        "hl": "vi"
+    },
+    "search_information": {
+        "local_results_state": "Results for exact spelling",
+        "query_displayed": "Khu cắm trại"
+    },
+    "local_results": [
+        {
+            "position": 1,
+            "title": "Bãi cắm trại Ancamp (đèo Khánh Lê)",
+            "place_id": "ChIJ6eixOwupcTERBsPpRjkhpEA",
+            "data_id": "0x3171a90b3bb1e8e9:0x40a4213946e9c306",
+            "data_cid": "4657884444494512902",
+            "reviews_link": "https://serpapi.com/search.json?data_id=0x3171a90b3bb1e8e9%3A0x40a4213946e9c306&engine=google_maps_reviews&hl=vi",
+            "photos_link": "https://serpapi.com/search.json?data_id=0x3171a90b3bb1e8e9%3A0x40a4213946e9c306&engine=google_maps_photos&hl=vi",
+            "gps_coordinates": {
+                "latitude": 12.1695081,
+                "longitude": 108.6695491
+            },
+            "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=vi&place_id=ChIJ6eixOwupcTERBsPpRjkhpEA",
+            "provider_id": "/g/11l2z9fszl",
+            "rating": 4.7,
+            "reviews": 22,
+            "type": "Khu cắm trại",
+            "types": [
+                "Khu cắm trại"
+            ],
+            "type_id": "campground",
+            "type_ids": [
+                "campground"
+            ],
+            "address": "Long lanh, Lạc Dương, Lâm Đồng, Việt Nam",
+            "phone": "+84 976 143 386",
+            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipMlFMUCkbUKqaqnBTABr0Vn6vAx3qH_R-n6hy1u=w122-h92-k-no"
+        },
+        {
+            "position": 2,
+            "title": "Farm Trang Trại Dưa Lưới Trâm Vàng",
+            "place_id": "ChIJqWicKRIfcTERAwQ20-jvQag",
+            "data_id": "0x31711f12299c68a9:0xa841efe8d3360403",
+            "data_cid": "12124235455113069571",
+            "reviews_link": "https://serpapi.com/search.json?data_id=0x31711f12299c68a9%3A0xa841efe8d3360403&engine=google_maps_reviews&hl=vi",
+            "photos_link": "https://serpapi.com/search.json?data_id=0x31711f12299c68a9%3A0xa841efe8d3360403&engine=google_maps_photos&hl=vi",
+            "gps_coordinates": {
+                "latitude": 11.8339886,
+                "longitude": 108.7632924
+            },
+            "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=vi&place_id=ChIJqWicKRIfcTERAwQ20-jvQag",
+            "provider_id": "/g/11tdnvqqdv",
+            "rating": 5,
+            "reviews": 1,
+            "unclaimed_listing": true,
+            "type": "Khu cắm trại",
+            "types": [
+                "Khu cắm trại"
+            ],
+            "type_id": "campground",
+            "type_ids": [
+                "campground"
+            ],
+            "address": "RQM7+H8V, Thôn, 2, Tân Lập, Ninh Sơn, Ninh Thuận, Việt Nam",
+            "phone": "+84 343 736 419",
+            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipMGmy1820dsaduv4CP6FtKnh5eg5zptvJtY_UPB=w80-h177-k-no"
+        },
+        {
+            "position": 3,
+            "title": "Cắm Trại BBQ Chuẩn Mỹ",
+            "place_id": "ChIJ3Y1bIqQTcTERzoYY-06JzAQ",
+            "data_id": "0x317113a4225b8ddd:0x4cc894efb1886ce",
+            "data_cid": "345802243713828558",
+            "reviews_link": "https://serpapi.com/search.json?data_id=0x317113a4225b8ddd%3A0x4cc894efb1886ce&engine=google_maps_reviews&hl=vi",
+            "photos_link": "https://serpapi.com/search.json?data_id=0x317113a4225b8ddd%3A0x4cc894efb1886ce&engine=google_maps_photos&hl=vi",
+            "gps_coordinates": {
+                "latitude": 11.933245099999999,
+                "longitude": 108.44497039999999
+            },
+            "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=vi&place_id=ChIJ3Y1bIqQTcTERzoYY-06JzAQ",
+            "provider_id": "/g/11vd6fx383",
+            "unclaimed_listing": true,
+            "type": "Khu cắm trại",
+            "types": [
+                "Khu cắm trại"
+            ],
+            "type_id": "campground",
+            "type_ids": [
+                "campground"
+            ],
+            "address": "4/2 3 Tháng 4, Phường 3, Thành phố Đà Lạt, Lâm Đồng, Việt Nam",
+            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipMEBoCOOTysdzzDcLis36PjLD9wZeITQkyU8bYd=w122-h92-k-no"
+        },
+        {
+            "position": 4,
+            "title": "Khu dã ngoại Nam Qua",
+            "place_id": "ChIJnaV9DB1rcTERPOIPwMqgFX8",
+            "data_id": "0x31716b1d0c7da59d:0x7f15a0cac00fe23c",
+            "data_cid": "9157402209993876028",
+            "reviews_link": "https://serpapi.com/search.json?data_id=0x31716b1d0c7da59d%3A0x7f15a0cac00fe23c&engine=google_maps_reviews&hl=vi",
+            "photos_link": "https://serpapi.com/search.json?data_id=0x31716b1d0c7da59d%3A0x7f15a0cac00fe23c&engine=google_maps_photos&hl=vi",
+            "gps_coordinates": {
+                "latitude": 11.8780802,
+                "longitude": 108.4162308
+            },
+            "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=vi&place_id=ChIJnaV9DB1rcTERPOIPwMqgFX8",
+            "provider_id": "/g/11h6r0s3tp",
+            "rating": 3.6,
+            "reviews": 118,
+            "unclaimed_listing": true,
+            "type": "Khu cắm trại",
+            "types": [
+                "Khu cắm trại"
+            ],
+            "type_id": "campground",
+            "type_ids": [
+                "campground"
+            ],
+            "address": "VCH8+6FQ, Phường 4, Thành phố Đà Lạt, Lâm Đồng, Việt Nam",
+            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipP0wAlgnoqT48YTArOgn8DqeMcg8NBpQaxwgR4J=w80-h106-k-no"
+        },
+        {
+            "position": 5,
+            "title": "Cu Weed Hills",
+            "place_id": "ChIJ-66sMqITcTERUKYg4i5G7YM",
+            "data_id": "0x317113a232acaefb:0x83ed462ee220a650",
+            "data_cid": "9506331555625215568",
+            "reviews_link": "https://serpapi.com/search.json?data_id=0x317113a232acaefb%3A0x83ed462ee220a650&engine=google_maps_reviews&hl=vi",
+            "photos_link": "https://serpapi.com/search.json?data_id=0x317113a232acaefb%3A0x83ed462ee220a650&engine=google_maps_photos&hl=vi",
+            "gps_coordinates": {
+                "latitude": 11.935775,
+                "longitude": 108.469945
+            },
+            "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=vi&place_id=ChIJ-66sMqITcTERUKYg4i5G7YM",
+            "provider_id": "/g/11f611xs43",
+            "rating": 4.7,
+            "reviews": 11,
+            "unclaimed_listing": true,
+            "type": "Khu cắm trại",
+            "types": [
+                "Khu cắm trại"
+            ],
+            "type_id": "campground",
+            "type_ids": [
+                "campground"
+            ],
+            "address": "WFP9+8X8, Phường 10, Thành phố Đà Lạt, Lâm Đồng, Việt Nam",
+            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipN00rKXeuknzS7sopVPZ1NtrFlSMeSEbLBW_ICr=w80-h106-k-no"
+        },
+        {
+            "position": 6,
+            "title": "Sơn Lâm Thủy Tặc Trại",
+            "place_id": "ChIJMYGqHQCpcTERnSbRMxrkqnk",
+            "data_id": "0x3171a9001daa8131:0x79aae41a33d1269d",
+            "data_cid": "8767070425819719325",
+            "reviews_link": "https://serpapi.com/search.json?data_id=0x3171a9001daa8131%3A0x79aae41a33d1269d&engine=google_maps_reviews&hl=vi",
+            "photos_link": "https://serpapi.com/search.json?data_id=0x3171a9001daa8131%3A0x79aae41a33d1269d&engine=google_maps_photos&hl=vi",
+            "gps_coordinates": {
+                "latitude": 12.174818499999999,
+                "longitude": 108.6731683
+            },
+            "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=vi&place_id=ChIJMYGqHQCpcTERnSbRMxrkqnk",
+            "provider_id": "/g/11vsgnr5qr",
+            "rating": 5,
+            "reviews": 1,
+            "unclaimed_listing": true,
+            "type": "Khu cắm trại",
+            "types": [
+                "Khu cắm trại"
+            ],
+            "type_id": "campground",
+            "type_ids": [
+                "campground"
+            ],
+            "address": "5MFF+W7F, Sơn Lâm Thủy Tặc Xóm, Đạ Chais, Lạc Dương, Lâm Đồng, Việt Nam",
+            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipP1VHM8HzbyLeLE9mn2oeTPBi0X71wF4tvEFpYC=w163-h92-k-no"
+        },
+        {
+            "position": 7,
+            "title": "RŌM ECO CAMPSITE - Khu cắm trại bán hoang dã",
+            "place_id": "ChIJs_-Oc_lvcTERUs0W87gRCNg",
+            "data_id": "0x31716ff9738effb3:0xd80811b8f316cd52",
+            "data_cid": "15566711598056131922",
+            "reviews_link": "https://serpapi.com/search.json?data_id=0x31716ff9738effb3%3A0xd80811b8f316cd52&engine=google_maps_reviews&hl=vi",
+            "photos_link": "https://serpapi.com/search.json?data_id=0x31716ff9738effb3%3A0xd80811b8f316cd52&engine=google_maps_photos&hl=vi",
+            "gps_coordinates": {
+                "latitude": 11.945569599999999,
+                "longitude": 108.33107969999999
+            },
+            "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=vi&place_id=ChIJs_-Oc_lvcTERUs0W87gRCNg",
+            "provider_id": "/g/11svvzw__x",
+            "rating": 5,
+            "reviews": 1,
+            "unclaimed_listing": true,
+            "type": "Khu cắm trại",
+            "types": [
+                "Khu cắm trại"
+            ],
+            "type_id": "campground",
+            "type_ids": [
+                "campground"
+            ],
+            "address": "W8WJ+6C, Tà Nung, Thành phố Đà Lạt, Lâm Đồng, Việt Nam",
+            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipPQHigTA5QxMYHodEGoCMEtCjCutYy934Mk-wvH=w122-h92-k-no"
+        },
+        {
+            "position": 8,
+            "title": "Vườn Ông Viễn",
+            "place_id": "ChIJnczTjj1tcTERwJ5jXdEP2hQ",
+            "data_id": "0x31716d3d8ed3cc9d:0x14da0fd15d639ec0",
+            "data_cid": "1502530817570873024",
+            "reviews_link": "https://serpapi.com/search.json?data_id=0x31716d3d8ed3cc9d%3A0x14da0fd15d639ec0&engine=google_maps_reviews&hl=vi",
+            "photos_link": "https://serpapi.com/search.json?data_id=0x31716d3d8ed3cc9d%3A0x14da0fd15d639ec0&engine=google_maps_photos&hl=vi",
+            "gps_coordinates": {
+                "latitude": 11.939874999999999,
+                "longitude": 108.39756399999999
+            },
+            "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=vi&place_id=ChIJnczTjj1tcTERwJ5jXdEP2hQ",
+            "provider_id": "/g/11vhggyf6k",
+            "unclaimed_listing": true,
+            "type": "Khu cắm trại",
+            "types": [
+                "Khu cắm trại"
+            ],
+            "type_id": "campground",
+            "type_ids": [
+                "campground"
+            ],
+            "address": "W9QX+X2, Phường 5, Thành phố Đà Lạt, Lâm Đồng, Việt Nam",
+            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipMTE6NMLofxnRLXkbqGTn4SWiwasyXr0bfTQi0C=w80-h142-k-no"
+        },
+        {
+            "position": 9,
+            "title": "BUI DU GARDEN",
+            "place_id": "ChIJS9eA2t9tcTERLhMpghKgoEc",
+            "data_id": "0x31716ddfda80d74b:0x47a0a0128229132e",
+            "data_cid": "5161301174320173870",
+            "reviews_link": "https://serpapi.com/search.json?data_id=0x31716ddfda80d74b%3A0x47a0a0128229132e&engine=google_maps_reviews&hl=vi",
+            "photos_link": "https://serpapi.com/search.json?data_id=0x31716ddfda80d74b%3A0x47a0a0128229132e&engine=google_maps_photos&hl=vi",
+            "gps_coordinates": {
+                "latitude": 11.952044299999999,
+                "longitude": 108.41502179999999
+            },
+            "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=vi&place_id=ChIJS9eA2t9tcTERLhMpghKgoEc",
+            "provider_id": "/g/11kjclc9zh",
+            "rating": 5,
+            "reviews": 1,
+            "unclaimed_listing": true,
+            "type": "Khu cắm trại",
+            "types": [
+                "Khu cắm trại"
+            ],
+            "type_id": "campground",
+            "type_ids": [
+                "campground"
+            ],
+            "address": "XC28+R2, Phường 5, Thành phố Đà Lạt, Lâm Đồng, Việt Nam"
+        },
+        {
+            "position": 10,
+            "title": "Camping house Trường Vân",
+            "place_id": "ChIJbanCfdRzcTER5td6HNmt7U8",
+            "data_id": "0x317173d47dc2a96d:0x4fedadd91c7ad7e6",
+            "data_cid": "5759450646474053606",
+            "reviews_link": "https://serpapi.com/search.json?data_id=0x317173d47dc2a96d%3A0x4fedadd91c7ad7e6&engine=google_maps_reviews&hl=vi",
+            "photos_link": "https://serpapi.com/search.json?data_id=0x317173d47dc2a96d%3A0x4fedadd91c7ad7e6&engine=google_maps_photos&hl=vi",
+            "gps_coordinates": {
+                "latitude": 12.015020999999999,
+                "longitude": 108.40651989999999
+            },
+            "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=vi&place_id=ChIJbanCfdRzcTER5td6HNmt7U8",
+            "provider_id": "/g/11pzywgymn",
+            "rating": 4,
+            "reviews": 1,
+            "unclaimed_listing": true,
+            "type": "Khu cắm trại",
+            "types": [
+                "Khu cắm trại"
+            ],
+            "type_id": "campground",
+            "type_ids": [
+                "campground"
+            ],
+            "address": "2C84+2J, Lát, Lạc Dương, Lâm Đồng, Việt Nam",
+            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipNos2cuKE5gUqwqdUJoI6WkVfuTQLwvIKHUU1BT=w80-h142-k-no"
+        },
+        {
+            "position": 11,
+            "title": "FARM DƯƠNG YAMAHA",
+            "place_id": "ChIJ8R7RryUTcTERcoFbKR7j0zI",
+            "data_id": "0x31711325afd11ef1:0x32d3e31e295b8172",
+            "data_cid": "3662520640664732018",
+            "reviews_link": "https://serpapi.com/search.json?data_id=0x31711325afd11ef1%3A0x32d3e31e295b8172&engine=google_maps_reviews&hl=vi",
+            "photos_link": "https://serpapi.com/search.json?data_id=0x31711325afd11ef1%3A0x32d3e31e295b8172&engine=google_maps_photos&hl=vi",
+            "gps_coordinates": {
+                "latitude": 11.9404192,
+                "longitude": 108.45831319999999
+            },
+            "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=vi&place_id=ChIJ8R7RryUTcTERcoFbKR7j0zI",
+            "provider_id": "/g/11pklkjyrl",
+            "type": "Khu cắm trại",
+            "types": [
+                "Khu cắm trại"
+            ],
+            "type_id": "campground",
+            "type_ids": [
+                "campground"
+            ],
+            "address": "11°20'47.8\"N+107°39'29.9\"E, Lâm Đồng 66650, Việt Nam",
+            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipNBUcNWF6N8zfzVEddD9OaEjOX0RiQqCknAuS4u=w122-h92-k-no"
+        },
+        {
+            "position": 12,
+            "title": "Liêng Rơwoa Camp - Trại Thác Voi",
+            "place_id": "ChIJeeLn-P1DcTER59_5GuB122Q",
+            "data_id": "0x317143fdf8e7e279:0x64db75e01af9dfe7",
+            "data_cid": "7267532029078134759",
+            "reviews_link": "https://serpapi.com/search.json?data_id=0x317143fdf8e7e279%3A0x64db75e01af9dfe7&engine=google_maps_reviews&hl=vi",
+            "photos_link": "https://serpapi.com/search.json?data_id=0x317143fdf8e7e279%3A0x64db75e01af9dfe7&engine=google_maps_photos&hl=vi",
+            "gps_coordinates": {
+                "latitude": 11.8220768,
+                "longitude": 108.3323303
+            },
+            "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=vi&place_id=ChIJeeLn-P1DcTER59_5GuB122Q",
+            "provider_id": "/g/11h_wjy8gz",
+            "rating": 4.8,
+            "reviews": 8,
+            "type": "Khu cắm trại",
+            "types": [
+                "Khu cắm trại"
+            ],
+            "type_id": "campground",
+            "type_ids": [
+                "campground"
+            ],
+            "address": "TT. Nam Ban, Lâm Hà, Lâm Đồng, Việt Nam",
+            "phone": "+84 909 172 991",
+            "website": "http://www.facebook.com/thacvoicamp",
+            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipPyW4EEmfwBIi7h-bzrm0tOxquVqVsKXLcD5Fpt=w122-h92-k-no"
+        },
+        {
+            "position": 13,
+            "title": "Farm Nidukuri",
+            "place_id": "ChIJpW_6TwAJcTERW4uCkG9wZi0",
+            "data_id": "0x317109004ffa6fa5:0x2d66706f90828b5b",
+            "data_cid": "3271425803799399259",
+            "reviews_link": "https://serpapi.com/search.json?data_id=0x317109004ffa6fa5%3A0x2d66706f90828b5b&engine=google_maps_reviews&hl=vi",
+            "photos_link": "https://serpapi.com/search.json?data_id=0x317109004ffa6fa5%3A0x2d66706f90828b5b&engine=google_maps_photos&hl=vi",
+            "gps_coordinates": {
+                "latitude": 12.128385,
+                "longitude": 108.538454
+            },
+            "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=vi&place_id=ChIJpW_6TwAJcTERW4uCkG9wZi0",
+            "provider_id": "/g/11vr25jlp5",
+            "rating": 5,
+            "reviews": 2,
+            "type": "Khu cắm trại",
+            "types": [
+                "Khu cắm trại"
+            ],
+            "type_id": "campground",
+            "type_ids": [
+                "campground"
+            ],
+            "address": "4GHQ+99, Xã Đạ Nhim, Lạc Dương, Lâm Đồng, Việt Nam",
+            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipO4X2eePp81YrrDt1yKk6yeNnqIAF2tcuGS4ev9=w122-h92-k-no"
+        },
+        {
+            "position": 14,
+            "title": "Khu Cắm Trại",
+            "place_id": "ChIJ_SU5RaZzcTERGIDxGXXIBV4",
+            "data_id": "0x317173a6453925fd:0x5e05c87519f18018",
+            "data_cid": "6775041619720765464",
+            "reviews_link": "https://serpapi.com/search.json?data_id=0x317173a6453925fd%3A0x5e05c87519f18018&engine=google_maps_reviews&hl=vi",
+            "photos_link": "https://serpapi.com/search.json?data_id=0x317173a6453925fd%3A0x5e05c87519f18018&engine=google_maps_photos&hl=vi",
+            "gps_coordinates": {
+                "latitude": 12.018404499999999,
+                "longitude": 108.3728045
+            },
+            "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=vi&place_id=ChIJ_SU5RaZzcTERGIDxGXXIBV4",
+            "provider_id": "/g/11g4cjp7w9",
+            "rating": 4.3,
+            "reviews": 122,
+            "unclaimed_listing": true,
+            "type": "Trại thiếu nhi",
+            "types": [
+                "Trại thiếu nhi"
+            ],
+            "type_id": "camp",
+            "type_ids": [
+                "camp"
+            ],
+            "address": "ĐT722, Lạc Dương, Lâm Đồng, Việt Nam",
+            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipNcN7MKgECZacaunuXEO63tCjFyHgNLmxnrZLFX=w122-h92-k-no"
+        },
+        {
+            "position": 15,
+            "title": "Farmstay CuDat Phi Tô",
+            "place_id": "ChIJsy_n1jdpcTER0dxeBi1px80",
+            "data_id": "0x31716937d6e72fb3:0xcdc7692d065edcd1",
+            "data_cid": "14827935940241972433",
+            "reviews_link": "https://serpapi.com/search.json?data_id=0x31716937d6e72fb3%3A0xcdc7692d065edcd1&engine=google_maps_reviews&hl=vi",
+            "photos_link": "https://serpapi.com/search.json?data_id=0x31716937d6e72fb3%3A0xcdc7692d065edcd1&engine=google_maps_photos&hl=vi",
+            "gps_coordinates": {
+                "latitude": 11.8728588,
+                "longitude": 108.2571825
+            },
+            "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=vi&place_id=ChIJsy_n1jdpcTER0dxeBi1px80",
+            "provider_id": "/g/11l6xlqppv",
+            "unclaimed_listing": true,
+            "type": "Khu cắm trại",
+            "types": [
+                "Khu cắm trại"
+            ],
+            "type_id": "campground",
+            "type_ids": [
+                "campground"
+            ],
+            "address": "V7F4+4VV, Phi Tô, Lâm Hà, Lâm Đồng, Việt Nam",
+            "phone": "+84 933 112 343"
+        },
+        {
+            "position": 16,
+            "title": "Đồi gió Phước Bình bãi trại Mây adventure",
+            "place_id": "ChIJmaIdxeoBcTERgFemoImL5IU",
+            "data_id": "0x317101eac51da299:0x85e48b89a0a65780",
+            "data_cid": "9647989724956481408",
+            "reviews_link": "https://serpapi.com/search.json?data_id=0x317101eac51da299%3A0x85e48b89a0a65780&engine=google_maps_reviews&hl=vi",
+            "photos_link": "https://serpapi.com/search.json?data_id=0x317101eac51da299%3A0x85e48b89a0a65780&engine=google_maps_photos&hl=vi",
+            "gps_coordinates": {
+                "latitude": 12.132057099999999,
+                "longitude": 108.74208399999999
+            },
+            "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=vi&place_id=ChIJmaIdxeoBcTERgFemoImL5IU",
+            "provider_id": "/g/11qg1bs66q",
+            "rating": 5,
+            "reviews": 6,
+            "type": "Khu cắm trại",
+            "types": [
+                "Khu cắm trại"
+            ],
+            "type_id": "campground",
+            "type_ids": [
+                "campground"
+            ],
+            "address": "Phước Bình, Bác Ái, Ninh Thuận, Việt Nam",
+            "phone": "+84 853 225 711",
+            "website": "http://mayadventure.vn/",
+            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipPQJPXzuLlVCohgCLHQ0VQXFqZwMojQgysov9U=w137-h92-k-no"
+        },
+        {
+            "position": 17,
+            "title": "Đỉnh Đồi Đa Phú",
+            "place_id": "ChIJF4oqjDdtcTER0gA2-7APQko",
+            "data_id": "0x31716d378c2a8a17:0x4a420fb0fb3600d2",
+            "data_cid": "5350856560072851666",
+            "reviews_link": "https://serpapi.com/search.json?data_id=0x31716d378c2a8a17%3A0x4a420fb0fb3600d2&engine=google_maps_reviews&hl=vi",
+            "photos_link": "https://serpapi.com/search.json?data_id=0x31716d378c2a8a17%3A0x4a420fb0fb3600d2&engine=google_maps_photos&hl=vi",
+            "gps_coordinates": {
+                "latitude": 11.986514399999999,
+                "longitude": 108.40699699999999
+            },
+            "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=vi&place_id=ChIJF4oqjDdtcTER0gA2-7APQko",
+            "provider_id": "/g/11llv7qzft",
+            "rating": 4.6,
+            "reviews": 20,
+            "unclaimed_listing": true,
+            "type": "Khu cắm trại",
+            "types": [
+                "Khu cắm trại"
+            ],
+            "type_id": "campground",
+            "type_ids": [
+                "campground"
+            ],
+            "address": "Hẻm 1 Đa Phú, Phường 7, Thành phố Đà Lạt, Lâm Đồng, Việt Nam",
+            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipN-OCTAFJbaKiSKYunh7P3VdxE6KBYETfJK71Qt=w163-h92-k-no"
+        },
+        {
+            "position": 18,
+            "title": "Khu nghỉ dưỡng Nguyễn du nam ban",
+            "place_id": "ChIJ97xtU0ITcTERslHlQZJceKQ",
+            "data_id": "0x31711342536dbcf7:0xa4785c9241e551b2",
+            "data_cid": "11851324202665988530",
+            "reviews_link": "https://serpapi.com/search.json?data_id=0x31711342536dbcf7%3A0xa4785c9241e551b2&engine=google_maps_reviews&hl=vi",
+            "photos_link": "https://serpapi.com/search.json?data_id=0x31711342536dbcf7%3A0xa4785c9241e551b2&engine=google_maps_photos&hl=vi",
+            "gps_coordinates": {
+                "latitude": 11.9493125,
+                "longitude": 108.4328025
+            },
+            "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=vi&place_id=ChIJ97xtU0ITcTERslHlQZJceKQ",
+            "provider_id": "/g/11tnvg9rfx",
+            "rating": 5,
+            "reviews": 2,
+            "unclaimed_listing": true,
+            "type": "Khu cắm trại",
+            "types": [
+                "Khu cắm trại"
+            ],
+            "type_id": "campground",
+            "type_ids": [
+                "campground"
+            ],
+            "address": "nam ban, Lâm Hà, Lâm Đồng 670000, Việt Nam"
+        },
+        {
+            "position": 19,
+            "title": "Cho thuê lều trại Đà Lạt",
+            "place_id": "ChIJb0xXxjcTcTERnLTCPFjCinM",
+            "data_id": "0x31711337c6574c6f:0x738ac2583cc2b49c",
+            "data_cid": "8325680545380086940",
+            "reviews_link": "https://serpapi.com/search.json?data_id=0x31711337c6574c6f%3A0x738ac2583cc2b49c&engine=google_maps_reviews&hl=vi",
+            "photos_link": "https://serpapi.com/search.json?data_id=0x31711337c6574c6f%3A0x738ac2583cc2b49c&engine=google_maps_photos&hl=vi",
+            "gps_coordinates": {
+                "latitude": 11.954625199999999,
+                "longitude": 108.4270258
+            },
+            "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=vi&place_id=ChIJb0xXxjcTcTERnLTCPFjCinM",
+            "provider_id": "/g/11m0bs58_l",
+            "rating": 5,
+            "reviews": 7,
+            "type": "Khu cắm trại",
+            "types": [
+                "Khu cắm trại"
+            ],
+            "type_id": "campground",
+            "type_ids": [
+                "campground"
+            ],
+            "address": "32 Phan Đình Giót, Phường 6, Thành phố Đà Lạt, Lâm Đồng 670000, Việt Nam",
+            "phone": "+84 912 187 302",
+            "website": "http://vietaction.com/leu-trai-vi",
+            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipMvmy3pA7pC4tVjpVmnhhNWpgxDxbtRojhZsIMW=w122-h92-k-no"
+        },
+        {
+            "position": 20,
+            "title": "Yiru's land",
+            "place_id": "ChIJaZxlaYERcTERlfZ4gBp8XCU",
+            "data_id": "0x3171118169659c69:0x255c7c1a8078f695",
+            "data_cid": "2692163130527118997",
+            "reviews_link": "https://serpapi.com/search.json?data_id=0x3171118169659c69%3A0x255c7c1a8078f695&engine=google_maps_reviews&hl=vi",
+            "photos_link": "https://serpapi.com/search.json?data_id=0x3171118169659c69%3A0x255c7c1a8078f695&engine=google_maps_photos&hl=vi",
+            "gps_coordinates": {
+                "latitude": 11.912252299999999,
+                "longitude": 108.56537139999999
+            },
+            "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=vi&place_id=ChIJaZxlaYERcTERlfZ4gBp8XCU",
+            "provider_id": "/g/11s8wv467c",
+            "address": "Lô A2, khoảnh 7, tiểu khu 163B, Tp. Đà Lạt, Lâm Đồng 66000, Việt Nam",
+            "phone": "+84 933 336 611",
+            "website": "https://www.facebook.com/profile.php?id=100078121893011",
+            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipNUzkOvALCE8vKE5YTX_rWaIv4oH4f36EBgfKPx=w80-h106-k-no"
+        }
+    ],
+    "serpapi_pagination": {
+        "next": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=vi&ll=%4011.940147238020286%2C108.45809725440188%2C11z&q=Khu+c%E1%BA%AFm+tr%E1%BA%A1i&start=20&type=search"
+    }
+}
