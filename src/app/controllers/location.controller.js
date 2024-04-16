@@ -2,6 +2,7 @@
 const Location = require("../models/location.model");
 
 class LocationController {
+  // [GET] /api/location/getLocations
   async getLocations(req, res, next) {
     try {
       const locations = await Location.find();

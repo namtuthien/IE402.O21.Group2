@@ -25,22 +25,6 @@
             "placeId": "ChIJ6eixOwupcTERBsPpRjkhpEA"
         },
         {
-            "position": 2,
-            "title": "Farm Trang Trại Dưa Lưới Trâm Vàng",
-            "address": "RQM7+H8V, Thôn, 2, Tân Lập, Ninh Sơn, Ninh Thuận, Việt Nam",
-            "latitude": 11.8339886,
-            "longitude": 108.7632924,
-            "rating": 5,
-            "ratingCount": 1,
-            "type": "Khu cắm trại",
-            "types": [
-                "Khu cắm trại"
-            ],
-            "phoneNumber": "+84 343 736 419",
-            "cid": "12124235455113069571",
-            "placeId": "ChIJqWicKRIfcTERAwQ20-jvQag"
-        },
-        {
             "position": 3,
             "title": "Sơn Lâm Thủy Tặc Trại",
             "address": "5MFF+W7F Sơn Lâm Thủy Tặc Xóm, Đạ Chais, Lạc Dương, Lâm Đồng, Việt Nam",
@@ -173,23 +157,6 @@
             ],
             "cid": "3271425803799399259",
             "placeId": "ChIJpW_6TwAJcTERW4uCkG9wZi0"
-        },
-        {
-            "position": 12,
-            "title": "Đồi gió Phước Bình bãi trại Mây adventure",
-            "address": "Phước Bình, Bác Ái, Ninh Thuận, Việt Nam",
-            "latitude": 12.132057099999999,
-            "longitude": 108.74208399999999,
-            "rating": 5,
-            "ratingCount": 6,
-            "type": "Khu cắm trại",
-            "types": [
-                "Khu cắm trại"
-            ],
-            "website": "http://mayadventure.vn/",
-            "phoneNumber": "+84 853 225 711",
-            "cid": "9647989724956481408",
-            "placeId": "ChIJmaIdxeoBcTERgFemoImL5IU"
         },
         {
             "position": 13,

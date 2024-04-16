@@ -4,8 +4,8 @@ class Admin {
     res.render("./pages/admin/map/index", {
       pageTitle: "Location",
       style: "/pages/admin/test.css",
-      script: "/pages/admin/location.js",
-      layout: "main",
+      script: "/pages/admin/map.js",
+      layout: "map",
     });
   }
 }
