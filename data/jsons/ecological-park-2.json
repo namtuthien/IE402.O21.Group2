@@ -1,0 +1,1250 @@
+{
+    "search_metadata": {
+        "id": "661ed3645fc4936d053cab45",
+        "status": "Success",
+        "json_endpoint": "https://serpapi.com/searches/8698e2e62dc817f3/661ed3645fc4936d053cab45.json",
+        "created_at": "2024-04-16 19:37:08 UTC",
+        "processed_at": "2024-04-16 19:37:08 UTC",
+        "google_maps_url": "https://www.google.com/maps/search/C%C3%B4ng+vi%C3%AAn+sinh+th%C3%A1i/@11.940147238020286,108.45809725440188,11z?hl=vi",
+        "raw_html_file": "https://serpapi.com/searches/8698e2e62dc817f3/661ed3645fc4936d053cab45.html",
+        "total_time_taken": 1.57
+    },
+    "search_parameters": {
+        "engine": "google_maps",
+        "type": "search",
+        "q": "Công viên sinh thái",
+        "ll": "@11.940147238020286,108.45809725440188,11z",
+        "google_domain": "google.com",
+        "hl": "vi"
+    },
+    "search_information": {
+        "local_results_state": "Showing results for type: \"place\" instead of type: \"search\"",
+        "query_displayed": "Công viên sinh thái"
+    },
+    "place_results": {
+        "title": "Công viên du lịch sinh thái Hóc Môn",
+        "place_id": "ChIJAZJk38ErdTERQxR2TumxHUg",
+        "data_id": "0x31752bc1df649201:0x481db1e94e761443",
+        "data_cid": "5196505160657278019",
+        "reviews_link": "https://serpapi.com/search.json?data_id=0x31752bc1df649201%3A0x481db1e94e761443&engine=google_maps_reviews&hl=vi",
+        "photos_link": "https://serpapi.com/search.json?data_id=0x31752bc1df649201%3A0x481db1e94e761443&engine=google_maps_photos&hl=vi",
+        "gps_coordinates": {
+            "latitude": 10.857752,
+            "longitude": 106.5817266
+        },
+        "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=vi&place_id=ChIJAZJk38ErdTERQxR2TumxHUg",
+        "provider_id": "/g/11ty4t_9j7",
+        "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipPY_r-4-ALxWklG_VJH7stxgfcFDH7HueGrrRXY=w129-h86-k-no",
+        "rating": 4.4,
+        "reviews": 283,
+        "type": [
+            "Công viên"
+        ],
+        "type_ids": [
+            "park"
+        ],
+        "extensions": [
+            {
+                "accessibility": [
+                    "Chỗ đỗ xe cho xe lăn",
+                    "Lối vào cho xe lăn"
+                ]
+            },
+            {
+                "amenities": [
+                    "Bàn ăn ngoài trời",
+                    "Khu trượt ván",
+                    "Nhà vệ sinh công cộng",
+                    "Xích đu"
+                ]
+            },
+            {
+                "children": [
+                    "Phù hợp cho trẻ em",
+                    "Sân chơi"
+                ]
+            },
+            {
+                "pets": [
+                    "Cho phép mang theo chó"
+                ]
+            }
+        ],
+        "address": "106 Xuân Thới Thượng, 6, Hóc Môn, Thành phố Hồ Chí Minh, Việt Nam",
+        "website": "https://facebook.com/congviendulichsinhthaihocmon",
+        "phone": "+84 932 162 182",
+        "open_state": "Mở cả ngày",
+        "plus_code": "VH5J+4M Hóc Môn, Thành phố Hồ Chí Minh, Việt Nam",
+        "hours": [
+            {
+                "thứ tư": "Mở cửa cả ngày"
+            },
+            {
+                "thứ năm": "Mở cửa cả ngày (Giỗ Tổ Hùng Vương)"
+            },
+            {
+                "thứ sáu": "Mở cửa cả ngày"
+            },
+            {
+                "thứ bảy": "Mở cửa cả ngày"
+            },
+            {
+                "chủ nhật": "Mở cửa cả ngày"
+            },
+            {
+                "thứ hai": "Mở cửa cả ngày"
+            },
+            {
+                "thứ ba": "Mở cửa cả ngày"
+            }
+        ],
+        "images": [
+            {
+                "title": "Tất cả",
+                "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipPY_r-4-ALxWklG_VJH7stxgfcFDH7HueGrrRXY=w447-h298-k-no"
+            },
+            {
+                "title": "Mới nhất",
+                "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipM-OufTaTYtpbolGB2azG1c0wbHRbCSuII9CPfS=w397-h298-k-no"
+            },
+            {
+                "title": "Video",
+                "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipOwdE1yMkrrD7ywS9K1Ozsl3lk_aZ42puaW-dio=w529-h298-k-no"
+            },
+            {
+                "title": "Chế độ xem Phố và 360°",
+                "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipOrzlWLKAoP-1IYW5Yf4z4s0XiVMjbZynVkJMzV=w224-h298-k-no-pi-0-ya200-ro0-fo100"
+            }
+        ],
+        "questions_and_answers": [
+            {
+                "question": {
+                    "user": {
+                        "name": "Dongphuong 272",
+                        "link": "https://www.google.com/maps/contrib/116397866613774965487",
+                        "thumbnail": "https://lh3.googleusercontent.com/a-/ALV-UjUIPuU17kbb1WKLHHGzRgjNvkDVTERuAcZzou8ntAxH7cSdo7pg=s120-c-rp-mo-ba4-br100"
+                    },
+                    "text": "Ở đây sau này tổ chức sinh hoạt vui chơi ngoài trời không",
+                    "date": "11 tháng trước",
+                    "language": "vi"
+                },
+                "answer": {
+                    "text": "Admin cũng chưa rõ phương án tổ chức sinh hoạt sau khi hoàn thành của khu sinh thái. Nhưng chắc sẽ có vì họ tổ chức sinh thái có vườn cây xanh và hồ cảnh quan mà",
+                    "date": "11 tháng trước",
+                    "language": "vi"
+                },
+                "total_answers": 1
+            }
+        ],
+        "user_reviews": {
+            "most_relevant": [
+                {
+                    "username": "Khuyến Trần",
+                    "rating": 3,
+                    "contributor_id": "109801482919588370423",
+                    "description": "Công viên rộng, nhưng công tác bảo quản, vệ sinh kém, hàng rào trụ tre gãy mấy tháng ko có người xử lý, thùng rác hôi thúi ko có người vệ sinh định kỳ, cho thuê rạp tiệc ngay thùng rác bốc mùi. Dịch vụ cho thuê xe điện trẻ em thì đã có ngăn khu riêng nên cũng tạm ổn. Cây xanh còn ít nên trưa rất nóng. Nhà vệ sinh thì đang có dấu hiệu dơ và hôi. Dịch vụ câu cá giải trí trên hồ rộng thoải mái cho cần thủ tập lực. Tận dụng không gian cho thuê các dịch vụ buôn bán tô tượng hơi nhiều",
+                    "link": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sChZDSUhNMG9nS0VJQ0FnSUREZ19DUUhREAE!2m1!1s0x0:0x481db1e94e761443!3m1!1s2@1:CIHM0ogKEICAgIDDg_CQHQ%7CCgwIod3psAYQ0NDUtQM%7C?hl=vi",
+                    "images": [
+                        {
+                            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipPOKcKh_5gxOaUXEpqHHasLlc21l9S8GJuU9jzC=w150-h150-k-no-p"
+                        },
+                        {
+                            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipNeWCRESlbiEX32Jdhik15M7E4_BsYByZPWRIY3=w150-h150-k-no-p"
+                        },
+                        {
+                            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipMnZhOau7FDUyxkM-gofLzqtf3K3jjqpn_cYXpe=w150-h150-k-no-p"
+                        },
+                        {
+                            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipMZ6g42ueqYEkiPllD3lyVQxM5ErgoeA3IClzFX=w150-h150-k-no-p"
+                        },
+                        {
+                            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipNlzaoLiUmd094M2cudnyt8czJR5mOVTgj4iepx=w150-h150-k-no-p"
+                        },
+                        {
+                            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipN9KVM9nXu3rEbgyCxpb21I2pzUBzUCnfcG-bKY=w150-h150-k-no-p"
+                        },
+                        {
+                            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipM-OufTaTYtpbolGB2azG1c0wbHRbCSuII9CPfS=w150-h150-k-no-p"
+                        }
+                    ],
+                    "date": "3 ngày trước"
+                },
+                {
+                    "username": "Hiếu Truong",
+                    "rating": 5,
+                    "contributor_id": "111617740669593349193",
+                    "description": "Một khu công viên phức hợp, có hồ bơi, sân khấu, quầy ăn, quán nước, hồ câu cá cho người dân vào giải trí. Buổi sáng các bạn có thể chạy bộ tạp thể dục. Chiều thì đi bơi. Tối dạo uống cf hoặc ăn cá viên chiên. Hứng lên thì chơi loto.....\nKhông khí mát mẻ, rộng rãi. Ít rác.",
+                    "link": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sChdDSUhNMG9nS0VJQ0FnSURkaXNUSjV3RRAB!2m1!1s0x0:0x481db1e94e761443!3m1!1s2@1:CIHM0ogKEICAgIDdisTJ5wE%7CCgwI4PbcrgYQ2PyYiQE%7C?hl=vi",
+                    "images": [
+                        {
+                            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipPQQziBwAZJJAjJ9XIX-N-PVOB7kAmQutUo_T2F=w150-h150-k-no-p"
+                        },
+                        {
+                            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipM3-ci9MQvhbW1ATBuS2dUs6Y7r-Oz5hrpc55Pi=w150-h150-k-no-p"
+                        },
+                        {
+                            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipNPl67Nag1WXgJUe6Xf_E27iVMXQzQjShFfYj3l=w150-h150-k-no-p"
+                        },
+                        {
+                            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipMcL3TO6VYtPDZM2FpRqr0CA32pfLmsLq3jBP2F=w150-h150-k-no-p"
+                        },
+                        {
+                            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipP-GEjzu8cediQCQW20gL1XBJ2qNGy1MHKtFHBV=w150-h150-k-no-p"
+                        }
+                    ],
+                    "date": "một tháng trước"
+                },
+                {
+                    "username": "Lọc Nước Đình Nhân",
+                    "rating": 4,
+                    "contributor_id": "103943141274904687826",
+                    "description": "Rộng và thoáng mát, tuy nhiên không có gì chơi cả, như 1 công viên để đi dạo.",
+                    "link": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sChZDSUhNMG9nS0VJQ0FnSUN0eU9ET053EAE!2m1!1s0x0:0x481db1e94e761443!3m1!1s2@1:CIHM0ogKEICAgICtyODONw%7CCgsI0d3YrQYQsJqyPg%7C?hl=vi",
+                    "images": [
+                        {
+                            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipOzVWYXqPCbUAAFZTUz8CBgxK0WNpr4D4Pp0fh2=w150-h150-k-no-p"
+                        },
+                        {
+                            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipNCK5h7I3zgTi-bxt9pn19Plz9B95xzbcOTkeUV=w150-h150-k-no-p"
+                        },
+                        {
+                            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipMFfF8wejsQV64bvlDxpfg_9NGjsbBLDCeCg0bL=w150-h150-k-no-p"
+                        },
+                        {
+                            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipMrSTOZ8C6qI7_fuSskszV1YzMsV1cpZsH2EEqC=w150-h150-k-no-p"
+                        },
+                        {
+                            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipPv8uNT3uiPuxem7MEFHa5CeNj8ILUaymnIIUHL=w150-h150-k-no-p"
+                        },
+                        {
+                            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipM2VRZPzGZW2OlPdNB6AJTbXYGsxzA99_mMozS9=w150-h150-k-no-p"
+                        },
+                        {
+                            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipOcE36FQurTgDF1SxFv_eYhnI4FgJ6fzgDJGov8=w150-h150-k-no-p"
+                        }
+                    ],
+                    "date": "2 tháng trước"
+                },
+                {
+                    "username": "Phuong Nguyen",
+                    "rating": 5,
+                    "contributor_id": "117574749215486602742",
+                    "description": "Công viên rộng,dịch vụ hồ bơi sạch đẹp giá vé chỉ có 25k/bé.Đồ ăn nước uống tại quán rất bình dân từ 10-25k.Sẽ quay lại",
+                    "link": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sChdDSUhNMG9nS0VJQ0FnSURGM19qempRRRAB!2m1!1s0x0:0x481db1e94e761443!3m1!1s2@1:CIHM0ogKEICAgIDF3_jzjQE%7CCgwIy53BqgYQgLvq2wI%7C?hl=vi",
+                    "images": [
+                        {
+                            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipMDudyx2ujAO86VDsRX8n28mTrBsEMrx8yUngKm=w150-h150-k-no-p"
+                        },
+                        {
+                            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipPTiUMPgOcnwc8aoGfEuJduUfOK5_d6jYH5rCjE=w150-h150-k-no-p"
+                        },
+                        {
+                            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipPINUkFyfW9i6ypKywVWLvweXILYee961rfq1H5=w150-h150-k-no-p"
+                        },
+                        {
+                            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipNl5y_8Jh-3rtOUEdIjeFHR0SEw1dztD1TwtQTt=w150-h150-k-no-p"
+                        },
+                        {
+                            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipN9us7b2ButIl5jyio9hI0K6Ja1iiF8TgAIcz2s=w150-h150-k-no-p"
+                        },
+                        {
+                            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipOO9JfVEjzph9u9J8psBO2TETpxIzl-I6VN1_lA=w150-h150-k-no-p"
+                        }
+                    ],
+                    "date": "5 tháng trước"
+                },
+                {
+                    "username": "Trinh Huu Giang",
+                    "rating": 5,
+                    "contributor_id": "105244170819946747757",
+                    "description": "Công viên sinh thái thoáng mát sạch sẽ,  chòi nghỉ chân lịch sự được gắn thêm quạt máy nữa thật quá tuyệt , tất cả mọi người được vào công viên hưởng không khí trong lành hoàn toàn miễn phí nên mọi người cũng cần chú ý giữ gìn vệ sinh môi trường nhé",
+                    "link": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sChdDSUhNMG9nS0VJQ0FnSUR0ejU3STF3RRAB!2m1!1s0x0:0x481db1e94e761443!3m1!1s2@1:CIHM0ogKEICAgIDtz57I1wE%7CCgwI3f6SrgYQqKnS1AE%7C?hl=vi",
+                    "images": [
+                        {
+                            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipPjViphOI1W_jxGY8aBZiLaouW1BPV39QWjsDII=w150-h150-k-no-p"
+                        },
+                        {
+                            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipP87xiOU8p4cGtGuBiz6Q1cbJuEuyQ67FMbXygF=w150-h150-k-no-p"
+                        },
+                        {
+                            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipPyen655dxu5c23yc4qcermRYsc48bT_A9Cm14o=w150-h150-k-no-p"
+                        }
+                    ],
+                    "date": "2 tháng trước"
+                },
+                {
+                    "username": "Hằng Trần",
+                    "rating": 4,
+                    "contributor_id": "104269952453196100543",
+                    "description": "Điểm cộng\nCông viên rộng rãi, thiết kế các cầu uốn lượn đẹp, phù hợp cho việc đi bộ và tập thể dục vào sáng sớm hoặc chiều tối. Hồ sinh thái mát.\nCó hồ bơi 25k/vé từ 7g30 sáng đến 7g tối\n\nBuổi tối có hệ thống đèn chiếu sáng lung linh khắp công viên. Dùng đèn năng lượng mặt trời cho các tiểu cảnh cỏ.\n\nVề ăn uống\nCó 1 quán ăn gia đình ngay lối vào bán cà phê và đồ ăn món. Buổi tối có một ít các gian hàng bán đồ chơi, đồ ăn trong 1 sân nhỏ trong khuôn viên.\n\nCuối tuần có hội chợ, loto, các gian ẩm thực và trò chơi\n\nĐiểm trừ\nCây mới trồng nên chưa nhiều bóng mát. Đi trưa thì nắng.\nMột số người vô ý thức vứt rác (vỏ ly nước, vỏ ốc,...) ko đúng nơi quy định gây mất mỹ quan. Trong khi thùng rác bố trí khắp nơi.\nKhu vệ sinh bị đọng nước khá dơ\n\nKết luận\nNên đến tập thể dục sáng sớm hoặc đi dạo hóng mát buổi tối.",
+                    "link": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sChZDSUhNMG9nS0VJQ0FnSUNKNEpmckVREAE!2m1!1s0x0:0x481db1e94e761443!3m1!1s2@1:CIHM0ogKEICAgICJ4JfrEQ%7CCgwIrO3nrgYQgIixzQE%7C?hl=vi",
+                    "images": [
+                        {
+                            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipPOvemB22h85qBWGNCrEVokTtP0bX5uTHspkLsk=w150-h150-k-no-p"
+                        },
+                        {
+                            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipPukvNJ-ch5LRySO4oWjWhGT7wUhOzMDk-84q2a=w150-h150-k-no-p"
+                        },
+                        {
+                            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipMcxASA1kusmZjwJbnvi-KLqvPQyKnd_QnUodSG=w150-h150-k-no-p"
+                        },
+                        {
+                            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipNKQ5jKmWKmplWEOdwIVYgj38tqGi_tDT-Q80PT=w150-h150-k-no-p"
+                        },
+                        {
+                            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipMtaFAJ1XMuF7kON5wGLbe3sXN0uVBZkE1v5yqV=w150-h150-k-no-p"
+                        }
+                    ],
+                    "date": "một tháng trước"
+                },
+                {
+                    "username": "Lê Trọng An (Shalom Le)",
+                    "rating": 4,
+                    "contributor_id": "114475621279537971764",
+                    "description": "Công viên lớn, phù hợp cho mọi lứa tuổi. Trong công viên có hồ bơi cho trẻ em và người lớn.",
+                    "link": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sChdDSUhNMG9nS0VJQ0FnSUQxOHBiQnZBRRAB!2m1!1s0x0:0x481db1e94e761443!3m1!1s2@1:CIHM0ogKEICAgID18pbBvAE%7CCgsIkOLkrAYQyJbxbg%7C?hl=vi",
+                    "images": [
+                        {
+                            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipOMAZ6rZe9URPoOH514FrxgP3wdhcKYZ2l9mv0O=w150-h150-k-no-p"
+                        },
+                        {
+                            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipP5dwKcwy1UAqinja34AiAHVU6fpzCy-jQQUdDr=w150-h150-k-no-p"
+                        },
+                        {
+                            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipMfrOOAmxllY908GML-WzCYuWQrTOS3PpR8y3hB=w150-h150-k-no-p"
+                        },
+                        {
+                            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipOrb9Rn1VHlgxjRH7-bzbm5JS0T0G3zT4-qzyGq=w150-h150-k-no-p"
+                        },
+                        {
+                            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipP6CHR653JZunyDsMG32Zv21R6_6gZGWnXJMCCM=w150-h150-k-no-p"
+                        },
+                        {
+                            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipOBOpBqsohobfmsBIwq80QAODWMB4Tbr3uW6-Li=w150-h150-k-no-p"
+                        },
+                        {
+                            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipN11NHJ2G5pOKTS8tu0dnmYaWHm9WDq4M1WLAeQ=w150-h150-k-no-p"
+                        },
+                        {
+                            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipMNbMIABUSEGFQfqTEZIAW7v3bKMz_0g_s9hxu1=w150-h150-k-no-p"
+                        }
+                    ],
+                    "date": "3 tháng trước"
+                },
+                {
+                    "username": "Mia Tran",
+                    "rating": 3,
+                    "contributor_id": "117907011283506409875",
+                    "description": "Rộng rãi. Thoáng đẹp. Thích hợp đi dạo, cafe chơi chơi hay cho trẻ chơi hồ bơi cho ai ở gần. Đi gần 1h xuống nhìn hơi chán. Tối kg biết có tấp nập hay bán đồ ăn nhiều kg chứ trưa đến sau 14h vẫn còn vắng hoe. Chỉ có quán cafe nhỏ nhỏ bán nước và ăn vặt.\nChỗ câu cá chỉ có 2 chòi chỉ để ngồi câu, còn lại ngồi ngoài trời với dù, mưa kg biết chạy đâu luôn. 190k/5h. Hồ rộng nhiều loại cá, kg có phân khu, ai câu gì câu. Kg thích hợp cho gia đình có trẻ đi câu cá giải trí ăn uống.\nĐi 1lần cho biết chứ kg quay lại.",
+                    "link": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sChZDSUhNMG9nS0VJQ0FnSUNaaG9tdlR3EAE!2m1!1s0x0:0x481db1e94e761443!3m1!1s2@1:CIHM0ogKEICAgICZhomvTw%7CCgwI94vxpwYQkJnbpwI%7C?hl=vi",
+                    "images": [
+                        {
+                            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipPIWd2sV3qNftcavxb1n9uy7M0Sdwi5NhasnpaB=w150-h150-k-no-p"
+                        },
+                        {
+                            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipNgaOSmOUMWJtLMxnrn1MKkPOX1JQy072hJ1L8C=w150-h150-k-no-p"
+                        },
+                        {
+                            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipO9D30-rDJzrRnXoT6FteNRRrNUjRYNi1KR12Lo=w150-h150-k-no-p"
+                        },
+                        {
+                            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipN_2M8xrWB3WJ7tdA0iBb6uDplN7drRSiFVKe7y=w150-h150-k-no-p"
+                        },
+                        {
+                            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipNqEBGWfqCYNtjCfW0-x7fey7sysbSHnzdviim-=w150-h150-k-no-p"
+                        }
+                    ],
+                    "date": "7 tháng trước"
+                }
+            ]
+        },
+        "people_also_search_for": [
+            {
+                "search_term": "Mọi người cũng tìm kiếm",
+                "local_results": [
+                    {
+                        "position": 1,
+                        "title": "Hồ câu cá giải trí huyện đội Hóc Môn",
+                        "data_id": "0x0:0x6a14b6e6f14ed577",
+                        "data_cid": "7643935570561783159",
+                        "reviews_link": "https://serpapi.com/search.json?data_id=0x0%3A0x6a14b6e6f14ed577&engine=google_maps_reviews&hl=vi",
+                        "photos_link": "https://serpapi.com/search.json?data_id=0x0%3A0x6a14b6e6f14ed577&engine=google_maps_photos&hl=vi",
+                        "gps_coordinates": {
+                            "latitude": 10.858855199999999,
+                            "longitude": 106.58140929999999
+                        },
+                        "place_id_search": "https://serpapi.com/search.json?data=%214m5%213m4%211s0x0%3A0x6a14b6e6f14ed577%218m2%213d10.858855199999999%214d106.58140929999999&engine=google_maps&google_domain=google.com&hl=vi&type=place",
+                        "rating": 3.7,
+                        "reviews": 62,
+                        "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipOKQ1Hyiw8GJRaNMnDbeXGNS0YQMsJoWqsQHDJo=w156-h156-n-k-no",
+                        "type": [
+                            "Trung tâm vui chơi giải trí"
+                        ]
+                    }
+                ]
+            }
+        ],
+        "popular_times": {
+            "graph_results": {
+                "sunday": [
+                    {
+                        "time": "04 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 4
+                    },
+                    {
+                        "time": "05 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 6
+                    },
+                    {
+                        "time": "06 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 8
+                    },
+                    {
+                        "time": "07 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 10
+                    },
+                    {
+                        "time": "08 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 12
+                    },
+                    {
+                        "time": "09 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 14
+                    },
+                    {
+                        "time": "10 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 15
+                    },
+                    {
+                        "time": "11 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 14
+                    },
+                    {
+                        "time": "12 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 14
+                    },
+                    {
+                        "time": "13 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 13
+                    },
+                    {
+                        "time": "14 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 14
+                    },
+                    {
+                        "time": "15 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 19
+                    },
+                    {
+                        "time": "16 giờ",
+                        "info": "Thường không quá đông đúc",
+                        "busyness_score": 32
+                    },
+                    {
+                        "time": "17 giờ",
+                        "info": "Thường hơi đông đúc",
+                        "busyness_score": 54
+                    },
+                    {
+                        "time": "18 giờ",
+                        "info": "Đông khách như mọi khi",
+                        "busyness_score": 81
+                    },
+                    {
+                        "time": "19 giờ",
+                        "info": "Đông khách như mọi khi",
+                        "busyness_score": 100
+                    },
+                    {
+                        "time": "20 giờ",
+                        "info": "Đông khách như mọi khi",
+                        "busyness_score": 94
+                    },
+                    {
+                        "time": "21 giờ",
+                        "info": "Thường hơi đông đúc",
+                        "busyness_score": 65
+                    },
+                    {
+                        "time": "22 giờ",
+                        "info": "Thường không quá đông đúc",
+                        "busyness_score": 33
+                    },
+                    {
+                        "time": "23 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 13
+                    },
+                    {
+                        "time": "00 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 4
+                    },
+                    {
+                        "time": "01 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 2
+                    },
+                    {
+                        "time": "02 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 1
+                    },
+                    {
+                        "time": "03 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 2
+                    }
+                ],
+                "monday": [
+                    {
+                        "time": "04 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 3
+                    },
+                    {
+                        "time": "05 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 5
+                    },
+                    {
+                        "time": "06 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 7
+                    },
+                    {
+                        "time": "07 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 8
+                    },
+                    {
+                        "time": "08 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 8
+                    },
+                    {
+                        "time": "09 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 8
+                    },
+                    {
+                        "time": "10 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 8
+                    },
+                    {
+                        "time": "11 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 8
+                    },
+                    {
+                        "time": "12 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 8
+                    },
+                    {
+                        "time": "13 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 7
+                    },
+                    {
+                        "time": "14 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 8
+                    },
+                    {
+                        "time": "15 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 10
+                    },
+                    {
+                        "time": "16 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 14
+                    },
+                    {
+                        "time": "17 giờ",
+                        "info": "Thường không quá đông đúc",
+                        "busyness_score": 23
+                    },
+                    {
+                        "time": "18 giờ",
+                        "info": "Thường không quá đông đúc",
+                        "busyness_score": 33
+                    },
+                    {
+                        "time": "19 giờ",
+                        "info": "Thường không quá đông đúc",
+                        "busyness_score": 41
+                    },
+                    {
+                        "time": "20 giờ",
+                        "info": "Thường không quá đông đúc",
+                        "busyness_score": 41
+                    },
+                    {
+                        "time": "21 giờ",
+                        "info": "Thường không quá đông đúc",
+                        "busyness_score": 32
+                    },
+                    {
+                        "time": "22 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 19
+                    },
+                    {
+                        "time": "23 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 10
+                    },
+                    {
+                        "time": "00 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 4
+                    },
+                    {
+                        "time": "01 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 2
+                    },
+                    {
+                        "time": "02 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 1
+                    },
+                    {
+                        "time": "03 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 2
+                    }
+                ],
+                "tuesday": [
+                    {
+                        "time": "04 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 3
+                    },
+                    {
+                        "time": "05 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 5
+                    },
+                    {
+                        "time": "06 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 7
+                    },
+                    {
+                        "time": "07 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 8
+                    },
+                    {
+                        "time": "08 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 8
+                    },
+                    {
+                        "time": "09 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 9
+                    },
+                    {
+                        "time": "10 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 9
+                    },
+                    {
+                        "time": "11 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 8
+                    },
+                    {
+                        "time": "12 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 8
+                    },
+                    {
+                        "time": "13 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 8
+                    },
+                    {
+                        "time": "14 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 9
+                    },
+                    {
+                        "time": "15 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 12
+                    },
+                    {
+                        "time": "16 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 17
+                    },
+                    {
+                        "time": "17 giờ",
+                        "info": "Thường không quá đông đúc",
+                        "busyness_score": 25
+                    },
+                    {
+                        "time": "18 giờ",
+                        "info": "Thường không quá đông đúc",
+                        "busyness_score": 36
+                    },
+                    {
+                        "time": "19 giờ",
+                        "info": "Thường không quá đông đúc",
+                        "busyness_score": 45
+                    },
+                    {
+                        "time": "20 giờ",
+                        "info": "Thường không quá đông đúc",
+                        "busyness_score": 45
+                    },
+                    {
+                        "time": "21 giờ",
+                        "info": "Thường không quá đông đúc",
+                        "busyness_score": 34
+                    },
+                    {
+                        "time": "22 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 19
+                    },
+                    {
+                        "time": "23 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 10
+                    },
+                    {
+                        "time": "00 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 4
+                    },
+                    {
+                        "time": "01 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 2
+                    },
+                    {
+                        "time": "02 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 2
+                    },
+                    {
+                        "time": "03 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 2
+                    }
+                ],
+                "wednesday": [
+                    {
+                        "time": "04 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 3
+                    },
+                    {
+                        "time": "05 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 5
+                    },
+                    {
+                        "time": "06 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 7
+                    },
+                    {
+                        "time": "07 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 8
+                    },
+                    {
+                        "time": "08 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 9
+                    },
+                    {
+                        "time": "09 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 10
+                    },
+                    {
+                        "time": "10 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 10
+                    },
+                    {
+                        "time": "11 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 9
+                    },
+                    {
+                        "time": "12 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 8
+                    },
+                    {
+                        "time": "13 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 8
+                    },
+                    {
+                        "time": "14 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 9
+                    },
+                    {
+                        "time": "15 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 12
+                    },
+                    {
+                        "time": "16 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 17
+                    },
+                    {
+                        "time": "17 giờ",
+                        "info": "Thường không quá đông đúc",
+                        "busyness_score": 25
+                    },
+                    {
+                        "time": "18 giờ",
+                        "info": "Thường không quá đông đúc",
+                        "busyness_score": 35
+                    },
+                    {
+                        "time": "19 giờ",
+                        "info": "Thường không quá đông đúc",
+                        "busyness_score": 43
+                    },
+                    {
+                        "time": "20 giờ",
+                        "info": "Thường không quá đông đúc",
+                        "busyness_score": 42
+                    },
+                    {
+                        "time": "21 giờ",
+                        "info": "Thường không quá đông đúc",
+                        "busyness_score": 32
+                    },
+                    {
+                        "time": "22 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 18
+                    },
+                    {
+                        "time": "23 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 9
+                    },
+                    {
+                        "time": "00 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 4
+                    },
+                    {
+                        "time": "01 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 2
+                    },
+                    {
+                        "time": "02 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 2
+                    },
+                    {
+                        "time": "03 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 2
+                    }
+                ],
+                "thursday": [
+                    {
+                        "time": "04 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 4
+                    },
+                    {
+                        "time": "05 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 6
+                    },
+                    {
+                        "time": "06 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 8
+                    },
+                    {
+                        "time": "07 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 9
+                    },
+                    {
+                        "time": "08 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 9
+                    },
+                    {
+                        "time": "09 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 10
+                    },
+                    {
+                        "time": "10 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 10
+                    },
+                    {
+                        "time": "11 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 9
+                    },
+                    {
+                        "time": "12 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 8
+                    },
+                    {
+                        "time": "13 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 8
+                    },
+                    {
+                        "time": "14 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 9
+                    },
+                    {
+                        "time": "15 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 11
+                    },
+                    {
+                        "time": "16 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 17
+                    },
+                    {
+                        "time": "17 giờ",
+                        "info": "Thường không quá đông đúc",
+                        "busyness_score": 26
+                    },
+                    {
+                        "time": "18 giờ",
+                        "info": "Thường không quá đông đúc",
+                        "busyness_score": 38
+                    },
+                    {
+                        "time": "19 giờ",
+                        "info": "Thường không quá đông đúc",
+                        "busyness_score": 47
+                    },
+                    {
+                        "time": "20 giờ",
+                        "info": "Thường không quá đông đúc",
+                        "busyness_score": 47
+                    },
+                    {
+                        "time": "21 giờ",
+                        "info": "Thường không quá đông đúc",
+                        "busyness_score": 35
+                    },
+                    {
+                        "time": "22 giờ",
+                        "info": "Thường không quá đông đúc",
+                        "busyness_score": 20
+                    },
+                    {
+                        "time": "23 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 10
+                    },
+                    {
+                        "time": "00 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 5
+                    },
+                    {
+                        "time": "01 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 3
+                    },
+                    {
+                        "time": "02 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 2
+                    },
+                    {
+                        "time": "03 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 3
+                    }
+                ],
+                "friday": [
+                    {
+                        "time": "04 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 3
+                    },
+                    {
+                        "time": "05 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 5
+                    },
+                    {
+                        "time": "06 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 7
+                    },
+                    {
+                        "time": "07 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 8
+                    },
+                    {
+                        "time": "08 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 8
+                    },
+                    {
+                        "time": "09 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 9
+                    },
+                    {
+                        "time": "10 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 9
+                    },
+                    {
+                        "time": "11 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 9
+                    },
+                    {
+                        "time": "12 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 8
+                    },
+                    {
+                        "time": "13 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 7
+                    },
+                    {
+                        "time": "14 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 9
+                    },
+                    {
+                        "time": "15 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 12
+                    },
+                    {
+                        "time": "16 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 18
+                    },
+                    {
+                        "time": "17 giờ",
+                        "info": "Thường không quá đông đúc",
+                        "busyness_score": 27
+                    },
+                    {
+                        "time": "18 giờ",
+                        "info": "Thường không quá đông đúc",
+                        "busyness_score": 38
+                    },
+                    {
+                        "time": "19 giờ",
+                        "info": "Thường hơi đông đúc",
+                        "busyness_score": 51
+                    },
+                    {
+                        "time": "20 giờ",
+                        "info": "Thường hơi đông đúc",
+                        "busyness_score": 54
+                    },
+                    {
+                        "time": "21 giờ",
+                        "info": "Thường không quá đông đúc",
+                        "busyness_score": 43
+                    },
+                    {
+                        "time": "22 giờ",
+                        "info": "Thường không quá đông đúc",
+                        "busyness_score": 25
+                    },
+                    {
+                        "time": "23 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 12
+                    },
+                    {
+                        "time": "00 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 5
+                    },
+                    {
+                        "time": "01 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 2
+                    },
+                    {
+                        "time": "02 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 2
+                    },
+                    {
+                        "time": "03 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 2
+                    }
+                ],
+                "saturday": [
+                    {
+                        "time": "04 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 4
+                    },
+                    {
+                        "time": "05 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 6
+                    },
+                    {
+                        "time": "06 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 8
+                    },
+                    {
+                        "time": "07 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 9
+                    },
+                    {
+                        "time": "08 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 10
+                    },
+                    {
+                        "time": "09 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 11
+                    },
+                    {
+                        "time": "10 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 11
+                    },
+                    {
+                        "time": "11 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 10
+                    },
+                    {
+                        "time": "12 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 9
+                    },
+                    {
+                        "time": "13 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 9
+                    },
+                    {
+                        "time": "14 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 10
+                    },
+                    {
+                        "time": "15 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 14
+                    },
+                    {
+                        "time": "16 giờ",
+                        "info": "Thường không quá đông đúc",
+                        "busyness_score": 23
+                    },
+                    {
+                        "time": "17 giờ",
+                        "info": "Thường không quá đông đúc",
+                        "busyness_score": 40
+                    },
+                    {
+                        "time": "18 giờ",
+                        "info": "Thường hơi đông đúc",
+                        "busyness_score": 64
+                    },
+                    {
+                        "time": "19 giờ",
+                        "info": "Đông khách như mọi khi",
+                        "busyness_score": 86
+                    },
+                    {
+                        "time": "20 giờ",
+                        "info": "Đông khách như mọi khi",
+                        "busyness_score": 89
+                    },
+                    {
+                        "time": "21 giờ",
+                        "info": "Thường hơi đông đúc",
+                        "busyness_score": 67
+                    },
+                    {
+                        "time": "22 giờ",
+                        "info": "Thường không quá đông đúc",
+                        "busyness_score": 36
+                    },
+                    {
+                        "time": "23 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 16
+                    },
+                    {
+                        "time": "00 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 5
+                    },
+                    {
+                        "time": "01 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 3
+                    },
+                    {
+                        "time": "02 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 2
+                    },
+                    {
+                        "time": "03 giờ",
+                        "info": "Thường không đông đúc",
+                        "busyness_score": 3
+                    }
+                ]
+            },
+            "live_hash": {
+                "info": "Không đông đúc",
+                "time_spent": "Mọi người thường dành tối đa 1,5 giờ ở đây"
+            }
+        }
+    }
+}

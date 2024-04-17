@@ -39,22 +39,22 @@ const locations = [
   ...homeStay,
 ];
 
-const preprocessedLocations = locations.map((item) => ({
-  name: item.title,
-  address: item.address,
-  description: item.description ?? "",
-  coordinate: {
+const filteredLocations = locations.map((item) => ({
+  location_coordinate: {
     longitude: item.longitude,
     latitude: item.latitude,
   },
-  rating: item.rating ?? 0,
-  ratingCount: item.ratingCount ?? 0,
-  type: item.type,
-  phoneNumber: item.phoneNumber ?? "",
-  website: item.website ?? "",
+  location_name: item.title,
+  location_type: item.type,
+  location_address: item.address,
+  location_description: item.description,
+  location_rating: item.rating ?? 0,
+  location_total_rating: item.ratingCount ?? 0,
+  location_phone_number: item.phoneNumber,
+  location_website: item.website,
 }));
 
-Location.create(preprocessedLocations)
+Location.create(filteredLocations)
   .then((data) => {
     console.log("Thành công. Locations đã được thêm vào cơ sở dữ liệu", data);
   })

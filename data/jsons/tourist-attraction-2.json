@@ -1,0 +1,764 @@
+{
+    "search_metadata": {
+        "id": "661ed2f2a3f4ef98e2e6ebd5",
+        "status": "Success",
+        "json_endpoint": "https://serpapi.com/searches/f67f48005f534e30/661ed2f2a3f4ef98e2e6ebd5.json",
+        "created_at": "2024-04-16 19:35:14 UTC",
+        "processed_at": "2024-04-16 19:35:14 UTC",
+        "google_maps_url": "https://www.google.com/maps/search/%C4%90i%E1%BB%83m+thu+h%C3%BAt+kh%C3%A1ch+du+l%E1%BB%8Bch/@11.940147238020286,108.45809725440188,11z?hl=vi",
+        "raw_html_file": "https://serpapi.com/searches/f67f48005f534e30/661ed2f2a3f4ef98e2e6ebd5.html",
+        "total_time_taken": 7.36
+    },
+    "search_parameters": {
+        "engine": "google_maps",
+        "type": "search",
+        "q": "Điểm thu hút khách du lịch",
+        "ll": "@11.940147238020286,108.45809725440188,11z",
+        "google_domain": "google.com",
+        "hl": "vi"
+    },
+    "search_information": {
+        "local_results_state": "Results for exact spelling",
+        "query_displayed": "Điểm thu hút khách du lịch"
+    },
+    "local_results": [
+        {
+            "position": 1,
+            "title": "Dốc Nhà Bồ",
+            "place_id": "ChIJHXpCc8UTcTERduxyrmJV9Nw",
+            "data_id": "0x317113c573427a1d:0xdcf45562ae72ec76",
+            "data_cid": "15921444464983469174",
+            "reviews_link": "https://serpapi.com/search.json?data_id=0x317113c573427a1d%3A0xdcf45562ae72ec76&engine=google_maps_reviews&hl=vi",
+            "photos_link": "https://serpapi.com/search.json?data_id=0x317113c573427a1d%3A0xdcf45562ae72ec76&engine=google_maps_photos&hl=vi",
+            "gps_coordinates": {
+                "latitude": 11.9551442,
+                "longitude": 108.4504491
+            },
+            "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=vi&place_id=ChIJHXpCc8UTcTERduxyrmJV9Nw",
+            "provider_id": "/g/11r10f7c84",
+            "rating": 4.8,
+            "reviews": 23,
+            "type": "Điểm thu hút khách du lịch",
+            "types": [
+                "Điểm thu hút khách du lịch",
+                "Trung tâm thiền"
+            ],
+            "type_id": "tourist_attraction",
+            "type_ids": [
+                "tourist_attraction",
+                "meditation_center"
+            ],
+            "address": "Hồ Xuân Hương 400m, 42A Đường Nguyên Tử Lực ( cách cửa Vườn Hoa Thành Phố, Phường 8, Thành phố Đà Lạt, Lâm Đồng, Việt Nam",
+            "open_state": "Mở cả ngày",
+            "hours": "Mở cả ngày",
+            "operating_hours": {
+                "thứ tư": "Mở cửa cả ngày",
+                "thứ năm": "Mở cửa cả ngày",
+                "thứ sáu": "Mở cửa cả ngày",
+                "thứ bảy": "Mở cửa cả ngày",
+                "chủ nhật": "Mở cửa cả ngày",
+                "thứ hai": "Mở cửa cả ngày",
+                "thứ ba": "Mở cửa cả ngày"
+            },
+            "phone": "+84 908 664 265",
+            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipO_y5rmevUyzyCEf3MYKRSbmSxCXcNIwo96HxD8=w122-h92-k-no"
+        },
+        {
+            "position": 2,
+            "title": "Du lịch Đà Lạt toàn cảnh (trú Minh Tâm hotel)",
+            "place_id": "ChIJNYE4G6UTcTERtRY0jbbpXoA",
+            "data_id": "0x317113a51b388135:0x805ee9b68d3416b5",
+            "data_cid": "9250087654927898293",
+            "reviews_link": "https://serpapi.com/search.json?data_id=0x317113a51b388135%3A0x805ee9b68d3416b5&engine=google_maps_reviews&hl=vi",
+            "photos_link": "https://serpapi.com/search.json?data_id=0x317113a51b388135%3A0x805ee9b68d3416b5&engine=google_maps_photos&hl=vi",
+            "gps_coordinates": {
+                "latitude": 11.9404192,
+                "longitude": 108.45831319999999
+            },
+            "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=vi&place_id=ChIJNYE4G6UTcTERtRY0jbbpXoA",
+            "provider_id": "/g/11rsv084vq",
+            "unclaimed_listing": true,
+            "type": "Điểm thu hút khách du lịch",
+            "types": [
+                "Điểm thu hút khách du lịch"
+            ],
+            "type_id": "tourist_attraction",
+            "type_ids": [
+                "tourist_attraction"
+            ],
+            "address": "WFR5+588, Minh tâm hotel, Lê Văn Tám, Phường 10, Thành phố Đà Lạt, Lâm Đồng, Việt Nam",
+            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipNie2szV-4refVKEl4mlIAVM-cHcfQM5cV0Df_S=w163-h92-k-no"
+        },
+        {
+            "position": 3,
+            "title": "KHU DU LỊCH ĐẢO THỎ",
+            "place_id": "ChIJzcn5I39zcTERscAKojbQfvU",
+            "data_id": "0x3171737f23f9c9cd:0xf57ed036a20ac0b1",
+            "data_cid": "17689805319423312049",
+            "reviews_link": "https://serpapi.com/search.json?data_id=0x3171737f23f9c9cd%3A0xf57ed036a20ac0b1&engine=google_maps_reviews&hl=vi",
+            "photos_link": "https://serpapi.com/search.json?data_id=0x3171737f23f9c9cd%3A0xf57ed036a20ac0b1&engine=google_maps_photos&hl=vi",
+            "gps_coordinates": {
+                "latitude": 12.0030299,
+                "longitude": 108.35008219999999
+            },
+            "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=vi&place_id=ChIJzcn5I39zcTERscAKojbQfvU",
+            "provider_id": "/g/11jp0v7gr1",
+            "rating": 5,
+            "reviews": 1,
+            "unclaimed_listing": true,
+            "type": "Điểm thu hút khách du lịch",
+            "types": [
+                "Điểm thu hút khách du lịch"
+            ],
+            "type_id": "tourist_attraction",
+            "type_ids": [
+                "tourist_attraction"
+            ],
+            "address": "2932+628, Unnamed Road, Lạc Dương, Lâm Đồng, Việt Nam",
+            "open_state": "Đã đóng cửa ⋅ Mở lúc 8:00",
+            "hours": "Đã đóng cửa ⋅ Mở lúc 8:00",
+            "operating_hours": {
+                "thứ tư": "08:00–17:00",
+                "thứ năm": "08:00–17:00",
+                "thứ sáu": "08:00–17:00",
+                "thứ bảy": "08:00–17:00",
+                "chủ nhật": "08:00–17:00",
+                "thứ hai": "08:00–17:00",
+                "thứ ba": "08:00–17:00"
+            },
+            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipOiELUYbW9ITcPxhvpAcTpLPxVRKJ8YcAhZ25Gb=w122-h92-k-no"
+        },
+        {
+            "position": 4,
+            "title": "Khu Du Lịch Lá Phong Đà Lạt",
+            "place_id": "ChIJKbqQUD4TcTERUAXkyRkE5Ss",
+            "data_id": "0x3171133e5090ba29:0x2be50419c9e40550",
+            "data_cid": "3162938822105498960",
+            "reviews_link": "https://serpapi.com/search.json?data_id=0x3171133e5090ba29%3A0x2be50419c9e40550&engine=google_maps_reviews&hl=vi",
+            "photos_link": "https://serpapi.com/search.json?data_id=0x3171133e5090ba29%3A0x2be50419c9e40550&engine=google_maps_photos&hl=vi",
+            "gps_coordinates": {
+                "latitude": 11.9288229,
+                "longitude": 108.4512551
+            },
+            "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=vi&place_id=ChIJKbqQUD4TcTERUAXkyRkE5Ss",
+            "provider_id": "/g/11dzl_w7np",
+            "rating": 4.1,
+            "reviews": 3160,
+            "unclaimed_listing": true,
+            "type": "Điểm thu hút khách du lịch",
+            "types": [
+                "Điểm thu hút khách du lịch"
+            ],
+            "type_id": "tourist_attraction",
+            "type_ids": [
+                "tourist_attraction"
+            ],
+            "address": "45 Đường Đặng Thái Thân, Phường 3, Thành phố Đà Lạt, Lâm Đồng, Việt Nam",
+            "open_state": "Đã đóng cửa ⋅ Mở lúc 7:30",
+            "hours": "Đã đóng cửa ⋅ Mở lúc 7:30",
+            "operating_hours": {
+                "thứ tư": "07:30–17:30",
+                "thứ năm": "07:30–17:30",
+                "thứ sáu": "07:30–17:30",
+                "thứ bảy": "07:30–17:30",
+                "chủ nhật": "07:30–17:30",
+                "thứ hai": "07:30–17:30",
+                "thứ ba": "07:30–17:30"
+            },
+            "phone": "+84 907 592 603",
+            "description": "Rừng cây phong, anh đào và nhà trọ. Khu rừng có hàng nghìn cây phong, anh đào và tùng bách cùng quán cà phê, khu cắm trại và nhà trọ dưới mặt đất.",
+            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipPw189XdteFnKJpsscIcRbgc185Zuhf_5usiKGu=w122-h92-k-no"
+        },
+        {
+            "position": 5,
+            "title": "KHU DU LỊCH VƯỜN THIỀN VI DIỆU THỨC",
+            "place_id": "ChIJzfDcSiNzcTER2rGQun-ouE4",
+            "data_id": "0x317173234adcf0cd:0x4eb8a87fba90b1da",
+            "data_cid": "5672468997217497562",
+            "reviews_link": "https://serpapi.com/search.json?data_id=0x317173234adcf0cd%3A0x4eb8a87fba90b1da&engine=google_maps_reviews&hl=vi",
+            "photos_link": "https://serpapi.com/search.json?data_id=0x317173234adcf0cd%3A0x4eb8a87fba90b1da&engine=google_maps_photos&hl=vi",
+            "gps_coordinates": {
+                "latitude": 12.0016875,
+                "longitude": 108.3505625
+            },
+            "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=vi&place_id=ChIJzfDcSiNzcTER2rGQun-ouE4",
+            "provider_id": "/g/11jp05s44d",
+            "rating": 4.9,
+            "reviews": 9,
+            "type": "Điểm thu hút khách du lịch",
+            "types": [
+                "Điểm thu hút khách du lịch"
+            ],
+            "type_id": "tourist_attraction",
+            "type_ids": [
+                "tourist_attraction"
+            ],
+            "address": "Phi Tô, Lạc Dương, Lâm Đồng, Việt Nam",
+            "open_state": "Đã đóng cửa ⋅ Mở lúc 8:00",
+            "hours": "Đã đóng cửa ⋅ Mở lúc 8:00",
+            "operating_hours": {
+                "thứ tư": "08:00–17:00",
+                "thứ năm": "08:00–17:00",
+                "thứ sáu": "08:00–17:00",
+                "thứ bảy": "08:00–17:00",
+                "chủ nhật": "08:00–17:00",
+                "thứ hai": "08:00–17:00",
+                "thứ ba": "08:00–17:00"
+            },
+            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipP3wfRGV_96ukn8Bk3WqFYoyJyYA3OeNFloJPns=w138-h92-k-no"
+        },
+        {
+            "position": 6,
+            "title": "Khu Du Lịch Đá Tiên",
+            "place_id": "ChIJc4lrOTZrcTEREb_nVhYuc00",
+            "data_id": "0x31716b36396b8973:0x4d732e1656e7bf11",
+            "data_cid": "5580855036724363025",
+            "reviews_link": "https://serpapi.com/search.json?data_id=0x31716b36396b8973%3A0x4d732e1656e7bf11&engine=google_maps_reviews&hl=vi",
+            "photos_link": "https://serpapi.com/search.json?data_id=0x31716b36396b8973%3A0x4d732e1656e7bf11&engine=google_maps_photos&hl=vi",
+            "gps_coordinates": {
+                "latitude": 11.882684699999999,
+                "longitude": 108.417638
+            },
+            "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=vi&place_id=ChIJc4lrOTZrcTEREb_nVhYuc00",
+            "provider_id": "/g/11b77cmh12",
+            "rating": 4.2,
+            "reviews": 758,
+            "type": "Điểm thu hút khách du lịch",
+            "types": [
+                "Điểm thu hút khách du lịch"
+            ],
+            "type_id": "tourist_attraction",
+            "type_ids": [
+                "tourist_attraction"
+            ],
+            "address": "Phường 4, Thành phố Đà Lạt, Lâm Đồng, Việt Nam",
+            "open_state": "Đã đóng cửa ⋅ Mở lúc 7:00",
+            "hours": "Đã đóng cửa ⋅ Mở lúc 7:00",
+            "operating_hours": {
+                "thứ tư": "07:00–18:00",
+                "thứ năm": "07:00–18:00",
+                "thứ sáu": "07:00–18:00",
+                "thứ bảy": "07:00–18:00",
+                "chủ nhật": "07:00–18:00",
+                "thứ hai": "07:00–18:00",
+                "thứ ba": "07:00–18:00"
+            },
+            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipPKcgu6iUiacx76TKOFXz7Zo4V581bsFIRS_emI=w122-h92-k-no"
+        },
+        {
+            "position": 7,
+            "title": "Cầu chữ Y",
+            "place_id": "ChIJEwyflvkTcTERjCPCOo2IEx4",
+            "data_id": "0x317113f9969f0c13:0x1e13888d3ac2238c",
+            "data_cid": "2167225985852908428",
+            "reviews_link": "https://serpapi.com/search.json?data_id=0x317113f9969f0c13%3A0x1e13888d3ac2238c&engine=google_maps_reviews&hl=vi",
+            "photos_link": "https://serpapi.com/search.json?data_id=0x317113f9969f0c13%3A0x1e13888d3ac2238c&engine=google_maps_photos&hl=vi",
+            "gps_coordinates": {
+                "latitude": 11.9469561,
+                "longitude": 108.448993
+            },
+            "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=vi&place_id=ChIJEwyflvkTcTERjCPCOo2IEx4",
+            "provider_id": "/g/11p39ts2jl",
+            "rating": 4.8,
+            "reviews": 9,
+            "unclaimed_listing": true,
+            "type": "Điểm thu hút khách du lịch",
+            "types": [
+                "Điểm thu hút khách du lịch"
+            ],
+            "type_id": "tourist_attraction",
+            "type_ids": [
+                "tourist_attraction"
+            ],
+            "address": "WCWX+QHQ, Đ. Trần Quốc Toản, Phường 1, Thành phố Đà Lạt, Lâm Đồng, Việt Nam",
+            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipOKgE11q_pW-ZpkhqOE_pT4RUKPmUKR_HWec5AQ=w122-h92-k-no"
+        },
+        {
+            "position": 8,
+            "title": "Thung lũng hoa cẩm tú cầu",
+            "place_id": "ChIJxToUMi8NcTERsNE9zBNc3Pg",
+            "data_id": "0x31710d2f32143ac5:0xf8dc5c13cc3dd1b0",
+            "data_cid": "17932309056383209904",
+            "reviews_link": "https://serpapi.com/search.json?data_id=0x31710d2f32143ac5%3A0xf8dc5c13cc3dd1b0&engine=google_maps_reviews&hl=vi",
+            "photos_link": "https://serpapi.com/search.json?data_id=0x31710d2f32143ac5%3A0xf8dc5c13cc3dd1b0&engine=google_maps_photos&hl=vi",
+            "gps_coordinates": {
+                "latitude": 11.9781744,
+                "longitude": 108.44513459999999
+            },
+            "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=vi&place_id=ChIJxToUMi8NcTERsNE9zBNc3Pg",
+            "provider_id": "/g/11fm7kxv6r",
+            "rating": 4.5,
+            "reviews": 474,
+            "unclaimed_listing": true,
+            "type": "Điểm thu hút khách du lịch",
+            "types": [
+                "Điểm thu hút khách du lịch"
+            ],
+            "type_id": "tourist_attraction",
+            "type_ids": [
+                "tourist_attraction"
+            ],
+            "address": "XCHW+736, Thị trấn Lạc Dương, Lạc Dương, Lâm Đồng, Việt Nam",
+            "open_state": "Mở cả ngày",
+            "hours": "Mở cả ngày",
+            "operating_hours": {
+                "thứ tư": "Mở cửa cả ngày",
+                "thứ năm": "Mở cửa cả ngày",
+                "thứ sáu": "Mở cửa cả ngày",
+                "thứ bảy": "Mở cửa cả ngày",
+                "chủ nhật": "Mở cửa cả ngày",
+                "thứ hai": "Mở cửa cả ngày",
+                "thứ ba": "Mở cửa cả ngày"
+            },
+            "phone": "+84 796 598 957",
+            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipNg3Ro9N7pBz8m1hjCfLgETFNwntqfWNKJ7HQQ0=w92-h92-k-no"
+        },
+        {
+            "position": 9,
+            "title": "Bắc Thang Lên Hỏi Ông Trời",
+            "place_id": "ChIJrSiKs8QRcTERfwhruh4Khp0",
+            "data_id": "0x317111c4b38a28ad:0x9d860a1eba6b087f",
+            "data_cid": "11350771037926787199",
+            "reviews_link": "https://serpapi.com/search.json?data_id=0x317111c4b38a28ad%3A0x9d860a1eba6b087f&engine=google_maps_reviews&hl=vi",
+            "photos_link": "https://serpapi.com/search.json?data_id=0x317111c4b38a28ad%3A0x9d860a1eba6b087f&engine=google_maps_photos&hl=vi",
+            "gps_coordinates": {
+                "latitude": 11.9372475,
+                "longitude": 108.53155919999999
+            },
+            "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=vi&place_id=ChIJrSiKs8QRcTERfwhruh4Khp0",
+            "provider_id": "/g/11j24k00vd",
+            "rating": 3.6,
+            "reviews": 206,
+            "type": "Điểm thu hút khách du lịch",
+            "types": [
+                "Điểm thu hút khách du lịch"
+            ],
+            "type_id": "tourist_attraction",
+            "type_ids": [
+                "tourist_attraction"
+            ],
+            "address": "Tuý Sơn, Xuân Thọ, Thành phố Đà Lạt, Lâm Đồng, Việt Nam",
+            "open_state": "Đã đóng cửa ⋅ Mở lúc 6:00",
+            "hours": "Đã đóng cửa ⋅ Mở lúc 6:00",
+            "operating_hours": {
+                "thứ tư": "06:00–18:00",
+                "thứ năm": "06:00–18:00",
+                "thứ sáu": "06:00–18:00",
+                "thứ bảy": "06:00–18:00",
+                "chủ nhật": "06:00–18:00",
+                "thứ hai": "06:00–17:00",
+                "thứ ba": "06:00–18:00"
+            },
+            "website": "https://m.facebook.com/cloudshunting/",
+            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipPTYiY_xJFMPO0xCpFlitziSMO3P6EZeyhd2pTp=w138-h92-k-no"
+        },
+        {
+            "position": 10,
+            "title": "Khu Du Lịch Sinh Thái Hiệp Lực",
+            "place_id": "ChIJXWSJRZcScTERtZHd6q_hgIo",
+            "data_id": "0x317112974589645d:0x8a80e1afeadd91b5",
+            "data_cid": "9980224919928934837",
+            "reviews_link": "https://serpapi.com/search.json?data_id=0x317112974589645d%3A0x8a80e1afeadd91b5&engine=google_maps_reviews&hl=vi",
+            "photos_link": "https://serpapi.com/search.json?data_id=0x317112974589645d%3A0x8a80e1afeadd91b5&engine=google_maps_photos&hl=vi",
+            "gps_coordinates": {
+                "latitude": 11.9798352,
+                "longitude": 108.4565216
+            },
+            "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=vi&place_id=ChIJXWSJRZcScTERtZHd6q_hgIo",
+            "provider_id": "/g/11b67jfhj1",
+            "rating": 3.9,
+            "reviews": 113,
+            "unclaimed_listing": true,
+            "type": "Điểm thu hút khách du lịch",
+            "types": [
+                "Điểm thu hút khách du lịch"
+            ],
+            "type_id": "tourist_attraction",
+            "type_ids": [
+                "tourist_attraction"
+            ],
+            "address": "XFH4+WJJ, Vòng Lâm Viên, Phường 8, Thành phố Đà Lạt, Lâm Đồng, Việt Nam",
+            "open_state": "Đã đóng cửa ⋅ Mở lúc 7:30",
+            "hours": "Đã đóng cửa ⋅ Mở lúc 7:30",
+            "operating_hours": {
+                "thứ tư": "07:30–17:00",
+                "thứ năm": "07:30–17:00",
+                "thứ sáu": "07:30–17:00",
+                "thứ bảy": "07:30–17:00",
+                "chủ nhật": "07:30–17:00",
+                "thứ hai": "07:30–17:00",
+                "thứ ba": "07:30–17:00"
+            },
+            "phone": "+84 933 063 480",
+            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipNxAC1N_Vy6L_xb2meFrHTPWBMkC8J0G59Qw60N=w122-h92-k-no"
+        },
+        {
+            "position": 11,
+            "title": "Hồ du lịch Đạ Sar",
+            "place_id": "ChIJ00wCFNtZcTER3lr2i7Kdqd8",
+            "data_id": "0x317159db14024cd3:0xdfa99db28bf65ade",
+            "data_cid": "16116586131699948254",
+            "reviews_link": "https://serpapi.com/search.json?data_id=0x317159db14024cd3%3A0xdfa99db28bf65ade&engine=google_maps_reviews&hl=vi",
+            "photos_link": "https://serpapi.com/search.json?data_id=0x317159db14024cd3%3A0xdfa99db28bf65ade&engine=google_maps_photos&hl=vi",
+            "gps_coordinates": {
+                "latitude": 11.7164205,
+                "longitude": 108.1357651
+            },
+            "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=vi&place_id=ChIJ00wCFNtZcTER3lr2i7Kdqd8",
+            "provider_id": "/g/11nmr48fzq",
+            "rating": 5,
+            "reviews": 2,
+            "unclaimed_listing": true,
+            "type": "Điểm thu hút khách du lịch",
+            "types": [
+                "Điểm thu hút khách du lịch"
+            ],
+            "type_id": "tourist_attraction",
+            "type_ids": [
+                "tourist_attraction"
+            ],
+            "address": "P48P+H86, Hồ Đạ Sar, Liên Hà, Lâm Hà, Lâm Đồng, Việt Nam",
+            "open_state": "Mở cả ngày",
+            "hours": "Mở cả ngày",
+            "operating_hours": {
+                "thứ tư": "Mở cửa cả ngày",
+                "thứ năm": "Mở cửa cả ngày",
+                "thứ sáu": "Mở cửa cả ngày",
+                "thứ bảy": "Mở cửa cả ngày",
+                "chủ nhật": "Mở cửa cả ngày",
+                "thứ hai": "Mở cửa cả ngày",
+                "thứ ba": "Mở cửa cả ngày"
+            },
+            "phone": "+84 902 976 406",
+            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipMYNN29EoveNmnYYUzUU_AAFcgf84_y1kK3ETX8=w204-h92-k-no"
+        },
+        {
+            "position": 12,
+            "title": "Khu du lịch ĐÀ LẠT SẮC MÀU - Làng hoa Vạn Thành",
+            "place_id": "ChIJIQS8K8BtcTERiot50kMDwkA",
+            "data_id": "0x31716dc02bbc0421:0x40c20343d2798b8a",
+            "data_cid": "4666295753738128266",
+            "reviews_link": "https://serpapi.com/search.json?data_id=0x31716dc02bbc0421%3A0x40c20343d2798b8a&engine=google_maps_reviews&hl=vi",
+            "photos_link": "https://serpapi.com/search.json?data_id=0x31716dc02bbc0421%3A0x40c20343d2798b8a&engine=google_maps_photos&hl=vi",
+            "gps_coordinates": {
+                "latitude": 11.947042699999999,
+                "longitude": 108.41315159999999
+            },
+            "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=vi&place_id=ChIJIQS8K8BtcTERiot50kMDwkA",
+            "provider_id": "/g/11nnzgp42m",
+            "rating": 4.3,
+            "reviews": 718,
+            "type": "Điểm thu hút khách du lịch",
+            "types": [
+                "Điểm thu hút khách du lịch",
+                "Đại lý du lịch tham quan"
+            ],
+            "type_id": "tourist_attraction",
+            "type_ids": [
+                "tourist_attraction",
+                "sightseeing_tour_agency"
+            ],
+            "address": "40 Vạn Thành, Phường 5, Thành phố Đà Lạt, Lâm Đồng 66113, Việt Nam",
+            "open_state": "Đã đóng cửa ⋅ Mở lúc 7:00",
+            "hours": "Đã đóng cửa ⋅ Mở lúc 7:00",
+            "operating_hours": {
+                "thứ tư": "07:00–17:00",
+                "thứ năm": "07:00–17:00",
+                "thứ sáu": "07:00–17:00",
+                "thứ bảy": "07:00–17:00",
+                "chủ nhật": "07:00–17:00",
+                "thứ hai": "07:00–17:00",
+                "thứ ba": "07:00–17:00"
+            },
+            "phone": "+84 931 119 903",
+            "website": "https://www.facebook.com/kdldalatsacmau",
+            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipOD2RYEjABqjK-WYZaO7QUhTbbQoLWFqNYJzZ7U=w122-h92-k-no"
+        },
+        {
+            "position": 13,
+            "title": "KDL Sinh Thái Hồ Suối Dứa",
+            "place_id": "ChIJhxelJ-RFcTERCL6Z-ubPpFo",
+            "data_id": "0x317145e427a51787:0x5aa4cfe6fa99be08",
+            "data_cid": "6531573950547869192",
+            "reviews_link": "https://serpapi.com/search.json?data_id=0x317145e427a51787%3A0x5aa4cfe6fa99be08&engine=google_maps_reviews&hl=vi",
+            "photos_link": "https://serpapi.com/search.json?data_id=0x317145e427a51787%3A0x5aa4cfe6fa99be08&engine=google_maps_photos&hl=vi",
+            "gps_coordinates": {
+                "latitude": 11.717376999999999,
+                "longitude": 108.2977365
+            },
+            "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=vi&place_id=ChIJhxelJ-RFcTERCL6Z-ubPpFo",
+            "provider_id": "/g/11t29z8f2x",
+            "rating": 5,
+            "reviews": 1,
+            "unclaimed_listing": true,
+            "type": "Điểm thu hút khách du lịch",
+            "types": [
+                "Điểm thu hút khách du lịch"
+            ],
+            "type_id": "tourist_attraction",
+            "type_ids": [
+                "tourist_attraction"
+            ],
+            "address": "P78W+VP7, Tân Hội, Đức Trọng, Lâm Đồng, Việt Nam",
+            "phone": "+84 963 318 779",
+            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipPJFOav5eMzYn-NSZhs4U-fiMIWuldiqcGuSWDS=w80-h106-k-no"
+        },
+        {
+            "position": 14,
+            "title": "Khu Du Lịch Sinh Thái Hoa Sơn Điền Trang",
+            "place_id": "ChIJtwY5-l5scTERRu6ig1d_VSY",
+            "data_id": "0x31716c5efa3906b7:0x26557f5783a2ee46",
+            "data_cid": "2762253960309042758",
+            "reviews_link": "https://serpapi.com/search.json?data_id=0x31716c5efa3906b7%3A0x26557f5783a2ee46&engine=google_maps_reviews&hl=vi",
+            "photos_link": "https://serpapi.com/search.json?data_id=0x31716c5efa3906b7%3A0x26557f5783a2ee46&engine=google_maps_photos&hl=vi",
+            "gps_coordinates": {
+                "latitude": 11.9338538,
+                "longitude": 108.3761498
+            },
+            "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=vi&place_id=ChIJtwY5-l5scTERRu6ig1d_VSY",
+            "provider_id": "/g/11f2szmvj_",
+            "rating": 3.9,
+            "reviews": 3681,
+            "type": "Điểm thu hút khách du lịch",
+            "types": [
+                "Điểm thu hút khách du lịch",
+                "Đại lý du lịch tham quan",
+                "Đại lý du lịch"
+            ],
+            "type_id": "tourist_attraction",
+            "type_ids": [
+                "tourist_attraction",
+                "sightseeing_tour_agency",
+                "travel_agency"
+            ],
+            "address": "Tiểu khu 159 Phường 5 hướng đi đèo, 159 ĐT725, P. 5, Thành phố Đà Lạt, Lâm Đồng 670000, Việt Nam",
+            "open_state": "Đã đóng cửa ⋅ Mở lúc 7:00",
+            "hours": "Đã đóng cửa ⋅ Mở lúc 7:00",
+            "operating_hours": {
+                "thứ tư": "07:00–17:00",
+                "thứ năm": "07:00–17:00",
+                "thứ sáu": "07:00–17:00",
+                "thứ bảy": "07:00–17:00",
+                "chủ nhật": "07:00–17:00",
+                "thứ hai": "07:00–17:00",
+                "thứ ba": "07:00–17:00"
+            },
+            "phone": "+84 868 588 886",
+            "website": "https://hoasondientrang.com/",
+            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipOExTSEJ2fTRAB-0WIVNCz4ByVPK-W-jiT0JXrG=w138-h92-k-no"
+        },
+        {
+            "position": 15,
+            "title": "Khu Du Lịch Thác Pongour",
+            "place_id": "ChIJAQAAUBhFcTERMLpEa0AJyoA",
+            "data_id": "0x3171451850000001:0x80ca09406b44ba30",
+            "data_cid": "9280240154432551472",
+            "reviews_link": "https://serpapi.com/search.json?data_id=0x3171451850000001%3A0x80ca09406b44ba30&engine=google_maps_reviews&hl=vi",
+            "photos_link": "https://serpapi.com/search.json?data_id=0x3171451850000001%3A0x80ca09406b44ba30&engine=google_maps_photos&hl=vi",
+            "gps_coordinates": {
+                "latitude": 11.689304199999999,
+                "longitude": 108.2656291
+            },
+            "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=vi&place_id=ChIJAQAAUBhFcTERMLpEa0AJyoA",
+            "provider_id": "/g/11b62rgs26",
+            "rating": 4.4,
+            "reviews": 3442,
+            "type": "Điểm thu hút khách du lịch",
+            "types": [
+                "Điểm thu hút khách du lịch"
+            ],
+            "type_id": "tourist_attraction",
+            "type_ids": [
+                "tourist_attraction"
+            ],
+            "address": "Thôn Tân Nghĩa, Đức Trọng, Lâm Đồng, Việt Nam",
+            "open_state": "Đã đóng cửa ⋅ Mở lúc 7:00",
+            "hours": "Đã đóng cửa ⋅ Mở lúc 7:00",
+            "operating_hours": {
+                "thứ tư": "07:00–17:00",
+                "thứ năm": "07:00–17:00",
+                "thứ sáu": "07:00–17:00",
+                "thứ bảy": "07:00–17:00",
+                "chủ nhật": "07:00–17:00",
+                "thứ hai": "07:00–17:00",
+                "thứ ba": "07:00–17:00"
+            },
+            "phone": "+84 962 096 839",
+            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipPd9SSp6WO9cX2wVGlTs6742jtEp5nddFla5jSD=w163-h92-k-no"
+        },
+        {
+            "position": 16,
+            "title": "KHU DU LỊCH LĂNG NGUYỄN HỮU HÀO",
+            "place_id": "ChIJQ53AH8JtcTERxhUH6DAZ6DQ",
+            "data_id": "0x31716dc21fc09d43:0x34e81930e80715c6",
+            "data_cid": "3812324782411027910",
+            "reviews_link": "https://serpapi.com/search.json?data_id=0x31716dc21fc09d43%3A0x34e81930e80715c6&engine=google_maps_reviews&hl=vi",
+            "photos_link": "https://serpapi.com/search.json?data_id=0x31716dc21fc09d43%3A0x34e81930e80715c6&engine=google_maps_photos&hl=vi",
+            "gps_coordinates": {
+                "latitude": 11.9409511,
+                "longitude": 108.4175222
+            },
+            "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=vi&place_id=ChIJQ53AH8JtcTERxhUH6DAZ6DQ",
+            "provider_id": "/g/11jdgh0y2v",
+            "rating": 4.6,
+            "reviews": 9,
+            "unclaimed_listing": true,
+            "type": "Điểm thu hút khách du lịch",
+            "types": [
+                "Điểm thu hút khách du lịch"
+            ],
+            "type_id": "tourist_attraction",
+            "type_ids": [
+                "tourist_attraction"
+            ],
+            "address": "WCR9+92J, Phường 5, Thành phố Đà Lạt, Lâm Đồng, Việt Nam",
+            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipMHqowzBoisH2sVJOzxc17tha_1KTXXMrHlOJTx=w80-h100-k-no"
+        },
+        {
+            "position": 17,
+            "title": "Vườn hoa cải trắng - hướng dương",
+            "place_id": "ChIJX5DZPO5rcTERQfUa8QOPTmU",
+            "data_id": "0x31716bee3cd9905f:0x654e8f03f11af541",
+            "data_cid": "7299929293106902337",
+            "reviews_link": "https://serpapi.com/search.json?data_id=0x31716bee3cd9905f%3A0x654e8f03f11af541&engine=google_maps_reviews&hl=vi",
+            "photos_link": "https://serpapi.com/search.json?data_id=0x31716bee3cd9905f%3A0x654e8f03f11af541&engine=google_maps_photos&hl=vi",
+            "gps_coordinates": {
+                "latitude": 11.900116299999999,
+                "longitude": 108.3479512
+            },
+            "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=vi&place_id=ChIJX5DZPO5rcTERQfUa8QOPTmU",
+            "provider_id": "/g/11g8f_11cv",
+            "rating": 4,
+            "reviews": 90,
+            "type": "Điểm thu hút khách du lịch",
+            "types": [
+                "Điểm thu hút khách du lịch"
+            ],
+            "type_id": "tourist_attraction",
+            "type_ids": [
+                "tourist_attraction"
+            ],
+            "address": "Tà Nung, Thành phố Đà Lạt, Lâm Đồng, Việt Nam",
+            "open_state": "Mở cả ngày",
+            "hours": "Mở cả ngày",
+            "operating_hours": {
+                "thứ tư": "Mở cửa cả ngày",
+                "thứ năm": "Mở cửa cả ngày",
+                "thứ sáu": "Mở cửa cả ngày",
+                "thứ bảy": "Mở cửa cả ngày",
+                "chủ nhật": "Mở cửa cả ngày",
+                "thứ hai": "Mở cửa cả ngày",
+                "thứ ba": "Mở cửa cả ngày"
+            },
+            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipOn_JFKttH_uCZpTHgxDDDt59_9SYth0ZVeAdsY=w122-h92-k-no"
+        },
+        {
+            "position": 18,
+            "title": "Nông Trại Hoa Huyền Vũ Đà Lạt",
+            "place_id": "ChIJSSuvFJttcTERag5bzGMkhUs",
+            "data_id": "0x31716d9b14af2b49:0x4b852463cc5b0e6a",
+            "data_cid": "5441795735795994218",
+            "reviews_link": "https://serpapi.com/search.json?data_id=0x31716d9b14af2b49%3A0x4b852463cc5b0e6a&engine=google_maps_reviews&hl=vi",
+            "photos_link": "https://serpapi.com/search.json?data_id=0x31716d9b14af2b49%3A0x4b852463cc5b0e6a&engine=google_maps_photos&hl=vi",
+            "gps_coordinates": {
+                "latitude": 11.9680625,
+                "longitude": 108.4124375
+            },
+            "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=vi&place_id=ChIJSSuvFJttcTERag5bzGMkhUs",
+            "provider_id": "/g/11k9qnhths",
+            "rating": 5,
+            "reviews": 313,
+            "type": "Điểm thu hút khách du lịch",
+            "types": [
+                "Điểm thu hút khách du lịch"
+            ],
+            "type_id": "tourist_attraction",
+            "type_ids": [
+                "tourist_attraction"
+            ],
+            "address": "XC96+6X7, Phường 7, Thành phố Đà Lạt, Lâm Đồng 670000, Việt Nam",
+            "open_state": "Mở cả ngày",
+            "hours": "Mở cả ngày",
+            "operating_hours": {
+                "thứ tư": "Mở cửa cả ngày",
+                "thứ năm": "Mở cửa cả ngày",
+                "thứ sáu": "Mở cửa cả ngày",
+                "thứ bảy": "Mở cửa cả ngày",
+                "chủ nhật": "Mở cửa cả ngày",
+                "thứ hai": "Mở cửa cả ngày",
+                "thứ ba": "Mở cửa cả ngày"
+            },
+            "phone": "+84 854 868 616",
+            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipNI3mHcjD_elbHGP-D80nDfBWKaUZTTRnTq5Zd0=w137-h92-k-no"
+        },
+        {
+            "position": 19,
+            "title": "Điểm tham quan du lịch Nhà máy Trà Atisô & Rượu Vang Vĩnh Tiến",
+            "place_id": "ChIJf7hmQrptcTER9vFySt9LMXc",
+            "data_id": "0x31716dba4266b87f:0x77314bdf4a72f1f6",
+            "data_cid": "8588729386771083766",
+            "reviews_link": "https://serpapi.com/search.json?data_id=0x31716dba4266b87f%3A0x77314bdf4a72f1f6&engine=google_maps_reviews&hl=vi",
+            "photos_link": "https://serpapi.com/search.json?data_id=0x31716dba4266b87f%3A0x77314bdf4a72f1f6&engine=google_maps_photos&hl=vi",
+            "gps_coordinates": {
+                "latitude": 11.948440399999999,
+                "longitude": 108.40301489999999
+            },
+            "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=vi&place_id=ChIJf7hmQrptcTER9vFySt9LMXc",
+            "provider_id": "/g/11gjm1v7qv",
+            "rating": 4.3,
+            "reviews": 255,
+            "unclaimed_listing": true,
+            "type": "Điểm thu hút khách du lịch",
+            "types": [
+                "Điểm thu hút khách du lịch"
+            ],
+            "type_id": "tourist_attraction",
+            "type_ids": [
+                "tourist_attraction"
+            ],
+            "address": "81D Hoàng Văn Thụ ( Vạn Thành, Cam Ly, Phường 5, Thành phố Đà Lạt, Lâm Đồng, Việt Nam",
+            "open_state": "Đã đóng cửa ⋅ Mở lúc 7:30",
+            "hours": "Đã đóng cửa ⋅ Mở lúc 7:30",
+            "operating_hours": {
+                "thứ tư": "07:30–17:00",
+                "thứ năm": "07:30–17:00",
+                "thứ sáu": "07:30–17:00",
+                "thứ bảy": "07:30–17:00",
+                "chủ nhật": "07:30–17:00",
+                "thứ hai": "07:30–17:00",
+                "thứ ba": "07:30–17:00"
+            },
+            "phone": "+84 263 3822 777",
+            "website": "http://vinhtiendalat.vn/",
+            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipMAm2UWi2p5xEfVb3UYPhxlVtdLtZl-mmsaBins=w163-h92-k-no"
+        },
+        {
+            "position": 20,
+            "title": "CTY TNHH TMDV DU LỊCH 368",
+            "place_id": "ChIJbdN0F0ATcTERJo1Gj6LAVfE",
+            "data_id": "0x317113401774d36d:0xf155c0a28f468d26",
+            "data_cid": "17390017340582038822",
+            "reviews_link": "https://serpapi.com/search.json?data_id=0x317113401774d36d%3A0xf155c0a28f468d26&engine=google_maps_reviews&hl=vi",
+            "photos_link": "https://serpapi.com/search.json?data_id=0x317113401774d36d%3A0xf155c0a28f468d26&engine=google_maps_photos&hl=vi",
+            "gps_coordinates": {
+                "latitude": 11.941713199999999,
+                "longitude": 108.4360372
+            },
+            "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=vi&place_id=ChIJbdN0F0ATcTERJo1Gj6LAVfE",
+            "provider_id": "/g/11qzb7k0fh",
+            "unclaimed_listing": true,
+            "type": "Điểm thu hút khách du lịch",
+            "types": [
+                "Điểm thu hút khách du lịch"
+            ],
+            "type_id": "tourist_attraction",
+            "type_ids": [
+                "tourist_attraction"
+            ],
+            "address": "5 Nam Kỳ Khởi Nghĩa, Phường 1, Thành phố Đà Lạt, Lâm Đồng, Việt Nam"
+        }
+    ],
+    "serpapi_pagination": {
+        "next": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=vi&ll=%4011.940147238020286%2C108.45809725440188%2C11z&q=%C4%90i%E1%BB%83m+thu+h%C3%BAt+kh%C3%A1ch+du+l%E1%BB%8Bch&start=20&type=search"
+    }
+}

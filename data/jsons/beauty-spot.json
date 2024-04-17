@@ -185,21 +185,6 @@
             "placeId": "ChIJP8AXu1cScTERHC4qy28jf_g"
         },
         {
-            "position": 12,
-            "title": "Di tích lịch sử và danh lam thắng cảnh thành Tà Kơn",
-            "address": "8P43+486, Unnamed Road, Vĩnh Sơn, Vĩnh Thạnh, Bình Định, Việt Nam",
-            "latitude": 14.3052798,
-            "longitude": 108.70326039999999,
-            "rating": 4.5,
-            "ratingCount": 2,
-            "type": "Điểm thu hút khách du lịch",
-            "types": [
-                "Điểm thu hút khách du lịch"
-            ],
-            "cid": "13961108049291802072",
-            "placeId": "ChIJvWvv55ItaTER2HXiPM3Rv8E"
-        },
-        {
             "position": 13,
             "title": "KHU DU LỊCH THUNG LŨNG TÌNH YÊU ĐÀ LẠT",
             "address": "03-05-07 Đường Mai Anh Đào, Phường 8, Thành phố Đà Lạt, Lâm Đồng 70000, Việt Nam",
@@ -231,36 +216,6 @@
             "placeId": "ChIJeeenQHoTcTERhjAmNn7xWGY"
         },
         {
-            "position": 15,
-            "title": "Đỉnh Núi Cái",
-            "address": "3HP6+HXQ, Long Khánh, Lục Yên, Yên Bái, Việt Nam",
-            "latitude": 22.0864548,
-            "longitude": 104.56248819999999,
-            "type": "Thắng cảnh",
-            "types": [
-                "Thắng cảnh"
-            ],
-            "cid": "14674402788678347367",
-            "placeId": "ChIJSSvj_y7PzDYRZ6oshpbzpcs"
-        },
-        {
-            "position": 16,
-            "title": "Tượng Ðài Chiến Thắng La Ngà",
-            "address": "575G+W7P, Phú Ngọc, Định Quán, Đồng Nai, Việt Nam",
-            "latitude": 11.1598353,
-            "longitude": 107.275717,
-            "rating": 4.4,
-            "ratingCount": 507,
-            "type": "Điểm thu hút khách du lịch",
-            "types": [
-                "Điểm thu hút khách du lịch",
-                "Bảo tàng"
-            ],
-            "phoneNumber": "+84 972 037 276",
-            "cid": "13995448977837085479",
-            "placeId": "ChIJSQ9c1G_1dDERJ1MVvLHSOcI"
-        },
-        {
             "position": 17,
             "title": "Bắc Thang Lên Hỏi Ông Trời",
             "address": "Tuý Sơn, Xuân Thọ, Thành phố Đà Lạt, Lâm Đồng, Việt Nam",
@@ -275,22 +230,6 @@
             "website": "https://m.facebook.com/cloudshunting/",
             "cid": "11350771037926787199",
             "placeId": "ChIJrSiKs8QRcTERfwhruh4Khp0"
-        },
-        {
-            "position": 18,
-            "title": "Bãi Đá suối Bằng Lăng",
-            "address": "34RW+J4Q, Liêng S'rônH, Đam Rông, Lâm Đồng, Việt Nam",
-            "latitude": 12.0915996,
-            "longitude": 108.1453645,
-            "rating": 5,
-            "ratingCount": 3,
-            "type": "Thắng cảnh",
-            "types": [
-                "Thắng cảnh"
-            ],
-            "phoneNumber": "+84 944 536 692",
-            "cid": "12008926909005101382",
-            "placeId": "ChIJp-mhUfh7cTERRvng0GVHqKY"
         },
         {
             "position": 19,

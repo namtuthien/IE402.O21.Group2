@@ -1,0 +1,58 @@
+.toursTable-section{
+  min-height: 55vh;
+}
+.tourHeading-section{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+.tourHeading{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  flex: 1;
+  margin-top: 40px;
+
+}
+.tourHeadingLeft{
+}
+.tourHeadingRight{
+}
+.toursTable-container{
+  display: flex;
+align-items: center; 
+justify-content: center;
+}
+.toursTable{
+  max-width: 1200px;
+  border-color: var(--primary1);
+}
+.toursTable {
+  td{
+    text-align: center;
+    
+  }
+  th{
+    text-align: center;
+    background-color: var(--primary1);
+    border-color: var(--primary3);
+    color: var(--white);
+    
+  }
+  p{
+    margin-bottom: 0px;
+    overflow: hidden;
+  }
+  
+}
+.toursAction_container:hover{
+  cursor: pointer;
+}
+.toursAction-icon{
+  color: var(--primary3);
+}
+.toursAction-icon:hover{
+  color: var(--primary1);
+}

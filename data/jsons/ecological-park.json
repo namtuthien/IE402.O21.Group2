@@ -9,23 +9,6 @@
     },
     "places": [
         {
-            "position": 1,
-            "title": "Công viên du lịch sinh thái Hóc Môn",
-            "address": "106 Xuân Thới Thượng, 6, Hóc Môn, Thành phố Hồ Chí Minh, Việt Nam",
-            "latitude": 10.857752,
-            "longitude": 106.5817266,
-            "rating": 4.4,
-            "ratingCount": 279,
-            "type": "Công viên",
-            "types": [
-                "Công viên"
-            ],
-            "website": "https://facebook.com/congviendulichsinhthaihocmon",
-            "phoneNumber": "+84 932 162 182",
-            "cid": "5196505160657278019",
-            "placeId": "ChIJAZJk38ErdTERQxR2TumxHUg"
-        },
-        {
             "position": 2,
             "title": "Làng sinh thái hữu cơ Lâm Hà",
             "address": "Q5JC+C5R, Phúc Thọ, Lâm Hà, Lâm Đồng, Việt Nam",

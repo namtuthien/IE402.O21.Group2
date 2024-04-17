@@ -1,0 +1,719 @@
+{
+    "search_metadata": {
+        "id": "661ed3d466d81f381bea997d",
+        "status": "Success",
+        "json_endpoint": "https://serpapi.com/searches/994793bc63aeb291/661ed3d466d81f381bea997d.json",
+        "created_at": "2024-04-16 19:39:00 UTC",
+        "processed_at": "2024-04-16 19:39:00 UTC",
+        "google_maps_url": "https://www.google.com/maps/search/Kh%C3%A1ch+s%E1%BA%A1n+ngh%E1%BB%89+d%C6%B0%E1%BB%A1ng/@11.940147238020286,108.45809725440188,11z?hl=vi",
+        "raw_html_file": "https://serpapi.com/searches/994793bc63aeb291/661ed3d466d81f381bea997d.html",
+        "total_time_taken": 2.33
+    },
+    "search_parameters": {
+        "engine": "google_maps",
+        "type": "search",
+        "q": "Khách sạn nghỉ dưỡng",
+        "ll": "@11.940147238020286,108.45809725440188,11z",
+        "google_domain": "google.com",
+        "hl": "vi"
+    },
+    "search_information": {
+        "local_results_state": "Results for exact spelling",
+        "query_displayed": "Khách sạn nghỉ dưỡng"
+    },
+    "local_results": [
+        {
+            "position": 1,
+            "title": "Mơ Stay - Forest Resort",
+            "place_id": "ChIJq2JiJwFrcTER_VMff_0G05Y",
+            "data_id": "0x31716b01276262ab:0x96d306fd7f1f53fd",
+            "data_cid": "10868038011604390909",
+            "reviews_link": "https://serpapi.com/search.json?data_id=0x31716b01276262ab%3A0x96d306fd7f1f53fd&engine=google_maps_reviews&hl=vi",
+            "photos_link": "https://serpapi.com/search.json?data_id=0x31716b01276262ab%3A0x96d306fd7f1f53fd&engine=google_maps_photos&hl=vi",
+            "gps_coordinates": {
+                "latitude": 11.886597199999999,
+                "longitude": 108.4089393
+            },
+            "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=vi&place_id=ChIJq2JiJwFrcTER_VMff_0G05Y",
+            "provider_id": "/g/11sd1rxgr0",
+            "rating": 4.8,
+            "reviews": 111,
+            "type": "Khách sạn nghỉ dưỡng",
+            "types": [
+                "Khách sạn nghỉ dưỡng"
+            ],
+            "type_id": "resort_hotel",
+            "type_ids": [
+                "resort_hotel"
+            ],
+            "address": "Đ. Hoa Hồng, Phường 4, Thành phố Đà Lạt, Lâm Đồng 670000, Việt Nam",
+            "phone": "+84 263 8889 986",
+            "website": "https://rungthongmo.com/",
+            "amenities": [
+                "Wi-Fi miễn phí",
+                "Bữa sáng miễn phí"
+            ],
+            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipOiHfS4Xx2KgDTrHV00dTyv7IJeMxnlA_Cqxzej=w137-h92-k-no"
+        },
+        {
+            "position": 2,
+            "title": "Ana Mandara Villas Dalat Resort & Spa",
+            "place_id": "ChIJS2jADNRscTERN7cFfAWSmGs",
+            "data_id": "0x31716cd40cc0684b:0x6b9892057c05b737",
+            "data_cid": "7753107310771550007",
+            "reviews_link": "https://serpapi.com/search.json?data_id=0x31716cd40cc0684b%3A0x6b9892057c05b737&engine=google_maps_reviews&hl=vi",
+            "photos_link": "https://serpapi.com/search.json?data_id=0x31716cd40cc0684b%3A0x6b9892057c05b737&engine=google_maps_photos&hl=vi",
+            "gps_coordinates": {
+                "latitude": 11.944039,
+                "longitude": 108.4236
+            },
+            "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=vi&place_id=ChIJS2jADNRscTERN7cFfAWSmGs",
+            "provider_id": "/m/07fklpg",
+            "rating": 4.5,
+            "reviews": 1792,
+            "type": "Khách sạn nghỉ dưỡng",
+            "types": [
+                "Khách sạn nghỉ dưỡng",
+                "Sân gôn thu nhỏ",
+                "Nhà hàng",
+                "Spa",
+                "Bể bơi"
+            ],
+            "type_id": "resort_hotel",
+            "type_ids": [
+                "resort_hotel",
+                "miniature_golf_course",
+                "restaurant",
+                "spa",
+                "swimming_pool"
+            ],
+            "address": "2 Đường Lê Lai, Phường 5, Thành phố Đà Lạt, Lâm Đồng, Việt Nam",
+            "phone": "+84 263 3555 888",
+            "website": "http://anamandara-resort.com/",
+            "amenities": [
+                "Wi-Fi miễn phí",
+                "Bữa sáng miễn phí"
+            ],
+            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipNaplF4N3EggP2h-9AVaXTrFKf70RyI1tOL__6R=w138-h92-k-no"
+        },
+        {
+            "position": 3,
+            "title": "Swiss-Belresort Tuyen Lam Dalat",
+            "place_id": "ChIJT_TcVJUUcTERQNkr-QgVPug",
+            "data_id": "0x3171149554dcf44f:0xe83e1508f92bd940",
+            "data_cid": "16734836393639663936",
+            "reviews_link": "https://serpapi.com/search.json?data_id=0x3171149554dcf44f%3A0xe83e1508f92bd940&engine=google_maps_reviews&hl=vi",
+            "photos_link": "https://serpapi.com/search.json?data_id=0x3171149554dcf44f%3A0xe83e1508f92bd940&engine=google_maps_photos&hl=vi",
+            "gps_coordinates": {
+                "latitude": 11.8824243,
+                "longitude": 108.4518585
+            },
+            "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=vi&place_id=ChIJT_TcVJUUcTERQNkr-QgVPug",
+            "provider_id": "/g/11b6s8dz8t",
+            "rating": 4.4,
+            "reviews": 2557,
+            "type": "Khách sạn nghỉ dưỡng",
+            "types": [
+                "Khách sạn nghỉ dưỡng",
+                "Khách sạn"
+            ],
+            "type_id": "resort_hotel",
+            "type_ids": [
+                "resort_hotel",
+                "hotel"
+            ],
+            "address": "số 7 và 8, KDL Hồ Tuyền Lâm, Phường 3, Thành phố Đà Lạt, Lâm Đồng 061000, Việt Nam",
+            "phone": "+84 263 3800 800",
+            "website": "https://samtuyenlamhotel.com.vn/",
+            "amenities": [
+                "Wi-Fi miễn phí",
+                "Bữa sáng miễn phí"
+            ],
+            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipNmz87qPRJ_KqeMrCLn8GdsNobpjZcS1-RLHVJ8=w138-h92-k-no"
+        },
+        {
+            "position": 4,
+            "title": "Tea Resort Prenn",
+            "place_id": "ChIJ20_4v9oVcTERZl_nL0P-Ub0",
+            "data_id": "0x317115dabff84fdb:0xbd51fe432fe75f66",
+            "data_cid": "13641964310801899366",
+            "reviews_link": "https://serpapi.com/search.json?data_id=0x317115dabff84fdb%3A0xbd51fe432fe75f66&engine=google_maps_reviews&hl=vi",
+            "photos_link": "https://serpapi.com/search.json?data_id=0x317115dabff84fdb%3A0xbd51fe432fe75f66&engine=google_maps_photos&hl=vi",
+            "gps_coordinates": {
+                "latitude": 11.8774933,
+                "longitude": 108.4707079
+            },
+            "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=vi&place_id=ChIJ20_4v9oVcTERZl_nL0P-Ub0",
+            "provider_id": "/g/11rqs3bpzr",
+            "rating": 4.1,
+            "reviews": 129,
+            "type": "Khách sạn nghỉ dưỡng",
+            "types": [
+                "Khách sạn nghỉ dưỡng",
+                "Khách sạn"
+            ],
+            "type_id": "resort_hotel",
+            "type_ids": [
+                "resort_hotel",
+                "hotel"
+            ],
+            "address": "Cầu chân đèo Prenn, Phường 3, Thành phố Đà Lạt, Lâm Đồng 66100, Việt Nam",
+            "phone": "+84 944 391 616",
+            "website": "https://www.facebook.com/TeaResortPrenn",
+            "thumbnail": "https://lh3.googleusercontent.com/gps-proxy/ALd4DhGsDlDIN7XLjS1CpifUIkoRUoEgbRleeFHGPlceErZKXRvCUVJCgbdHe6zx0o4pJezFyqiOzWtJzaO3rL6Xw3A9Gv-qAhKNgJngJa6WRXeFjsEGWLVPUG0ILzCA-ZqCVPEoh_6jALF-NXARKdUGBqsZWWmI3O8vnnHEI7LBkeDsyJmjBRowiwY=w138-h92-k-no"
+        },
+        {
+            "position": 5,
+            "title": "Lavenderdalat Gardens",
+            "place_id": "ChIJk6Z3ck5rcTERdS1bssDNCAc",
+            "data_id": "0x31716b4e7277a693:0x708cdc0b25b2d75",
+            "data_cid": "506881185588915573",
+            "reviews_link": "https://serpapi.com/search.json?data_id=0x31716b4e7277a693%3A0x708cdc0b25b2d75&engine=google_maps_reviews&hl=vi",
+            "photos_link": "https://serpapi.com/search.json?data_id=0x31716b4e7277a693%3A0x708cdc0b25b2d75&engine=google_maps_photos&hl=vi",
+            "gps_coordinates": {
+                "latitude": 11.8940558,
+                "longitude": 108.4209388
+            },
+            "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=vi&place_id=ChIJk6Z3ck5rcTERdS1bssDNCAc",
+            "provider_id": "/g/11bzs1jxvw",
+            "rating": 4.1,
+            "reviews": 392,
+            "type": "Khách sạn nghỉ dưỡng",
+            "types": [
+                "Khách sạn nghỉ dưỡng",
+                "Điểm thu hút khách du lịch"
+            ],
+            "type_id": "resort_hotel",
+            "type_ids": [
+                "resort_hotel",
+                "tourist_attraction"
+            ],
+            "address": "Hồ Tuyền Lâm, Phường 4, Thành phố Đà Lạt, Lâm Đồng 670000, Việt Nam",
+            "phone": "+84 965 838 289",
+            "website": "http://lavenderdalat.com/",
+            "amenities": [
+                "Wi-Fi miễn phí",
+                "Bữa sáng miễn phí"
+            ],
+            "thumbnail": "https://lh3.googleusercontent.com/gps-proxy/ALd4DhE-8AICMKipN_Ha53QoyV16U90hJvWA4lCs2wNulOWC3JPTgVhVQMEaxwlf1KEu1D5W8nUuUVlp7RaO6g12Xhbe3cPlkV2gzLe0XK6FiUHQBAhWomFcM33tVuCFhjq2d03H8pPRIJTJFI582rKf5is7rFil5L5Hsd_YwhvmBOx-76LwdArfeK8-=w138-h92-k-no"
+        },
+        {
+            "position": 6,
+            "title": "Terracotta Hotel & Resort Dalat",
+            "place_id": "ChIJxwYY4q8UcTERt31w04QnILo",
+            "data_id": "0x317114afe21806c7:0xba202784d3707db7",
+            "data_cid": "13411763141745868215",
+            "reviews_link": "https://serpapi.com/search.json?data_id=0x317114afe21806c7%3A0xba202784d3707db7&engine=google_maps_reviews&hl=vi",
+            "photos_link": "https://serpapi.com/search.json?data_id=0x317114afe21806c7%3A0xba202784d3707db7&engine=google_maps_photos&hl=vi",
+            "gps_coordinates": {
+                "latitude": 11.8948927,
+                "longitude": 108.43805379999999
+            },
+            "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=vi&place_id=ChIJxwYY4q8UcTERt31w04QnILo",
+            "provider_id": "/g/1pzr_k90p",
+            "rating": 4.3,
+            "reviews": 3838,
+            "price": "49 US$",
+            "type": "Khách sạn",
+            "types": [
+                "Khách sạn"
+            ],
+            "type_id": "hotel",
+            "type_ids": [
+                "hotel"
+            ],
+            "address": "Phân khu chức năng 7.9 KDL hồ Tuyền Lâm, Phường 3, Lâm Đồng 670000, Việt Nam",
+            "phone": "+84 263 3883 838",
+            "website": "https://terracottaresort.com/",
+            "description": "Khu nghỉ dưỡng ven hồ có spa, sân tennis. Phòng ở và biệt thự cao cấp tại khu nghỉ dưỡng ven hồ có spa, phòng ăn, sân tennis, phòng gym, phòng karaoke.",
+            "amenities": [
+                "Wi-Fi miễn phí",
+                "Bữa sáng miễn phí"
+            ],
+            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipNQCxPmDNWTp34nZcTqCqoz7T55rdK-T9hPXP2m=w138-h92-k-no"
+        },
+        {
+            "position": 7,
+            "title": "Cereja Hotel & Resort",
+            "place_id": "ChIJU4s13rsVcTEReGE_DVgWwX0",
+            "data_id": "0x317115bbde358b53:0x7dc116580d3f6178",
+            "data_cid": "9061548492681339256",
+            "reviews_link": "https://serpapi.com/search.json?data_id=0x317115bbde358b53%3A0x7dc116580d3f6178&engine=google_maps_reviews&hl=vi",
+            "photos_link": "https://serpapi.com/search.json?data_id=0x317115bbde358b53%3A0x7dc116580d3f6178&engine=google_maps_photos&hl=vi",
+            "gps_coordinates": {
+                "latitude": 11.8886638,
+                "longitude": 108.43475009999999
+            },
+            "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=vi&place_id=ChIJU4s13rsVcTEReGE_DVgWwX0",
+            "provider_id": "/g/11gyyk1r88",
+            "rating": 4,
+            "reviews": 470,
+            "price": "37 US$",
+            "type": "Khách sạn",
+            "types": [
+                "Khách sạn",
+                "Phòng tiệc",
+                "Khách sạn nghỉ dưỡng",
+                "Biệt thự"
+            ],
+            "type_id": "hotel",
+            "type_ids": [
+                "hotel",
+                "banquet_hall",
+                "resort_hotel",
+                "villa"
+            ],
+            "address": "Hoa Phượng Tím, Phường 3, Thành phố Đà Lạt, Lâm Đồng, Việt Nam",
+            "phone": "+84 263 7300 888",
+            "website": "http://cerejahotel-resort.vn/",
+            "amenities": [
+                "Wi-Fi miễn phí",
+                "Bữa sáng miễn phí"
+            ],
+            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipN8SKD-C5LlFdmAURmgYWNAFp-D8X0oOQQcOYa5=w137-h92-k-no"
+        },
+        {
+            "position": 8,
+            "title": "Khách sạn Dalat Palace",
+            "place_id": "ChIJl9p2kTETcTERD2UK-Y4pL70",
+            "data_id": "0x317113319176da97:0xbd2f298ef90a650f",
+            "data_cid": "13632160291114083599",
+            "reviews_link": "https://serpapi.com/search.json?data_id=0x317113319176da97%3A0xbd2f298ef90a650f&engine=google_maps_reviews&hl=vi",
+            "photos_link": "https://serpapi.com/search.json?data_id=0x317113319176da97%3A0xbd2f298ef90a650f&engine=google_maps_photos&hl=vi",
+            "gps_coordinates": {
+                "latitude": 11.9376172,
+                "longitude": 108.4403766
+            },
+            "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=vi&place_id=ChIJl9p2kTETcTERD2UK-Y4pL70",
+            "provider_id": "/m/03g_yqw",
+            "rating": 4.5,
+            "reviews": 1203,
+            "price": "105 US$",
+            "type": "Khách sạn",
+            "types": [
+                "Khách sạn"
+            ],
+            "type_id": "hotel",
+            "type_ids": [
+                "hotel"
+            ],
+            "address": "2 Đ. Trần Phú, Phường 3, Thành phố Đà Lạt, Lâm Đồng 66100, Việt Nam",
+            "phone": "+84 263 3825 444",
+            "website": "https://www.dalatpalacehotel.com/",
+            "description": "Khách sạn uy nghi, nhà hàng cao cấp, spa. Khách sạn trang trọng từ thập niên 1920, cảnh hồ, vườn cây tuyệt đẹp, nhà hàng, spa và phòng ở tinh tế.",
+            "amenities": [
+                "Wi-Fi miễn phí",
+                "Bữa sáng miễn phí"
+            ],
+            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipOp6PVcTLs2fWL9CB3zW_XyVrZN5ykHHSY0eb9v=w137-h92-k-no"
+        },
+        {
+            "position": 9,
+            "title": "The Lake House Dalat",
+            "place_id": "ChIJYf7pUqkUcTER1b8xCoYfpKI",
+            "data_id": "0x317114a952e9fe61:0xa2a41f860a31bfd5",
+            "data_cid": "11719526790881984469",
+            "reviews_link": "https://serpapi.com/search.json?data_id=0x317114a952e9fe61%3A0xa2a41f860a31bfd5&engine=google_maps_reviews&hl=vi",
+            "photos_link": "https://serpapi.com/search.json?data_id=0x317114a952e9fe61%3A0xa2a41f860a31bfd5&engine=google_maps_photos&hl=vi",
+            "gps_coordinates": {
+                "latitude": 11.900756099999999,
+                "longitude": 108.4341623
+            },
+            "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=vi&place_id=ChIJYf7pUqkUcTER1b8xCoYfpKI",
+            "provider_id": "/g/11d_781c5t",
+            "rating": 4.6,
+            "reviews": 235,
+            "price": "12 US$",
+            "type": "Khách sạn",
+            "types": [
+                "Khách sạn"
+            ],
+            "type_id": "hotel",
+            "type_ids": [
+                "hotel"
+            ],
+            "address": "Phường 3, Thành phố Đà Lạt, Lâm Đồng, Việt Nam",
+            "phone": "+84 967 182 748",
+            "description": "Khách sạn ven hồ yên tĩnh có nhà hàng. Phòng ở bài trí ấm cúng bên trong khách sạn ven hồ thơ mộng có nhà hàng bình dân, thoải mái.",
+            "amenities": [
+                "Wi-Fi miễn phí",
+                "Bữa sáng miễn phí"
+            ],
+            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipPbq8QXG9Jk1f_sbZ8HbiQZ9ReQKJr1ev_uYcuG=w80-h100-k-no"
+        },
+        {
+            "position": 10,
+            "title": "Binh An Village Da Lat Resort",
+            "place_id": "ChIJRZmEBEZrcTERIkUn7yHrWQA",
+            "data_id": "0x31716b4604849945:0x59eb21ef274522",
+            "data_cid": "25309803906024738",
+            "reviews_link": "https://serpapi.com/search.json?data_id=0x31716b4604849945%3A0x59eb21ef274522&engine=google_maps_reviews&hl=vi",
+            "photos_link": "https://serpapi.com/search.json?data_id=0x31716b4604849945%3A0x59eb21ef274522&engine=google_maps_photos&hl=vi",
+            "gps_coordinates": {
+                "latitude": 11.8877595,
+                "longitude": 108.4176396
+            },
+            "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=vi&place_id=ChIJRZmEBEZrcTERIkUn7yHrWQA",
+            "provider_id": "/g/11b636xdwq",
+            "rating": 4.4,
+            "reviews": 283,
+            "type": "Khách sạn nghỉ dưỡng",
+            "types": [
+                "Khách sạn nghỉ dưỡng",
+                "Khách sạn"
+            ],
+            "type_id": "resort_hotel",
+            "type_ids": [
+                "resort_hotel",
+                "hotel"
+            ],
+            "address": "Tuyen Lam Lake, Da Lat, Lâm Đồng, Việt Nam",
+            "phone": "+84 263 3800 999",
+            "website": "http://www.binhanvillage.com/index.php/en/mmenu-binhan-dalat",
+            "amenities": [
+                "Wi-Fi miễn phí",
+                "Bữa sáng miễn phí"
+            ],
+            "thumbnail": "https://lh3.googleusercontent.com/gps-proxy/ALd4DhGdoqwyTE1e1Ii3S2zKba9-SYf9yHjZ65eszg7KM2QPu7jOY0YanKR-qd6zwbjkz_qoelxfUeNQf9l7OIyt9WRv5d2Wq8Pt0p663O_Zkidif4J7O_5uIwZL86kaYB2IFooY2hpsYoCHut5ZdTckycVFz-I8dwFzq6pISY7vw_mOa75lhs5WiXRh=w133-h92-k-no"
+        },
+        {
+            "position": 11,
+            "title": "Dalat Edensee Lake Resort & Spa",
+            "place_id": "ChIJrYwq6a4UcTERyc7HOyuPJhk",
+            "data_id": "0x317114aee92a8cad:0x19268f2b3bc7cec9",
+            "data_cid": "1812293315912519369",
+            "reviews_link": "https://serpapi.com/search.json?data_id=0x317114aee92a8cad%3A0x19268f2b3bc7cec9&engine=google_maps_reviews&hl=vi",
+            "photos_link": "https://serpapi.com/search.json?data_id=0x317114aee92a8cad%3A0x19268f2b3bc7cec9&engine=google_maps_photos&hl=vi",
+            "gps_coordinates": {
+                "latitude": 11.8868268,
+                "longitude": 108.4235015
+            },
+            "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=vi&place_id=ChIJrYwq6a4UcTERyc7HOyuPJhk",
+            "provider_id": "/g/1tkl0tm2",
+            "rating": 4.4,
+            "reviews": 1480,
+            "type": "Khách sạn nghỉ dưỡng",
+            "types": [
+                "Khách sạn nghỉ dưỡng",
+                "Khách sạn"
+            ],
+            "type_id": "resort_hotel",
+            "type_ids": [
+                "resort_hotel",
+                "hotel"
+            ],
+            "address": "Tuyen Lam Lake, Zone VII.2, Phường 4, Ward 4, Lâm Đồng 670000, Việt Nam",
+            "phone": "+84 263 3831 515",
+            "website": "http://www.dalatedensee.com/",
+            "amenities": [
+                "Wi-Fi miễn phí",
+                "Bữa sáng miễn phí"
+            ],
+            "thumbnail": "https://lh3.googleusercontent.com/gps-proxy/ALd4DhFFyMD6LSbj--9Iyh3sB9KBqCYPF22VO3PdHQatd2_JUy937uXOWstFNATV5_j8loohVnOn6hauqTb00PCcnA-kHAGHaDtAamnCwQpZpVB8e_KdKu_Y69ZKOqrDXN_zZoEysW0gVLqdoG4kUPh9Yn5mfrnHvai8rSWRqjMW1kbSsY37cpaHkBsD=w138-h92-k-no"
+        },
+        {
+            "position": 12,
+            "title": "Zen Valley Đà Lạt",
+            "place_id": "ChIJQUwXahoTcTER9BlplLNlH4Y",
+            "data_id": "0x3171131a6a174c41:0x861f65b3946919f4",
+            "data_cid": "9664555147323841012",
+            "reviews_link": "https://serpapi.com/search.json?data_id=0x3171131a6a174c41%3A0x861f65b3946919f4&engine=google_maps_reviews&hl=vi",
+            "photos_link": "https://serpapi.com/search.json?data_id=0x3171131a6a174c41%3A0x861f65b3946919f4&engine=google_maps_photos&hl=vi",
+            "gps_coordinates": {
+                "latitude": 11.929509,
+                "longitude": 108.459361
+            },
+            "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=vi&place_id=ChIJQUwXahoTcTER9BlplLNlH4Y",
+            "provider_id": "/g/11b73n52_k",
+            "rating": 4.5,
+            "reviews": 659,
+            "price": "56 US$",
+            "type": "Khách sạn",
+            "types": [
+                "Khách sạn",
+                "Nhà hàng"
+            ],
+            "type_id": "hotel",
+            "type_ids": [
+                "hotel",
+                "restaurant"
+            ],
+            "address": "38 Khe Sanh, Phường 10, Thành phố Đà Lạt, Lâm Đồng, Việt Nam",
+            "phone": "+84 263 3577 277",
+            "description": "Biệt thự ấm cúng có nhà hàng và spa. Biệt thự cổ kính phong cách thời Pháp thuộc nhìn ra đồi, có nhà hàng/quán bar, spa và bồn tắm nước nóng.",
+            "amenities": [
+                "Wi-Fi miễn phí",
+                "Bữa sáng miễn phí"
+            ],
+            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipNQgOyxSsKFuHjYJLBiRGxhZ3P0LS412UORX4OL=w137-h92-k-no"
+        },
+        {
+            "position": 13,
+            "title": "Golden Hills Villa The Windy BnB2",
+            "place_id": "ChIJ-ccnAjcTcTERAgZDlvsIspo",
+            "data_id": "0x317113370227c7f9:0x9ab208fb96430602",
+            "data_cid": "11146981904346187266",
+            "reviews_link": "https://serpapi.com/search.json?data_id=0x317113370227c7f9%3A0x9ab208fb96430602&engine=google_maps_reviews&hl=vi",
+            "photos_link": "https://serpapi.com/search.json?data_id=0x317113370227c7f9%3A0x9ab208fb96430602&engine=google_maps_photos&hl=vi",
+            "gps_coordinates": {
+                "latitude": 11.93048,
+                "longitude": 108.43664
+            },
+            "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=vi&place_id=ChIJ-ccnAjcTcTERAgZDlvsIspo",
+            "provider_id": "/g/11st6sq3mf",
+            "rating": 4.5,
+            "reviews": 4,
+            "unclaimed_listing": true,
+            "type": "Khách sạn nghỉ dưỡng",
+            "types": [
+                "Khách sạn nghỉ dưỡng"
+            ],
+            "type_id": "resort_hotel",
+            "type_ids": [
+                "resort_hotel"
+            ],
+            "address": "Nguyen Trung Truc Apartment, Phường 3, Thành phố Đà Lạt, Lâm Đồng 66116, Việt Nam",
+            "phone": "+84 384 896 372",
+            "thumbnail": "https://lh3.googleusercontent.com/gps-proxy/ALd4DhES5Pp57oXRKRvZyn64oH9auP89dTLgitNgQyQXiATXgckxKdaPccTc2xRdN7ZfuoivyVFq_8FB-JJwBAwmJQGu3Q7jd-DpThdmqDWwaCI2WrixRop-ykjbkRRS7zbH3jsQCtbSS3KId2JbOXKCSbidhVhXWudg9uqCQZ-SQ4AO3pggzXcuhxwl=w80-h142-k-no"
+        },
+        {
+            "position": 14,
+            "title": "nacasoo hill",
+            "place_id": "ChIJMw8JlZ1rcTERJgBN3Y8DfK0",
+            "data_id": "0x31716b9d95090f33:0xad7c038fdd4d0026",
+            "data_cid": "12500870582101671974",
+            "reviews_link": "https://serpapi.com/search.json?data_id=0x31716b9d95090f33%3A0xad7c038fdd4d0026&engine=google_maps_reviews&hl=vi",
+            "photos_link": "https://serpapi.com/search.json?data_id=0x31716b9d95090f33%3A0xad7c038fdd4d0026&engine=google_maps_photos&hl=vi",
+            "gps_coordinates": {
+                "latitude": 11.8737145,
+                "longitude": 108.3341485
+            },
+            "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=vi&place_id=ChIJMw8JlZ1rcTERJgBN3Y8DfK0",
+            "provider_id": "/g/11sdsgfq4x",
+            "rating": 5,
+            "reviews": 30,
+            "type": "Khách sạn nghỉ dưỡng",
+            "types": [
+                "Khách sạn nghỉ dưỡng"
+            ],
+            "type_id": "resort_hotel",
+            "type_ids": [
+                "resort_hotel"
+            ],
+            "address": "Thôn 2, Lâm Hà, Lâm Đồng 670000, Việt Nam",
+            "phone": "+84 902 539 956",
+            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipMRPDpV3WV7r6zLMg3t0TQ4qDX8JEE2d71DUkCS=w80-h106-k-no"
+        },
+        {
+            "position": 15,
+            "title": "Laan Dalat Retreat",
+            "place_id": "ChIJBUy1IT5ycTEREZLjJbrKlHQ",
+            "data_id": "0x3171723e21b54c05:0x7494caba25e39211",
+            "data_cid": "8400562105801216529",
+            "reviews_link": "https://serpapi.com/search.json?data_id=0x3171723e21b54c05%3A0x7494caba25e39211&engine=google_maps_reviews&hl=vi",
+            "photos_link": "https://serpapi.com/search.json?data_id=0x3171723e21b54c05%3A0x7494caba25e39211&engine=google_maps_photos&hl=vi",
+            "gps_coordinates": {
+                "latitude": 12.020894199999999,
+                "longitude": 108.3533898
+            },
+            "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=vi&place_id=ChIJBUy1IT5ycTEREZLjJbrKlHQ",
+            "provider_id": "/g/11cn94w60d",
+            "rating": 4.3,
+            "reviews": 331,
+            "unclaimed_listing": true,
+            "type": "Khách sạn nghỉ dưỡng",
+            "types": [
+                "Khách sạn nghỉ dưỡng"
+            ],
+            "type_id": "resort_hotel",
+            "type_ids": [
+                "resort_hotel"
+            ],
+            "address": "Lát, Lạc Dương, Lâm Đồng, Việt Nam",
+            "phone": "+84 949 734 400",
+            "amenities": [
+                "Wi-Fi miễn phí",
+                "Bữa sáng miễn phí"
+            ],
+            "thumbnail": "https://lh3.googleusercontent.com/gps-proxy/ALd4DhET_89Ys_Ac_9l13LBmm0jjmsfVzt5InU45t2CV_0Pox_npgI3oRTjrmEc0JTn3K-Q6f-9HJZ2aEY-cClkbhdSQQXRybP5xvVBPdP-C6y0W0d6tVUSBB6Lt0K9JJwgN-9EJd0AAF72MBqy4GtjtMLb73xkgjF2OK6Ne9jB-VGvtkyj9DrCVlw0SqQ=w167-h92-k-no"
+        },
+        {
+            "position": 16,
+            "title": "DaLaHa Retreat",
+            "place_id": "ChIJ7c0HFgATcTEROuOx3iRaUTw",
+            "data_id": "0x317113001607cded:0x3c515a24deb1e33a",
+            "data_cid": "4346354229790761786",
+            "reviews_link": "https://serpapi.com/search.json?data_id=0x317113001607cded%3A0x3c515a24deb1e33a&engine=google_maps_reviews&hl=vi",
+            "photos_link": "https://serpapi.com/search.json?data_id=0x317113001607cded%3A0x3c515a24deb1e33a&engine=google_maps_photos&hl=vi",
+            "gps_coordinates": {
+                "latitude": 11.9744196,
+                "longitude": 108.44623999999999
+            },
+            "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=vi&place_id=ChIJ7c0HFgATcTEROuOx3iRaUTw",
+            "provider_id": "/g/11vs0lcpv2",
+            "rating": 5,
+            "reviews": 8,
+            "type": "Khách sạn nghỉ dưỡng",
+            "types": [
+                "Khách sạn nghỉ dưỡng",
+                "Lưu trú nhà dân"
+            ],
+            "type_id": "resort_hotel",
+            "type_ids": [
+                "resort_hotel",
+                "private_guest_room"
+            ],
+            "address": "20/20 Đường Ngô Tất Tố, Phường 8, Thành phố Đà Lạt, Lâm Đồng 66001, Việt Nam",
+            "phone": "+84 908 796 054",
+            "website": "https://www.facebook.com/DalahaRetreat",
+            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipMODEwt1YrM_2IkOYMthvEhFPGgnf7At2pSQEn7=w138-h92-k-no"
+        },
+        {
+            "position": 17,
+            "title": "Hôtel Colline",
+            "place_id": "ChIJRXfYM1MTcTERm2W_mcYPd-8",
+            "data_id": "0x3171135333d87745:0xef770fc699bf659b",
+            "data_cid": "17255277842950743451",
+            "reviews_link": "https://serpapi.com/search.json?data_id=0x3171135333d87745%3A0xef770fc699bf659b&engine=google_maps_reviews&hl=vi",
+            "photos_link": "https://serpapi.com/search.json?data_id=0x3171135333d87745%3A0xef770fc699bf659b&engine=google_maps_photos&hl=vi",
+            "gps_coordinates": {
+                "latitude": 11.9439482,
+                "longitude": 108.4381016
+            },
+            "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=vi&place_id=ChIJRXfYM1MTcTERm2W_mcYPd-8",
+            "provider_id": "/g/11g1npb9fh",
+            "rating": 4.2,
+            "reviews": 1182,
+            "price": "53 US$",
+            "type": "Khách sạn",
+            "types": [
+                "Khách sạn"
+            ],
+            "type_id": "hotel",
+            "type_ids": [
+                "hotel"
+            ],
+            "address": "10 Phan Bội Châu, Phường 1, Thành phố Đà Lạt, Lâm Đồng 670000, Việt Nam",
+            "phone": "+84 263 3665 588",
+            "website": "http://hotelcolline.com/",
+            "description": "KS hiện đại có nhà hàng và phòng tập. Khách sạn hiện đại với phòng ở tinh tế, có 2 nhà hàng, 2 quán bar và phòng tập thể dục.",
+            "amenities": [
+                "Wi-Fi miễn phí",
+                "Bữa sáng miễn phí"
+            ],
+            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipP2L97jq6bCrQcHzgz_cppu9QCM3sKqIY2Ulcko=w80-h120-k-no"
+        },
+        {
+            "position": 18,
+            "title": "Rừng Lá Kim Resort",
+            "place_id": "ChIJU5IDlDUTcTERESudLxscnZQ",
+            "data_id": "0x3171133594039253:0x949d1c1b2f9d2b11",
+            "data_cid": "10708746392045431569",
+            "reviews_link": "https://serpapi.com/search.json?data_id=0x3171133594039253%3A0x949d1c1b2f9d2b11&engine=google_maps_reviews&hl=vi",
+            "photos_link": "https://serpapi.com/search.json?data_id=0x3171133594039253%3A0x949d1c1b2f9d2b11&engine=google_maps_photos&hl=vi",
+            "gps_coordinates": {
+                "latitude": 11.978228099999999,
+                "longitude": 108.4613818
+            },
+            "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=vi&place_id=ChIJU5IDlDUTcTERESudLxscnZQ",
+            "provider_id": "/g/11sqvw7fhz",
+            "rating": 4.4,
+            "reviews": 214,
+            "type": "Khách sạn nghỉ dưỡng",
+            "types": [
+                "Khách sạn nghỉ dưỡng",
+                "Nhà hàng",
+                "Spa"
+            ],
+            "type_id": "resort_hotel",
+            "type_ids": [
+                "resort_hotel",
+                "restaurant",
+                "spa"
+            ],
+            "address": "144B Đường Vòng Lâm Viên, Phường 8, Thành phố Đà Lạt, Lâm Đồng 670000, Việt Nam",
+            "phone": "+84 846 888 879",
+            "website": "https://runglakimresort.com/",
+            "amenities": [
+                "Wi-Fi miễn phí",
+                "Bữa sáng miễn phí"
+            ],
+            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipMMnpCOmgfx3SYwlj5CB28NcMmD28_KH_aQGsd0=w146-h92-k-no"
+        },
+        {
+            "position": 19,
+            "title": "Dalat Wonder Resort",
+            "place_id": "ChIJ6dwPJF5rcTERR6noRVI-2oQ",
+            "data_id": "0x31716b5e240fdce9:0x84da3e5245e8a947",
+            "data_cid": "9573032481010526535",
+            "reviews_link": "https://serpapi.com/search.json?data_id=0x31716b5e240fdce9%3A0x84da3e5245e8a947&engine=google_maps_reviews&hl=vi",
+            "photos_link": "https://serpapi.com/search.json?data_id=0x31716b5e240fdce9%3A0x84da3e5245e8a947&engine=google_maps_photos&hl=vi",
+            "gps_coordinates": {
+                "latitude": 11.8968232,
+                "longitude": 108.4150389
+            },
+            "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=vi&place_id=ChIJ6dwPJF5rcTERR6noRVI-2oQ",
+            "provider_id": "/g/11f75yt7xx",
+            "rating": 4.2,
+            "reviews": 2229,
+            "type": "Khách sạn nghỉ dưỡng",
+            "types": [
+                "Khách sạn nghỉ dưỡng"
+            ],
+            "type_id": "resort_hotel",
+            "type_ids": [
+                "resort_hotel"
+            ],
+            "address": "19 Đ. Hoa Hồng, Phường 4, Thành phố Đà Lạt, Lâm Đồng 66100, Việt Nam",
+            "phone": "+84 263 3800 099",
+            "website": "http://www.dalatwonderresort.com/",
+            "description": "Khu nghỉ thời thượng ven hồ, có nhà hàng. Khu nghỉ dưỡng tinh tế có nhà hàng, bể bơi vô cực nhìn ra hồ và quán bar.",
+            "amenities": [
+                "Wi-Fi miễn phí",
+                "Bữa sáng miễn phí"
+            ],
+            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipPqNjBa7Ask0Kr4IgFe_rcAS08Wg7dfZyDa0WgM=w92-h92-k-no"
+        },
+        {
+            "position": 20,
+            "title": "Khu nghỉ dưỡng Biệt thự cổ Đà Lạt Cadasa",
+            "place_id": "ChIJ871QEBgTcTERr8F83m5wxGE",
+            "data_id": "0x317113181050bdf3:0x61c4706ede7cc1af",
+            "data_cid": "7044879338595729839",
+            "reviews_link": "https://serpapi.com/search.json?data_id=0x317113181050bdf3%3A0x61c4706ede7cc1af&engine=google_maps_reviews&hl=vi",
+            "photos_link": "https://serpapi.com/search.json?data_id=0x317113181050bdf3%3A0x61c4706ede7cc1af&engine=google_maps_photos&hl=vi",
+            "gps_coordinates": {
+                "latitude": 11.9381258,
+                "longitude": 108.4541576
+            },
+            "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=vi&place_id=ChIJ871QEBgTcTERr8F83m5wxGE",
+            "provider_id": "/g/11c51_rt2m",
+            "rating": 4.2,
+            "reviews": 365,
+            "type": "Khách sạn nghỉ dưỡng",
+            "types": [
+                "Khách sạn nghỉ dưỡng",
+                "Quán cà phê",
+                "Quán bar chơi nhạc pianô",
+                "Nhà hàng"
+            ],
+            "type_id": "resort_hotel",
+            "type_ids": [
+                "resort_hotel",
+                "coffee_shop",
+                "piano_bar",
+                "restaurant"
+            ],
+            "address": "16 Trần Hưng Đạo, Phường 10, Thành phố Đà Lạt, Lâm Đồng 670000, Việt Nam",
+            "phone": "+84 263 3586 699",
+            "amenities": [
+                "Wi-Fi miễn phí",
+                "Bữa sáng miễn phí"
+            ],
+            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipNKsvZkXRjvSRO1NlgeADjbGOlTSN2GnlcSJhXL=w139-h92-k-no"
+        }
+    ],
+    "serpapi_pagination": {
+        "next": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=vi&ll=%4011.940147238020286%2C108.45809725440188%2C11z&q=Kh%C3%A1ch+s%E1%BA%A1n+ngh%E1%BB%89+d%C6%B0%E1%BB%A1ng&start=20&type=search"
+    }
+}
