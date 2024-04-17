@@ -131,6 +131,43 @@ require([
   points.forEach(function (data) {
     graphicsLayer.add(createGraphic(data));
   });
-
+  //sidebar handle
+  toursMapSideBarHandle();
   map.add(graphicsLayer);
 });
+
+const toursMapSideBarHandle = () => {
+  fetch(`/api/tour/getTours`)
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+      return response.json();
+    })
+    .then((data) => {
+      const tours = data.newTours;
+      const toursListElement = document.getElementById("toursMapSideBar-List");
+
+      tours.forEach((tour) => {
+        var listItem = document.createElement("button");
+        listItem.classList.add("list-group-item");
+        listItem.classList.add("list-group-item-action");
+        listItem.textContent = tour.tour_name;
+        listItem.addEventListener("click", function () {
+          if (listItem.classList.contains("active")) {
+            listItem.classList.remove("active");
+          } else {
+            const activedElement = document.getElementsByClassName("active");
+            if (activedElement[0] != null) {
+              activedElement[0].classList.remove("active");
+            }
+            listItem.classList.add("active");
+          }
+        });
+        toursListElement.appendChild(listItem);
+      });
+    })
+    .catch((error) => {
+      console.error("Error:", error);
+    });
+};
