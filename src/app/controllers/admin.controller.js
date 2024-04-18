@@ -3,7 +3,7 @@ class Admin {
   show(req, res, next) {
     res.render("./pages/admin/map/index", {
       pageTitle: "Location",
-      style: "/pages/admin/test.css",
+      style: "/pages/admin/map.css",
       script: "/pages/admin/map.js",
       layout: "map",
     });
