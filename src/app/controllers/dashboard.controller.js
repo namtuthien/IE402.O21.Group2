@@ -3,6 +3,8 @@ const userModel = require("../models/user.model");
 const bookingModel = require("../models/booking.model");
 
 class DashboardController {
+
+    //[GET] /admin/dashboard
     async show(req, res, next) {
         const totalCustomers = await this.getTotalCustomers();
         const totalBookings = await this.getTotalBookings();
@@ -19,6 +21,8 @@ class DashboardController {
             // layout: "main"
         });
     }
+
+    // [GET] /admin/dashboard/createStatistical
     async createStatistical(req, res, next) {
         try {
             const revenueResult = await paymentModel.aggregate([
