@@ -1,0 +1,113 @@
+<div class="popup-add-tour">
+  <div class="popup-add-tour__content">
+    <span class="popup-add-tour__close">&times;</span>
+    <h2 class="popup-add-tour__title">Tour Informations</h2>
+    <form class="popup-add-tour__form">
+      <div class="popup-add-tour__form-group">
+        <label for="tour-name" class="popup-add-tour__label">Tour Name:</label>
+        <input type="text" id="tour-name" name="tour-name" class="popup-add-tour__input" required>
+      </div>
+      <div class="popup-add-tour__form-group">
+        <label for="region" class="popup-add-tour__label">Region:</label>
+        <select id="region" name="region" class="popup-add-tour__input" required>
+          <option value="1">Region 1</option>
+          <option value="2">Region 2</option>
+          <option value="3">Region 3</option>
+        </select>
+      </div>
+      <div class="popup-add-tour__form-group--flex-direction">
+        <div class="popup-add-tour__form-group">
+          <label for="tour-price" class="popup-add-tour__label">Tour Price:</label>
+          <input type="number" id="tour-price" name="tour-price" class="popup-add-tour__input" required>
+        </div>
+        <div class="popup-add-tour__form-group">
+          <label for="tour-category" class="popup-add-tour__label">Tour Category:</label>
+          <input type="text" id="tour-category" name="tour-category" class="popup-add-tour__input">
+        </div>
+      </div>
+      <div class="popup-add-tour__form-group--flex-direction">
+        <div class="popup-add-tour__form-group">
+          <label for="tour-days" class="popup-add-tour__label">Number of Days:</label>
+          <input type="number" id="tour-days" name="tour-days" class="popup-add-tour__input">
+        </div>
+        <div class="popup-add-tour__form-group">
+          <label for="tour-nights" class="popup-add-tour__label">Number of Nights:</label>
+          <input type="number" id="tour-nights" name="tour-nights" class="popup-add-tour__input">
+        </div>
+      </div>
+      <div class="popup-add-tour__form-group">
+        <label for="tour-description" class="popup-add-tour__label">Tour Description:</label>
+        <textarea id="tour-description" name="tour-description" class="popup-add-tour__input popup-add-tour__textarea" rows="4"></textarea>
+      </div>
+      <div class="popup-add-tour__form-group--flex-direction">
+        <div class="popup-add-tour__form-group">
+          <label for="total-ticket" class="popup-add-tour__label">Total Ticket:</label>
+          <input type="number" id="total-ticket" name="total-ticket" class="popup-add-tour__input">
+        </div>
+        <div class="popup-add-tour__form-group">
+          <label for="total-ticket-available" class="popup-add-tour__label">Total Ticket Available:</label>
+          <input type="number" id="total-ticket-available" name="total-ticket-available" class="popup-add-tour__input">
+        </div>
+      </div>
+      
+      {{!-- <div class="popup-add-tour__form-group">
+        <label for="tour-images" class="popup-add-tour__label">Tour Images:</label>
+        <input type="file" id="tour-images" name="tour-images" multiple class="popup-add-tour__input">
+      </div> --}}
+      <div class="popup-add-tour__form-group">
+        <label for="tour-images" class="popup-add-tour__label">Tour Images:</label>
+        <div class="popup-add-tour__image-container">
+          <div class="popup-add-tour__image-item">
+            <input type="text" name="image-src[]" class="popup-add-tour__input" placeholder="Image Source">
+            <input type="text" name="image-alt[]" class="popup-add-tour__input" placeholder="Image Alt">
+          </div>
+          {{!-- <div class="popup-add-tour__image-item">
+            <input type="text" name="image-src[]" class="popup-add-tour__input" placeholder="Image Source">
+            <input type="text" name="image-alt[]" class="popup-add-tour__input" placeholder="Image Alt">
+          </div> --}}
+        </div>
+      </div>
+      
+      <div class="popup-add-tour__form-group">
+        <label for="destinations" class="popup-add-tour__label">Destinations:</label>
+        <select id="destinations" name="destinations" multiple class="popup-add-tour__input">
+        </select>
+      </div>
+      
+        {{!-- <label for="route" class="popup-add-tour__label">Routes:</label> --}}
+      <div class="popup-add-tour__form-group--flex-direction">
+        <div class="popup-add-tour__form-group">
+            <label for="start-coordinate" class="popup-add-tour__label">Start Coordinate:</label>
+            <input type="text" id="start-coordinate" name="start-coordinate" class="popup-add-tour__input">
+        </div>
+        <div class="popup-add-tour__form-group">
+            <label for="end-coordinate" class="popup-add-tour__label">End Coordinate:</label>
+            <input type="text" id="end-coordinate" name="end-coordinate" class="popup-add-tour__input">
+        </div>
+      </div>
+      <div class="popup-add-tour__form-group">
+        <label for="route" class="popup-add-tour__label">Route:</label>
+        <select id="route" name="route" multiple class="popup-add-tour__input">
+        </select>
+      </div>
+      
+      <div class="popup-add-tour__form-group--flex-direction">
+        <div class="popup-add-tour__form-group">
+          <label for="vehicles" class="popup-add-tour__label">Vehicles:</label>
+          <select id="vehicles" name="vehicles" multiple class="popup-add-tour__input">
+          </select>
+        </div>
+        <div class="popup-add-tour__form-group">
+          <label for="guides" class="popup-add-tour__label">Guides:</label>
+          <select id="guides" name="guides" multiple class="popup-add-tour__input">
+          </select>
+        </div>
+      </div>
+      
+      
+      <div class="popup-add-tour__form-group">
+        <button type="submit" class="popup-add-tour__submit">Add Tour</button>
+      </div>
+    </form>
+  </div>
+</div>
