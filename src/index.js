@@ -29,6 +29,8 @@ app.engine(
     extname: ".hbs",
     helpers: {
       sum: (a, b) => a + b,
+      gt: (a, b) => a > b,
+      divide: (a, b) => a / b,
     },
     partialsDir: [
       path.join(__dirname, "resources", "views", "partials"),

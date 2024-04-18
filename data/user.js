@@ -1,25 +1,40 @@
 /*
 admin:
-    email: vuphan123@gmail.com
-    password: VuPhan@4321@
+    user_email: vuphan123@gmail.com
+    user_password: VuPhan@4321@
 staff: 
-    email: giabao456@gmail.com
-    password: BaoMenly@4231@
+    user_email: giabao456@gmail.com
+    user_password: BaoMenly@4231@
 
-    email: leducmanh123@gmail.com
-    password: LeDucManh@4231@
+    user_email: leducmanh123@gmail.com
+    user_password: LeDucManh@4231@
 
-    email: truonghuynh789@gmail.com
-    password: TruongHuynh@987@
+    user_email: truonghuynh789@gmail.com
+    user_password: TruongHuynh@987@
 
-    email: quocduy987@gmail.com
-    password: LeDucManh@4231@
+    user_email: quocduy987@gmail.com
+    user_password: LeDucManh@4231@
 
-    email: seosau4332@gmail.com
-    password: ToiLaSau@123@
+    user_email: seosau4332@gmail.com
+    user_password: ToiLaSau@123@
+tourguide: 
+    user_email: giabao456.tourguide@gmail.com
+    user_password: BaoMenly@4231@
+
+    user_email: leducmanh123.tourguide@gmail.com
+    user_password: LeDucManh@4231@
+
+    user_email: truonghuynh789.tourguide@gmail.com
+    user_password: TruongHuynh@987@
+
+    user_email: quocduy987.tourguide@gmail.com
+    user_password: LeDucManh@4231@
+
+    user_email: seosau4332.tourguide@gmail.com
+    user_password: ToiLaSau@123@
 customer:
-    email: check db
-    password: Ho + Ten + @1233@  (vd: LeDuy@1233@)
+    user_email: check db
+    user_password: Ho + Ten + @1233@  (vd: LeDuy@1233@)
 */
 const dotenv = require("dotenv");
 const bcrypt = require("bcryptjs");
@@ -30,8 +45,8 @@ const { db } = require("../src/config");
 db.connect();
 
 async function generateHash(password) {
-  const hashedPassword = await bcrypt.hash(password, 8);
-  return hashedPassword;
+  const hashedpassword = await bcrypt.hash(password, 8);
+  return hashedpassword;
 }
 
 const ho = [
@@ -77,72 +92,220 @@ function generateRandomPhoneNumber() {
   return phoneNumber;
 }
 
+function generateRandomBirthday() {
+  const startDate = new Date(2000, 0, 2);
+  const endDate = new Date(2005, 11, 32);
+  const randomTime = startDate.getTime() + Math.random() * (endDate.getTime() - startDate.getTime());
+  const randomDate = new Date(randomTime);
+
+  return randomDate;
+}
+
+generateRandomBirthday();
+
 const createUsers = async () => {
   let admin = {
-    name: "Phan Thanh Vu",
-    email: "vuphan123@gmail.com",
-    password: await generateHash("VuPhan@4321@"),
-    phone_number: "0997998999",
+    user_name: "Phan Thanh Vu",
+    user_email: "vuphan123@gmail.com",
+    user_password: await generateHash("VuPhan@4321@"),
+    user_phone_number: "0997998999",
     user_role: "admin",
-    is_authenticated: true,
+    user_birthday: '',
+    user_gender: 1,
+    user_address: {
+      street: "Hàn Thuyên",
+      ward: "Linh Trung",
+      district: "Thủ Đức",
+      province: "Thành phố Hồ Chí Minh",
+    },
+    // is_authenticated: true,
   };
 
   let staff = [
     {
-      name: "Le Duc Manh",
-      email: "leducmanh123@gmail.com",
-      password: await generateHash("LeDucManh@4231@"),
-      phone_number: "0338676213",
+      user_name: "Le Duc Manh",
+      user_email: "leducmanh123@gmail.com",
+      user_password: await generateHash("LeDucManh@4231@"),
+      user_phone_number: "0338676213",
       user_role: "staff",
-      is_authenticated: true,
+      user_birthday: '',
+      user_gender: 1,
+      user_address: {
+        street: "Hàn Thuyên",
+        ward: "Linh Trung",
+        district: "Thủ Đức",
+        province: "Thành phố Hồ Chí Minh",
+      },
+      // is_authenticated: true,
     },
     {
-      name: "Tran Ngo Gia Bao",
-      email: "giabao456@gmail.com",
-      password: await generateHash("BaoMenly@4231@"),
-      phone_number: "0312382412",
+      user_name: "Tran Ngo Gia Bao",
+      user_email: "giabao456@gmail.com",
+      user_password: await generateHash("BaoMenly@4231@"),
+      user_phone_number: "0312382412",
       user_role: "staff",
-      is_authenticated: true,
+      user_birthday: '',
+      user_gender: 1,
+      user_address: {
+        street: "Hàn Thuyên",
+        ward: "Linh Trung",
+        district: "Thủ Đức",
+        province: "Thành phố Hồ Chí Minh",
+      },
+      // is_authenticated: true,
     },
     {
-      name: "Huynh Sinh Truong",
-      email: "truonghuynh789@gmail.com",
-      password: await generateHash("TruongHuynh@987@"),
-      phone_number: "0334562432",
+      user_name: "Huynh Sinh Truong",
+      user_email: "truonghuynh789@gmail.com",
+      user_password: await generateHash("TruongHuynh@987@"),
+      user_phone_number: "0334562432",
       user_role: "staff",
-      is_authenticated: true,
+      user_birthday: '',
+      user_gender: 1,
+      user_address: {
+        street: "Hàn Thuyên",
+        ward: "Linh Trung",
+        district: "Thủ Đức",
+        province: "Thành phố Hồ Chí Minh",
+      },
+      // is_authenticated: true,
     },
     {
-      name: "Dang Quoc Duy",
-      email: "quocduy987@gmail.com",
-      password: await generateHash("QuocDuy@7654@"),
-      phone_number: "0338753464",
+      user_name: "Dang Quoc Duy",
+      user_email: "quocduy987@gmail.com",
+      user_password: await generateHash("QuocDuy@7654@"),
+      user_phone_number: "0338753464",
       user_role: "staff",
-      is_authenticated: true,
+      user_birthday: '',
+      user_gender: 1,
+      user_address: {
+        street: "Hàn Thuyên",
+        ward: "Linh Trung",
+        district: "Thủ Đức",
+        province: "Thành phố Hồ Chí Minh",
+      },
+      // is_authenticated: true,
     },
     {
-      name: "Ma Seo Sau",
-      email: "seosau4332@gmail.com",
-      password: await generateHash("ToiLaSau@123@"),
-      phone_number: "0344678121",
+      user_name: "Ma Seo Sau",
+      user_email: "seosau4332@gmail.com",
+      user_password: await generateHash("ToiLaSau@123@"),
+      user_phone_number: "0344678121",
       user_role: "staff",
-      is_authenticated: true,
+      user_birthday: '',
+      user_gender: 1,
+      user_address: {
+        street: "Hàn Thuyên",
+        ward: "Linh Trung",
+        district: "Thủ Đức",
+        province: "Thành phố Hồ Chí Minh",
+      },
+      // is_authenticated: true,
+    },
+    {
+      user_name: "Le Duc Manh",
+      user_email: "leducmanh123.tourguide@gmail.com",
+      user_password: await generateHash("LeDucManh@4231@"),
+      user_phone_number: "0338676213",
+      user_role: "tourguide",
+      user_birthday: '',
+      user_gender: 1,
+      user_address: {
+        street: "Hàn Thuyên",
+        ward: "Linh Trung",
+        district: "Thủ Đức",
+        province: "Thành phố Hồ Chí Minh",
+      },
+      // is_authenticated: true,
+    },
+    {
+      user_name: "Tran Ngo Gia Bao",
+      user_email: "giabao456.tourguide@gmail.com",
+      user_password: await generateHash("BaoMenly@4231@"),
+      user_phone_number: "0312382412",
+      user_role: "tourguide",
+      user_birthday: '',
+      user_gender: 1,
+      user_address: {
+        street: "Hàn Thuyên",
+        ward: "Linh Trung",
+        district: "Thủ Đức",
+        province: "Thành phố Hồ Chí Minh",
+      },
+      // is_authenticated: true,
+    },
+    {
+      user_name: "Huynh Sinh Truong",
+      user_email: "truonghuynh789.tourguide@gmail.com",
+      user_password: await generateHash("TruongHuynh@987@"),
+      user_phone_number: "0334562432",
+      user_role: "tourguide",
+      user_birthday: '',
+      user_gender: 1,
+      user_address: {
+        street: "Hàn Thuyên",
+        ward: "Linh Trung",
+        district: "Thủ Đức",
+        province: "Thành phố Hồ Chí Minh",
+      },
+      // is_authenticated: true,
+    },
+    {
+      user_name: "Dang Quoc Duy",
+      user_email: "quocduy987.tourguide@gmail.com",
+      user_password: await generateHash("QuocDuy@7654@"),
+      user_phone_number: "0338753464",
+      user_role: "tourguide",
+      user_birthday: '',
+      user_gender: 1,
+      user_address: {
+        street: "Hàn Thuyên",
+        ward: "Linh Trung",
+        district: "Thủ Đức",
+        province: "Thành phố Hồ Chí Minh",
+      },
+      // is_authenticated: true,
+    },
+    {
+      user_name: "Ma Seo Sau",
+      user_email: "seosau4332.tourguide@gmail.com",
+      user_password: await generateHash("ToiLaSau@123@"),
+      user_phone_number: "0344678121",
+      user_role: "tourguide",
+      user_birthday: '',
+      user_gender: 1,
+      user_address: {
+        street: "Hàn Thuyên",
+        ward: "Linh Trung",
+        district: "Thủ Đức",
+        province: "Thành phố Hồ Chí Minh",
+      },
+      // is_authenticated: true,
     },
   ];
   let users = [admin, ...staff];
   for (let i = 0; i < 25; i++) {
-    let idx1 = Math.floor(Math.random() * 10);
-    let idx2 = Math.floor(Math.random() * 10);
+    let idx1 = Math.floor(Math.random() * 12);
+    let idx2 = Math.floor(Math.random() * 12);
     let phoneNumber = generateRandomPhoneNumber();
-    let password = await generateHash(ho[idx1] + ten[idx2] + "@1233@");
+    let user_password = await generateHash(ho[idx1] + ten[idx2] + "@1233@");
+    let birthday = generateRandomBirthday();
 
     users.push({
-      name: ho[idx1] + " " + ten[idx2],
-      email: ho[idx1].toLowerCase() + ten[idx2].toLowerCase() + "@gmail.com",
-      password: password,
-      phone_number: phoneNumber,
+      user_name: ho[idx1] + " " + ten[idx2],
+      user_email: ho[idx1].toLowerCase() + ten[idx2].toLowerCase() + Math.floor(Math.random() * 12) + "@gmail.com",
+      user_password: user_password,
+      user_phone_number: phoneNumber,
+      user_birthday: birthday,
+      user_gender: Math.floor(Math.random() * 2),
       user_role: "customer",
-      is_authenticated: true,
+      user_address: {
+        street: "Hàn Thuyên",
+        ward: "Linh Trung",
+        district: "Thủ Đức",
+        province: "Thành phố Hồ Chí Minh",
+      },
+      // is_authenticated: true,
     });
   }
   return users;
