@@ -38,7 +38,7 @@ for (let i = 0; i < 4; i++) {
 fetch('/admin/dashboard/createStatistical')
   .then(response => {
     if (!response.ok) {
-      throw new Error('Network response was not ok');
+      alert("404")
     }
     return response.json();
   })

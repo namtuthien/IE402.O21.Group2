@@ -45,8 +45,8 @@ const { db } = require("../src/config");
 db.connect();
 
 async function generateHash(password) {
-  const hashedpassword = await bcrypt.hash(password, 8);
-  return hashedpassword;
+  const hashedPassword = await bcrypt.hash(password, 8);
+  return hashedPassword;
 }
 
 const ho = [
