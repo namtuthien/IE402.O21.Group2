@@ -16,13 +16,12 @@ class AuthController {
 
   // authen user info login
   async authenticateUser(email, password) {
-    const user = await User.findOne({ email });
-
+    const user = await User.findOne({user_email: email });
     if (!user) {
       return { success: false, message: "Email hoặc mật khẩu không đúng" };
     }
 
-    const isPasswordValid = await bcrypt.compare(password, user.password);
+    const isPasswordValid = await bcrypt.compare(password, user.user_password);
     if (!isPasswordValid) {
       return { success: false, message: "Mật khẩu không đúng" };
     }
