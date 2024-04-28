@@ -8,7 +8,7 @@ const User = new Schema({
   user_email: { type: String, required: true },
   user_phone_number: { type: String },
   user_password: { type: String, required: true },
-  user_role: { type: String, required: true },
+  user_role: { type: String, required: true, default:"customer" },
   //   is_authenticated: { type: Boolean },
   user_birthday: { type: Date },
   user_gender: { type: Boolean }, // 0: female, 1: male, -1; others
