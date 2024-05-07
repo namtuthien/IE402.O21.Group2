@@ -1,10 +1,11 @@
 // import utils
 import { convertDateToHourDayMonthYear } from "/format.js";
-import { getLocations } from "/fetch.js";
+import { getLocations, getTours, getLinesOfTour } from "/fetch.js";
 
 // get data
 const locations = await getLocations();
-
+const tours = await getTours();
+let streets;
 // arcgis
 require([
   "esri/Map",
@@ -12,7 +13,7 @@ require([
   "esri/Graphic",
   "esri/layers/GraphicsLayer",
   "esri/PopupTemplate",
-], (Map, MapView, Graphic, GraphicsLayer, PopupTemplate) => {
+], (Map, MapView, Graphic, GraphicsLayer, PopupTemplate, Polyline) => {
   // create map
   var map = new Map({
     basemap: "streets-relief-vector",
@@ -133,41 +134,35 @@ require([
   });
   //sidebar handle
   toursMapSideBarHandle();
-  map.add(graphicsLayer);
+  var tourPoints;
+  const toursListElement = document.getElementById("toursMapSideBar-List");
+  tours.forEach((tour) => {
+    var listItem = document.createElement("button");
+    listItem.classList.add("list-group-item");
+    listItem.classList.add("list-group-item-action");
+    listItem.textContent = tour.tour_name;
+    listItem.addEventListener("click", async function (e) {
+      if (listItem.classList.contains("active")) {
+        listItem.classList.remove("active");
+      } else {
+        const activedElement = document.getElementsByClassName("active");
+        if (activedElement[0] != null) {
+          activedElement[0].classList.remove("active");
+        }
+        listItem.classList.add("active");
+      }
+      //fetch points
+      tourPoints = await getLinesOfTour(tour.routes);
+
+      streets = {
+        type: "polyline",
+        paths: tourPoints,
+      };
+      console.log(streets);
+    });
+
+    toursListElement.appendChild(listItem);
+  });
 });
 
-const toursMapSideBarHandle = () => {
-  fetch(`/api/tour/getTours`)
-    .then((response) => {
-      if (!response.ok) {
-        throw new Error("Network response was not ok");
-      }
-      return response.json();
-    })
-    .then((data) => {
-      const tours = data.newTours;
-      const toursListElement = document.getElementById("toursMapSideBar-List");
-
-      tours.forEach((tour) => {
-        var listItem = document.createElement("button");
-        listItem.classList.add("list-group-item");
-        listItem.classList.add("list-group-item-action");
-        listItem.textContent = tour.tour_name;
-        listItem.addEventListener("click", function () {
-          if (listItem.classList.contains("active")) {
-            listItem.classList.remove("active");
-          } else {
-            const activedElement = document.getElementsByClassName("active");
-            if (activedElement[0] != null) {
-              activedElement[0].classList.remove("active");
-            }
-            listItem.classList.add("active");
-          }
-        });
-        toursListElement.appendChild(listItem);
-      });
-    })
-    .catch((error) => {
-      console.error("Error:", error);
-    });
-};
+const toursMapSideBarHandle = () => {};

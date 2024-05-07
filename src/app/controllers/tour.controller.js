@@ -1,5 +1,8 @@
 // import models
 const Tour = require("../models/tour.model");
+const Route = require("../models/route.model");
+const Line = require("../models/line.model");
+const { getRouteById } = require("./route.controller");
 
 class TourController {
   // [GET] /tour/create
@@ -42,6 +45,7 @@ class TourController {
       });
     }
   }
+  //[GET] /api/tour/getTours
   async getTours(req, res, next) {
     try {
       const tours = await Tour.find();
@@ -55,6 +59,39 @@ class TourController {
         newTours.push(tour.toObject());
       });
       return res.status(200).json({ newTours });
+    } catch (err) {
+      res.status(500).json({
+        message: "Internal server error",
+      });
+    }
+  }
+  //[GET] /api/tour/getLinesOfTour
+  async getLinesOfTour(req, res, next) {
+    try {
+      //get routes of tour
+      var tourRoutes = req.params.routes;
+      tourRoutes = JSON.parse(tourRoutes);
+      var routes = [];
+      var lines = [];
+      var points = [];
+      for (var i = 0; i < tourRoutes.length; i++) {
+        var route = await Route.findOne({ _id: tourRoutes[i].route });
+        routes.push(route);
+      }
+      //get lines of route
+      routes.forEach((route) => {});
+      for (var i = 0; i < routes.length; i++) {
+        for (var j = 0; j < routes[i].lines.length; j++) {
+          var line = await Line.findOne({ _id: routes[i].lines[j] });
+          lines.push(line);
+        }
+      }
+      lines.forEach((line) => {
+        line.points.forEach((point) => {
+          points.push([point.longtitude, point.latitude]);
+        });
+      });
+      return res.status(200).json({ points });
     } catch (err) {
       res.status(500).json({
         message: "Internal server error",
