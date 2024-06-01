@@ -1,0 +1,34 @@
+.bg-navbar {
+    background: url('/imgs/admin/navbarbackground.png');
+}
+
+.nav-item {
+    width: 100%;
+    font-size: 1rem;
+}
+
+.nav-link {
+    color: #fff;
+}
+
+.nav-link:hover {
+    margin-left: 8px;
+    transition: all 0.3s ease;
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.4);
+
+}
+
+.nav-link:hover:not(.active) {
+    color: #fff;
+}
+
+.active {
+    background-color: rgba(255, 255, 255);
+    color: var(--blue1) !important;
+    font-weight: bold;
+}
+
+.user__role {
+    width: fit-content;
+}
