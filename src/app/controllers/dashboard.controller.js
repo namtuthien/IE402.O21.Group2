@@ -1,6 +1,7 @@
 const paymentModel = require("../models/payment.model");
 const userModel = require("../models/user.model");
 const bookingModel = require("../models/booking.model");
+const ratingModel = require("../models/rating.model");
 
 class DashboardController {
 
@@ -8,16 +9,16 @@ class DashboardController {
     async show(req, res, next) {
         const totalCustomers = await this.getTotalCustomers();
         const totalBookings = await this.getTotalBookings();
-        const totalStaffs = await this.getTotalStaffs();
+        const totalRatings = await this.getTotalRatings();
         const totalRevenue = await this.calculateTotalRevenue();
         res.render('pages/admin/dashboard', {
             pageTitle: "Bảng điều khiển",
             style: "/pages/admin/dashboard.css",
             script: "/pages/admin/dashboard.js",
-            totalCustomers: totalCustomers,
-            totalBookings: totalBookings,
-            totalStaffs: totalStaffs,
-            totalRevenue: totalRevenue,
+            totalCustomers: totalCustomers.toLocaleString("de-DE"),
+            totalBookings: totalBookings.toLocaleString("de-DE"),
+            totalRatings: totalRatings.toLocaleString("de-DE"),
+            totalRevenue: totalRevenue.toLocaleString("de-DE"),
             // layout: "main"
         });
     }
@@ -138,9 +139,9 @@ class DashboardController {
         }
     }
 
-    async getTotalStaffs() {
+    async getTotalRatings() {
         try {
-            const count = await userModel.countDocuments({ user_role: 'staff' });
+            const count = await ratingModel.countDocuments();
             return count;
         } catch (err) {
             console.error(err);
