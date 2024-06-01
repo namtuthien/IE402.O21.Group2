@@ -29,6 +29,18 @@ app.engine(
     extname: ".hbs",
     helpers: {
       sum: (a, b) => a + b,
+      tourGetStartingDay: (tour_starting_day) => {
+        var timestampStr = tour_starting_day;
+        var date = new Date(timestampStr);
+        var day = date.getDate();
+        var month = date.getMonth() + 1;
+        var year = date.getFullYear();
+        var formattedDate = day + "/" + month + "/" + year;
+        return formattedDate;
+      },
+      tourIndex: (index) => {
+        return parseInt(index) + 1;
+      },
     },
     partialsDir: [
       path.join(__dirname, "resources", "views", "partials"),
