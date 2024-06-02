@@ -16,7 +16,9 @@ class AuthController {
 
   // authen user info login
   async authenticateUser(email, password) {
+
     const user = await User.findOne({ user_email: email });
+
     if (!user) {
       return { success: false, message: "Email hoặc mật khẩu không đúng" };
     }
