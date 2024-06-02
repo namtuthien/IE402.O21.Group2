@@ -5,8 +5,6 @@ const Route = new Schema({
   route_name: { type: String, required: true },
   route_description: { type: String },
   route_length: { type: Number },
-  //   start_location: { type: ObjectId },
-  //   destination: { type: ObjectId },
   lines: [
     {
       type: mongoose.Schema.Types.ObjectId,
