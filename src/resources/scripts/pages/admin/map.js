@@ -1,10 +1,11 @@
 // import utils
 import { convertDateToHourDayMonthYear } from "/format.js";
-import { getLocations } from "/fetch.js";
+import { getLocations, getTours, getLinesOfTour } from "/fetch.js";
 
 // get data
 const locations = await getLocations();
-
+const tours = await getTours();
+let streets;
 // arcgis
 require([
   "esri/Map",
@@ -14,7 +15,7 @@ require([
   "esri/widgets/Editor",
   "esri/layers/FeatureLayer",
   "esri/core/reactiveUtils",
-], (Map, MapView, Graphic, GraphicsLayer, Editor, FeatureLayer, reactiveUtils) => {
+], (Map, MapView, Graphic, GraphicsLayer, Editor, FeatureLayer, reactiveUtils, Polyline) => {
   // create map
   const map = new Map({
     basemap: "streets-relief-vector",
