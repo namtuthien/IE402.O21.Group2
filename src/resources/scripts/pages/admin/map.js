@@ -406,7 +406,7 @@ require([
         copyTextToClipboard(
           '{"longitude":' +
             event.mapPoint.longitude +
-            ', "ladtitude":' +
+            ', "latitude":' +
             event.mapPoint.latitude +
             "},"
         );
