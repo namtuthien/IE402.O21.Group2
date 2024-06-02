@@ -9,5 +9,4 @@ router.get("/customer/:user_id", StaffController.getCustomerById);
 // [GET] all ratings
 router.get("/rating/get-all", RatingController.index);
 
-
 module.exports = router;
