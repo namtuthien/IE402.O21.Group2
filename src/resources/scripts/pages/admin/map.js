@@ -378,4 +378,39 @@ require([
     // Cancel the workflow so that once edits are applied, a new popup can be displayed
     editor.viewModel.cancelWorkflow();
   });
+
+  var list_points = [];
+  var string_points = "";
+
+  function copyTextToClipboard(text) {
+    if (!navigator.clipboard) {
+      fallbackCopyTextToClipboard(text);
+      return;
+    }
+    navigator.clipboard.writeText(text).then(
+      function () {
+        console.log("Async: Copying to clipboard was successful!");
+      },
+      function (err) {
+        console.error("Async: Could not copy text: ", err);
+      }
+    );
+  }
+
+  view.popup.autoOpenEnabled = true; // Disable the default popup behavior
+  view.on("click", function (event) {
+    view.hitTest(event).then(function (hitTestResults) {
+      if (hitTestResults.results) {
+        list_points.push([event.mapPoint.longitude, event.mapPoint.latitude]);
+        string_points += "[" + event.mapPoint.longitude + ", " + event.mapPoint.latitude + "],";
+        copyTextToClipboard(
+          '{"longitude":' +
+            event.mapPoint.longitude +
+            ', "ladtitude":' +
+            event.mapPoint.latitude +
+            "},"
+        );
+      }
+    });
+  });
 });
