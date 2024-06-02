@@ -10,6 +10,7 @@ const Tour = new Schema({
   },
   tour_price: { type: Number, required: true },
   tour_category: [{ type: String }],
+  tour_starting_day: { type: Date },
   tour_number_of_days: { type: Number },
   tour_number_of_nights: { type: Number },
   tour_description: { type: String },
