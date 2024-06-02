@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 const Line = new Schema({
   points: [
     {
-      longtitude: { type: String, required: true },
+      longitude: { type: String, required: true },
       latitude: { type: String, required: true },
     },
   ],

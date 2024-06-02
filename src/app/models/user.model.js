@@ -3,9 +3,9 @@ const Schema = mongoose.Schema;
 
 const User = new Schema({
   //   _id: { type: ObjectId },
-  user_login_name: { type: String, unique: true, required: true },
+  // user_login_name: { type: String, unique: true, required: true },
   user_name: { type: String, required: true },
-  user_email: { type: String, required: true },
+  user_email: { type: String, unique: true, required: true },
   user_phone_number: { type: String },
   user_password: { type: String, required: true },
   user_role: { type: String, required: true, default:"customer" },
