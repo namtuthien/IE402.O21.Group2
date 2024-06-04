@@ -1,0 +1,709 @@
+{
+    "search_metadata": {
+        "id": "661ed1675b54ef5ffb5f2394",
+        "status": "Success",
+        "json_endpoint": "https://serpapi.com/searches/0313c5485c41929e/661ed1675b54ef5ffb5f2394.json",
+        "created_at": "2024-04-16 19:28:39 UTC",
+        "processed_at": "2024-04-16 19:28:39 UTC",
+        "google_maps_url": "https://www.google.com/maps/search/Th%E1%BA%AFng+c%E1%BA%A3nh/@11.940147238020286,108.45809725440188,11z?hl=vi",
+        "raw_html_file": "https://serpapi.com/searches/0313c5485c41929e/661ed1675b54ef5ffb5f2394.html",
+        "total_time_taken": 1.42
+    },
+    "search_parameters": {
+        "engine": "google_maps",
+        "type": "search",
+        "q": "Thắng cảnh",
+        "ll": "@11.940147238020286,108.45809725440188,11z",
+        "google_domain": "google.com",
+        "hl": "vi"
+    },
+    "search_information": {
+        "local_results_state": "Results for exact spelling",
+        "query_displayed": "Thắng cảnh"
+    },
+    "local_results": [
+        {
+            "position": 1,
+            "title": "Thung Lũng HjNa",
+            "place_id": "ChIJo4TkbbZtcTERnP__lnNeZ5g",
+            "data_id": "0x31716db66de484a3:0x98675e7396ffff9c",
+            "data_cid": "10981850066913853340",
+            "reviews_link": "https://serpapi.com/search.json?data_id=0x31716db66de484a3%3A0x98675e7396ffff9c&engine=google_maps_reviews&hl=vi",
+            "photos_link": "https://serpapi.com/search.json?data_id=0x31716db66de484a3%3A0x98675e7396ffff9c&engine=google_maps_photos&hl=vi",
+            "gps_coordinates": {
+                "latitude": 11.9279356,
+                "longitude": 108.3717119
+            },
+            "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=vi&place_id=ChIJo4TkbbZtcTERnP__lnNeZ5g",
+            "provider_id": "/g/11h84f6g7v",
+            "rating": 4.5,
+            "reviews": 15,
+            "type": "Thắng cảnh",
+            "types": [
+                "Thắng cảnh"
+            ],
+            "type_id": "scenic_spot",
+            "type_ids": [
+                "scenic_spot"
+            ],
+            "address": "Tà Nung, Thành phố Đà Lạt, Lâm Đồng, Việt Nam",
+            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipMftDlWkH0WqYrDktoS2bK3YTjLeenrDcQdK9XS=w122-h92-k-no"
+        },
+        {
+            "position": 2,
+            "title": "Thác 7 tầng Păng Tiên",
+            "place_id": "ChIJs78crUxucTERs1N3lrQDlC8",
+            "data_id": "0x31716e4cad1cbfb3:0x2f9403b4967753b3",
+            "data_cid": "3428369290489189299",
+            "reviews_link": "https://serpapi.com/search.json?data_id=0x31716e4cad1cbfb3%3A0x2f9403b4967753b3&engine=google_maps_reviews&hl=vi",
+            "photos_link": "https://serpapi.com/search.json?data_id=0x31716e4cad1cbfb3%3A0x2f9403b4967753b3&engine=google_maps_photos&hl=vi",
+            "gps_coordinates": {
+                "latitude": 11.9753442,
+                "longitude": 108.28533859999999
+            },
+            "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=vi&place_id=ChIJs78crUxucTERs1N3lrQDlC8",
+            "provider_id": "/g/11c5btjrr8",
+            "rating": 4.4,
+            "reviews": 40,
+            "unclaimed_listing": true,
+            "type": "Thắng cảnh",
+            "types": [
+                "Thắng cảnh",
+                "Chèo xuồng vượt thác",
+                "Điểm thu hút khách du lịch"
+            ],
+            "type_id": "scenic_spot",
+            "type_ids": [
+                "scenic_spot",
+                "rafting",
+                "tourist_attraction"
+            ],
+            "address": "X7GP+44P, Thôn Păng Tiên xã, Lạc Dương, Lâm Đồng, Việt Nam",
+            "open_state": "Mở cả ngày",
+            "hours": "Mở cả ngày",
+            "operating_hours": {
+                "thứ tư": "Mở cửa cả ngày",
+                "thứ năm": "Mở cửa cả ngày",
+                "thứ sáu": "Mở cửa cả ngày",
+                "thứ bảy": "Mở cửa cả ngày",
+                "chủ nhật": "Mở cửa cả ngày",
+                "thứ hai": "Mở cửa cả ngày",
+                "thứ ba": "Mở cửa cả ngày"
+            },
+            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipPY0PB3_j2sFBEadN_otSlIR-IthauoOagumuGj=w80-h106-k-no"
+        },
+        {
+            "position": 3,
+            "title": "Thung lũng Tình Yêu",
+            "place_id": "ChIJc6HmQ70ScTER9nFcY5EPR7k",
+            "data_id": "0x317112bd43e6a173:0xb9470f91635c71f6",
+            "data_cid": "13350656737474802166",
+            "reviews_link": "https://serpapi.com/search.json?data_id=0x317112bd43e6a173%3A0xb9470f91635c71f6&engine=google_maps_reviews&hl=vi",
+            "photos_link": "https://serpapi.com/search.json?data_id=0x317112bd43e6a173%3A0xb9470f91635c71f6&engine=google_maps_photos&hl=vi",
+            "gps_coordinates": {
+                "latitude": 11.978063899999999,
+                "longitude": 108.4489179
+            },
+            "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=vi&place_id=ChIJc6HmQ70ScTER9nFcY5EPR7k",
+            "provider_id": "/g/122z_vxt",
+            "rating": 4.4,
+            "reviews": 13238,
+            "type": "Thắng cảnh",
+            "types": [
+                "Thắng cảnh",
+                "Điểm thu hút khách du lịch"
+            ],
+            "type_id": "scenic_spot",
+            "type_ids": [
+                "scenic_spot",
+                "tourist_attraction"
+            ],
+            "address": "5 - 7 Đường Mai Anh Đào, Phường 8, Thành phố Đà Lạt, Lâm Đồng 670000, Việt Nam",
+            "open_state": "Đã đóng cửa ⋅ Mở lúc 7:30",
+            "hours": "Đã đóng cửa ⋅ Mở lúc 7:30",
+            "operating_hours": {
+                "thứ tư": "07:30–22:00",
+                "thứ năm": "07:30–22:00",
+                "thứ sáu": "07:30–23:00",
+                "thứ bảy": "07:30–23:00",
+                "chủ nhật": "07:30–23:00",
+                "thứ hai": "07:30–22:00",
+                "thứ ba": "07:30–22:00"
+            },
+            "phone": "+84 263 3821 448",
+            "description": "Công viên huyền ảo có vườn cây & hồ nước. Công viên lãng mạn có tác phẩm ng.thuật kỳ lạ, vườn đặc sắc và hồ nước có những chiếc thuyền hình thiên nga.",
+            "user_review": "\"Thật đẹp, đúng là danh lam thắng cảnh\"",
+            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipOLv98WYYNGZwSiJtZuEhvsQZL0LtNXscOPtBsO=w128-h92-k-no"
+        },
+        {
+            "position": 4,
+            "title": "30 Wonders - Valley of Love",
+            "place_id": "ChIJtU7wK-MNcTER5Ki2dsGVpHE",
+            "data_id": "0x31710de32bf04eb5:0x71a495c176b6a8e4",
+            "data_cid": "8188834680619313380",
+            "reviews_link": "https://serpapi.com/search.json?data_id=0x31710de32bf04eb5%3A0x71a495c176b6a8e4&engine=google_maps_reviews&hl=vi",
+            "photos_link": "https://serpapi.com/search.json?data_id=0x31710de32bf04eb5%3A0x71a495c176b6a8e4&engine=google_maps_photos&hl=vi",
+            "gps_coordinates": {
+                "latitude": 11.9933927,
+                "longitude": 108.44726
+            },
+            "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=vi&place_id=ChIJtU7wK-MNcTER5Ki2dsGVpHE",
+            "provider_id": "/g/11n09xqn_s",
+            "rating": 4.5,
+            "reviews": 46,
+            "unclaimed_listing": true,
+            "type": "Thắng cảnh",
+            "types": [
+                "Thắng cảnh"
+            ],
+            "type_id": "scenic_spot",
+            "type_ids": [
+                "scenic_spot"
+            ],
+            "address": "XCVW+9W2, Unnamed Road, Thị trấn Lạc Dương, Lạc Dương, Lâm Đồng, Việt Nam",
+            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipP8hLf9kCVXAHh_BIECeaatuNgSMuV267DNF_YS=w80-h106-k-no"
+        },
+        {
+            "position": 5,
+            "title": "KHU DU LỊCH THUNG LŨNG TÌNH YÊU ĐÀ LẠT",
+            "place_id": "ChIJoV9KXNsTcTERAjeEWDutZyA",
+            "data_id": "0x317113db5c4a5fa1:0x2067ad3b58843702",
+            "data_cid": "2335025402214627074",
+            "reviews_link": "https://serpapi.com/search.json?data_id=0x317113db5c4a5fa1%3A0x2067ad3b58843702&engine=google_maps_reviews&hl=vi",
+            "photos_link": "https://serpapi.com/search.json?data_id=0x317113db5c4a5fa1%3A0x2067ad3b58843702&engine=google_maps_photos&hl=vi",
+            "gps_coordinates": {
+                "latitude": 11.978382,
+                "longitude": 108.44944059999999
+            },
+            "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=vi&place_id=ChIJoV9KXNsTcTERAjeEWDutZyA",
+            "provider_id": "/g/11gxxfm7dy",
+            "rating": 4.4,
+            "reviews": 249,
+            "unclaimed_listing": true,
+            "type": "Thắng cảnh",
+            "types": [
+                "Thắng cảnh"
+            ],
+            "type_id": "scenic_spot",
+            "type_ids": [
+                "scenic_spot"
+            ],
+            "address": "03-05-07 Đường Mai Anh Đào, Phường 8, Thành phố Đà Lạt, Lâm Đồng 70000, Việt Nam",
+            "open_state": "Đã đóng cửa ⋅ Mở lúc 7:30",
+            "hours": "Đã đóng cửa ⋅ Mở lúc 7:30",
+            "operating_hours": {
+                "thứ tư": "07:30–17:00",
+                "thứ năm": "07:30–17:00",
+                "thứ sáu": "07:30–17:00",
+                "thứ bảy": "07:30–17:00",
+                "chủ nhật": "07:30–17:00",
+                "thứ hai": "07:30–17:30",
+                "thứ ba": "07:30–17:00"
+            },
+            "phone": "+84 966 936 173",
+            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipPX9DvGHmVYBfe9c1-h5O_PISp0HJZ4ffbIatE4=w122-h92-k-no"
+        },
+        {
+            "position": 6,
+            "title": "Da M'lates",
+            "place_id": "ChIJHRAspLYTcTERqRUgUDuN-Dk",
+            "data_id": "0x317113b6a42c101d:0x39f88d3b502015a9",
+            "data_cid": "4177243940273001897",
+            "reviews_link": "https://serpapi.com/search.json?data_id=0x317113b6a42c101d%3A0x39f88d3b502015a9&engine=google_maps_reviews&hl=vi",
+            "photos_link": "https://serpapi.com/search.json?data_id=0x317113b6a42c101d%3A0x39f88d3b502015a9&engine=google_maps_photos&hl=vi",
+            "gps_coordinates": {
+                "latitude": 11.978382,
+                "longitude": 108.44944059999999
+            },
+            "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=vi&place_id=ChIJHRAspLYTcTERqRUgUDuN-Dk",
+            "provider_id": "/g/11q_3wrnzn",
+            "rating": 5,
+            "reviews": 2,
+            "type": "Thắng cảnh",
+            "types": [
+                "Thắng cảnh"
+            ],
+            "type_id": "scenic_spot",
+            "type_ids": [
+                "scenic_spot"
+            ],
+            "address": "5 - 7 Đường Mai Anh Đào, Phường 8, Thành phố Đà Lạt, Lâm Đồng 66000, Việt Nam",
+            "open_state": "Đã đóng cửa ⋅ Mở lúc 7:00",
+            "hours": "Đã đóng cửa ⋅ Mở lúc 7:00",
+            "operating_hours": {
+                "thứ tư": "07:00–21:00",
+                "thứ năm": "07:00–21:00",
+                "thứ sáu": "07:00–21:00",
+                "thứ bảy": "07:00–21:00",
+                "chủ nhật": "07:00–21:00",
+                "thứ hai": "07:00–21:00",
+                "thứ ba": "07:00–21:00"
+            },
+            "phone": "+84 263 3558 888",
+            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipMgd8dx1GL5jEROrCwW2jz_q9QnE0h1rf4MWjSH=w137-h92-k-no"
+        },
+        {
+            "position": 7,
+            "title": "Bãi Đá suối Bằng Lăng",
+            "place_id": "ChIJp-mhUfh7cTERRvng0GVHqKY",
+            "data_id": "0x31717bf851a1e9a7:0xa6a84765d0e0f946",
+            "data_cid": "12008926909005101382",
+            "reviews_link": "https://serpapi.com/search.json?data_id=0x31717bf851a1e9a7%3A0xa6a84765d0e0f946&engine=google_maps_reviews&hl=vi",
+            "photos_link": "https://serpapi.com/search.json?data_id=0x31717bf851a1e9a7%3A0xa6a84765d0e0f946&engine=google_maps_photos&hl=vi",
+            "gps_coordinates": {
+                "latitude": 12.0915996,
+                "longitude": 108.1453645
+            },
+            "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=vi&place_id=ChIJp-mhUfh7cTERRvng0GVHqKY",
+            "provider_id": "/g/11ggvt7nxr",
+            "rating": 5,
+            "reviews": 3,
+            "unclaimed_listing": true,
+            "type": "Thắng cảnh",
+            "types": [
+                "Thắng cảnh"
+            ],
+            "type_id": "scenic_spot",
+            "type_ids": [
+                "scenic_spot"
+            ],
+            "address": "34RW+J4Q, Liêng S'rônH, Đam Rông, Lâm Đồng, Việt Nam",
+            "phone": "+84 944 536 692",
+            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipNJo83L_htURHoYkl66NEN2FEEbwOO4o_3MnVyY=w80-h106-k-no"
+        },
+        {
+            "position": 8,
+            "title": "Săn Mây Long Lanh",
+            "place_id": "ChIJ2XVQFZkHcTER2MqngAYkd5c",
+            "data_id": "0x31710799155075d9:0x9777240680a7cad8",
+            "data_cid": "10914231832302570200",
+            "reviews_link": "https://serpapi.com/search.json?data_id=0x31710799155075d9%3A0x9777240680a7cad8&engine=google_maps_reviews&hl=vi",
+            "photos_link": "https://serpapi.com/search.json?data_id=0x31710799155075d9%3A0x9777240680a7cad8&engine=google_maps_photos&hl=vi",
+            "gps_coordinates": {
+                "latitude": 12.1342679,
+                "longitude": 108.62896309999999
+            },
+            "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=vi&place_id=ChIJ2XVQFZkHcTER2MqngAYkd5c",
+            "provider_id": "/g/11kdcxg9x4",
+            "rating": 4.5,
+            "reviews": 15,
+            "unclaimed_listing": true,
+            "type": "Thắng cảnh",
+            "types": [
+                "Thắng cảnh"
+            ],
+            "type_id": "scenic_spot",
+            "type_ids": [
+                "scenic_spot"
+            ],
+            "address": "4JMH+PH4, QL27C, Đạ Chais, Lạc Dương, Lâm Đồng, Việt Nam",
+            "open_state": "Mở cả ngày",
+            "hours": "Mở cả ngày",
+            "operating_hours": {
+                "thứ tư": "Mở cửa cả ngày",
+                "thứ năm": "Mở cửa cả ngày",
+                "thứ sáu": "Mở cửa cả ngày",
+                "thứ bảy": "Mở cửa cả ngày",
+                "chủ nhật": "Mở cửa cả ngày",
+                "thứ hai": "Mở cửa cả ngày",
+                "thứ ba": "Mở cửa cả ngày"
+            },
+            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipN-RkdIa8GcQgc9142hhowGgjztkEEsgsfbF7kf=w148-h92-k-no"
+        },
+        {
+            "position": 9,
+            "title": "Cánh đồng hoa Cẩm Tú Cầu",
+            "place_id": "ChIJ1aNbAC0ScTER4LPDF4K-nW8",
+            "data_id": "0x3171122d005ba3d5:0x6f9dbe8217c3b3e0",
+            "data_cid": "8042793975507301344",
+            "reviews_link": "https://serpapi.com/search.json?data_id=0x3171122d005ba3d5%3A0x6f9dbe8217c3b3e0&engine=google_maps_reviews&hl=vi",
+            "photos_link": "https://serpapi.com/search.json?data_id=0x3171122d005ba3d5%3A0x6f9dbe8217c3b3e0&engine=google_maps_photos&hl=vi",
+            "gps_coordinates": {
+                "latitude": 11.9466931,
+                "longitude": 108.5135145
+            },
+            "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=vi&place_id=ChIJ1aNbAC0ScTER4LPDF4K-nW8",
+            "provider_id": "/g/11dxqdl5_c",
+            "rating": 4.1,
+            "reviews": 4081,
+            "type": "Điểm thu hút khách du lịch",
+            "types": [
+                "Điểm thu hút khách du lịch",
+                "Vườn"
+            ],
+            "type_id": "tourist_attraction",
+            "type_ids": [
+                "tourist_attraction",
+                "garden"
+            ],
+            "address": "Xã, Tp. Đà Lạt, Lâm Đồng, Việt Nam",
+            "open_state": "Đã đóng cửa ⋅ Mở lúc 7:00",
+            "hours": "Đã đóng cửa ⋅ Mở lúc 7:00",
+            "operating_hours": {
+                "thứ tư": "07:00–17:30",
+                "thứ năm": "07:00–17:30",
+                "thứ sáu": "07:00–17:30",
+                "thứ bảy": "07:00–17:30",
+                "chủ nhật": "07:00–17:30",
+                "thứ hai": "07:00–17:30",
+                "thứ ba": "07:00–17:30"
+            },
+            "description": "Vườn hoa chuyên trồng cẩm tú cầu. Vườn hoa có lối đi và đài ngắm cảnh nhìn ra cánh đồng cẩm tú cầu xanh nở rộ.",
+            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipNjtSjyziMr9hb7vDP_l6nV5ZceTvSTT5iJ1UgA=w122-h92-k-no"
+        },
+        {
+            "position": 10,
+            "title": "Đồi Bắc",
+            "place_id": "ChIJeeenQHoTcTERhjAmNn7xWGY",
+            "data_id": "0x3171137a40a7e779:0x6658f17e36263086",
+            "data_cid": "7374909914195832966",
+            "reviews_link": "https://serpapi.com/search.json?data_id=0x3171137a40a7e779%3A0x6658f17e36263086&engine=google_maps_reviews&hl=vi",
+            "photos_link": "https://serpapi.com/search.json?data_id=0x3171137a40a7e779%3A0x6658f17e36263086&engine=google_maps_photos&hl=vi",
+            "gps_coordinates": {
+                "latitude": 11.988799,
+                "longitude": 108.474307
+            },
+            "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=vi&place_id=ChIJeeenQHoTcTERhjAmNn7xWGY",
+            "provider_id": "/g/11lh50ntxr",
+            "rating": 3.7,
+            "reviews": 3,
+            "unclaimed_listing": true,
+            "type": "Thắng cảnh",
+            "types": [
+                "Thắng cảnh"
+            ],
+            "type_id": "scenic_spot",
+            "type_ids": [
+                "scenic_spot"
+            ],
+            "address": "XFQF+GP7, Đường Bãi Tự Do, Đạ Sar, Lạc Dương, Lâm Đồng, Việt Nam",
+            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipMrB3Gba_GHWeZMrvPXo9O4EPnLYC1fUcnupEI8=w163-h92-k-no"
+        },
+        {
+            "position": 11,
+            "title": "Dốc sương mờ",
+            "place_id": "ChIJSbLxatgTcTERgqEKGDd8bjU",
+            "data_id": "0x317113d86af1b249:0x356e7c37180aa182",
+            "data_cid": "3850151307516748162",
+            "reviews_link": "https://serpapi.com/search.json?data_id=0x317113d86af1b249%3A0x356e7c37180aa182&engine=google_maps_reviews&hl=vi",
+            "photos_link": "https://serpapi.com/search.json?data_id=0x317113d86af1b249%3A0x356e7c37180aa182&engine=google_maps_photos&hl=vi",
+            "gps_coordinates": {
+                "latitude": 11.9460508,
+                "longitude": 108.48895929999999
+            },
+            "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=vi&place_id=ChIJSbLxatgTcTERgqEKGDd8bjU",
+            "provider_id": "/g/11h6r1wgj_",
+            "rating": 4.6,
+            "reviews": 17,
+            "unclaimed_listing": true,
+            "type": "Thắng cảnh",
+            "types": [
+                "Thắng cảnh"
+            ],
+            "type_id": "scenic_spot",
+            "type_ids": [
+                "scenic_spot"
+            ],
+            "address": "WFWQ+CHG, Tự Phước, Phường 11, Thành phố Đà Lạt, Lâm Đồng, Việt Nam",
+            "open_state": "Mở cả ngày",
+            "hours": "Mở cả ngày",
+            "operating_hours": {
+                "thứ tư": "Mở cửa cả ngày",
+                "thứ năm": "Mở cửa cả ngày",
+                "thứ sáu": "Mở cửa cả ngày",
+                "thứ bảy": "Mở cửa cả ngày",
+                "chủ nhật": "Mở cửa cả ngày",
+                "thứ hai": "Mở cửa cả ngày",
+                "thứ ba": "Mở cửa cả ngày"
+            },
+            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipNe9AXfUS-cKvZ4LHjKNcJkQE-5PSWSDLegAO7T=w122-h92-k-no"
+        },
+        {
+            "position": 12,
+            "title": "Đỉnh Bidoup",
+            "place_id": "ChIJhbneXC4HcTERC43MSLclKtU",
+            "data_id": "0x3171072e5cdeb985:0xd52a25b748cc8d0b",
+            "data_cid": "15360130948231105803",
+            "reviews_link": "https://serpapi.com/search.json?data_id=0x3171072e5cdeb985%3A0xd52a25b748cc8d0b&engine=google_maps_reviews&hl=vi",
+            "photos_link": "https://serpapi.com/search.json?data_id=0x3171072e5cdeb985%3A0xd52a25b748cc8d0b&engine=google_maps_photos&hl=vi",
+            "gps_coordinates": {
+                "latitude": 12.091123,
+                "longitude": 108.6619228
+            },
+            "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=vi&place_id=ChIJhbneXC4HcTERC43MSLclKtU",
+            "provider_id": "/g/11j86nlm48",
+            "rating": 4.6,
+            "reviews": 10,
+            "unclaimed_listing": true,
+            "type": "Thắng cảnh",
+            "types": [
+                "Thắng cảnh"
+            ],
+            "type_id": "scenic_spot",
+            "type_ids": [
+                "scenic_spot"
+            ],
+            "address": "Đạ Chais, Lạc Dương, Lâm Đồng, Việt Nam",
+            "phone": "+84 853 225 711",
+            "website": "http://mayadventure.vn/",
+            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipOi1Kbp9QpIKFPXVnugqh0_TqgrzDp-HjLmGYa6=w122-h92-k-no"
+        },
+        {
+            "position": 13,
+            "title": "Săn Mây Nhà Gỗ Cầu Đất",
+            "place_id": "ChIJSaYmi4UXcTERvzvr71G1_HY",
+            "data_id": "0x317117858b26a649:0x76fcb551efeb3bbf",
+            "data_cid": "8573927154128731071",
+            "reviews_link": "https://serpapi.com/search.json?data_id=0x317117858b26a649%3A0x76fcb551efeb3bbf&engine=google_maps_reviews&hl=vi",
+            "photos_link": "https://serpapi.com/search.json?data_id=0x317117858b26a649%3A0x76fcb551efeb3bbf&engine=google_maps_photos&hl=vi",
+            "gps_coordinates": {
+                "latitude": 11.8934375,
+                "longitude": 108.5660625
+            },
+            "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=vi&place_id=ChIJSaYmi4UXcTERvzvr71G1_HY",
+            "provider_id": "/g/11n5d162d2",
+            "rating": 4.1,
+            "reviews": 399,
+            "type": "Thắng cảnh",
+            "types": [
+                "Thắng cảnh"
+            ],
+            "type_id": "scenic_spot",
+            "type_ids": [
+                "scenic_spot"
+            ],
+            "address": "Xã, Xuân Trường, Cầu Đất, Lâm Đồng 66158, Việt Nam",
+            "open_state": "Đã đóng cửa ⋅ Mở lúc 4:30",
+            "hours": "Đã đóng cửa ⋅ Mở lúc 4:30",
+            "operating_hours": {
+                "thứ tư": "04:30–18:00",
+                "thứ năm": "04:30–18:00",
+                "thứ sáu": "04:30–18:00",
+                "thứ bảy": "04:30–18:00",
+                "chủ nhật": "04:30–18:00",
+                "thứ hai": "04:30–18:00",
+                "thứ ba": "04:30–18:00"
+            },
+            "phone": "+84 903 663 428",
+            "website": "https://www.facebook.com/Caugosanmay",
+            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipMv8cVhx081_Aqw-wVmNTslB-3dtgDe_G8cMOwJ=w138-h92-k-no"
+        },
+        {
+            "position": 14,
+            "title": "Tuyen Lam Photo Spot",
+            "place_id": "ChIJH9PpsfgVcTERNQjJkoT0Jhg",
+            "data_id": "0x317115f8b1e9d31f:0x1826f48492c90835",
+            "data_cid": "1740347156260784181",
+            "reviews_link": "https://serpapi.com/search.json?data_id=0x317115f8b1e9d31f%3A0x1826f48492c90835&engine=google_maps_reviews&hl=vi",
+            "photos_link": "https://serpapi.com/search.json?data_id=0x317115f8b1e9d31f%3A0x1826f48492c90835&engine=google_maps_photos&hl=vi",
+            "gps_coordinates": {
+                "latitude": 11.8995274,
+                "longitude": 108.4373224
+            },
+            "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=vi&place_id=ChIJH9PpsfgVcTERNQjJkoT0Jhg",
+            "provider_id": "/g/11qpwh0p16",
+            "rating": 4.7,
+            "reviews": 55,
+            "unclaimed_listing": true,
+            "type": "Thắng cảnh",
+            "types": [
+                "Thắng cảnh"
+            ],
+            "type_id": "scenic_spot",
+            "type_ids": [
+                "scenic_spot"
+            ],
+            "address": "VCXP+RW8, Hoa Cẩm Tú Cầu, Phường 3, Thành phố Đà Lạt, Lâm Đồng, Việt Nam",
+            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipMhR4wmAmr-XrnyUfDcBXbA1FmkPce0HYM5N3H1=w122-h92-k-no"
+        },
+        {
+            "position": 15,
+            "title": "Love Bridge - Valley of Love",
+            "place_id": "ChIJ8dYiHZITcTERPOkV-K-5sIQ",
+            "data_id": "0x317113921d22d6f1:0x84b0b9aff815e93c",
+            "data_cid": "9561346174340163900",
+            "reviews_link": "https://serpapi.com/search.json?data_id=0x317113921d22d6f1%3A0x84b0b9aff815e93c&engine=google_maps_reviews&hl=vi",
+            "photos_link": "https://serpapi.com/search.json?data_id=0x317113921d22d6f1%3A0x84b0b9aff815e93c&engine=google_maps_photos&hl=vi",
+            "gps_coordinates": {
+                "latitude": 11.9817529,
+                "longitude": 108.45022309999999
+            },
+            "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=vi&place_id=ChIJ8dYiHZITcTERPOkV-K-5sIQ",
+            "provider_id": "/g/11qpwmhkwn",
+            "rating": 3.5,
+            "reviews": 2,
+            "unclaimed_listing": true,
+            "type": "Thắng cảnh",
+            "types": [
+                "Thắng cảnh"
+            ],
+            "type_id": "scenic_spot",
+            "type_ids": [
+                "scenic_spot"
+            ],
+            "address": "XFJ2+P35, Thung Lũng Tình Yêu, Phường 8, Thành phố Đà Lạt, Lâm Đồng, Việt Nam",
+            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipOiLvuaLuUKVOhk24wWc8Tf7ocICbPnRQBL-9tU=w122-h92-k-no"
+        },
+        {
+            "position": 16,
+            "title": "Đồi Thông Hai Mộ",
+            "place_id": "ChIJP8AXu1cScTERHC4qy28jf_g",
+            "data_id": "0x31711257bb17c03f:0xf87f236fcb2a2e1c",
+            "data_cid": "17906069606505262620",
+            "reviews_link": "https://serpapi.com/search.json?data_id=0x31711257bb17c03f%3A0xf87f236fcb2a2e1c&engine=google_maps_reviews&hl=vi",
+            "photos_link": "https://serpapi.com/search.json?data_id=0x31711257bb17c03f%3A0xf87f236fcb2a2e1c&engine=google_maps_photos&hl=vi",
+            "gps_coordinates": {
+                "latitude": 11.955679499999999,
+                "longitude": 108.4772041
+            },
+            "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=vi&place_id=ChIJP8AXu1cScTERHC4qy28jf_g",
+            "provider_id": "/g/11b69grynj",
+            "rating": 4,
+            "reviews": 779,
+            "unclaimed_listing": true,
+            "type": "Thắng cảnh",
+            "types": [
+                "Thắng cảnh"
+            ],
+            "type_id": "scenic_spot",
+            "type_ids": [
+                "scenic_spot"
+            ],
+            "address": "XF4G+7VG, Hồ Xuân Hương, Phường 12, Thành phố Đà Lạt, Lâm Đồng, Việt Nam",
+            "open_state": "Mở cả ngày",
+            "hours": "Mở cả ngày",
+            "operating_hours": {
+                "thứ tư": "Mở cửa cả ngày",
+                "thứ năm": "Mở cửa cả ngày",
+                "thứ sáu": "Mở cửa cả ngày",
+                "thứ bảy": "Mở cửa cả ngày",
+                "chủ nhật": "Mở cửa cả ngày",
+                "thứ hai": "Mở cửa cả ngày",
+                "thứ ba": "Mở cửa cả ngày"
+            },
+            "description": "Ngôi mộ của cặp đôi xấu số. Điểm tham quan 2 ngôi mộ trên đồi thông của cặp đôi trẻ xấu số bị gia đình phản đối chuyện tình cảm.",
+            "user_review": "\"Ngưng phục vụ nha cả nhà\nMình đi tháng 5/2023\"",
+            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipPBCFt-Ceo2QKN44jmxGkV9n2rjCZaw5ZpMxAgs=w122-h92-k-no"
+        },
+        {
+            "position": 17,
+            "title": "Tuyen Lam Lake Viewpoint",
+            "place_id": "ChIJD3ij7hZrcTER99NkhMzdnww",
+            "data_id": "0x31716b16eea3780f:0xc9fddcc8464d3f7",
+            "data_cid": "909689520216396791",
+            "reviews_link": "https://serpapi.com/search.json?data_id=0x31716b16eea3780f%3A0xc9fddcc8464d3f7&engine=google_maps_reviews&hl=vi",
+            "photos_link": "https://serpapi.com/search.json?data_id=0x31716b16eea3780f%3A0xc9fddcc8464d3f7&engine=google_maps_photos&hl=vi",
+            "gps_coordinates": {
+                "latitude": 11.904757,
+                "longitude": 108.42026129999999
+            },
+            "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=vi&place_id=ChIJD3ij7hZrcTER99NkhMzdnww",
+            "provider_id": "/g/11g1lqn8f1",
+            "rating": 4.4,
+            "reviews": 47,
+            "unclaimed_listing": true,
+            "type": "Thắng cảnh",
+            "types": [
+                "Thắng cảnh"
+            ],
+            "type_id": "scenic_spot",
+            "type_ids": [
+                "scenic_spot"
+            ],
+            "address": "WC3C+W42, Phường 4, Thành phố Đà Lạt, Lâm Đồng, Việt Nam",
+            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipNCERCANuxzU7UqlVVDOgMfn5A-Y4qYrToqIWRb=w122-h92-k-no"
+        },
+        {
+            "position": 18,
+            "title": "Thung lũng đá Tà Giang",
+            "place_id": "ChIJ1-4G7TkBcTEREvGSw1Y5Hkk",
+            "data_id": "0x31710139ed06eed7:0x491e3956c392f112",
+            "data_cid": "5268711658881216786",
+            "reviews_link": "https://serpapi.com/search.json?data_id=0x31710139ed06eed7%3A0x491e3956c392f112&engine=google_maps_reviews&hl=vi",
+            "photos_link": "https://serpapi.com/search.json?data_id=0x31710139ed06eed7%3A0x491e3956c392f112&engine=google_maps_photos&hl=vi",
+            "gps_coordinates": {
+                "latitude": 12.1294515,
+                "longitude": 108.7835616
+            },
+            "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=vi&place_id=ChIJ1-4G7TkBcTEREvGSw1Y5Hkk",
+            "provider_id": "/g/11hyh0qy4g",
+            "unclaimed_listing": true,
+            "type": "Thắng cảnh",
+            "types": [
+                "Thắng cảnh"
+            ],
+            "type_id": "scenic_spot",
+            "type_ids": [
+                "scenic_spot"
+            ],
+            "address": "4QHM+QCM, Phước Bình, Bác Ái, Ninh Thuận, Việt Nam",
+            "open_state": "Temporarily closed",
+            "hours": "Temporarily closed",
+            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipO179OLOcUruJbXMlLGOFy7CtzcY1e6Ts7slJlP=w122-h92-k-no"
+        },
+        {
+            "position": 19,
+            "title": "Cung đường hoa dã quỳ làng Quảng Thừa",
+            "place_id": "ChIJ6yeNOCFtcTERNXo6D73H0lg",
+            "data_id": "0x31716d21388d27eb:0x58d2c7bd0f3a7a35",
+            "data_cid": "6400397635265133109",
+            "reviews_link": "https://serpapi.com/search.json?data_id=0x31716d21388d27eb%3A0x58d2c7bd0f3a7a35&engine=google_maps_reviews&hl=vi",
+            "photos_link": "https://serpapi.com/search.json?data_id=0x31716d21388d27eb%3A0x58d2c7bd0f3a7a35&engine=google_maps_photos&hl=vi",
+            "gps_coordinates": {
+                "latitude": 11.9124875,
+                "longitude": 108.4177625
+            },
+            "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=vi&place_id=ChIJ6yeNOCFtcTERNXo6D73H0lg",
+            "provider_id": "/g/11fpqw7v14",
+            "rating": 4.7,
+            "reviews": 3,
+            "unclaimed_listing": true,
+            "type": "Thắng cảnh",
+            "types": [
+                "Thắng cảnh"
+            ],
+            "type_id": "scenic_spot",
+            "type_ids": [
+                "scenic_spot"
+            ],
+            "address": "WC69+X4R, Làng Quảng Thừa, Thành phố Đà Lạt, Lâm Đồng, Việt Nam",
+            "open_state": "Temporarily closed",
+            "hours": "Temporarily closed",
+            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipMFtkebPw2hiNcczoadUPKycSwVRUuxTsHpuV7f=w163-h92-k-no"
+        },
+        {
+            "position": 20,
+            "title": "Cổng Lang Biang",
+            "place_id": "ChIJ2frlo8tycTERPO6m50EUFBM",
+            "data_id": "0x317172cba3e5fad9:0x13141441e7a6ee3c",
+            "data_cid": "1374746059546750524",
+            "reviews_link": "https://serpapi.com/search.json?data_id=0x317172cba3e5fad9%3A0x13141441e7a6ee3c&engine=google_maps_reviews&hl=vi",
+            "photos_link": "https://serpapi.com/search.json?data_id=0x317172cba3e5fad9%3A0x13141441e7a6ee3c&engine=google_maps_photos&hl=vi",
+            "gps_coordinates": {
+                "latitude": 12.0196034,
+                "longitude": 108.4242228
+            },
+            "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=vi&place_id=ChIJ2frlo8tycTERPO6m50EUFBM",
+            "provider_id": "/g/11gf30hkht",
+            "rating": 3.9,
+            "reviews": 17,
+            "unclaimed_listing": true,
+            "type": "Thắng cảnh",
+            "types": [
+                "Thắng cảnh"
+            ],
+            "type_id": "scenic_spot",
+            "type_ids": [
+                "scenic_spot"
+            ],
+            "address": "305 đường, Langbiang, Thị trấn Lạc Dương, Lạc Dương, Lâm Đồng, Việt Nam",
+            "open_state": "Temporarily closed",
+            "hours": "Temporarily closed",
+            "phone": "+84 263 3839 088",
+            "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipM7qIhN-GeCD5o6CscMs8jb3U0lO8bynUH_AlsU=w138-h92-k-no"
+        }
+    ],
+    "serpapi_pagination": {
+        "next": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=vi&ll=%4011.940147238020286%2C108.45809725440188%2C11z&q=Th%E1%BA%AFng+c%E1%BA%A3nh&start=20&type=search"
+    }
+}

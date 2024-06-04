@@ -1,7 +1,15 @@
-const tourRouter = require("./tour.route");
+const adminRouter = require("./admin");
+const apiRouter = require("./api");
+const customerRouter = require("./customer");
+const TourGuideRouter = require("./tour-guide");
+const StaffRouter = require("./staff");
 
 const route = (app) => {
-  app.use("/tour", tourRouter);
+  app.use("/admin", adminRouter);
+  app.use("/tour-guide", TourGuideRouter);
+  app.use("/staff", StaffRouter);
+  app.use("/api", apiRouter);
+  app.use("/", customerRouter);
 };
 
 module.exports = route;

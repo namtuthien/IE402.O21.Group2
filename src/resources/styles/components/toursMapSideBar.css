@@ -1,0 +1,41 @@
+.toursMapSideBar-section{
+  height: 100px;
+}
+.toursMapSideBar{
+  color: var(--primary1);
+}
+.toursMenuBtn{
+  width: 20px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: left ease .35s;
+  position: absolute;
+  left: 20px;
+  top: -30px;
+  margin-top: 30px;
+  left: 300px;
+  margin-bottom: 30px;
+  background-color: var(--primary1);
+  border-color: var(--primary1);
+
+}
+.toursMenuBtn:hover{
+  background-color: var(--primary3);
+  border-color: var(--primary3);
+}
+.btn.btn-primary:active,
+.btn.btn-primary.collapsed:active {
+  background-color: var(--primary3);
+  border-color: var(--primary3);
+  opacity: 0.8;
+
+}
+.collapsed{
+  left: 0px;
+}
+.list-group-item.active{
+  background-color: var(--primary3);
+  border-color: var(--primary3);
+}

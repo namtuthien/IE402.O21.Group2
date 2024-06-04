@@ -1,0 +1,268 @@
+{
+    "searchParameters": {
+        "q": "Thắng cảnh",
+        "hl": "vi",
+        "type": "maps",
+        "page": 1,
+        "ll": "@11.940147238020286,108.45809725440188,11z",
+        "engine": "google"
+    },
+    "places": [
+        {
+            "position": 1,
+            "title": "Thung Lũng HjNa",
+            "address": "Tà Nung, Thành phố Đà Lạt, Lâm Đồng, Việt Nam",
+            "latitude": 11.9279356,
+            "longitude": 108.3717119,
+            "rating": 4.5,
+            "ratingCount": 15,
+            "type": "Thắng cảnh",
+            "types": [
+                "Thắng cảnh"
+            ],
+            "cid": "10981850066913853340",
+            "placeId": "ChIJo4TkbbZtcTERnP__lnNeZ5g"
+        },
+        {
+            "position": 2,
+            "title": "Thung lũng Tình Yêu",
+            "address": "5 - 7 Đường Mai Anh Đào, Phường 8, Thành phố Đà Lạt, Lâm Đồng 670000, Việt Nam",
+            "latitude": 11.978063899999999,
+            "longitude": 108.4489179,
+            "rating": 4.4,
+            "ratingCount": 13211,
+            "type": "Thắng cảnh",
+            "types": [
+                "Thắng cảnh",
+                "Điểm thu hút khách du lịch"
+            ],
+            "phoneNumber": "+84 263 3821 448",
+            "description": "Công viên lãng mạn có tác phẩm ng.thuật kỳ lạ, vườn đặc sắc và hồ nước có những chiếc thuyền hình thiên nga.",
+            "cid": "13350656737474802166",
+            "placeId": "ChIJc6HmQ70ScTER9nFcY5EPR7k"
+        },
+        {
+            "position": 3,
+            "title": "Da M'lates",
+            "address": "5 - 7 Đường Mai Anh Đào, Phường 8, Thành phố Đà Lạt, Lâm Đồng 66000, Việt Nam",
+            "latitude": 11.978382,
+            "longitude": 108.44944059999999,
+            "rating": 5,
+            "ratingCount": 2,
+            "type": "Thắng cảnh",
+            "types": [
+                "Thắng cảnh"
+            ],
+            "phoneNumber": "+84 263 3558 888",
+            "cid": "4177243940273001897",
+            "placeId": "ChIJHRAspLYTcTERqRUgUDuN-Dk"
+        },
+        {
+            "position": 4,
+            "title": "Thác 7 tầng Păng Tiên",
+            "address": "X7GP+44P, Thôn Păng Tiên xã, Lạc Dương, Lâm Đồng, Việt Nam",
+            "latitude": 11.9753442,
+            "longitude": 108.28533859999999,
+            "rating": 4.4,
+            "ratingCount": 40,
+            "type": "Thắng cảnh",
+            "types": [
+                "Thắng cảnh",
+                "Chèo xuồng vượt thác",
+                "Điểm thu hút khách du lịch"
+            ],
+            "cid": "3428369290489189299",
+            "placeId": "ChIJs78crUxucTERs1N3lrQDlC8"
+        },
+        {
+            "position": 5,
+            "title": "30 Wonders - Valley of Love",
+            "address": "XCVW+9W2, Unnamed Road, Thị trấn Lạc Dương, Lạc Dương, Lâm Đồng, Việt Nam",
+            "latitude": 11.9933927,
+            "longitude": 108.44726,
+            "rating": 4.5,
+            "ratingCount": 46,
+            "type": "Thắng cảnh",
+            "types": [
+                "Thắng cảnh"
+            ],
+            "cid": "8188834680619313380",
+            "placeId": "ChIJtU7wK-MNcTER5Ki2dsGVpHE"
+        },
+        {
+            "position": 6,
+            "title": "Đập tràn Hồ Tuyền Lâm",
+            "address": "Phường 4, Thành phố Đà Lạt, Lâm Đồng, Việt Nam",
+            "latitude": 11.9006438,
+            "longitude": 108.4387486,
+            "rating": 4.2,
+            "ratingCount": 9458,
+            "type": "Điểm thu hút khách du lịch",
+            "types": [
+                "Điểm thu hút khách du lịch"
+            ],
+            "description": "Đoạn đường đi bộ ngắn và dốc từ công viên điêu khắc đa dạng đến thác nước nhỏ với những hồ đá.",
+            "cid": "13331401060499202043",
+            "placeId": "ChIJQcvL-n2OpzER-x9SuaGmArk"
+        },
+        {
+            "position": 7,
+            "title": "Dốc sương mờ",
+            "address": "WFWQ+CHG, Tự Phước, Phường 11, Thành phố Đà Lạt, Lâm Đồng, Việt Nam",
+            "latitude": 11.9460508,
+            "longitude": 108.48895929999999,
+            "rating": 4.6,
+            "ratingCount": 17,
+            "type": "Thắng cảnh",
+            "types": [
+                "Thắng cảnh"
+            ],
+            "cid": "3850151307516748162",
+            "placeId": "ChIJSbLxatgTcTERgqEKGDd8bjU"
+        },
+        {
+            "position": 8,
+            "title": "Săn Mây Long Lanh",
+            "address": "4JMH+PH4, QL27C, Đạ Chais, Lạc Dương, Lâm Đồng, Việt Nam",
+            "latitude": 12.1342679,
+            "longitude": 108.62896309999999,
+            "rating": 4.5,
+            "ratingCount": 15,
+            "type": "Thắng cảnh",
+            "types": [
+                "Thắng cảnh"
+            ],
+            "cid": "10914231832302570200",
+            "placeId": "ChIJ2XVQFZkHcTER2MqngAYkd5c"
+        },
+        {
+            "position": 9,
+            "title": "Đỉnh Bidoup",
+            "address": "Đạ Chais, Lạc Dương, Lâm Đồng, Việt Nam",
+            "latitude": 12.091123,
+            "longitude": 108.6619228,
+            "rating": 4.6,
+            "ratingCount": 10,
+            "type": "Thắng cảnh",
+            "types": [
+                "Thắng cảnh"
+            ],
+            "website": "http://mayadventure.vn/",
+            "phoneNumber": "+84 853 225 711",
+            "cid": "15360130948231105803",
+            "placeId": "ChIJhbneXC4HcTERC43MSLclKtU"
+        },
+        {
+            "position": 10,
+            "title": "Thung lũng hoa cẩm tú cầu",
+            "address": "XCHW+736, Thị trấn Lạc Dương, Lạc Dương, Lâm Đồng, Việt Nam",
+            "latitude": 11.9781744,
+            "longitude": 108.44513459999999,
+            "rating": 4.5,
+            "ratingCount": 474,
+            "type": "Điểm thu hút khách du lịch",
+            "types": [
+                "Điểm thu hút khách du lịch"
+            ],
+            "phoneNumber": "+84 796 598 957",
+            "cid": "17932309056383209904",
+            "placeId": "ChIJxToUMi8NcTERsNE9zBNc3Pg"
+        },
+        {
+            "position": 11,
+            "title": "Đồi Thông Hai Mộ",
+            "address": "XF4G+7VG, Hồ Xuân Hương, Phường 12, Thành phố Đà Lạt, Lâm Đồng, Việt Nam",
+            "latitude": 11.955679499999999,
+            "longitude": 108.4772041,
+            "rating": 4,
+            "ratingCount": 779,
+            "type": "Thắng cảnh",
+            "types": [
+                "Thắng cảnh"
+            ],
+            "description": "Điểm tham quan 2 ngôi mộ trên đồi thông của cặp đôi trẻ xấu số bị gia đình phản đối chuyện tình cảm.",
+            "cid": "17906069606505262620",
+            "placeId": "ChIJP8AXu1cScTERHC4qy28jf_g"
+        },
+        {
+            "position": 13,
+            "title": "KHU DU LỊCH THUNG LŨNG TÌNH YÊU ĐÀ LẠT",
+            "address": "03-05-07 Đường Mai Anh Đào, Phường 8, Thành phố Đà Lạt, Lâm Đồng 70000, Việt Nam",
+            "latitude": 11.978382,
+            "longitude": 108.44944059999999,
+            "rating": 4.4,
+            "ratingCount": 249,
+            "type": "Thắng cảnh",
+            "types": [
+                "Thắng cảnh"
+            ],
+            "phoneNumber": "+84 966 936 173",
+            "cid": "2335025402214627074",
+            "placeId": "ChIJoV9KXNsTcTERAjeEWDutZyA"
+        },
+        {
+            "position": 14,
+            "title": "Đồi Bắc",
+            "address": "XFQF+GP7, Đường Bãi Tự Do, Đạ Sar, Lạc Dương, Lâm Đồng, Việt Nam",
+            "latitude": 11.988799,
+            "longitude": 108.474307,
+            "rating": 3.7,
+            "ratingCount": 3,
+            "type": "Thắng cảnh",
+            "types": [
+                "Thắng cảnh"
+            ],
+            "cid": "7374909914195832966",
+            "placeId": "ChIJeeenQHoTcTERhjAmNn7xWGY"
+        },
+        {
+            "position": 17,
+            "title": "Bắc Thang Lên Hỏi Ông Trời",
+            "address": "Tuý Sơn, Xuân Thọ, Thành phố Đà Lạt, Lâm Đồng, Việt Nam",
+            "latitude": 11.9372475,
+            "longitude": 108.53155919999999,
+            "rating": 3.6,
+            "ratingCount": 206,
+            "type": "Điểm thu hút khách du lịch",
+            "types": [
+                "Điểm thu hút khách du lịch"
+            ],
+            "website": "https://m.facebook.com/cloudshunting/",
+            "cid": "11350771037926787199",
+            "placeId": "ChIJrSiKs8QRcTERfwhruh4Khp0"
+        },
+        {
+            "position": 19,
+            "title": "Thác Thiên Thai",
+            "address": "4GVH+XV8, Xã Đạ Nhim, Lạc Dương, Lâm Đồng, Việt Nam",
+            "latitude": 12.144922099999999,
+            "longitude": 108.529703,
+            "rating": 4.4,
+            "ratingCount": 39,
+            "type": "Điểm thu hút khách du lịch",
+            "types": [
+                "Điểm thu hút khách du lịch"
+            ],
+            "website": "http://bidoupnuiba.gov.vn/",
+            "cid": "7249450137714557517",
+            "placeId": "ChIJP6Q34fMJcTERTQJis304m2Q"
+        },
+        {
+            "position": 20,
+            "title": "Cánh đồng hoa Cẩm Tú Cầu",
+            "address": "Xã, Tp. Đà Lạt, Lâm Đồng, Việt Nam",
+            "latitude": 11.9466931,
+            "longitude": 108.5135145,
+            "rating": 4.1,
+            "ratingCount": 4080,
+            "type": "Điểm thu hút khách du lịch",
+            "types": [
+                "Điểm thu hút khách du lịch",
+                "Vườn"
+            ],
+            "description": "Vườn hoa có lối đi và đài ngắm cảnh nhìn ra cánh đồng cẩm tú cầu xanh nở rộ.",
+            "cid": "8042793975507301344",
+            "placeId": "ChIJ1aNbAC0ScTER4LPDF4K-nW8"
+        }
+    ]
+}

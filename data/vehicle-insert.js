@@ -4,7 +4,8 @@ const Vehicle = require("../src/app/models/vehicle.model");
 dotenv.config();
 
 const { db } = require("../src/config");
-db.connect()
+
+db.connect();
 
 const vehicle = [
   {
@@ -51,6 +52,7 @@ const createVehicle = () => {
       is_available: true,
       vehicle_total_seat: vehicle[idx].total_seat,
       vehicle_total_seat_available: vehicle[idx].total_seat,
+
     });
   }
   return vehicles;

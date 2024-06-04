@@ -1,16 +1,33 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
-const ObjectId = Schema.ObjectId;
 
-const Region = new Schema({
-  _id: { type: ObjectId },
-  user_id: { type: ObjectId },
-  tour_id: { type: ObjectId },
-  amount: { type: Number },
-  total_price: { type: Number },
-  note: { type: String },
+const Booking = new Schema({
+  customer: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "User",
+    required: true,
+  },
+  tour: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "Tour",
+    required: true,
+  },
+  staff: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "User",
+    required: true,
+  },
+  payment_id: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "Payment",
+  },
+  booking_amount: { type: Number },
+  booking_total_price: { type: Number },
+  booking_note: { type: String },
   booking_date: { type: Date },
-  created_at: { type: Date, default: Date.now },
-  updated_at: { type: Date, default: Date.now },
+  booking_status: { type: String, required: true },
+  created_at: { type: Date, default: () => Date.now() },
+  updated_at: { type: Date, default: () => Date.now() },
 });
-module.exports = mongoose.model("Region", Region);
+
+module.exports = mongoose.model("Booking", Booking);

@@ -1,4 +1,54 @@
+@import "material-icons.css";
+
+:root {
+    /* primary */
+    --primary1: #087264;
+    --primary2: #058C7F;
+    --primary3: #4BC3B2;
+    --primary4: #F1B544;
+    --primary5: #4285F4;
+
+    /* basic */
+    --white: #fff;
+    --black: #000;
+    --red: #f00;
+
+    /* background */
+    --background1: #f1f1f1;
+
+    /* outline */
+    --outline1: #EBEBF0;
+    --outline2: #FF4343;
+    --outline3: #EAEAEA;
+    --outline4: #5392F9;
+
+    /* black */
+    --black1: rgba(0, 0, 0, 0.2);
+
+    /* gray */
+    --gray1: #333333;
+    --gray2: rgba(44, 42, 42, 0.7);
+
+    /* blue */
+    --blue1: #377DFF;
+
+    /* orange */
+    --orange1: #EA4C2D;
+
+    /* green */
+    --green1: #00AC47;
+
+    /* pink */
+    --pink1: #FF685F;
+
+    /* yellow */
+    --yellow1: #FFC107;
+
+    /* reset bootstrap variables */
+    --bs-body-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --bs-body-bg: var(--background1);
+}
+
 body {
-    background-color: black;
-    color: white;
+    position: relative;
 }

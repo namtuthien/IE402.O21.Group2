@@ -1,17 +1,16 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
-const ObjectId = Schema.ObjectId;
 
 const Vehicle = new Schema({
-  _id: { type: ObjectId },
-  name: { type: String },
-  type: { type: String },
-  license_plates: { type: String },
-  is_available: { type: Boolean },
-  total_seat: { type: Number },
-  total_seat_available: { type: Number },
-  area: { type: ObjectId },
-  created_at: { type: Date, default: Date.now },
-  updated_at: { type: Date, default: Date.now },
+  vehicle_name: { type: String, required: true },
+  vehicle_type: { type: String, required: true },
+  vehicle_license_plate: { type: String, required: true },
+  vehicle_total_seat: { type: Number, required: true },
+  vehicle_total_seat_available: { type: Number, required: true },
+  //   area: { type: ObjectId },
+  is_available: { type: Boolean, required: true },
+  created_at: { type: Date, default: () => Date.now() },
+  updated_at: { type: Date, default: () => Date.now() },
 });
+
 module.exports = mongoose.model("Vehicle", Vehicle);
