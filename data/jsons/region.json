@@ -1,0 +1,64 @@
+[
+    {
+        "region_name": "Đà Lạt",
+        "region_description": "Đà Lạt là thành phố tỉnh lỵ trực thuộc tỉnh Lâm Đồng, nằm trên cao nguyên Lâm Viên, thuộc vùng Tây Nguyên, Việt Nam. Từ xa xưa, vùng đất này vốn là địa bàn cư trú của những cư dân người Lạch, người Chil và người Srê thuộc dân tộc Cơ Ho.",
+        "polygons": [
+            {
+                "points": [
+                    {
+                        "longitude": 108.42470860518034,
+                        "latitude": 11.854000504056433
+                    },
+                    {
+                        "longitude": 108.42470860518034,
+                        "latitude": 11.854000504056433
+                    },
+                    {
+                        "longitude": 108.42470860518034,
+                        "latitude": 11.854000504056433
+                    },
+                    {
+                        "longitude": 108.48822331465293,
+                        "latitude": 11.82443080465124
+                    },
+                    {
+                        "longitude": 108.48822331465293,
+                        "latitude": 11.82443080465124
+                    },
+                    {
+                        "longitude": 108.48822331465293,
+                        "latitude": 11.82443080465124
+                    },
+                    {
+                        "longitude": 108.59190678633249,
+                        "latitude": 11.90506789138356
+                    },
+                    {
+                        "longitude": 108.59190678633249,
+                        "latitude": 11.90506789138356
+                    },
+                    {
+                        "longitude": 108.59190678633249,
+                        "latitude": 11.90506789138356
+                    },
+                    {
+                        "longitude": 108.3560440543992,
+                        "latitude": 11.993741054594413
+                    },
+                    {
+                        "longitude": 108.3560440543992,
+                        "latitude": 11.993741054594413
+                    },
+                    {
+                        "longitude": 108.35055089033666,
+                        "latitude": 11.890958113284483
+                    },
+                    {
+                        "longitude": 108.42470860518034,
+                        "latitude": 11.854000504056433
+                    }
+                ]
+            }
+        ]
+    }
+]
