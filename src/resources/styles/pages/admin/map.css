@@ -4,3 +4,85 @@
     height: 100%;
     width: 100%;
 }
+.modal_overlay {
+    display:none;
+    position: absolute; 
+    background-color: rgba(112, 114, 115, 0.1);
+    top:0; 
+    right:0; 
+    left:0;
+    bottom:0; 
+}
+.cfl__container {
+    background-color: #fff; 
+    margin:auto;
+    width: 50%;
+}
+.cfl__title {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+.cursor-pointer {
+    float: right;
+    cursor: pointer;
+    color: red;
+}
+
+.table__activities {
+    background-color: #fff;
+}
+
+.table__activities tr {
+    border: 1px solid #087264;
+}
+.table__activities td {
+    border-right: 1px solid #087264;
+}
+.table__activities-thead {
+    background-color: #087264 !important;
+}
+.table__activities-thead th:first-child {
+  
+    display: flex !important;
+    justify-content: center !important;
+}
+.table__activities-thead th {
+    color: #fff;
+    font-weight: 600;
+    text-align: center;
+}
+
+.table__activities-tbody {
+    color: #000;
+    font-weight: 500;
+    text-align: center;
+}
+.table__activities-tbody .form-control{
+    padding: 0;
+    border-radius: 0;
+    width: 100%;
+    text-align: center;
+}
+.table__activities-tbody tr td:first-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.table__activities-tbody tr:last-child td:first-child {
+  display: table-cell;
+}
+.table__action-add {
+    color: #087264;
+    font-weight: bold;
+    cursor: pointer;
+}
+/* Override */
+.form-check {
+    padding-left: 1.8rem;
+    margin-bottom: 0.2rem;
+}
+.form-check-input {
+    background-color: #fff;
+    
+}
