@@ -4,6 +4,7 @@ const Vehicle = require("../src/app/models/vehicle.model");
 dotenv.config();
 
 const { db } = require("../src/config");
+
 db.connect();
 
 const vehicle = [
@@ -45,13 +46,13 @@ const createVehicle = () => {
       bsx = `${i}`;
     }
     vehicles.push({
-      name: vehicle[idx].name,
-      type: vehicle[idx].type,
-      license_plates: "51G-102" + bsx,
+      vehicle_name: vehicle[idx].name,
+      vehicle_type: vehicle[idx].type,
+      vehicle_license_plate: "51G-102" + bsx,
       is_available: true,
-      total_seat: vehicle[idx].total_seat,
-      total_seat_available: vehicle[idx].total_seat,
-      area: null,
+      vehicle_total_seat: vehicle[idx].total_seat,
+      vehicle_total_seat_available: vehicle[idx].total_seat,
+
     });
   }
   return vehicles;
@@ -61,7 +62,7 @@ const vehicles = createVehicle();
 
 Vehicle.create(vehicles)
   .then((data) => {
-    console.log("Thành công. Users đã được thêm vào cơ sở dữ liệu", data);
+    console.log("Thành công. Vehicles đã được thêm vào cơ sở dữ liệu", data);
   })
   .catch((err) => {
     console.log("Lỗi.", err);

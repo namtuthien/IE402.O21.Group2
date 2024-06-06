@@ -15,19 +15,22 @@ db.connect();
 
 // Đọc tệp JSON
 const ecologicalPark = JSON.parse(
-  fs.readFileSync(path.join(__dirname, "jsons", "ecological-park.json"), "utf8")
+  fs.readFileSync(path.join(__dirname, "jsons", "location-crawled", "ecological-park.json"), "utf8")
 ).places;
 const touristAttraction = JSON.parse(
-  fs.readFileSync(path.join(__dirname, "jsons", "tourist-attraction.json"), "utf8")
+  fs.readFileSync(
+    path.join(__dirname, "jsons", "location-crawled", "tourist-attraction.json"),
+    "utf8"
+  )
 ).places;
 const campingArea = JSON.parse(
-  fs.readFileSync(path.join(__dirname, "jsons", "camping-area.json"), "utf8")
+  fs.readFileSync(path.join(__dirname, "jsons", "location-crawled", "camping-area.json"), "utf8")
 ).places;
 const beautySpot = JSON.parse(
-  fs.readFileSync(path.join(__dirname, "jsons", "beauty-spot.json"), "utf8")
+  fs.readFileSync(path.join(__dirname, "jsons", "location-crawled", "beauty-spot.json"), "utf8")
 ).places;
 const homeStay = JSON.parse(
-  fs.readFileSync(path.join(__dirname, "jsons", "home-stay.json"), "utf8")
+  fs.readFileSync(path.join(__dirname, "jsons", "location-crawled", "home-stay.json"), "utf8")
 ).places;
 
 // Tạo mảng các Location

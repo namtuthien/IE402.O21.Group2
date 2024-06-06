@@ -16,13 +16,14 @@ class AuthController {
 
   // authen user info login
   async authenticateUser(email, password) {
-    const user = await User.findOne({ email });
+
+    const user = await User.findOne({ user_email: email });
 
     if (!user) {
       return { success: false, message: "Email hoặc mật khẩu không đúng" };
     }
 
-    const isPasswordValid = await bcrypt.compare(password, user.password);
+    const isPasswordValid = await bcrypt.compare(password, user.user_password);
     if (!isPasswordValid) {
       return { success: false, message: "Mật khẩu không đúng" };
     }
@@ -62,7 +63,31 @@ class AuthController {
         return "/";
     }
   }
+  // [POST] /register
+  async register(req, res, next) {
+    try {
+      const customerInfo = req.body;
+      // Kiểm tra xem email có tồn tại chưa
+      const existingEmail = await User.findOne({ user_email: customerInfo.user_email });
+      if (existingEmail) {
+        return res.status(400).json({ error: "Email đã tồn tại trong hệ thống" });
+      }
+      // Kiểm tra xem tên đăng nhập có tồn tại chưa
+      const existingLoginName = await User.findOne({
+        user_login_name: customerInfo.user_login_name,
+      });
+      if (existingLoginName) {
+        return res.status(400).json({ error: "Tên đăng nhập đã tồn tại trong hệ thống" });
+      }
 
+      customerInfo.user_password = await bcrypt.hash(customerInfo.user_password, 8);
+      const newCustomer = new User(customerInfo);
+      await newCustomer.save();
+      res.status(201).json({ success: "Tạo tài khoản người dùng thành công" });
+    } catch (error) {
+      res.status(500).json({ error: "Đã có lỗi xảy ra" });
+    }
+  }
   // [POST] /login
   async login(req, res, next) {
     try {

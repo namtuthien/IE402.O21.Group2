@@ -1,30 +1,29 @@
-const User = require('../models/user.model');
-const jwt = require('jwt-simple');
+const User = require("../models/user.model");
+const jwt = require("jwt-simple");
+
 async function checkToken(req, res, next) {
-    const token = req.cookies.token;
-    if (!token) {
-        return next(); // Không có token, tiếp tục xử lý tiếp theo
+  const token = req.cookies.token;
+  if (!token) {
+    return res.status(401).send("Unauthorized: No token provided");
+  }
+  try {
+    const decodedToken = jwt.decode(token, null, true);
+    const { userId, exp } = decodedToken;
+  
+    if (Date.now() >= exp) {
+      return res.status(401).send("Unauthorized: Token expired");
     }
-    try {
-        const decodedToken = jwt.decode(token, null, true);
-        const { userId } = decodedToken;
-        const user = await User.findById(userId);
-        if (!user) {
-            res.clearCookie('token');
-            return next();
-        }
-        switch (user.user_role) {
-            case 'customer':
-                res.render('pages/customer/test.hbs');
-            case 'staff':
-                res.render('pages/staff/test.hbs');
-            case 'admin':
-                res.render('pages/admin/test.hbs');
-        }
-    } catch (error) {
-        console.error(error);
-        return res.redirect('/');
+
+    const user = await User.findById(userId);
+    if (!user) {
+      res.clearCookie("token");
+      return res.status(401).send("Unauthorized: User not found");
     }
+    req.user_id = userId;
+    return next();
+  } catch (error) {
+    return res.status(500).send("Internal Server Error");
+  }
 }
 
 module.exports = checkToken;
