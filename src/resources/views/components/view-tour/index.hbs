@@ -12,36 +12,51 @@
         <form class="tour-popup__form" method="post">
             <div class="tour-popup__form-group">
                 <label for="tour-popup-name" class="tour-popup__label">Tên Tour</label>
-                <input type="text" id="tour-popup-name" class="tour-popup__input" placeholder="Nhập tên Tour...">
+                <input type="text" id="tour-popup-name" class="tour-popup__input" placeholder="Nhập tên Tour..." value="Tour Đà Lạt hè 2024">
             </div>
             <div class="tour-popup__flex-group">
               <div class="tour-popup__form-group">
                   <label for="tour-popup-price" class="tour-popup__label">Giá vé</label>
-                  <input type="text" id="tour-popup-price" class="tour-popup__input" placeholder="Nhập số tiền...">
+                  <input type="text" id="tour-popup-price" class="tour-popup__input" placeholder="Nhập số tiền..." value="2.000.000đ">
               </div>
               <div class="tour-popup__form-group">
                   <label for="tour-popup-total-tickets" class="tour-popup__label">Tổng số vé</label>
-                  <input type="number" id="tour-popup-total-tickets" class="tour-popup__input">
+                  <input type="number" id="tour-popup-total-tickets" class="tour-popup__input" value="100">
               </div>
               <div class="tour-popup__form-group">
                   <label for="tour-popup-available-tickets" class="tour-popup__label">Số vé còn trống</label>
-                  <input type="number" id="tour-popup-available-tickets" class="tour-popup__input">
+                  <input type="number" id="tour-popup-available-tickets" class="tour-popup__input" value="20">
               </div>              
             </div>
             <div class="tour-popup__flex-group">
               <div class="tour-popup__form-group">
                   <label for="tour-popup-start-date" class="tour-popup__label">Ngày khởi hành</label>
-                  <input type="date" id="tour-popup-start-date" class="tour-popup__input">
+                  <input type="date" id="tour-popup-start-date" class="tour-popup__input" value="2024-06-28">
               </div>
               <div class="tour-popup__form-group">
                   <label for="tour-popup-days" class="tour-popup__label">Ngày / Đêm</label>
-                  <input type="text" id="tour-popup-days" class="tour-popup__input" placeholder="N/Đ">
+                  <input type="text" id="tour-popup-days" class="tour-popup__input" placeholder="N/Đ" value="3/2">
               </div>
             </div>
             <div class="tour-popup__form-group">
                 <label for="" class="tour-popup__label">Điểm đến</label>
                 <div class="tour-popup__tab-group">
                     <div class="tour-popup__location-tabs" id="tour-popup__current-locations">
+                        <p class="tour-popup__button tour-popup__tab">Hồ Xuân Hương
+                            <button type="button" class="tour-popup__remove-button">
+                                <i class="fa-solid fa-xmark"></i>
+                            </button>
+                        </p>
+                        <p class="tour-popup__button tour-popup__tab">Quảng trường
+                            <button type="button" class="tour-popup__remove-button">
+                                <i class="fa-solid fa-xmark"></i>
+                            </button>
+                        </p>
+                        <p class="tour-popup__button tour-popup__tab">Thác LangBiang
+                            <button type="button" class="tour-popup__remove-button">
+                                <i class="fa-solid fa-xmark"></i>
+                            </button>
+                        </p>
                     </div>
                     <button type="button" class="tour-popup__button" id="addLocationButton">Thêm điểm đến +</button>
                 </div>
@@ -67,6 +82,16 @@
                 <label for="" class="tour-popup__label">Danh mục</label>
                 <div class="tour-popup__tab-group">
                     <div class="tour-popup__area-tabs" id="tour-popup__current-areas">
+                        <p class="tour-popup__button tour-popup__tab">Đà Lạt
+                            <button type="button" class="tour-popup__remove-button">
+                                <i class="fa-solid fa-xmark"></i>
+                            </button>
+                        </p>
+                        <p class="tour-popup__button tour-popup__tab">Tây Nguyên
+                            <button type="button" class="tour-popup__remove-button">
+                                <i class="fa-solid fa-xmark"></i>
+                            </button>
+                        </p>
                     </div>
                     <button type="button" class="tour-popup__button"  id="addAreaButton">Thêm danh mục +</button>
                 </div>
@@ -92,6 +117,18 @@
                 <label class="tour-popup__label">Hình ảnh</label>
                 <div class="tour-popup__image-group">
                     <div class="tour-popup__all-image-div">
+                        <div class="tour-popup__image-button tour-popup__image">
+                            <img src="/imgs/admin/navbarbackground.png" alt="Hình ảnh" class="tour-popup__image-placeholder">
+                        </div>
+                        <div class="tour-popup__image-button tour-popup__image">
+                            <img src="/imgs/admin/navbarbackground.png" alt="Hình ảnh" class="tour-popup__image-placeholder">
+                        </div>
+                        <div class="tour-popup__image-button tour-popup__image">
+                            <img src="/imgs/admin/navbarbackground.png" alt="Hình ảnh" class="tour-popup__image-placeholder">
+                        </div>
+                        <div class="tour-popup__image-button tour-popup__image">
+                            <img src="/imgs/admin/navbarbackground.png" alt="Hình ảnh" class="tour-popup__image-placeholder">
+                        </div>
                     </div>
                     <button type="button" class="tour-popup__image-button" id="addImageButton">
                         <img src="/imgs/admin/add_photo_alternate.png" alt="Hình ảnh" class="tour-popup__image-placeholder">
@@ -101,12 +138,24 @@
             </div>
             <div class="tour-popup__form-group">
                 <label for="tour-popup-description" class="tour-popup__label">Mô tả</label>
-                <textarea id="tour-popup-description" class="tour-popup__textarea" placeholder="Nhập mô tả..."></textarea>
+                <textarea id="tour-popup-description" class="tour-popup__textarea" placeholder="Nhập mô tả...">
+1. Chinh phục núi LangBiang - nóc nhà Tây Nguyên 
+2. Trang trại cún - Puppy Farm, điểm tham quan "hot" nhất hiện nay ( hơn 36 loài chó quý hiếm, hơn 100 cá thể chó ) 
+3. Đồi hoa thạch thảo, xác pháo, cẩm tú cầu,... 
+4. Trài nghiệm cảm giác hái dâu tây tại vườn ( tự túc ) 
+5. Chùa Linh Phước - chùa Ve Chai với tượng Phật kết bằng hoa bất tử lớn nhất Việt Nam 
+6. Ga xe lửa - ga cổ nhất Đông Dương 
+7. Tham quan vườn : sen đá, dưa pepino + cà chua cherry,...
+                </textarea>
             </div>
             <div class="tour-popup__form-group tour__form-group--submit">
                 <button type="submit" class="tour-popup__submit-button">
                   <i class="fa-solid fa-floppy-disk"></i>
-                    Lưu
+                    Cập nhật
+                </button>
+                <button type="submit" class="tour-popup__submit-button tour-popup__remove-submit-button">
+                  <i class="fa-solid fa-trash"></i>
+                    Xóa Tour
                 </button>
             </div>
         </form>
