@@ -1,14 +1,12 @@
-document.addEventListener('DOMContentLoaded', function () {
-    var navLinks = document.querySelectorAll('.nav-link');
+document.addEventListener("DOMContentLoaded", function () {
+    const currentPath = window.location.pathname;
+    const navLinks = document.querySelectorAll('.nav-link');
 
-    navLinks.forEach(function (navLink) {
-        navLink.addEventListener('click', function (event) {
-            event.preventDefault(); 
-            navLinks.forEach(function (link) {
-                link.classList.remove('active');
-            });
-
-            this.classList.add('active');
-        });
+    navLinks.forEach(link => {
+        if (link.getAttribute('href') === currentPath) {
+            link.classList.add('active');
+        } else {
+            link.classList.remove('active');
+        }
     });
 });
