@@ -18,11 +18,14 @@
   background-color: #fff;
   padding: ;
 } */
+.form-control{
+  font-size: 1.34rem;
+}
 .form-control:focus {
   box-shadow: 0 0 0 0.25rem #c8ede8;
 }
 .form-label {
-  color: #087264;
+  color: #000;
   font-weight: 600;
 }
 .btn-primary {
@@ -43,7 +46,14 @@
 }
 .main {
   width: 100%;
-  background-color: #058c7f;
+  background-image: url("/imgs/home/background-login.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* height: 650px;
+  padding-top: 30px; */
+}
+.formlogin {
+  border-radius: 16px;
 }
 .formlogin__field-password {
   position:relative;
@@ -53,7 +63,30 @@
   content: "";
   top: 50px;
   right: 10px;
+  color: #087264;
 }
 .formlogin__icon-visibility:hover{
   cursor: pointer;
+}
+
+.formlogin__title {
+  text-align: center;
+  font-weight: 700;
+  font-size: 30px;
+  color: #087264;
+  margin-bottom: 20px;
+}
+.form-check-input {
+  background-color: #fff;
+  
+}
+.slogan {
+  font-size: 76px;
+  margin-bottom: 70px;
+}
+@media (min-width: 1200px) {
+  .col-xl-3-5 {
+      flex: 0 0 auto;
+      width: 31%;
+  }
 }
