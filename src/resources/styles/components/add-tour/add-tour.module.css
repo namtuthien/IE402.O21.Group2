@@ -68,7 +68,8 @@
 }
 
 .tour-popup__submit-button {
-  display: block;
+  display: flex;
+  gap: 0.2em;
   width: max-content;
   padding: 5px 15px;
   background-color: var(--primary5);
@@ -151,6 +152,11 @@
   border-radius: 5px;
 }
 
+.tour-popup__add-image-icon {
+  color: var(--primary5);
+  font-size: 85px;
+}
+
 .tour-popup__image {
   border: none;
 }
@@ -173,8 +179,12 @@
   border: solid 1px var(--black1);
   border-radius: 5px;
   padding: 1em;
-  width: max-content;
+  /* width: max-content; */
+  width: 200px;
+  /* overflow-x: auto; */
   height: max-content;
+  max-height: 400px;
+  overflow-y: auto;
   position: absolute;
   background-color: var(--white);
 }
@@ -184,6 +194,11 @@
   position: relative;
   left: 95%;
   bottom: 95%;
+  cursor: pointer;
+}
+
+.tour-popup__hidden-tab {
+  font-size: 14px;
   cursor: pointer;
 }
 

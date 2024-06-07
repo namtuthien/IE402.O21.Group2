@@ -17,7 +17,7 @@ for (let i = 0; i< locations.length; i++) {
     pElement.innerHTML = `
       ${this.textContent}
       <button type="button" class="tour-popup__remove-button">
-          <i class="fa-solid fa-xmark"></i>
+          <i class="material-icons tour-popup__hidden-tab">close</i>
       </button>
     `
     document.getElementById('tour-popup__current-locations').appendChild(pElement);
@@ -53,7 +53,7 @@ for (let i = 0; i< areas.length; i++) {
     pElement.innerHTML = `
       ${this.textContent}
       <button type="button" class="tour-popup__remove-button">
-          <i class="fa-solid fa-xmark"></i>
+          <i class="material-icons tour-popup__hidden-tab">close</i>
       </button>
     `
     document.getElementById('tour-popup__current-areas').appendChild(pElement);
