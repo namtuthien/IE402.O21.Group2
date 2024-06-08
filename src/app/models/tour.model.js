@@ -3,11 +3,11 @@ const Schema = mongoose.Schema;
 
 const Tour = new Schema({
   tour_name: { type: String, required: true },
-  region: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: "Region",
-    required: true,
-  },
+  // region: {
+  //   type: mongoose.Schema.Types.ObjectId,
+  //   ref: "Region",
+  //   required: true,
+  // },
   tour_price: { type: Number, required: true },
   tour_category: [{ type: String }],
   tour_starting_day: { type: Date },
