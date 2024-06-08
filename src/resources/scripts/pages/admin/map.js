@@ -1,12 +1,13 @@
-// import utils
+// Import các module cần thiết
 import { convertDateToHourDayMonthYear } from "/format.js";
 import { getLocations, getTours, getLinesOfTour } from "/fetch.js";
 
-// get data
+// Lấy dữ liệu
 const locations = await getLocations();
-const tours = await getTours();
+// const tours = await getTours();
 let streets;
-// arcgis
+
+// ArcGIS
 require([
   "esri/Map",
   "esri/views/MapView",
@@ -15,18 +16,19 @@ require([
   "esri/widgets/Editor",
   "esri/layers/FeatureLayer",
   "esri/core/reactiveUtils",
-], (Map, MapView, Graphic, GraphicsLayer, Editor, FeatureLayer, reactiveUtils, Polyline) => {
-  // create map
+  "esri/form/FormTemplate",
+], (Map, MapView, Graphic, GraphicsLayer, Editor, FeatureLayer, reactiveUtils, FormTemplate) => {
+  // Tạo map
   const map = new Map({
     basemap: "streets-relief-vector",
   });
 
-  // enable mouse event on map
+  // Kích hoạt sự kiện chuột trên bản đồ
   map.on("load", function () {
     map.graphics.enableMouseEvents();
   });
 
-  // create view
+  // Tạo view
   const view = new MapView({
     container: "viewDiv",
     map: map,
@@ -37,7 +39,119 @@ require([
     },
   });
 
-  // create graphic layer
+  // Sự kiện click
+  view.on("click", function (event) {
+    // Lấy cái modal form thêm địa điểm
+    const formCRLElement = document.querySelector("#modal_form_add_location");
+    // Cho nó hiện ra
+    formCRLElement.style.display = "flex";
+    // Lấy cái nút tắt form
+    const formCloseAction = document.querySelector("#close-form-action");
+    formCloseAction.onclick = function () {
+      formCRLElement.style.display = "none";
+    };
+    // lấy lat long khi click
+    const fieldlLongitude = document.querySelector('input[name="location_coordinate_longitude"]');
+    const fieldlLatitude = document.querySelector('input[name="location_coordinate_latitude"]');
+    fieldlLongitude.value = event.mapPoint.longitude;
+    fieldlLatitude.value = event.mapPoint.latitude;
+    // Xử lý bảng hoạt động
+    const tableActivitiesTbody = document.querySelector(".table__activities-tbody");
+    const tableActionAdd = document.querySelector(".table__action-add");
+    const tableActionDelete = document.querySelector("#delete_activity");
+    const tableActionSelectAll = document.querySelector("#select_all_activity");
+
+    let index = 0;
+    let listNoActivity = [];
+    let selectedArrActivity = [];
+    // Xử lý chọn all dòng
+    tableActionSelectAll.onchange = function (e) {
+      const isChecked = e.target.checked;
+      selectedArrActivity = isChecked ? [...listNoActivity] : [];
+      document.querySelectorAll(".form-check-input").forEach((checkbox) => {
+        checkbox.checked = isChecked;
+      });
+    };
+    // Xử lý thêm dòng
+    tableActionAdd.onclick = function () {
+      index++;
+      const newRow = document.createElement("tr");
+
+      newRow.innerHTML = `
+      <td scope="row">
+        <div class="form-check">
+          <input name="activity_item" class="form-check-input" type="checkbox" id="${index}" onchange="onChecked(${index})">
+        </div>
+      </td>
+      <td scope="row" class="col-md-1">
+        <div class="form-group">
+          <input type="number" min="1" name="activity_no" class="form-control bg-white">
+        </div>
+      </td>
+      <td>
+        <div class="form-group">
+          <input type="text" name="activity_name" class="form-control bg-white">
+        </div>
+      </td>
+      <td>
+        <div class="form-group">
+          <input type="text" name="activity_time" class="form-control bg-white">
+        </div>
+      </td>
+      <td>
+        <div class="form-group">
+          <input type="text" name="activity_desc" class="form-control bg-white">
+        </div>
+      </td>
+      <td>
+        <span class="material-icons-outlined">more_vert</span>
+      </td>
+    `;
+      // Add event listener
+      const checkbox = newRow.querySelector(".form-check-input");
+      checkbox.onchange = function (e) {
+        const id = +e.target.id;
+        if (selectedArrActivity.includes(id)) {
+          const index = selectedArrActivity.indexOf(id);
+          if (index > -1) {
+            selectedArrActivity.splice(index, 1);
+          }
+        } else {
+          selectedArrActivity.push(id);
+        }
+        tableActionSelectAll.checked = selectedArrActivity.length === listNoActivity.length;
+      };
+
+      tableActivitiesTbody.insertBefore(newRow, tableActionAdd);
+      listNoActivity.push(index);
+    };
+    // Xử lý xoá dòng được chọn
+    tableActionDelete.onclick = function () {
+      selectedArrActivity.forEach((id) => {
+        const checkbox = document.getElementById(id);
+        if (checkbox) {
+          const row = checkbox.closest("tr");
+          if (row) {
+            row.remove();
+          }
+        }
+      });
+
+      listNoActivity = listNoActivity.filter((currId) => !selectedArrActivity.includes(currId));
+      selectedArrActivity.length = 0;
+      tableActionSelectAll.checked = false;
+    };
+    // Xử lý gửi dữ liệu lên server
+    const storeForm = document.querySelector("#form_add_location");
+    const btnSave = document.querySelector("#btn_save");
+    
+    btnSave.onclick = function () {
+      storeForm.action = '/admin/location/store';
+      storeForm.submit();
+    }
+  });
+
+  // Tạo graphic layer
   const graphicsLayer = new GraphicsLayer({
     graphics: locations.map(
       (location) =>
@@ -67,127 +181,47 @@ require([
   });
   map.add(graphicsLayer);
 
-  // create feature layer
+  // Tạo feature layer
   const featureLayer = new FeatureLayer({
     fields: [
-      {
-        type: "string",
-        name: "location_id",
-        alias: "ID",
-      },
-      {
-        type: "double",
-        name: "location_longitude",
-        alias: "Kinh độ",
-      },
-      {
-        type: "double",
-        name: "location_latitude",
-        alias: "Vĩ độ",
-      },
-      {
-        type: "string",
-        name: "location_name",
-        alias: "Tên địa điểm",
-      },
-      {
-        type: "string",
-        name: "location_type",
-        alias: "Loại địa điểm",
-      },
-      {
-        type: "string",
-        name: "location_address",
-        alias: "Địa chỉ",
-      },
-      {
-        type: "string",
-        name: "location_description",
-        alias: "Mô tả",
-      },
-      {
-        type: "string",
-        name: "location_rating",
-        alias: "Đánh giá",
-      },
-      {
-        type: "string",
-        name: "location_total_rating",
-        alias: "Số lượt đánh giá",
-      },
-      {
-        type: "string",
-        name: "location_phone_number",
-        alias: "Số điện thoại",
-      },
-      {
-        type: "string",
-        name: "location_website",
-        alias: "Website",
-      },
-      {
-        type: "string",
-        name: "updated_at",
-        alias: "Ngày cập nhật",
-      },
-      {
-        type: "string",
-        name: "created_at",
-        alias: "Ngày tạo",
-      },
+      { type: "string", name: "location_id", alias: "ID" },
+      { type: "double", name: "location_longitude", alias: "Kinh độ" },
+      { type: "double", name: "location_latitude", alias: "Vĩ độ" },
+      { type: "string", name: "location_name", alias: "Tên địa điểm" },
+      { type: "string", name: "location_type", alias: "Loại địa điểm" },
+      { type: "string", name: "location_address", alias: "Địa chỉ" },
+      { type: "string", name: "location_description", alias: "Mô tả" },
+      { type: "string", name: "location_rating", alias: "Đánh giá" },
+      { type: "string", name: "location_total_rating", alias: "Số lượt đánh giá" },
+      { type: "string", name: "location_phone_number", alias: "Số điện thoại" },
+      { type: "string", name: "location_website", alias: "Website" },
+      { type: "string", name: "updated_at", alias: "Ngày cập nhật" },
+      { type: "string", name: "created_at", alias: "Ngày tạo" },
     ],
     popupTemplate: {
       title: "{location_name} : {location_id}",
       content: [
-        {
-          type: "text",
-          text: "<b>Tọa độ: </b> [{location_longitude}, {location_latitude}]",
-        },
-        {
-          type: "text",
-          text: "<b>Loại địa điểm:</b> {location_type}",
-        },
-        {
-          type: "text",
-          text: "<b>Địa chỉ:</b> {location_address}",
-        },
+        { type: "text", text: "<b>Tọa độ: </b> [{location_longitude}, {location_latitude}]" },
+        { type: "text", text: "<b>Loại địa điểm:</b> {location_type}" },
+        { type: "text", text: "<b>Địa chỉ:</b> {location_address}" },
         {
           type: "text",
           text: "<b>Đánh giá:</b> {location_rating}/5 - {location_total_rating} lượt",
         },
-        {
-          type: "text",
-          text: "<b>Số điện thoại:</b> {location_phone_number}",
-        },
-        {
-          type: "text",
-          text: "<b>Website:</b> {location_website}",
-        },
-        {
-          type: "text",
-          text: "<b>Ngày tạo:</b> {created_at}",
-        },
-        {
-          type: "text",
-          text: "<b>Cập nhật:</b> {updated_at}",
-        },
+        { type: "text", text: "<b>Số điện thoại:</b> {location_phone_number}" },
+        { type: "text", text: "<b>Website:</b> {location_website}" },
+        { type: "text", text: "<b>Ngày tạo:</b> {created_at}" },
+        { type: "text", text: "<b>Cập nhật:</b> {updated_at}" },
       ],
       actions: [
-        {
-          title: "Cập nhật thông tin",
-          id: "action-edit-info",
-          className: "esri-icon-edit",
-        },
+        { title: "Thêm địa điểm", id: "action-add-info", className: "esri-icon-add" },
+        { title: "Cập nhật thông tin", id: "action-edit-info", className: "esri-icon-edit" },
         {
           title: "Phóng to",
           id: "action-zoom-out",
           className: "esri-icon-zoom-out-magnifying-glass",
         },
-        {
-          title: "Thu nhỏ",
-          id: "action-zoom-in",
-          className: "esri-icon-zoom-in-magnifying-glass",
-        },
+        { title: "Thu nhỏ", id: "action-zoom-in", className: "esri-icon-zoom-in-magnifying-glass" },
       ],
       overwriteActions: true,
     },
@@ -200,17 +234,14 @@ require([
       symbol: {
         type: "simple-marker",
         color: [0, 153, 51],
-        outline: {
-          color: [255, 255, 255],
-          width: 1,
-        },
+        outline: { color: [255, 255, 255], width: 1 },
       },
     },
     outFields: ["*"],
   });
   map.add(featureLayer);
 
-  // create editor
+  // Tạo editor
   let editor;
   view.when(() => {
     editor = new Editor({
@@ -222,162 +253,80 @@ require([
           container: document.createElement("div"),
           formTemplate: {
             elements: [
-              {
-                type: "field",
-                fieldName: "location_id",
-                label: "ID",
-              },
-              {
-                type: "field",
-                fieldName: "location_name",
-                label: "Tên địa điểm",
-              },
-              {
-                type: "field",
-                fieldName: "location_type",
-                label: "Loại địa điểm",
-              },
-              {
-                type: "field",
-                fieldName: "location_address",
-                label: "Địa chỉ",
-              },
-              {
-                type: "field",
-                fieldName: "location_description",
-                label: "Mô tả",
-              },
-              {
-                type: "field",
-                fieldName: "location_phone_number",
-                label: "Số điện thoại",
-              },
-              {
-                type: "field",
-                fieldName: "location_website",
-                label: "Website",
-              },
+              { type: "field", fieldName: "location_id", label: "ID" },
+              { type: "field", fieldName: "location_name", label: "Tên địa điểm" },
+              { type: "field", fieldName: "location_type", label: "Loại địa điểm" },
+              { type: "field", fieldName: "location_address", label: "Địa chỉ" },
+              { type: "field", fieldName: "location_description", label: "Mô tả" },
+              { type: "field", fieldName: "location_phone_number", label: "Số điện thoại" },
+              { type: "field", fieldName: "location_website", label: "Website" },
             ],
           },
         },
       ],
     });
 
-    // view.ui.add(editor, { position: "top-right" });
-    function editLocation() {
-      // If the Editor's activeWorkflow is null, make the popup not visible
-      if (!editor.activeWorkFlow) {
-        view.popup.visible = false;
-
-        // Call the Editor update feature edit workflow
-        editor.startUpdateWorkflowAtFeatureEdit(view.popup.selectedFeature);
-        view.ui.add(editor, "top-right");
-      }
-
-      // Remove the editor widget from the display when the state of the editor's viewModel is "ready"
-      // and re-add the popup. Ready state indicates that the initial editor panel displays and is ready
-      // for editing.
-
-      // The editor displays a panel to select a feature to update if the user "backs" out of the current edit workflow.
-      // This is not needed in this specific workflow as the feature is already selected from the popup.
-      // The "ready" state indicates that this initial editor panel is active and was activated via the "back" button.
-
-      reactiveUtils.when(
-        () => editor.viewModel.state === "ready",
-        () => {
-          // Remove the editor and open the popup again
-          view.ui.remove(editor);
-          view.openPopup({
-            fetchFeatures: true,
-            shouldFocus: true,
-          });
-        }
-      );
-    }
-
-    // Event handler that fires each time an action is clicked
-    reactiveUtils.on(
-      () => view.popup,
-      "trigger-action",
-      (event) => {
-        if (event.action.id === "action-edit-info") {
-          editLocation();
-        }
+    reactiveUtils.when(
+      () => editor.viewModel.state === "ready",
+      () => {
+        view.ui.remove(editor);
+        view.openPopup({ fetchFeatures: true, shouldFocus: true });
       }
     );
   });
 
   let features;
-  // Watch when the popup is visible
   reactiveUtils.watch(
     () => view.popup?.visible,
     (event) => {
-      // Check the Editor's viewModel state, if it is currently open and editing existing features, disable popups
       if (editor.viewModel.state === "editing-existing-feature") {
         view.closePopup();
       } else {
-        // Grab the features of the popup
         features = view.popup.features;
       }
     }
   );
 
   featureLayer.on("apply-edits", () => {
-    // Once edits are applied to the layer, remove the Editor from the UI
     view.ui.remove(editor);
-
-    // Iterate through the features
     features.forEach((feature) => {
-      // Reset the template for the feature if it was edited
       feature.popupTemplate = {
         title: "{location_name} : {location_id}",
         content: [
-          {
-            type: "text",
-            text: "<b>Tọa độ: </b> [{location_longitude}, {location_latitude}]",
-          },
-          {
-            type: "text",
-            text: "<b>Loại địa điểm:</b> {location_type}",
-          },
-          {
-            type: "text",
-            text: "<b>Địa chỉ:</b> {location_address}",
-          },
+          { type: "text", text: "<b>Tọa độ: </b> [{location_longitude}, {location_latitude}]" },
+          { type: "text", text: "<b>Loại địa điểm:</b> {location_type}" },
+          { type: "text", text: "<b>Địa chỉ:</b> {location_address}" },
           {
             type: "text",
             text: "<b>Đánh giá:</b> {location_rating}/5 - {location_total_rating} lượt",
           },
-          {
-            type: "text",
-            text: "<b>Số điện thoại:</b> {location_phone_number}",
-          },
-          {
-            type: "text",
-            text: "<b>Website:</b> {location_website}",
-          },
-          {
-            type: "text",
-            text: "<b>Ngày tạo:</b> {created_at}",
-          },
-          {
-            type: "text",
-            text: "<b>Cập nhật:</b> {updated_at}",
-          },
+          { type: "text", text: "<b>Số điện thoại:</b> {location_phone_number}" },
+          { type: "text", text: "<b>Website:</b> {location_website}" },
+          { type: "text", text: "<b>Ngày tạo:</b> {created_at}" },
+          { type: "text", text: "<b>Cập nhật:</b> {updated_at}" },
         ],
       };
     });
 
-    // Open the popup again and reset its content after updates were made on the feature
     if (features) {
-      view.openPopup({
-        features: features,
-      });
+      view.openPopup({ features: features });
     }
 
-    // Cancel the workflow so that once edits are applied, a new popup can be displayed
     editor.viewModel.cancelWorkflow();
   });
+
+  // Xử lý sự kiện action của popup
+  reactiveUtils.on(
+    () => view.popup,
+    "trigger-action",
+    (event) => {
+      if (event.action.id === "action-edit-info") {
+        view.popup.visible = false;
+        editor.startUpdateWorkflowAtFeatureEdit(view.popup.selectedFeature);
+        view.ui.add(editor, "top-right");
+      }
+    }
+  );
 
   var list_points = [];
   var string_points = "";

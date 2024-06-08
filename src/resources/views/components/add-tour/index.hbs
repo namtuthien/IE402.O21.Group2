@@ -1,0 +1,109 @@
+<body class="tour-popup__body">
+    <div class="tour-popup">
+        <form class="tour-popup__form" method="post">
+            <div class="tour-popup__form-group">
+                <label for="tour-popup-name" class="tour-popup__label">Tên Tour</label>
+                <input type="text" id="tour-popup-name" class="tour-popup__input" placeholder="Nhập tên Tour...">
+            </div>
+            <div class="tour-popup__flex-group">
+              <div class="tour-popup__form-group">
+                  <label for="tour-popup-price" class="tour-popup__label">Giá vé</label>
+                  <input type="text" id="tour-popup-price" class="tour-popup__input" placeholder="Nhập số tiền...">
+              </div>
+              <div class="tour-popup__form-group">
+                  <label for="tour-popup-total-tickets" class="tour-popup__label">Tổng số vé</label>
+                  <input type="number" id="tour-popup-total-tickets" class="tour-popup__input" value="0">
+              </div>
+              <div class="tour-popup__form-group">
+                  <label for="tour-popup-available-tickets" class="tour-popup__label">Số vé còn trống</label>
+                  <input type="number" id="tour-popup-available-tickets" class="tour-popup__input" value="0">
+              </div>              
+            </div>
+            <div class="tour-popup__flex-group">
+              <div class="tour-popup__form-group">
+                  <label for="tour-popup-start-date" class="tour-popup__label">Ngày khởi hành</label>
+                  <input type="date" id="tour-popup-start-date" class="tour-popup__input">
+              </div>
+              <div class="tour-popup__form-group">
+                  <label for="tour-popup-days" class="tour-popup__label">Ngày / Đêm</label>
+                  <input type="text" id="tour-popup-days" class="tour-popup__input" placeholder="N/Đ">
+              </div>
+            </div>
+            <div class="tour-popup__form-group">
+                <label for="" class="tour-popup__label">Điểm đến</label>
+                <div class="tour-popup__tab-group">
+                    <div class="tour-popup__location-tabs" id="tour-popup__current-locations">
+                    </div>
+                    <div class="tour-popup__button-area-div">
+                        <button type="button" class="tour-popup__button" id="addLocationButton">Thêm điểm đến +</button>
+                        <div class="tour-popup__all-location-div" id="allLocationDiv">
+                            <i class="material-icons tour-popup__hidden-div" id="hideLocationDiv">close</i>
+                            <div class="tour-popup__all-location-ul">
+                                <p class="tour-popup__location">
+                                    Ba Đình
+                                </p>
+                                <p class="tour-popup__location">
+                                    Hồ Chí Minh
+                                </p>
+                                <p class="tour-popup__location">
+                                    Bà Rịa
+                                </p>
+                                <p class="tour-popup__location">
+                                    Vịnh Hạ Long
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tour-popup__form-group">
+                <label for="" class="tour-popup__label">Danh mục</label>
+                <div class="tour-popup__tab-group">
+                    <div class="tour-popup__area-tabs" id="tour-popup__current-areas">
+                    </div>
+                    <div class="tour-popup__button-area-div">
+                        <button type="button" class="tour-popup__button"  id="addAreaButton">Thêm danh mục +</button>
+                        <div class="tour-popup__all-area-div" id="allAreaDiv">
+                            <i class="material-icons tour-popup__hidden-div" id="hideAreaDiv">close</i>
+                            <div class="tour-popup__all-area-ul">
+                                <p class="tour-popup__area">
+                                    Ba Đình
+                                </p>
+                                <p class="tour-popup__area">
+                                    Hồ Chí Minh
+                                </p>
+                                <p class="tour-popup__area">
+                                    Bà Rịa
+                                </p>
+                                <p class="tour-popup__area">
+                                    Vịnh Hạ Long
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tour-popup__form-group tour__form-group--image">
+                <label class="tour-popup__label">Hình ảnh</label>
+                <div class="tour-popup__image-group">
+                    <div class="tour-popup__all-image-div">
+                    </div>
+                    <button type="button" class="tour-popup__image-button" id="addImageButton">
+                        <i class="material-icons-outlined tour-popup__add-image-icon">add_photo_alternate</i>
+                    </button>
+                    <input type="file" class="tour-popup__hidden-input" id="imageInput" accept="image/*">
+                </div>
+            </div>
+            <div class="tour-popup__form-group">
+                <label for="tour-popup-description" class="tour-popup__label">Mô tả</label>
+                <textarea id="tour-popup-description" class="tour-popup__textarea" placeholder="Nhập mô tả..."></textarea>
+            </div>
+            <div class="tour-popup__form-group tour__form-group--submit">
+                <button type="submit" class="tour-popup__submit-button">
+                    <i class="material-icons">save</i>
+                    Lưu
+                </button>
+            </div>
+        </form>
+    </div>
+</body>

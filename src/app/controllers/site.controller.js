@@ -15,6 +15,7 @@ class SiteController {
       pageTitle: "Đăng nhập",
       style: "/pages/auth/login.css",
       script: "/pages/auth/login.js",
+      layout: "customer",
     });
   }
   // [GET] /tours

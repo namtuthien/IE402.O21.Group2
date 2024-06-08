@@ -32,3 +32,8 @@
 .user__role {
     width: fit-content;
 }
+
+.user__avatar {
+    width: 100px;
+    height: 100px;
+}
