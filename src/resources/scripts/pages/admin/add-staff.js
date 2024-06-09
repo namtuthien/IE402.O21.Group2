@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const selectDistrictElement = document.getElementById("staff-district");
     const selectWardElement = document.getElementById("staff-ward");
     const inputStreetElement = document.getElementById("staff-street");
+    const submitButtonElement = document.getElementById("staff__submit-button")
 
     fetch("https://vapi.vnappmob.com/api/province", {
         method: "GET",
@@ -83,4 +84,29 @@ document.addEventListener("DOMContentLoaded", function () {
             })
             .catch(error => console.error("Error fetching wards:", error));
     });
+
+    submitButtonElement.addEventListener("click", () => {
+        const user_name = document.getElementById("staff-name").value;
+        const user_gender = document.getElementById("staff-gender").value
+        const user_phone_number = document.getElementById("staff-phone").value;
+        const user_email = document.getElementById("staff-email").value;
+        const user_password = document.getElementById("staff-password").value;
+        const province = document.getElementById("staff-province").value;
+        const district = document.getElementById("staff-district").value;
+        const ward = document.getElementById("staff-ward").value;
+        const street = document.getElementById("staff-street").value;
+        const user = {
+            user_name: user_name,
+            user_gender: user_gender,
+            user_phone_number: user_phone_number,
+            user_email: user_email,
+            user_password: user_password,
+            user_address: {
+                street: street,
+                ward: ward,
+                district: district,
+                province: province,
+            }
+        }
+    })
 });
