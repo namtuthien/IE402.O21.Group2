@@ -1,0 +1,7 @@
+.bg-green {
+    background-color: var(--green1);
+}
+
+.bg-red {
+    background-color: var(--red);
+}
