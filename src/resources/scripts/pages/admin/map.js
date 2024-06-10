@@ -38,116 +38,140 @@ require([
       color: "rgb(123, 211, 234)",
     },
   });
-
+  // Lấy bản đồ
+  const viewDivContainer = document.querySelector("#viewDiv");
+  // Biến check xem có đang ở chế độ thêm địa điểm không
+  let isAddingLocation = false;
+  // Nút thêm địa điểm
+  const btnAddLocation = document.querySelector("#btn-add-location");
+  btnAddLocation.onclick = function() {
+    isAddingLocation = true;
+   
+    viewDivContainer.style = 'cursor: url("/imgs/cursor-add-location.png"),auto';
+  }
   // Sự kiện click
   view.on("click", function (event) {
-    // Lấy cái modal form thêm địa điểm
-    const formCRLElement = document.querySelector("#modal_form_add_location");
-    // Cho nó hiện ra
-    formCRLElement.style.display = "flex";
-    // Lấy cái nút tắt form
-    const formCloseAction = document.querySelector("#close-form-action");
-    formCloseAction.onclick = function () {
-      formCRLElement.style.display = "none";
-    };
-    // lấy lat long khi click
-    const fieldlLongitude = document.querySelector('input[name="location_coordinate_longitude"]');
-    const fieldlLatitude = document.querySelector('input[name="location_coordinate_latitude"]');
-    fieldlLongitude.value = event.mapPoint.longitude;
-    fieldlLatitude.value = event.mapPoint.latitude;
-    // Xử lý bảng hoạt động
-    const tableActivitiesTbody = document.querySelector(".table__activities-tbody");
-    const tableActionAdd = document.querySelector(".table__action-add");
-    const tableActionDelete = document.querySelector("#delete_activity");
-    const tableActionSelectAll = document.querySelector("#select_all_activity");
+    if (isAddingLocation) {
+      isAddingLocation = false;
+      viewDivContainer.style = "cursor: auto";
+      // Lấy cái modal form thêm địa điểm
+      const formCRLElement = document.querySelector("#modal_form_add_location");
+      // Cho nó hiện ra
+      formCRLElement.style.display = "flex";
 
-    let index = 0;
-    let listNoActivity = [];
-    let selectedArrActivity = [];
-    // Xử lý chọn all dòng
-    tableActionSelectAll.onchange = function (e) {
-      const isChecked = e.target.checked;
-      selectedArrActivity = isChecked ? [...listNoActivity] : [];
-      document.querySelectorAll(".form-check-input").forEach((checkbox) => {
-        checkbox.checked = isChecked;
-      });
-    };
-    // Xử lý thêm dòng
-    tableActionAdd.onclick = function () {
-      index++;
-      const newRow = document.createElement("tr");
+      // lấy lat long khi click
+      const fieldlLongitude = document.querySelector('input[name="location_coordinate_longitude"]');
+      const fieldlLatitude = document.querySelector('input[name="location_coordinate_latitude"]');
+      fieldlLongitude.value = event.mapPoint.longitude;
+      fieldlLatitude.value = event.mapPoint.latitude;
+      // Xử lý bảng hoạt động
+      const tableActivitiesTbody = document.querySelector(".table__activities-tbody");
+      const tableActionAdd = document.querySelector(".table__action-add");
+      const tableActionDelete = document.querySelector("#delete_activity");
+      const tableActionSelectAll = document.querySelector("#select_all_activity");
 
-      newRow.innerHTML = `
-      <td scope="row">
-        <div class="form-check">
-          <input name="activity_item" class="form-check-input" type="checkbox" id="${index}" onchange="onChecked(${index})">
-        </div>
-      </td>
-      <td scope="row" class="col-md-1">
-        <div class="form-group">
-          <input type="number" min="1" name="activity_no" class="form-control bg-white">
-        </div>
-      </td>
-      <td>
-        <div class="form-group">
-          <input type="text" name="activity_name" class="form-control bg-white">
-        </div>
-      </td>
-      <td>
-        <div class="form-group">
-          <input type="text" name="activity_time" class="form-control bg-white">
-        </div>
-      </td>
-      <td>
-        <div class="form-group">
-          <input type="text" name="activity_desc" class="form-control bg-white">
-        </div>
-      </td>
-      <td>
-        <span class="material-icons-outlined">more_vert</span>
-      </td>
-    `;
-      // Add event listener
-      const checkbox = newRow.querySelector(".form-check-input");
-      checkbox.onchange = function (e) {
-        const id = +e.target.id;
-        if (selectedArrActivity.includes(id)) {
-          const index = selectedArrActivity.indexOf(id);
-          if (index > -1) {
-            selectedArrActivity.splice(index, 1);
-          }
-        } else {
-          selectedArrActivity.push(id);
-        }
-        tableActionSelectAll.checked = selectedArrActivity.length === listNoActivity.length;
+      let index = 0;
+      let listNoActivity = [];
+      let selectedArrActivity = [];
+      // Xử lý chọn all dòng
+      tableActionSelectAll.onchange = function (e) {
+        const isChecked = e.target.checked;
+        selectedArrActivity = isChecked ? [...listNoActivity] : [];
+        document.querySelectorAll(".form-check-input").forEach((checkbox) => {
+          checkbox.checked = isChecked;
+        });
       };
+      // Xử lý thêm dòng
+      tableActionAdd.onclick = function () {
+        index++;
+        const newRow = document.createElement("tr");
 
-      tableActivitiesTbody.insertBefore(newRow, tableActionAdd);
-      listNoActivity.push(index);
-    };
-    // Xử lý xoá dòng được chọn
-    tableActionDelete.onclick = function () {
-      selectedArrActivity.forEach((id) => {
-        const checkbox = document.getElementById(id);
-        if (checkbox) {
-          const row = checkbox.closest("tr");
-          if (row) {
-            row.remove();
+        newRow.innerHTML = `
+            <td scope="row">
+              <div class="form-check">
+                <input name="activity_item" class="form-check-input" type="checkbox" id="${index}" onchange="onChecked(${index})">
+              </div>
+            </td>
+            <td scope="row" class="col-md-1">
+              <div class="form-group">
+                <input type="number" readonly min="1" value=${listNoActivity.length + 1} name="activity_no" class="form-control bg-white">
+              </div>
+            </td>
+            <td>
+              <div class="form-group">
+                <input type="text" name="activity_name" class="form-control bg-white">
+              </div>
+            </td>
+            <td>
+              <div class="form-group">
+                <input type="text" name="activity_time" class="form-control bg-white">
+              </div>
+            </td>
+            <td>
+              <div class="form-group">
+                <input type="text" name="activity_desc" class="form-control bg-white">
+              </div>
+            </td>
+            <td>
+              <span class="material-icons-outlined">more_vert</span>
+            </td>
+          `;
+        // Add event listener
+        const checkbox = newRow.querySelector(".form-check-input");
+        checkbox.onchange = function (e) {
+          const id = +e.target.id;
+          if (selectedArrActivity.includes(id)) {
+            const index = selectedArrActivity.indexOf(id);
+            if (index > -1) {
+              selectedArrActivity.splice(index, 1);
+            }
+          } else {
+            selectedArrActivity.push(id);
           }
-        }
-      });
+          tableActionSelectAll.checked = selectedArrActivity.length === listNoActivity.length;
+        };
 
-      listNoActivity = listNoActivity.filter((currId) => !selectedArrActivity.includes(currId));
-      selectedArrActivity.length = 0;
-      tableActionSelectAll.checked = false;
-    };
-    // Xử lý gửi dữ liệu lên server
-    const storeForm = document.querySelector("#form_add_location");
-    const btnSave = document.querySelector("#btn_save");
-    
-    btnSave.onclick = function () {
-      storeForm.action = '/admin/location/store';
-      storeForm.submit();
+        tableActivitiesTbody.insertBefore(newRow, tableActionAdd);
+        listNoActivity.push(index);
+      };
+      // Xử lý xoá dòng được chọn
+      tableActionDelete.onclick = function () {
+        selectedArrActivity.forEach((id) => {
+          const checkbox = document.getElementById(id);
+          if (checkbox) {
+            const row = checkbox.closest("tr");
+            if (row) {
+              row.remove();
+            }
+          }
+        });
+
+        listNoActivity = listNoActivity.filter((currId) => !selectedArrActivity.includes(currId));
+        const arrSTT = document.querySelectorAll('input[name="activity_no"]');
+
+        listNoActivity.forEach((id, index) => {
+          arrSTT[index].value = index + 1;
+        });
+        selectedArrActivity.length = 0;
+        tableActionSelectAll.checked = false;
+      };
+      // Xử lý gửi dữ liệu lên server
+      const storeForm = document.querySelector("#form_add_location");
+      const btnSave = document.querySelector("#btn_save");
+      // Lưu địa điểm
+      btnSave.onclick = function () {
+        storeForm.action = "/admin/location/store";
+        storeForm.submit();
+      };
+      // Lấy cái nút tắt form
+      const formCloseAction = document.querySelector("#close-form-action");
+      formCloseAction.onclick = function () {
+        formCRLElement.style.display = "none";
+        const allRows = Array.from(tableActivitiesTbody.querySelectorAll("tr"));
+        for (let i = 0; i < allRows.length - 1; i++) {
+          tableActivitiesTbody.removeChild(allRows[i]);
+        }
+      };
     }
   });
 

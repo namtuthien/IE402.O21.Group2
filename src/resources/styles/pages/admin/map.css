@@ -63,6 +63,7 @@
     border-radius: 0;
     width: 100%;
     text-align: center;
+    padding-left: 12px;
 }
 .table__activities-tbody tr td:first-child {
     display: flex;
