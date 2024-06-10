@@ -1,0 +1,219 @@
+.staff {
+    background-color: var(--white);
+    padding: 20px;
+    height: 83vh;
+}
+
+.staff__form {
+    display: flex;
+    flex-direction: column;
+}
+
+.staff__form-group {
+    margin-bottom: 15px;
+    width: 32.6%;
+}
+
+.staff__flex-group {
+    display: flex;
+    gap: 1em;
+    flex-wrap: wrap;
+}
+
+.staff__label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 14px;
+    color: var(--gray1);
+}
+
+.staff__input,
+.staff__textarea,
+.staff__select
+ {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid var(--black1);
+    border-radius: 4px;
+    font-size: 14px;
+    color: var(--gray1);
+}
+
+.staff__textarea {
+    height: 100px;
+}
+
+.staff__button {
+    display: block;
+    width: max-content;
+    height: max-content;
+    padding: 5px;
+    color: var(--primary5);
+    border: solid 2px var(--primary5);
+    border-radius: 5px;
+    background-color: var(--white);
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    /* margin-top: 10px; */
+}
+
+.tour__form-group--submit {
+    display: flex;
+    justify-content: space-between;
+}
+
+.staff__submit-button {
+    display: flex;
+    gap: 0.2em;
+    width: max-content;
+    padding: 5px 15px;
+    background-color: var(--primary5);
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.staff__submit-button:hover {
+    background-color: var(--outline4);
+}
+
+.staff__remove-submit-button {
+    background-color: var(--red);
+}
+
+.staff__tab {
+    width: max-content;
+    color: var(--black);
+    border: solid 1px var(--black1);
+    font-weight: normal;
+    display: flex;
+}
+
+.staff__remove-button {
+    background-color: var(--white);
+    color: var(--black);
+    border: none;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 14px;
+    height: 14px;
+    margin-left: 0.5em;
+}
+
+.staff__area-tabs,
+.staff__location-tabs,
+.staff__tab-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.staff__form-group--image {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.staff__image-group,
+.staff__all-image-div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.staff__image-button {
+    width: 100px;
+    height: 100px;
+    border: 2px solid var(--primary5);
+    border-radius: 5px;
+    background-color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.staff__image-placeholder {
+    /* max-width: 100%;
+    max-height: 100%; */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.staff__add-image-icon {
+    color: var(--primary5);
+    font-size: 85px;
+}
+
+.staff__image {
+    border: none;
+}
+
+.staff__hidden-input {
+    display: none;
+}
+
+.staff__form-group--submit {
+    display: flex;
+    justify-content: flex-start;
+}
+
+
+/* =========================================CSS của Danh sách địa điểm===================================================== */
+.staff__all-area-div,
+.staff__all-location-div {
+    display: none;
+    z-index: 999;
+    border: solid 1px var(--black1);
+    border-radius: 5px;
+    padding: 1em;
+    /* width: max-content; */
+    width: 200px;
+    /* overflow-x: auto; */
+    height: max-content;
+    max-height: 400px;
+    overflow-y: auto;
+    position: absolute;
+    background-color: var(--white);
+}
+
+.staff__hidden-div {
+    font-size: 20px;
+    position: relative;
+    left: 95%;
+    bottom: 95%;
+    cursor: pointer;
+}
+
+.staff__hidden-tab {
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.staff__all-area-ul,
+.staff__all-location-ul {
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+    height: max-content;
+    list-style-type: none;
+}
+
+.staff__area,
+.staff__location {
+    border: solid 1px var(--black1);
+    border-radius: 5px;
+    width: max-content;
+    height: auto;
+    padding: 5px;
+    cursor: pointer;
+}
