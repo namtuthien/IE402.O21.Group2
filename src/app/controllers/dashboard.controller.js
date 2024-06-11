@@ -4,26 +4,26 @@ const bookingModel = require("../models/booking.model");
 const ratingModel = require("../models/rating.model");
 
 class DashboardController {
-    //[GET] /admin/dashboard
-    async show(req, res, next) {
-        const totalCustomers = await this.getTotalCustomers();
-        const totalBookings = await this.getTotalBookings();
-        const totalRatings = await this.getTotalRatings();
-        const totalRevenue = await this.calculateTotalRevenue();
-        const admin = await this.getAdminById(req.user_id)
-        res.render('pages/admin/dashboard', {
-            pageTitle: "Bảng điều khiển",
-            style: "/pages/admin/dashboard.css",
-            script: "/pages/admin/dashboard.js",
-            totalCustomers: totalCustomers.toLocaleString("de-DE"),
-            totalBookings: totalBookings.toLocaleString("de-DE"),
-            totalRatings: totalRatings.toLocaleString("de-DE"),
-            totalRevenue: totalRevenue.toLocaleString("de-DE"),
-            user_name: admin.user_name,
-            user_role: admin.user_role
-            // layout: "main"
-        });
-    }
+  //[GET] /admin/dashboard
+  async show(req, res, next) {
+    const totalCustomers = await this.getTotalCustomers();
+    const totalBookings = await this.getTotalBookings();
+    const totalRatings = await this.getTotalRatings();
+    const totalRevenue = await this.calculateTotalRevenue();
+    const admin = await this.getAdminById(req.user_id)
+    res.render('pages/admin/dashboard', {
+      pageTitle: "Bảng điều khiển",
+      style: "/pages/admin/dashboard.css",
+      script: "/pages/admin/dashboard.js",
+      totalCustomers: totalCustomers.toLocaleString("de-DE"),
+      totalBookings: totalBookings.toLocaleString("de-DE"),
+      totalRatings: totalRatings.toLocaleString("de-DE"),
+      totalRevenue: totalRevenue.toLocaleString("de-DE"),
+      user_name: admin.user_name,
+      user_role: admin.user_role
+      // layout: "main"
+    });
+  }
   // [GET] /admin/dashboard/createStatistical
   async createStatistical(req, res, next) {
     try {
@@ -176,17 +176,18 @@ class DashboardController {
       console.error(err);
       return 0;
     }
+  }
 
-    async getAdminById(id) {
-        try {
-            const admin = await userModel.findById(id);
-            return admin;
-        }
-        catch (err) {
-            console.error(err);
-            return 0;
-        }
+  async getAdminById(id) {
+    try {
+      const admin = await userModel.findById(id);
+      return admin;
     }
+    catch (err) {
+      console.error(err);
+      return 0;
+    }
+  }
 }
 
 module.exports = new DashboardController();
