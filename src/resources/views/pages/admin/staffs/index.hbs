@@ -79,7 +79,7 @@
             Địa chỉ
           </th>
           <th class="tourTable-heading_title" scope="col">
-            Lương
+            Ngày sinh
           </th>
           <th class="tourTable-heading_title" scope="col">
             <span class="material-icons-outlined">
@@ -89,7 +89,7 @@
         </tr>
       </thead>
       <tbody id="toursTableBody">
-        {{#each tours}}
+        {{#each staffs}}
           <tr>
             <td class="">
               <input type="checkbox" class="singleCheck" />
@@ -101,27 +101,27 @@
             </td>
             <td class="">
               <p class="toursTable-data tourId">
-                {{this._id}}
+                {{this.user_name}}
               </p>
             </td>
             <td class="">
               <p class="toursTable-data">
-                {{this.tour_name}}
+                {{this.user_email}}
               </p>
             </td>
             <td class="">
               <p class="toursTable-data">
-                {{this.tour_price}}
+                {{this.user_phone_number}}
               </p>
             </td>
             <td class="">
               <p class="toursTable-data">
-                {{tourGetStartingDay this.tour_starting_day}}
+                {{this.user_address.street}}, {{this.user_address.ward}}, {{this.user_address.district}}, {{this.user_address.province}}
               </p>
             </td>
             <td class="">
               <p class="toursTable-data">
-                {{this.tour_number_of_days}}/{{this.tour_number_of_nights}}
+                {{this.user_birthday}}
               </p>
             </td>
 
