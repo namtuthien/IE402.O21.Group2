@@ -18,15 +18,15 @@ class TourController {
     });
   }
 
-    // [GET] /tour/editTour
-    showTourDetailForm(req, res, next) {
-      res.render("./components/view-tour/index", {
-        pageTitle: "Xem chi tiết Tour",
-        style: "/components/add-tour/add-tour.module.css",
-        script: "/components/add-tour/add-tour.js",
-        layout: "main",
-      });
-    }
+  // [GET] /tour/editTour
+  showTourDetailForm(req, res, next) {
+    res.render("./components/view-tour/index", {
+      pageTitle: "Xem chi tiết Tour",
+      style: "/components/add-tour/add-tour.module.css",
+      script: "/components/add-tour/add-tour.js",
+      layout: "main",
+    });
+  }
 
   // [POST] /tour/store
   async store(req, res, next) {
