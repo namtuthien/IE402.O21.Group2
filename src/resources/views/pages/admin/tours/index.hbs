@@ -1,12 +1,53 @@
 <section class="tourHeading-section">
   <div class="tourHeading">
     <div class="tourHeadingLeft">
-      <h2 class="tourHeadingLeft-title">
-        Danh sách Tour
-      </h2>
+      <div class="searchBar">
+        <div class="searchBar-input">
+          <input type="text" class="searchInput" placeholder="Tìm tour..." />
+        </div>
+        <div class="line">
+        </div>
+        <div class="searchBar-icon">
+          <span class="material-icons-outlined">
+            search
+          </span>
+        </div>
+      </div>
     </div>
     <div class="tourHeadingRight">
-      <a href="/admin/map"><button type="button" class="btn btn-primary">Xem dưới dạng bản đồ</button></a>
+      <div class="paginationBar">
+        <div class="paginationBar-btn">
+          <span class="material-icons-outlined">
+            chevron_left
+          </span>
+        </div>
+        <div class="pageLine"></div>
+        <div class="paginationBar-btn current-page">
+          1
+        </div>
+        <div class="pageLine"></div>
+        <div class="paginationBar-btn">
+          2
+        </div>
+        <div class="pageLine"></div>
+        <div class="paginationBar-btn">
+          ...
+        </div>
+        <div class="pageLine"></div>
+        <div class="paginationBar-btn">
+          5
+        </div>
+        <div class="pageLine"></div>
+        <div class="paginationBar-btn">
+          6
+        </div>
+        <div class="pageLine"></div>
+        <div class="paginationBar-btn">
+          <span class="material-icons-outlined">
+            chevron_right
+          </span>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -20,7 +61,13 @@
       <thead id="toursTable-heading">
         <tr class="toursTable-heading_row">
           <th class="tourTable-heading_title" scope="col">
-            No.
+            <input type="checkbox" class="allCheck" />
+          </th>
+          <th class="tourTable-heading_title" scope="col">
+            STT
+          </th>
+          <th class="tourTable-heading_title" scope="col">
+            Mã Tour
           </th>
           <th class="tourTable-heading_title" scope="col">
             Tên Tour
@@ -32,15 +79,15 @@
             Ngày khởi hành
           </th>
           <th class="tourTable-heading_title" scope="col">
-            Số ngày
+            Ngày/Đêm
           </th>
           <th class="tourTable-heading_title" scope="col">
-            Số đêm
+            Vé trống
           </th>
           <th class="tourTable-heading_title" scope="col">
-            Số lượng vé trống
-          </th>
-          <th class="tourTable-heading_title" scope="col">
+            <span class="material-icons-outlined">
+              more_vert
+            </span>
           </th>
         </tr>
       </thead>
@@ -48,55 +95,55 @@
         {{#each tours}}
           <tr>
             <td class="">
-              <p class="toursTable-data">
-            {{tourIndex @index}}
-            </p>
+              <input type="checkbox" class="singleCheck" />
             </td>
             <td class="">
               <p class="toursTable-data">
-            {{this.tour_name}}
-            </p>
+                {{tourIndex @index}}
+              </p>
+            </td>
+            <td class="">
+              <p class="toursTable-data tourId">
+                {{this._id}}
+              </p>
             </td>
             <td class="">
               <p class="toursTable-data">
-            {{this.tour_price}}
-            </p>
+                {{this.tour_name}}
+              </p>
             </td>
             <td class="">
               <p class="toursTable-data">
-            {{tourGetStartingDay this.tour_starting_day}}
-            </p>
+                {{this.tour_price}}
+              </p>
             </td>
             <td class="">
               <p class="toursTable-data">
-            {{this.tour_number_of_days}}
-            </p>
+                {{tourGetStartingDay this.tour_starting_day}}
+              </p>
             </td>
             <td class="">
               <p class="toursTable-data">
-            {{this.tour_number_of_nights}}
-            </p>
+                {{this.tour_number_of_days}}/{{this.tour_number_of_nights}}
+              </p>
             </td>
+
             <td class="">
               <p class="toursTable-data">
-            {{this.tour_total_ticket_available}}
-            </p>
+                {{this.tour_total_ticket_available}}
+              </p>
             </td>
-            <td class=""> 
-            <div class="toursAction_container">
-              <span class="material-icons toursAction-icon">
-                more_vert
+            <td class="">
+              <div class="toursAction_container">
+                <span class="material-icons toursAction-icon">
+                  more_vert
                 </span>
-            </div>
-           
+              </div>
             </td>
           </tr>
         {{/each}}
       </tbody>
     </table>
-  </div>
-  <div class="addTourBtn-container">
-    <button type="button" class="btn btn-success">Add new Tour</button>
   </div>
 </section>
 <script src="./helper.js" type="script"></script>

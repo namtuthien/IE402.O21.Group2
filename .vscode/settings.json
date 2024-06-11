@@ -1,4 +1,11 @@
 {
+  "editor.formatOnSave": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "liveServer.settings.port": 5501
+  "prettier.configPath": ".prettierrc",
+  "reactSnippets.settings.prettierEnabled": false,
+  "prettier.requireConfig": false,
+  "prettier.useEditorConfig": false,
+  "[handlebars]": {
+    "editor.defaultFormatter": "mfeckies.handlebars-formatter"
+  }
 }

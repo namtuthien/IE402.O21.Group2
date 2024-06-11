@@ -1,5 +1,5 @@
 .toursTable-section{
-  min-height: 55vh;
+  min-height: 73vh;
 }
 .tourHeading-section{
   display: flex;
@@ -11,14 +11,62 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1200px;
+  max-width: 1400px;
   flex: 1;
   margin-top: 40px;
 
 }
 .tourHeadingLeft{
 }
+.searchBar{
+  display: flex;
+  align-items: center;
+  border: 1px solid gray;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+.line{
+  height: 30px;
+  width: 0px;
+  border-left: 1px solid gray;
+   margin: 0px 8px;
+}
+.searchBar-icon:hover{
+  cursor: pointer;
+}
+.searchInput{
+  border: none;
+  background-color: transparent;
+  outline: none ;
+}
 .tourHeadingRight{
+}
+.paginationBar{
+  display: flex;
+  align-items: center;
+  border: 1px solid gray;
+  align-items: center;
+  border-radius: 4px;
+}
+.pageLine{
+  height: 36px;
+  width: 0px;
+  border-left: 1px solid gray;
+
+}
+.paginationBar-btn{
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.current-page{
+  background-color: var(--primary3);
+  color: aliceblue;
+}
+.paginationBar-btn:hover{
+  cursor: pointer;
 }
 .toursTable-section{
   display: flex;
@@ -26,12 +74,15 @@
   flex-direction: column;
 }
 .toursTable-container{
-  width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  max-width: 1400px;
+  width: 100%;
 
 }
 .toursTable{
-  max-width: 1200px;
   border-color: var(--primary1);
+
 }
 .toursTable {
   td{
@@ -65,4 +116,28 @@
   width: 1200px;
   justify-content: flex-end;
   justify-self: center;
+}
+.toursTable-data{
+  max-width: 640px; 
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.tourId:hover{
+  cursor: pointer;
+  color: var(--primary1);
+  text-decoration: underline;
+}
+
+.singleCheck, .allCheck {
+  accent-color: var(--primary3);
+  width: 16px;
+  height: 16px;
+}
+.singleCheck:hover{
+  accent-color: var(--primary1);
+}
+.allCheck:hover {
+  accent-color: var(--primary1);
+  
 }
