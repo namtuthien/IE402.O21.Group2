@@ -8,10 +8,10 @@
                 <img src="/imgs/home/vietnam-flag.webp" class="user__avatar img-fluid" alt="user avatar">
             </div>
             <div class="fw-bold text-white my-1">
-                <span>Dang Quoc Duy</span>
+                <span>{{user_name}}</span>
             </div>
-            <div class="user__role bg-white fst-italic rounded-pill py-1 px-2 my-1">
-                Nhân viên
+            <div class="user__role text-capitalize bg-white fst-italic rounded-pill py-1 px-2 my-1">
+                {{user_role}}
             </div>
         </div>
         <div class="nav flex-column position-relative">
@@ -111,7 +111,7 @@
                         <i class="material-icons mx-2">
                             logout
                         </i>
-                        <div class="mx-2">
+                        <div class="mx-2" id="btn-logout">
                             Đăng xuất
                         </div>
                     </a>

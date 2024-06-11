@@ -18,6 +18,16 @@ class UserController {
             res.status(500).send("Có lỗi khi xóa")
         }
     }
+
+    // [GET] /admin/staff/add
+    showAddStaffForm(req, res, next) {
+        res.render("pages/admin/add-staff", {
+            pageTitle: "Thêm nhân viên",
+            style: "/pages/admin/add-staff.css",
+            script: "/pages/admin/add-staff.js",
+            // layout: "main",
+        });
+    }
 }
 
 module.exports = new UserController();

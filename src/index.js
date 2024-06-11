@@ -31,6 +31,7 @@ app.engine(
       sum: (a, b) => a + b,
       gt: (a, b) => a > b,
       divide: (a, b) => a / b,
+      eq: (a, b) => a === b,
       tourGetStartingDay: (tour_starting_day) => {
         var timestampStr = tour_starting_day;
         var date = new Date(timestampStr);

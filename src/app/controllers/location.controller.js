@@ -33,7 +33,6 @@ class LocationController {
         latitude: data.location_coordinate_latitude,
       };
       const activities = data.activity_no.map((stt, index) => ({
-        activity_no: stt,
         activity_name: data.activity_name[index],
         activity_time: data.activity_time[index],
         activity_desc: data.activity_desc[index],
@@ -57,3 +56,10 @@ class LocationController {
 }
 
 module.exports = new LocationController();
+
+
+{
+  activity_name:"test"
+  activity_time:"10/06/2024"
+  activity_desc:"test"
+}

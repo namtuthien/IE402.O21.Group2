@@ -16,6 +16,21 @@ class StaffController {
       res.status(500).json({ error: "Lỗi truy xuất người dùng" });
     }
   }
+  async showStaffs(req, res, next) {
+    try {
+      return res.status(200).render("pages/admin/staffs", {
+        pageTitle: "Danh sách nhân viên",
+        style: "/pages/admin/staffs.css",
+        script: "/pages/admin/staffs.js",
+
+        layout: "main",
+      });
+    } catch (err) {
+      res.status(500).json({
+        message: "Internal server error",
+      });
+    }
+  }
 }
 
 module.exports = new StaffController();
