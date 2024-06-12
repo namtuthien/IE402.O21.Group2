@@ -16,6 +16,15 @@ class StaffController {
       res.status(500).json({ error: "Lỗi truy xuất người dùng" });
     }
   }
+  // [GET] /staff/tourguides/location/show
+  async showRealTimeLocation(req,res,next) {
+    res.render("./pages/staff/test", {
+      pageTitle: "Xem vị trí",
+      style: "/pages/admin/map.css",
+      script: "/pages/staff/map.js",
+      layout: "map",
+    });
+  }
 }
 
 module.exports = new StaffController();
