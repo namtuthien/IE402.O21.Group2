@@ -6,16 +6,16 @@ dotenv.config();
 const { db } = require("../src/config");
 
 const linesId = [
-    '665d84fd6ce0c5c9545e9bdd', // Thung lũng hoa cẩm tú cầu
-    '665d84fd6ce0c5c9545e9bde', // Thung lũng Tình Yêu
-    '665d84fd6ce0c5c9545e9bdf', // Rừng Lá Kim Resort
-    '665d84fd6ce0c5c9545e9be0', // Khu Du Lịch Sinh Thái Hiệp Lực
-    '665d84fd6ce0c5c9545e9be1', // KHU DU LỊCH LĂNG NGUYỄN HỮU HÀO
-    '665d84fd6ce0c5c9545e9be2', // Khu du lịch ĐÀ LẠT SẮC MÀU - Làng hoa Vạn Thành
-    '665d84fd6ce0c5c9545e9be3',
-    '665d84fd6ce0c5c9545e9be4', // Điểm tham quan du lịch Nhà máy Trà Atisô & Rượu Vang Vĩnh Tiến
-    '665d84fd6ce0c5c9545e9be5', // Cereja Hotel & Resort - Terracotta Hotel & Resort Dalat
-    '665d84fd6ce0c5c9545e9be6', // Đập tràn Hồ Tuyền Lâm - The Lake House Dalat
+    '6669b41502b425027ca1a19a', // Thung lũng hoa cẩm tú cầu
+    '6669b41502b425027ca1a1ad', // Thung lũng Tình Yêu
+    '6669b41502b425027ca1a1c1', // Rừng Lá Kim Resort
+    '6669b41502b425027ca1a1f7', // Khu Du Lịch Sinh Thái Hiệp Lực
+    '6669b41502b425027ca1a1fb', // KHU DU LỊCH LĂNG NGUYỄN HỮU HÀO
+    '6669b41502b425027ca1a208', // Khu du lịch ĐÀ LẠT SẮC MÀU - Làng hoa Vạn Thành
+    '6669b41502b425027ca1a244',
+    '6669b41502b425027ca1a26a', // Điểm tham quan du lịch Nhà máy Trà Atisô & Rượu Vang Vĩnh Tiến
+    '6669b41502b425027ca1a271', // Cereja Hotel & Resort - Terracotta Hotel & Resort Dalat
+    '6669b41502b425027ca1a2c4', // Đập tràn Hồ Tuyền Lâm - The Lake House Dalat
 ];
 
 const routeDescription = [

@@ -162,6 +162,17 @@ const routes = [
             },
             route: new mongoose.Types.ObjectId('665dc688b5329c687e6c03e6'),
         },
+        // {
+        //     start_coordinate: {
+        //         longitude: 108.45650273487935,
+        //         latitude: 11.979822224219005,
+        //     },
+        //     end_coordinate: {
+        //         longitude: 108.45651803958027,
+        //         latitude: 11.97983751125635,
+        //     },
+        //     route: new mongoose.Types.ObjectId('665dc688b5329c687e6c03e8'),
+        // },
         {
             start_coordinate: {
                 longitude: 108.45326607959225,
@@ -173,17 +184,7 @@ const routes = [
             },
             route: new mongoose.Types.ObjectId('665dc688b5329c687e6c03e7'),
         },
-        {
-            start_coordinate: {
-                longitude: 108.45650273487935,
-                latitude: 11.979822224219005,
-            },
-            end_coordinate: {
-                longitude: 108.45651803958027,
-                latitude: 11.97983751125635,
-            },
-            route: new mongoose.Types.ObjectId('665dc688b5329c687e6c03e8'),
-        },
+        
         
     ]
 
