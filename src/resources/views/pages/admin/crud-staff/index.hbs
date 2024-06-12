@@ -2,6 +2,7 @@
     <div class="staff">
         <div class="staff__form">
             <div class="staff__flex-group">
+                <input type="hidden" name="staff-id" value="{{staff._id}}"/>
                 <div class="staff__form-group">
                     <label for="staff-name" class="staff__label">Tên nhân viên: </label>
                     <input type="text" name="staff-name" id="staff-name" class="staff__input"
@@ -34,9 +35,9 @@
                         placeholder="Nhập mật khẩu...">
                 </div>
                 <div class="staff__form-group">
-                    <label for="staff-confirm-password" class="staff__label">Xác nhận mật khẩu: </label>
-                    <input type="password" name="staff-confirm-password" id="staff-confirm-password"
-                        class="staff__input" placeholder="Nhập lại mật khẩu...">
+                    <label for="staff-birthday" class="staff__label">Ngày sinh: </label>
+                    <input type="date" name="staff-birthday" id="staff-birthday"
+                        class="staff__input" placeholder="Chọn ngày sinh..." value="{{staff.user_birthday}}">
                 </div>
             </div>
             <div class="staff__flex-group">
