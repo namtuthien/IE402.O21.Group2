@@ -1,141 +1,144 @@
-<section class="tourHeading-section">
-  <div class="tourHeading">
-    <div class="tourHeadingLeft">
-      <div class="searchBar">
-        <div class="searchBar-input">
-          <input type="text" class="searchInput" placeholder="Tìm tour..." />
-        </div>
-        <div class="line">
-        </div>
-        <div class="searchBar-icon">
-          <span class="material-icons-outlined">
-            search
-          </span>
-        </div>
-      </div>
-    </div>
-    <div class="tourHeadingRight">
-      <div class="paginationBar">
-        <div class="paginationBar-btn">
-          <span class="material-icons-outlined">
-            chevron_left
-          </span>
-        </div>
-        <div class="pageLine"></div>
-        <div class="paginationBar-btn current-page">
-          1
-        </div>
-        <div class="pageLine"></div>
-        <div class="paginationBar-btn">
-          2
-        </div>
-        <div class="pageLine"></div>
-        <div class="paginationBar-btn">
-          ...
-        </div>
-        <div class="pageLine"></div>
-        <div class="paginationBar-btn">
-          5
-        </div>
-        <div class="pageLine"></div>
-        <div class="paginationBar-btn">
-          6
-        </div>
-        <div class="pageLine"></div>
-        <div class="paginationBar-btn">
-          <span class="material-icons-outlined">
-            chevron_right
-          </span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="toursTable-section">
-  <div class="table-responsive toursTable-container">
-    <table class="table-bordered table toursTable">
-      {{! <caption>
-        List of users
-      </caption> }}
-      <thead id="toursTable-heading">
-        <tr class="toursTable-heading_row">
-          <th class="tourTable-heading_title" scope="col">
-            <input type="checkbox" class="allCheck" />
-          </th>
-          <th class="tourTable-heading_title" scope="col">
-            STT
-          </th>
-          <th class="tourTable-heading_title" scope="col">
-            Họ và tên
-          </th>
-          <th class="tourTable-heading_title" scope="col">
-            Email
-          </th>
-          <th class="tourTable-heading_title" scope="col">
-            Số điện thoại
-          </th>
-          <th class="tourTable-heading_title" scope="col">
-            Địa chỉ
-          </th>
-          <th class="tourTable-heading_title" scope="col">
-            Lương
-          </th>
-          <th class="tourTable-heading_title" scope="col">
+<div class="bg-white">
+  <section class="tourHeading-section">
+    <div class="tourHeading">
+      <div class="tourHeadingLeft">
+        <div class="searchBar">
+          <div class="searchBar-input">
+            <input type="text" class="searchInput" placeholder="Tìm tour..." />
+          </div>
+          <div class="line">
+          </div>
+          <div class="searchBar-icon">
             <span class="material-icons-outlined">
-              more_vert
+              search
             </span>
-          </th>
-        </tr>
-      </thead>
-      <tbody id="toursTableBody">
-        {{#each tours}}
+          </div>
+        </div>
+      </div>
+      <div class="tourHeadingRight">
+        <div class="paginationBar">
+          <div class="paginationBar-btn">
+            <span class="material-icons-outlined">
+              chevron_left
+            </span>
+          </div>
+          <div class="pageLine"></div>
+          <div class="paginationBar-btn current-page">
+            1
+          </div>
+          <div class="pageLine"></div>
+          <div class="paginationBar-btn">
+            2
+          </div>
+          <div class="pageLine"></div>
+          <div class="paginationBar-btn">
+            ...
+          </div>
+          <div class="pageLine"></div>
+          <div class="paginationBar-btn">
+            5
+          </div>
+          <div class="pageLine"></div>
+          <div class="paginationBar-btn">
+            6
+          </div>
+          <div class="pageLine"></div>
+          <div class="paginationBar-btn">
+            <span class="material-icons-outlined">
+              chevron_right
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="toursTable-section">
+    <div class="table-responsive toursTable-container">
+      <table class="table-bordered table toursTable">
+        {{! <caption>
+          List of users
+        </caption> }}
+        <thead id="toursTable-heading ">
+          <tr class="toursTable-heading_row">
+            <th class="tourTable-heading_title bg-white" scope="col">
+              <input type="checkbox" class="allCheck" />
+            </th>
+            <th class="tourTable-heading_title bg-white" scope="col">
+              STT
+            </th>
+            <th class="tourTable-heading_title bg-white" scope="col">
+              Họ và tên
+            </th>
+            <th class="tourTable-heading_title bg-white" scope="col">
+              Email
+            </th>
+            <th class="tourTable-heading_title bg-white" scope="col">
+              Số điện thoại
+            </th>
+            <th class="tourTable-heading_title bg-white" scope="col">
+              Địa chỉ
+            </th>
+            <th class="tourTable-heading_title bg-white" scope="col">
+              Ngày sinh
+            </th>
+            <th class="tourTable-heading_title bg-white" scope="col">
+              <span class="material-icons-outlined">
+                more_vert
+              </span>
+            </th>
+          </tr>
+        </thead>
+        <tbody id="toursTableBody">
+          {{#each staffs}}
           <tr>
-            <td class="">
+            <td class="bg-white">
               <input type="checkbox" class="singleCheck" />
             </td>
-            <td class="">
+            <td class="bg-white">
               <p class="toursTable-data">
                 {{tourIndex @index}}
               </p>
             </td>
-            <td class="">
+            <td class="bg-white">
               <p class="toursTable-data tourId">
-                {{this._id}}
+                {{this.user_name}}
               </p>
             </td>
-            <td class="">
+            <td class="bg-white">
               <p class="toursTable-data">
-                {{this.tour_name}}
+                {{this.user_email}}
               </p>
             </td>
-            <td class="">
+            <td class="bg-white">
               <p class="toursTable-data">
-                {{this.tour_price}}
+                {{this.user_phone_number}}
               </p>
             </td>
-            <td class="">
+            <td class="bg-white">
               <p class="toursTable-data">
-                {{tourGetStartingDay this.tour_starting_day}}
+                {{this.user_address.street}}, {{this.user_address.ward}}, {{this.user_address.district}},
+                {{this.user_address.province}}
               </p>
             </td>
-            <td class="">
+            <td class="bg-white">
               <p class="toursTable-data">
-                {{this.tour_number_of_days}}/{{this.tour_number_of_nights}}
+                {{this.user_birthday}}
               </p>
             </td>
 
-            <td class="">
+            <td class="bg-white">
               <div class="toursAction_container">
-                <span class="material-icons toursAction-icon">
+                <a class="material-icons toursAction-icon text-decoration-none" href="/admin/staff/view/{{this._id}}">
                   more_vert
-                </span>
+                  <a />
               </div>
             </td>
           </tr>
-        {{/each}}
-      </tbody>
-    </table>
-  </div>
-</section>
+          {{/each}}
+        </tbody>
+      </table>
+    </div>
+  </section>
+</div>
 <script src="./helper.js" type="script"></script>
