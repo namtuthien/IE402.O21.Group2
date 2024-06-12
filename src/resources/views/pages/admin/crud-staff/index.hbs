@@ -12,9 +12,8 @@
                     <select name="staff-gender" id="staff-gender" class="staff__select">
                         <option value="" disabled {{#unless staff.user_gender}}selected{{/unless}}> Chọn giới tính
                         </option>
-                        <option value="0" {{#if (eq staff.user_gender 0)}}selected{{/if}}> Nữ </option>
-                        <option value="1" {{#if (eq staff.user_gender 1)}}selected{{/if}}> Nam </option>
-                        <option value="-1" {{#if (eq staff.user_gender -1)}}selected{{/if}}> Khác </option>
+                        <option value="false" {{#if (eq staff.user_gender false)}}selected{{/if}}> Nữ </option>
+                        <option value="true" {{#if (eq staff.user_gender true)}}selected{{/if}}> Nam </option>
                     </select>
                 </div>
                 <div class="staff__form-group">
@@ -32,36 +31,51 @@
                 <div class="staff__form-group">
                     <label for="staff-password" class="staff__label">Mật khẩu: </label>
                     <input type="password" name="staff-password" id="staff-password" class="staff__input"
-                        placeholder="Nhập mật khẩu..." value="{{staff.user_password}}">
+                        placeholder="Nhập mật khẩu...">
+                </div>
+                <div class="staff__form-group">
+                    <label for="staff-confirm-password" class="staff__label">Xác nhận mật khẩu: </label>
+                    <input type="password" name="staff-confirm-password" id="staff-confirm-password"
+                        class="staff__input" placeholder="Nhập lại mật khẩu...">
                 </div>
             </div>
             <div class="staff__flex-group">
                 <div class="staff__form-group">
-                    <label for="staff-province" class="staff__label">Tỉnh: </label>
+                    <label for="staff-province" class="staff__label">Tỉnh/Thành phố: </label>
                     <select name="staff-province" id="staff-province" class="staff__select">
-                        <option value="" disabled {{#unless staff.user_province}}selected{{/unless}}>Chọn tỉnh</option>
+                        <option value="" disabled {{#unless staff.user_address}}selected{{/unless}}>Chọn tỉnh/thành phố</option>
+                        {{#if staff.user_address}}
+                        <option value="{{staff.user_address.province}}" disabled selected>
+                            {{staff.user_address.province}}</option>
+                        {{/if}}
                     </select>
                 </div>
                 <div class="staff__form-group">
-                    <label for="staff-district" class="staff__label">Huyện: </label>
+                    <label for="staff-district" class="staff__label">Huyện/Quận: </label>
                     <select name="staff-district" id="staff-district" class="staff__select">
-                        <option value="" disabled {{#unless staff.user_district}}selected{{/unless}}> Chọn quận/huyện
+                        <option value="" disabled {{#unless staff.user_address}}selected{{/unless}}> Chọn quận/huyện
                         </option>
+                        {{#if staff.user_address}}
+                        <option value="{{staff.user_address.district}}">{{staff.user_address.district}}</option>
+                        {{/if}}
                     </select>
                 </div>
             </div>
             <div class="staff__flex-group">
                 <div class="staff__form-group">
-                    <label for="staff-ward" class="staff__label">Xã: </label>
+                    <label for="staff-ward" class="staff__label">Xã/Phường: </label>
                     <select name="staff-ward" id="staff-ward" class="staff__select">
-                        <option value="" disabled {{#unless staff.user_ward}}selected{{/unless}}>Chọn phường/xã
+                        <option value="" disabled {{#unless staff.user_address}}selected{{/unless}}>Chọn phường/xã
                         </option>
+                        {{#if staff.user_address}}
+                        <option value="{{staff.user_address.ward}}">{{staff.user_address.ward}}</option>
+                        {{/if}}
                     </select>
                 </div>
                 <div class="staff__form-group">
                     <label for="staff-street" class="staff__label">Đường: </label>
                     <input type="text" name="staff-street" id="staff-street" class="staff__input"
-                        placeholder="Nhập đường..." value="{{staff.user_street}}">
+                        placeholder="Nhập đường..." value="{{staff.user_address.street}}">
                 </div>
             </div>
             <div class="staff__form-group tour__form-group--submit">
