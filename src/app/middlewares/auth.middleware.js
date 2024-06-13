@@ -46,6 +46,12 @@ async function checkToken(req, res, next) {
 
     req.user_id = userId;
     req.user_role = user.user_role;
+
+    res.locals.user = {
+      user_name: user.user_name,
+      user_role: user.user_role
+    };
+
     next();
   } catch (error) {
     return res.status(500).send({ "Internal Server Error": error.message });

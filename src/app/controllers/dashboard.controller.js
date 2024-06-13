@@ -10,7 +10,7 @@ class DashboardController {
     const totalBookings = await this.getTotalBookings();
     const totalRatings = await this.getTotalRatings();
     const totalRevenue = await this.calculateTotalRevenue();
-    res.render("pages/admin/dashboard", {
+    res.render('pages/admin/dashboard', {
       pageTitle: "Bảng điều khiển",
       style: "/pages/admin/dashboard.css",
       script: "/pages/admin/dashboard.js",
@@ -21,7 +21,6 @@ class DashboardController {
       // layout: "main"
     });
   }
-
   // [GET] /admin/dashboard/createStatistical
   async createStatistical(req, res, next) {
     try {
@@ -114,7 +113,6 @@ class DashboardController {
       ]);
 
       const totalBookings = await this.getTotalBookings();
-
       res.status(200).json({
         revenuePerMonthYear: revenueResult,
         bookingPerMonthYear: bookingResult,
