@@ -44,6 +44,7 @@ app.engine(
       tourIndex: (index) => {
         return parseInt(index) + 1;
       },
+      formatPrice: (price) => price.toLocaleString("de-DE"),
     },
     partialsDir: [
       path.join(__dirname, "resources", "views", "partials"),

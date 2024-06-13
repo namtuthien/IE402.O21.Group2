@@ -63,7 +63,7 @@ class TourController {
       res.status(500).send("Đánh dấu tour không hoạt động thất bại");
     }
   }
-  // [GET] /tour/get-tours
+  // [GET] /tours
   async showTours(req, res, next) {
     try {
       const tours = await Tour.find();
@@ -76,12 +76,38 @@ class TourController {
       tours.forEach((tour) => {
         newTours.push(tour.toObject());
       });
-      return res.status(200).render("pages/admin/tours", {
+      return res.status(200).render("pages/admin/tours/index", {
         pageTitle: "Danh sách tour",
         style: "/pages/admin/tours.css",
         script: "/pages/admin/tours.js",
         tours: newTours,
         layout: "main",
+      });
+    } catch (err) {
+      res.status(500).json({
+        message: "Internal server error",
+      });
+    }
+  }
+  // [GET] /map/tours
+  async showToursMap(req, res, next) {
+    try {
+      const tours = await Tour.find();
+      if (!tours) {
+        return res.status(404).json({
+          message: "Tour not found!",
+        });
+      }
+      var newTours = [];
+      tours.forEach((tour) => {
+        newTours.push(tour.toObject());
+      });
+      return res.status(200).render("pages/admin/map/tours", {
+        pageTitle: "Danh sách tour",
+        style: "/pages/admin/tours-map.css",
+        script: "/pages/admin/tours-map.js",
+        tours: newTours,
+        layout: "map",
       });
     } catch (err) {
       res.status(500).json({
