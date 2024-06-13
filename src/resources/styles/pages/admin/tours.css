@@ -130,14 +130,7 @@
 }
 
 .singleCheck, .allCheck {
-  accent-color: var(--primary3);
+  accent-color: var(--primary5);
   width: 16px;
   height: 16px;
-}
-.singleCheck:hover{
-  accent-color: var(--primary1);
-}
-.allCheck:hover {
-  accent-color: var(--primary1);
-  
 }
