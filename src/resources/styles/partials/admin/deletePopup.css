@@ -21,6 +21,10 @@
     padding: 15px;
 }
 
+.delete-popup__hidden-element {
+    display: none;
+}
+
 .delete-popup__group {
     border-bottom: 1px solid var(--gray1);
 }
