@@ -1,0 +1,79 @@
+.delete-popup__container {
+    display:none;
+    position: absolute; 
+    background-color: rgba(112, 114, 115, 0.1);
+    top:0; 
+    right:0; 
+    left:20%;
+    bottom:0; 
+    justify-content: center;
+    align-items: center;
+}
+
+.delete-popup__small-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    width: 40em;
+    height: max-content;
+    border-radius: 5px;
+    background-color: var(--white);
+    padding: 15px;
+}
+
+.delete-popup__group {
+    border-bottom: 1px solid var(--gray1);
+}
+.delete-popup__group:last-child {
+    border-bottom: none;
+}
+
+.delete-popup__popup-title {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.delete-popup__text-title,
+.delete-popup__x-mark-icon {
+    font-size: 24px;
+}
+
+.delete-popup__x-mark-icon {
+    cursor: pointer;
+}
+
+.delete-popup__popup-info {
+    padding: 0 15px;
+}
+.delete-popup__text-info {
+    font-size: 16px;
+}
+
+.delete-popup__popup-button {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 1em;
+}
+
+.delete-popup__button {
+  display: block;
+  width: 5em;
+  height: max-content;
+  padding: 5px;
+  color: var(--white);
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.delete-popup__cancel-button {
+    background-color: var(--gray1);
+}
+.delete-popup__submit-button {
+    background-color: var(--red);
+}

@@ -88,3 +88,6 @@ document.getElementById('imageInput').addEventListener('change', function(event)
   }
 })
 
+document.getElementById('removeTourButton').addEventListener('click', function () {
+  document.getElementById('deletePopupContainer').style.display='flex';
+})

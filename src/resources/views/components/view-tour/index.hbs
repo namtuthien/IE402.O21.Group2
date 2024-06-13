@@ -148,11 +148,12 @@
                     <i class="material-icons">save</i>
                     Cập nhật
                 </button>
-                <button type="submit" class="tour-popup__submit-button tour-popup__remove-submit-button">
+                <button type="button" class="tour-popup__submit-button tour-popup__remove-submit-button" id="removeTourButton">
                   <i class="material-icons">delete_forever</i>
                     Xóa Tour
                 </button>
             </div>
         </form>
     </div>
+    {{> admin/deletePopup message="Bạn có muốn xóa Tour này không?"}}
 </body>
