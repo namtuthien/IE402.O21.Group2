@@ -1,111 +1,269 @@
-<div id="viewDiv" style="position: relative;">
-    {{!-- <button id="btn-add-location">Thêm địa điểm</button> --}}
-    {{!-- cfl = creation-form-location --}}
-    <div class="modal_overlay" id="modal_form_add_location">
-        <div class="cfl__container p-3">
-            <h1 class="cfl__title fs-2 text-dark fw-bold">Thêm địa điểm
-                <div class="material-icons-outlined cursor-pointer d-inline-block" id="close-form-action">
-                    close
-                </div>
-            </h1>
-            <form method="post" action="" id="form_add_location">
-                <div class="row my-4">
-                  <div class="form-group col-md-6">
-                    <label class="text-dark fw-bold" for="inputEmail4">Tên địa điểm
-                      <span class="text-danger fw-bold">*</span>
-                    </label>
-                    <input type="text" name="location_name" class="form-control bg-white" id="inputEmail4" placeholder="Nhập tên địa chỉ">
-                  </div>
-                  <div class="form-group col-md-6">
-                    <label class="text-dark fw-bold" for="inputPassword4">Địa chỉ
-                      <span class="text-danger fw-bold">*</span>
-                    </label>
-                    <input type="text" name="location_address" class="form-control bg-white" id="inputPassword4" placeholder="Nhập địa chỉ">
-                  </div>
-                </div>
-                <div class="row my-4">
-                <div class="form-group col-md-6">
-                  <label class="text-dark fw-bold" for="inputEmail4">Kinh độ</label>
-                  <input type="text" name="location_coordinate_longitude" readonly class="form-control bg-white" id="inputEmail4" placeholder="11.023921381411023124">
-                </div>
-                <div class="form-group col-md-6">
-                  <label class="text-dark fw-bold" for="inputPassword4">Vĩ độ</label>
-                  <input type="text" name="location_coordinate_latitude" readonly class="form-control bg-white" id="inputPassword4" placeholder="123.3912938813213">
-                </div>
-                </div>
-
-                <div class="row my-4">
-                  <div class="form-group col-sm">
-                    <label class="text-dark fw-bold" for="inputEmail4">Loại địa điểm
-                      <span class="text-danger fw-bold">*</span>
-                    </label>
-                    <input type="text" name="location_type" class="form-control bg-white" id="inputEmail4" placeholder="Chọn loại địa điểm...">
-                  </div>
-                  <div class="form-group col-sm">
-                    <label class="text-dark fw-bold" for="inputPassword4">Số điện thoại</label>
-                    <input type="text" name="location_phone_number" class="form-control bg-white" id="inputPassword4" placeholder="Nhập số điện thoại...">
-                  </div>
-                  <div class="form-group col-sm">
-                    <label class="text-dark fw-bold" for="inputPassword4">Website</label>
-                    <input type="text" name="location_website" class="form-control bg-white" id="inputPassword4" placeholder="Nhập website...">
-                  </div>
-                </div>
-
-                <div class="row my-4">
-                <div class="form-group col-sm">
-                  <label class="text-dark fw-bold" for="inputEmail4">Mô tả địa điểm</label>
-                  <input type="text" name="location_description" class="form-control bg-white" id="inputEmail4" placeholder="Nhập mô tả địa điểm...">
-                </div>
-              
-                </div>
-                <div class="row my-4 d-flex align-items-center justify-content-between">
-                    <div class="form-group col-sm">
-                      <label class="text-dark fw-bold" for="inputEmail4">Danh sách hoạt động</label>
-                    
-                    </div>
-                     <div class="form-group col-sm d-flex justify-content-end">
-                        <button type="button" class="btn btn-danger d-flex align-items-center " id="delete_activity">
-                          <span class="material-icons-outlined ">delete_forever</span>
-                          <span>Xoá </span>
-                        </button>
-                    </div>
-                    
-                </div>
-                <div class="row my-4 mx-0">
-                  <table class="table__activities bg-white">
-                    <thead class="table__activities-thead">
-                      <tr>
-                        <th scope="col">
-                            <div class="form-check">
-                              <input class="form-check-input" type="checkbox" value="" id="select_all_activity">
-                            </div>
-                        </th>
-                        <th scope="col">STT</th>
-                        <th scope="col">Tên hoạt động</th>
-                        <th scope="col">Thời gian tổ chức</th>
-                        <th scope="col">Mô tả hoạt động</th>
-                        <th scope="col"></th>
-                      </tr>
-                    </thead>
-                    <tbody class="table__activities-tbody">
-                    
-                       
-                      <tr class="table__action-add">
-                        <td colspan="6" class="w-100">
-                          <div class="d-flex justify-content-center align-items-center ">
-                              <span class="material-icons-outlined">add</span>
-                              <span>Thêm hoạt động</span>
-                          </div>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div> 
-                <button type="button" class="btn btn-primary d-flex align-items-center" id="btn_save">
-                      <span class="material-icons-outlined">save </span>
-                      <span>Lưu địa điểm</span>
-                </button>
-            </form>
-        </div>
+<div class="navbar">
+  <div class="navbar-btn">
+    <span class="material-icons-outlined" id="btn-icon">
+      menu
+    </span>
+  </div>
+  <div class="navbar-content">
+    <div class="heading">
+      <div class="heading-title">
+        Danh sách địa điểm
+      </div>
     </div>
+    <ul class="tours-list">
+      {{#each locations}}
+        <li class="tours-item">
+          <div class="tour-left">
+            <input type="checkbox" class="tour-check" />
+            <img src="/imgs/logo3D.png" alt="thumbnail" class="tour-thumbnail" />
+          </div>
+          <div class="tour-right">
+            <div class="tour-name">
+              {{this.location_name}}
+            </div>
+            <div class="tour-price">
+              {{this.location_type}}
+            </div>
+          </div>
+        </li>
+      {{/each}}
+    </ul>
+    <div class="navbar-func">
+      <div class="navbar-func-top">
+        <div class="navbar-func-btn update-btn">
+          <span class="material-icons-outlined">
+            edit
+          </span>
+          <div class="navbar-btn-text">
+            Cập nhật
+          </div>
+        </div>
+        <div class="navbar-func-btn delete-btn">
+          <span class="material-icons-outlined">
+            delete_forever
+          </span>
+          <div class="navbar-btn-text">
+            Xóa
+          </div>
+        </div>
+      </div>
+      <div class="navbar-func-bot">
+        <div class="navbar-func-btn add-btn">
+          <span class="material-icons-outlined">
+            add_location
+          </span>
+          <div id="btn-add-location" class="navbar-btn-text">
+            Thêm Location
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="viewDiv" style="position: relative;">
+  {{! cfl = creation-form-location }}
+
+  <div class="modal_overlay" id="modal_form_add_location">
+    <div class="cfl__container p-3">
+      <h1 class="cfl__title fs-2 text-dark fw-bold">
+        Thêm địa điểm
+        <div class="material-icons-outlined cursor-pointer d-inline-block" id="close-form-action">
+          close
+        </div>
+      </h1>
+      <form method="post" action="" id="form_add_location">
+        <div class="row my-4">
+          <div class="form-group col-md-6">
+            <label class="text-dark fw-bold" for="inputEmail4">
+              Tên địa điểm
+              <span class="text-danger fw-bold">
+                *
+              </span>
+            </label>
+            <input
+              type="text"
+              name="location_name"
+              class="form-control bg-white"
+              id="inputEmail4"
+              placeholder="Nhập tên địa chỉ"
+            />
+          </div>
+          <div class="form-group col-md-6">
+            <label class="text-dark fw-bold" for="inputPassword4">
+              Địa chỉ
+              <span class="text-danger fw-bold">
+                *
+              </span>
+            </label>
+            <input
+              type="text"
+              name="location_address"
+              class="form-control bg-white"
+              id="inputPassword4"
+              placeholder="Nhập địa chỉ"
+            />
+          </div>
+        </div>
+        <div class="row my-4">
+          <div class="form-group col-md-6">
+            <label class="text-dark fw-bold" for="inputEmail4">
+              Kinh độ
+            </label>
+            <input
+              type="text"
+              name="location_coordinate_longitude"
+              readonly
+              class="form-control bg-white"
+              id="inputEmail4"
+              placeholder="11.023921381411023124"
+            />
+          </div>
+          <div class="form-group col-md-6">
+            <label class="text-dark fw-bold" for="inputPassword4">
+              Vĩ độ
+            </label>
+            <input
+              type="text"
+              name="location_coordinate_latitude"
+              readonly
+              class="form-control bg-white"
+              id="inputPassword4"
+              placeholder="123.3912938813213"
+            />
+          </div>
+        </div>
+
+        <div class="row my-4">
+          <div class="form-group col-sm">
+            <label class="text-dark fw-bold" for="inputEmail4">
+              Loại địa điểm
+              <span class="text-danger fw-bold">
+                *
+              </span>
+            </label>
+            <input
+              type="text"
+              name="location_type"
+              class="form-control bg-white"
+              id="inputEmail4"
+              placeholder="Chọn loại địa điểm..."
+            />
+          </div>
+          <div class="form-group col-sm">
+            <label class="text-dark fw-bold" for="inputPassword4">
+              Số điện thoại
+            </label>
+            <input
+              type="text"
+              name="location_phone_number"
+              class="form-control bg-white"
+              id="inputPassword4"
+              placeholder="Nhập số điện thoại..."
+            />
+          </div>
+          <div class="form-group col-sm">
+            <label class="text-dark fw-bold" for="inputPassword4">
+              Website
+            </label>
+            <input
+              type="text"
+              name="location_website"
+              class="form-control bg-white"
+              id="inputPassword4"
+              placeholder="Nhập website..."
+            />
+          </div>
+        </div>
+
+        <div class="row my-4">
+          <div class="form-group col-sm">
+            <label class="text-dark fw-bold" for="inputEmail4">
+              Mô tả địa điểm
+            </label>
+            <input
+              type="text"
+              name="location_description"
+              class="form-control bg-white"
+              id="inputEmail4"
+              placeholder="Nhập mô tả địa điểm..."
+            />
+          </div>
+        </div>
+        <div class="row my-4 d-flex align-items-center justify-content-between">
+          <div class="form-group col-sm">
+            <label class="text-dark fw-bold" for="inputEmail4">
+              Danh sách hoạt động
+            </label>
+          </div>
+          <div class="form-group col-sm d-flex justify-content-end">
+            <button
+              type="button"
+              class="btn btn-danger d-flex align-items-center"
+              id="delete_activity"
+            >
+              <span class="material-icons-outlined">
+                delete_forever
+              </span>
+              <span>
+                Xoá
+              </span>
+            </button>
+          </div>
+        </div>
+        <div class="row my-4 mx-0">
+          <table class="table__activities bg-white">
+            <thead class="table__activities-thead">
+              <tr>
+                <th scope="col">
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      value=""
+                      id="select_all_activity"
+                    />
+                  </div>
+                </th>
+                <th scope="col">
+                  STT
+                </th>
+                <th scope="col">
+                  Tên hoạt động
+                </th>
+                <th scope="col">
+                  Thời gian tổ chức
+                </th>
+                <th scope="col">
+                  Mô tả hoạt động
+                </th>
+                <th scope="col"></th>
+              </tr>
+            </thead>
+            <tbody class="table__activities-tbody">
+              <tr class="table__action-add">
+                <td colspan="6" class="w-100">
+                  <div class="d-flex justify-content-center align-items-center">
+                    <span class="material-icons-outlined">
+                      add
+                    </span>
+                    <span>
+                      Thêm hoạt động
+                    </span>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <button type="button" class="btn btn-primary d-flex align-items-center" id="btn_save">
+          <span class="material-icons-outlined">
+            save
+          </span>
+          <span>
+            Lưu địa điểm
+          </span>
+        </button>
+      </form>
+    </div>
+  </div>
 </div>
