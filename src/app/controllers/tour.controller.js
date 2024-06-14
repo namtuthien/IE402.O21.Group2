@@ -63,7 +63,7 @@ class TourController {
       res.status(500).send("Đánh dấu tour không hoạt động thất bại");
     }
   }
-  // [GET] /tours
+  // [GET] /admin/tours
   async showTours(req, res, next) {
     try {
       const tours = await Tour.find();

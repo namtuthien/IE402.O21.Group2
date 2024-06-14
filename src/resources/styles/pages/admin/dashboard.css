@@ -10,8 +10,6 @@
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
-
-
 .text span {
     color: #000;
     font-size: 20px;
@@ -96,6 +94,15 @@
     height: 100px;
 }
 
+.summary-item {
+    width: 24%;
+}
+
+.dashboard__icon-bg i {
+    padding-left: 0.75rem !important;
+    padding-right: 0.75rem !important;
+}
+
 .dashboard__icon-color-1 {
     background-color: rgba(55, 125, 255);
     color: #fff;
@@ -116,15 +123,11 @@
     color: #fff;
 }
 
-.header__logo {
-    height: 70px;
-}
-
 .new-user-avatar {
     height: 22px;
 }
 
-.dashboard__tour:first-child .dashboard__tour-ranking{
+.dashboard__tour:first-child .dashboard__tour-ranking {
     color: var(--red);
 }
 
@@ -135,4 +138,3 @@
 .dashboard__tour:nth-child(3) .dashboard__tour-ranking {
     color: var(--blue1);
 }
-

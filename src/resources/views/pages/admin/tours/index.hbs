@@ -93,54 +93,54 @@
       </thead>
       <tbody id="toursTableBody">
         {{#each tours}}
-          <tr>
-            <td class="">
-              <input type="checkbox" class="singleCheck" />
-            </td>
-            <td class="">
-              <p class="toursTable-data">
-                {{tourIndex @index}}
-              </p>
-            </td>
-            <td class="">
-              <p class="toursTable-data tourId">
-                {{this._id}}
-              </p>
-            </td>
-            <td class="">
-              <p class="toursTable-data">
-                {{this.tour_name}}
-              </p>
-            </td>
-            <td class="">
-              <p class="toursTable-data">
-                {{this.tour_price}}
-              </p>
-            </td>
-            <td class="">
-              <p class="toursTable-data">
-                {{tourGetStartingDay this.tour_starting_day}}
-              </p>
-            </td>
-            <td class="">
-              <p class="toursTable-data">
-                {{this.tour_number_of_days}}/{{this.tour_number_of_nights}}
-              </p>
-            </td>
+        <tr>
+          <td class="">
+            <input type="checkbox" class="singleCheck" />
+          </td>
+          <td class="">
+            <p class="toursTable-data">
+              {{tourIndex @index}}
+            </p>
+          </td>
+          <td class="">
+            <p class="toursTable-data tourId">
+              {{this._id}}
+            </p>
+          </td>
+          <td class="">
+            <p class="toursTable-data">
+              {{this.tour_name}}
+            </p>
+          </td>
+          <td class="">
+            <p class="toursTable-data">
+              {{this.tour_price}}
+            </p>
+          </td>
+          <td class="">
+            <p class="toursTable-data">
+              {{tourGetStartingDay this.tour_starting_day}}
+            </p>
+          </td>
+          <td class="">
+            <p class="toursTable-data">
+              {{this.tour_number_of_days}}/{{this.tour_number_of_nights}}
+            </p>
+          </td>
 
-            <td class="">
-              <p class="toursTable-data">
-                {{this.tour_total_ticket_available}}
-              </p>
-            </td>
-            <td class="">
-              <div class="toursAction_container">
-                <span class="material-icons toursAction-icon">
-                  more_vert
-                </span>
-              </div>
-            </td>
-          </tr>
+          <td class="">
+            <p class="toursTable-data">
+              {{this.tour_total_ticket_available}}
+            </p>
+          </td>
+          <td class="">
+            <div class="toursAction_container">
+              <span class="material-icons toursAction-icon">
+                more_vert
+              </span>
+            </div>
+          </td>
+        </tr>
         {{/each}}
       </tbody>
     </table>
