@@ -252,7 +252,8 @@ require([
                   innerItem.classList.remove("tours-item-active");
                 });
                 tourItems[index].classList.add("tours-item-active");
-
+                const container = document.querySelector(".tours-list");
+                container.scrollTop = tourItems[index].offsetTop - container.offsetTop;
                 const center = graphic.geometry.extent.center;
                 const zoomLevel = 14;
 
