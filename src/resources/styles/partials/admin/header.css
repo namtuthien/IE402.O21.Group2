@@ -1,6 +1,11 @@
+.header {
+    padding: 0 1rem;
+}
+
 .header__logo {
     height: 40px;
 }
+
 
 .hidden {
     display: none !important;
