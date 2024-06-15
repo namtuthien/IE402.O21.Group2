@@ -3,7 +3,7 @@
     <div class="tourHeadingLeft">
       <div class="searchBar">
         <div class="searchBar-input">
-          <input type="text" class="searchInput" placeholder="Tìm tour..." />
+          <input type="text" class="searchInput" placeholder="Tìm địa điểm..." />
         </div>
         <div class="line">
         </div>
@@ -64,22 +64,25 @@
             STT
           </th>
           <th class="tourTable-heading_title" scope="col">
-            Mã Tour
+            Mã địa điểm
           </th>
           <th class="tourTable-heading_title" scope="col">
-            Tên Tour
+            Tên địa điểm
           </th>
           <th class="tourTable-heading_title" scope="col">
-            Giá vé
+            Loại địa điểm
           </th>
           <th class="tourTable-heading_title" scope="col">
-            Ngày khởi hành
+            Địa chỉ
           </th>
           <th class="tourTable-heading_title" scope="col">
-            Ngày/Đêm
+            Mô tả
           </th>
           <th class="tourTable-heading_title" scope="col">
-            Vé trống
+            Số điện thoại
+          </th>
+          <th class="tourTable-heading_title" scope="col">
+            Website
           </th>
           <th class="tourTable-heading_title" scope="col">
             <span class="material-icons-outlined">
@@ -89,7 +92,7 @@
         </tr>
       </thead>
       <tbody id="toursTableBody">
-        {{#each tours}}
+        {{#each locations}}
         <tr>
           <td class="">
             <input type="checkbox" class="singleCheck" />
@@ -105,29 +108,34 @@
             </p>
           </td>
           <td class="">
-            <p class="toursTable-data tourName">
-              {{this.tour_name}}
+            <p class="toursTable-data locationName">
+              {{this.location_name}}
             </p>
           </td>
           <td class="">
-            <p class="toursTable-data">
-              {{this.tour_price}}
+            <p class="toursTable-data locationType">
+              {{this.location_type}}
             </p>
           </td>
           <td class="">
-            <p class="toursTable-data">
-              {{tourGetStartingDay this.tour_starting_day}}
+            <p class="toursTable-data locationAddress">
+              {{this.location_address}}
             </p>
           </td>
           <td class="">
-            <p class="toursTable-data">
-              {{this.tour_number_of_days}}/{{this.tour_number_of_nights}}
+            <p class="toursTable-data locationDescription">
+              {{this.location_description}}
             </p>
           </td>
 
           <td class="">
             <p class="toursTable-data">
-              {{this.tour_total_ticket_available}}
+              {{this.location_phone_number}}
+            </p>
+          </td>
+          <td class="">
+            <p class="toursTable-data locationWebsite">
+              {{this.location_website}}
             </p>
           </td>
           <td class="">

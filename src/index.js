@@ -41,7 +41,7 @@ app.engine(
         var formattedDate = day + "/" + month + "/" + year;
         return formattedDate;
       },
-      tourIndex: (index) => {
+      getIndex: (index) => {
         return parseInt(index) + 1;
       },
       formatPrice: (price) => price.toLocaleString("de-DE"),
