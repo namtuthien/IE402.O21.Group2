@@ -4,8 +4,6 @@ import { getLocations, getTours, getLinesOfTour } from "/fetch.js";
 
 // Lấy dữ liệu
 const locations = await getLocations();
-// const tours = await getTours();
-let streets;
 
 // ArcGIS
 require([
@@ -44,11 +42,12 @@ require([
   let isAddingLocation = false;
   // Nút thêm địa điểm
   const btnAddLocation = document.querySelector("#btn-add-location");
-  btnAddLocation.onclick = function() {
+  btnAddLocation.onclick = function () {
     isAddingLocation = true;
-   
+
     viewDivContainer.style = 'cursor: url("/imgs/cursor-add-location.png"),auto';
-  }
+  };
+
   // Sự kiện click
   view.on("click", function (event) {
     if (isAddingLocation) {
@@ -94,7 +93,9 @@ require([
             </td>
             <td scope="row" class="col-md-1">
               <div class="form-group">
-                <input type="number" readonly min="1" value=${listNoActivity.length + 1} name="activity_no" class="form-control bg-white">
+                <input type="number" readonly min="1" value=${
+                  listNoActivity.length + 1
+                } name="activity_no" class="form-control bg-white">
               </div>
             </td>
             <td>
@@ -175,35 +176,32 @@ require([
     }
   });
 
-  // Tạo graphic layer
-  const graphicsLayer = new GraphicsLayer({
-    graphics: locations.map(
-      (location) =>
-        new Graphic({
-          geometry: {
-            type: "point",
-            longitude: location.location_coordinate.longitude,
-            latitude: location.location_coordinate.latitude,
-          },
-          attributes: {
-            location_longitude: location.location_coordinate.longitude,
-            location_latitude: location.location_coordinate.latitude,
-            location_id: location._id,
-            location_name: location.location_name,
-            location_type: location.location_type,
-            location_address: location.location_address,
-            location_description: location.location_description ?? "Không có",
-            location_rating: location.location_rating ?? "0",
-            location_total_rating: location.location_total_rating ?? "0",
-            location_phone_number: location.location_phone_number ?? "Không có",
-            location_website: location.location_website ?? "Không có",
-            created_at: convertDateToHourDayMonthYear(location.created_at),
-            updated_at: convertDateToHourDayMonthYear(location.updated_at),
-          },
-        })
-    ),
-  });
-  map.add(graphicsLayer);
+  // Chuyển đổi location thành graphic cho feature layer
+  const graphics = locations.map(
+    (location) =>
+      new Graphic({
+        geometry: {
+          type: "point",
+          longitude: location.location_coordinate.longitude,
+          latitude: location.location_coordinate.latitude,
+        },
+        attributes: {
+          location_longitude: location.location_coordinate.longitude,
+          location_latitude: location.location_coordinate.latitude,
+          location_id: location._id,
+          location_name: location.location_name,
+          location_type: location.location_type,
+          location_address: location.location_address,
+          location_description: location.location_description ?? "Không có",
+          location_rating: location.location_rating ?? "0",
+          location_total_rating: location.location_total_rating ?? "0",
+          location_phone_number: location.location_phone_number ?? "Không có",
+          location_website: location.location_website ?? "Không có",
+          created_at: convertDateToHourDayMonthYear(location.created_at),
+          updated_at: convertDateToHourDayMonthYear(location.updated_at),
+        },
+      })
+  );
 
   // Tạo feature layer
   const featureLayer = new FeatureLayer({
@@ -249,8 +247,8 @@ require([
       ],
       overwriteActions: true,
     },
-    source: graphicsLayer.graphics,
-    objectIdField: "ID",
+    source: graphics,
+    objectIdField: "location_id",
     geometryType: "point",
     spatialReference: { wkid: 4326 },
     renderer: {
@@ -263,6 +261,7 @@ require([
     },
     outFields: ["*"],
   });
+
   map.add(featureLayer);
 
   // Tạo editor

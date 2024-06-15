@@ -30,6 +30,16 @@ class LocationController {
     }
   }
 
+  // [GET] /admin/map/locations
+  showLocationsMap(req, res, next) {
+    res.render("./pages/admin/map/locations", {
+      pageTitle: "Location",
+      style: "/pages/admin/locations-map.css",
+      script: "/pages/admin/locations-map.js",
+      layout: "map",
+    });
+  }
+
   // [GET] /api/location/getLocations
   async getLocations(req, res, next) {
     try {
