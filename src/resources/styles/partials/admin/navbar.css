@@ -1,5 +1,6 @@
 .bg-navbar {
     background: url('/imgs/admin/navbarbackground.png');
+    background-repeat: repeat;
 }
 
 .nav-item {
@@ -8,6 +9,7 @@
 }
 
 .nav-link {
+    padding: 0.5rem 0 !important;
     color: #fff;
 }
 
@@ -27,6 +29,10 @@
     background-color: rgba(255, 255, 255);
     color: var(--blue1) !important;
     font-weight: bold;
+}
+
+.nav-link.active:hover {
+    color: #fff !important;
 }
 
 .user__role {

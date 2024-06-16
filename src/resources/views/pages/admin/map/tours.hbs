@@ -13,50 +13,50 @@
       </div>
       <ul class="tours-list">
         {{#each tours}}
-          <li class="tours-item">
-            <div class="tour-left">
-              <input type="checkbox" class="tour-check" />
-              <img src="/imgs/logo3D.png" alt="thumbnail" class="tour-thumbnail" />
+        <li class="tours-item">
+          <div class="tour-left">
+            <input type="checkbox" class="tour-check" />
+            <img src="/imgs/logo3D.png" alt="thumbnail" class="tour-thumbnail" />
+          </div>
+          <div class="tour-right">
+            <div class="tour-name">
+              {{this.tour_name}}
             </div>
-            <div class="tour-right">
-              <div class="tour-name">
-                {{this.tour_name}}
-              </div>
-              <div class="tour-price">
-                {{formatPrice this.tour_price}}đ
-              </div>
+            <div class="tour-price">
+              {{formatPrice this.tour_price}}đ
             </div>
-          </li>
+          </div>
+        </li>
         {{/each}}
       </ul>
       <div class="navbar-func">
         <div class="navbar-func-top">
-          <div class="navbar-func-btn update-btn">
+          <button class="navbar-func-btn update-btn">
             <span class="material-icons-outlined">
               edit
             </span>
             <div class="navbar-btn-text">
               Cập nhật
             </div>
-          </div>
-          <div class="navbar-func-btn delete-btn">
+          </button>
+          <button class="navbar-func-btn delete-btn">
             <span class="material-icons-outlined">
               delete_forever
             </span>
             <div class="navbar-btn-text">
               Xóa
             </div>
-          </div>
+          </button>
         </div>
         <div class="navbar-func-bot">
-          <div class="navbar-func-btn add-btn">
+          <button class="navbar-func-btn add-btn">
             <span class="material-icons-outlined">
               add_location
             </span>
             <div class="navbar-btn-text">
               Thêm Tour
             </div>
-          </div>
+          </button>
         </div>
       </div>
     </div>

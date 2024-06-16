@@ -12,7 +12,7 @@ const TourLog = new Schema({
     ref: "User",
     required: true,
   },
-  log: [
+  logs: [
     {
       current_time: { type: Date, required: true },
       longitude: { type: String, required: true },

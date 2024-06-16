@@ -1,3 +1,7 @@
 .bg-primary2 {
     background-color: var(--primary2);
 }
+
+.header-btn {
+    text-decoration: none;
+}

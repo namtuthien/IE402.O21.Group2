@@ -4,47 +4,50 @@
   height: 100%;
   width: 100%;
 }
-ul{
+
+ul {
   list-style: none;
   padding: 0;
 }
+
 .esri-zoom {
   display: none;
 }
-.navbar{
+
+.navbar {
   position: absolute;
-  width: 0px;
+  width: 240px;
   height: 100vh;
   z-index: 10;
   background-color: white;
   border-top-right-radius: 8px;
   border-bottom-right-radius: 8px;
-  padding-top: 16px;
+  padding: 0.75rem 0;
   box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.5);
   transition: all 0.5s;
-
 }
-.navbar-content{
+
+.navbar-content {
   height: 100%;
   display: none;
   transition: all 0.5s;
   z-index: 10;
-
-
 }
-.heading{
+
+.heading {
   width: 100%;
-  padding-bottom: 20px;
   border-bottom: 2px solid gray;
-
+  padding-bottom: 0.75rem;
 }
-.heading-title{
+
+.heading-title {
   text-align: center;
   font-weight: bold;
   font-size: 26px;
   color: var(--primary1);
 }
-.navbar-btn{
+
+.navbar-btn {
   width: 60px;
   height: 60px;
   border-top-right-radius: 60px;
@@ -60,63 +63,78 @@ ul{
   top: 45px;
   left: 10px;
   user-select: none;
-  transition: left 0.5s ease, opacity 0.2s ease, box-shadow 0.2s ease, border-radius 0.5s ease ;
-z-index: 0;
-
+  transition: left 0.5s ease, opacity 0.2s ease, box-shadow 0.2s ease, border-radius 0.5s ease;
+  z-index: 0;
 }
-.material-icons-outlined{
+
+.material-icons-outlined {
   color: white;
 }
-.navbar-btn:hover{
+
+.navbar-btn:hover {
   cursor: pointer;
   box-shadow: 0px 0 1px rgba(0, 0, 0, 0.5);
 }
-.navbar-btn:active{
+
+.navbar-btn:active {
   opacity: 0.5;
 
 }
-.tours-list{
+
+.tours-list {
   margin-top: 16px;
   height: 76vh;
   overflow-y: scroll;
 }
-.tours-item{
-  margin-bottom: 16px;
+
+.tours-item {
+  margin-bottom: 0.5rem;
+  padding: 0.5rem !important;
   display: flex;
   align-items: center;
   gap: 8px;
-  height: 80px;
   transition: all 0.1s;
-  padding:0px 6px 0px 10px;
+  padding: 0px 6px 0px 10px;
   transition: background-color 0.15s;
+}
 
-}
-.tour-right:hover{
+.tours-item:hover {
   cursor: pointer;
-  .tour-name{
-    text-decoration: underline;
-  }
+  background-color: var(--primary5);
+  color: white;
 }
-.tour-right:active{
-  .tour-name{
+
+.tour-left {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.tour-right:active {
+  .tour-name {
     opacity: 0.2;
   }
 }
 
-.tours-item-active{
-  background-color: var(--primary3);
+.tours-item-active {
+  background-color: var(--primary5);
+  color: white;
 }
-.tour-check{
+
+.tour-check {
   position: absolute;
-  accent-color: var(--red);
+  top: 0;
+  accent-color: var(--primary5);
   width: 18px;
   height: 18px;
 }
-.tour-thumbnail{
-  width: 70px;
-  height: 70px;
+
+.tour-thumbnail {
+  width: 50px;
+  height: 50px;
 }
-.tour-name{
+
+.tour-name {
   height: 44px;
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -124,64 +142,83 @@ z-index: 0;
   overflow: hidden;
   text-overflow: ellipsis;
   font-weight: 600;
-  font-size: 18px;
   line-height: 22px;
   user-select: none;
   transition: all 0.2s;
 }
-.tour-price{
+
+.tour-price {
   height: 20px;
   user-select: none;
 
 }
-.navbar-func{
-}
-.navbar-func-top{
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
 
+.navbar-func {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-top: 2px solid gray;
+  position: absolute;
+  bottom: 0.5rem;
 }
-.navbar-func-btn{
-  height: 40px;
-  width: 130px;
-  border-radius: 6px;
+
+.navbar-func-top {
   display: flex;
-  justify-content: space-evenly;
   align-items: center;
-  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
+  gap: 0.5rem;
+}
+
+.navbar-func-btn {
+  height: 40px;
+  border-radius: 6px;
+  border: none;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
   transition: all 0.2s;
   user-select: none;
-
 }
-.navbar-func-btn:hover{
+
+.navbar-func-top .navbar-func-btn {
+  width: 50%;
+}
+
+.navbar-func-bot .navbar-func-btn {
+  width: 100%;
+}
+
+.navbar-func-btn:hover {
   cursor: pointer;
   box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5);
-
 }
-.navbar-func-btn:active{
+
+.navbar-func-btn:active {
   opacity: 0.5;
 }
-.navbar-btn-text{
+
+.navbar-btn-text {
   vertical-align: middle;
   color: white;
   font-weight: bold;
   font-size: 18px;
   user-select: none;
-
 }
-.update-btn{
+
+.update-btn {
   background-color: var(--primary1);
 }
-.delete-btn{
+
+.delete-btn {
   background-color: var(--red);
 }
-.add-btn{
+
+.add-btn {
   background-color: var(--primary5);
   width: 160px;
 }
-.navbar-func-bot{
-  margin-top: 16px;
+
+.navbar-func-bot {
+  margin-top: 0.5rem;
   display: flex;
   justify-content: center;
 }

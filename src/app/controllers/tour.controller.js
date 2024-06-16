@@ -63,7 +63,8 @@ class TourController {
       res.status(500).send("Đánh dấu tour không hoạt động thất bại");
     }
   }
-  // [GET] /tours
+
+  // [GET] /admin/tours
   async showTours(req, res, next) {
     try {
       const tours = await Tour.find();
@@ -81,6 +82,7 @@ class TourController {
         style: "/pages/admin/tours.css",
         script: "/pages/admin/tours.js",
         tours: newTours,
+        mapLink: "/admin/map/tours",
         layout: "main",
       });
     } catch (err) {
@@ -89,6 +91,7 @@ class TourController {
       });
     }
   }
+
   // [GET] /map/tours
   async showToursMap(req, res, next) {
     try {

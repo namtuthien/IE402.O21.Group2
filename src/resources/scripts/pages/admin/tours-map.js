@@ -26,8 +26,8 @@ navbarBtn.addEventListener("click", () => {
     navbarBtn.style.borderBottomLeftRadius = "100%";
   } else {
     navbarStatus = true;
-    navbar.style.width = 360;
-    navbarBtn.style.left = 360;
+    navbar.style.width = 300;
+    navbarBtn.style.left = 300;
     navbarBtn.style.borderTopLeftRadius = 0;
     navbarBtn.style.borderBottomLeftRadius = 0;
     setTimeout(() => {

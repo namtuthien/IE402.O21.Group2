@@ -10,7 +10,7 @@ class DashboardController {
     const totalBookings = await this.getTotalBookings();
     const totalRatings = await this.getTotalRatings();
     const totalRevenue = await this.calculateTotalRevenue();
-    res.render('pages/admin/dashboard', {
+    res.render("pages/admin/dashboard/index", {
       pageTitle: "Bảng điều khiển",
       style: "/pages/admin/dashboard.css",
       script: "/pages/admin/dashboard.js",
@@ -18,9 +18,10 @@ class DashboardController {
       totalBookings: totalBookings.toLocaleString("de-DE"),
       totalRatings: totalRatings.toLocaleString("de-DE"),
       totalRevenue: totalRevenue.toLocaleString("de-DE"),
-      // layout: "main"
+      layout: "main",
     });
   }
+
   // [GET] /admin/dashboard/createStatistical
   async createStatistical(req, res, next) {
     try {
