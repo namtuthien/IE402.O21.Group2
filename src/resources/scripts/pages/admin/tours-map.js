@@ -135,7 +135,7 @@ require([
       { type: "string", name: "tour_price", alias: "Giá vé" },
       { type: "string", name: "tour_total_ticket", alias: "Tổng số vé" },
       { type: "string", name: "tour_total_ticket_available", alias: "Tổng số vé còn trống" },
-      { type: "string", name: "tour_description", alias: "Mô tả" },
+      { type: "string", name: "tour_description", alias: "Mô tả", length: 2000 },
       { type: "string", name: "tour_average_rating", alias: "Đánh giá" },
       { type: "string", name: "tour_total_rating", alias: "Tổng số đánh giá" },
       { type: "string", name: "tour_number_of_days", alias: "Số ngày" },
@@ -200,43 +200,6 @@ require([
     isUpdate = true;
 
     viewDivContainer.style = 'cursor: url("/imgs/cursor-add-location.png"),auto';
-    // tourCheck.forEach((item, index) => {
-    //   if (item.checked) {
-    //     const tourRoute = tourRoutes[index];
-
-    //     // Tạo query để tìm feature dựa trên tour_id
-    //     const query = featureLayer.createQuery();
-    //     query.where = `tour_id = '${tourRoute.tour._id}'`;
-    //     query.returnGeometry = true;
-    //     query.outFields = ["*"];
-
-    //     // Thực hiện query để lấy feature
-    //     featureLayer.queryFeatures(query).then((result) => {
-    //       if (result.features.length > 0) {
-    //         const feature = result.features[0];
-    //         const center = feature.geometry.extent.center;
-    //         const zoomLevel = 14;
-
-    //         // Kiểm tra và tắt popup editor hiện tại nếu có
-    //         if (editor.viewModel.activeWorkflow) {
-    //           editor.viewModel.cancelWorkflow();
-    //         }
-
-    //         view.goTo({
-    //           target: center,
-    //           zoom: zoomLevel,
-    //         }).then(() => {
-    //           view.ui.add(editor, "top-right");
-    //           editor.startUpdateWorkflowAtFeatureEdit(feature);
-
-    //           tourId = tourIds[index].value
-    //         });
-    //       }
-    //     }).catch((error) => {
-    //       console.error("Error querying features: ", error);
-    //     });
-    //   }
-    // });
   });
 
   const deleteButton = document.querySelector(".delete-btn");
@@ -288,25 +251,32 @@ require([
         item.parentElement.classList.add("tours-item-active");
 
         const tourRoute = tourRoutes[index];
-        const polylineGraphic = graphicsLayer.graphics.find(
-          (graphic) => graphic.attributes.tour_id === tourRoute.tour._id
-        );
-
-        if (polylineGraphic) {
-          const center = polylineGraphic.geometry.extent.center;
-          const zoomLevel = 14;
-          view
-            .goTo({
-              target: center,
-              zoom: zoomLevel,
-            })
-            .then(() => {
-              view.popup.open({
-                features: [polylineGraphic],
-                location: polylineGraphic.geometry.extent.center,
+        featureLayer
+          .queryFeatures({
+            where: `tour_id = '${tourRoute.tour._id}'`,
+            returnGeometry: true,
+            outFields: ["*"],
+          })
+          .then((queryResult) => {
+            if (queryResult.features.length > 0) {
+              const feature = queryResult.features[0];
+              const center = feature.geometry.extent.center;
+              const zoomLevel = 14;
+              view.goTo({ target: center, zoom: zoomLevel }).then(() => {
+                view.popup.open({
+                  features: [feature],
+                  location: center,
+                });
               });
-            });
-        }
+            } else {
+              console.warn(
+                `Không tìm thấy đối tượng với tour_id = '${tourRoute.tour._id}' trong featureLayer.`
+              );
+            }
+          })
+          .catch((error) => {
+            console.error("Lỗi khi truy vấn đối tượng từ featureLayer:", error);
+          });
       }
     });
   });
@@ -330,7 +300,8 @@ require([
                   innerItem.classList.remove("tours-item-active");
                 });
                 tourItems[index].classList.add("tours-item-active");
-
+                const container = document.querySelector(".tours-list");
+                container.scrollTop = tourItems[index].offsetTop - container.offsetTop;
                 const center = graphic.geometry.extent.center;
                 const zoomLevel = 14;
 
@@ -392,7 +363,7 @@ require([
           container: document.createElement("div"),
           formTemplate: {
             elements: [
-              { type: "field", fieldName: "tour_id", label: "ID" },
+              { type: "field", fieldName: "tour_id", label: "ID", editable: false },
               { type: "field", fieldName: "tour_name", label: "Tên tour" },
               { type: "field", fieldName: "tour_price", label: "Giá vé" },
               { type: "field", fieldName: "tour_total_ticket", label: "Tổng số vé" },
@@ -401,9 +372,14 @@ require([
                 fieldName: "tour_total_ticket_available",
                 label: "Tổng số vé còn trống",
               },
-              { type: "field", fieldName: "tour_description", label: "Mô tả" },
-              { type: "field", fieldName: "tour_average_rating", label: "Đánh giá" },
-              { type: "field", fieldName: "tour_total_rating", label: "Tổng số đánh giá" },
+              {
+                type: "field",
+                fieldName: "tour_description",
+                label: "Mô tả",
+                input: { type: "text-area" },
+              },
+              { type: "field", fieldName: "tour_average_rating", label: "Đánh giá", editable: false },
+              { type: "field", fieldName: "tour_total_rating", label: "Tổng số đánh giá", editable: false },
               { type: "field", fieldName: "tour_number_of_days", label: "Số ngày" },
               { type: "field", fieldName: "tour_number_of_nights", label: "Số đêm" },
               { type: "field", fieldName: "tour_starting_day", label: "Ngày khởi hành" },
