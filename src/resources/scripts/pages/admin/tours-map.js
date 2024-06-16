@@ -1,5 +1,5 @@
 import { getTours, getLinesOfTour } from "/fetch.js";
-import { convertDateToHourDayMonthYear } from "/format.js";
+import { convertDateToHourDayMonthYear, convertHourDayMonthYearToDate } from "/format.js";
 
 const results = await getLinesOfTour();
 const tourRoutes = results.tourRoutes;
@@ -11,6 +11,8 @@ const navbar = document.querySelector(".navbar");
 const navbarBtnIcon = document.querySelector("#btn-icon");
 const tourItems = document.querySelectorAll(".tours-item");
 const tourRight = document.querySelectorAll(".tour-right");
+const tourCheck = document.querySelectorAll(".tour-check");
+const tourIds = document.querySelectorAll(".tour-id");
 let navbarAction = true;
 let navbarStatus = false;
 navbarBtn.addEventListener("click", () => {
@@ -133,7 +135,7 @@ require([
       { type: "string", name: "tour_price", alias: "Giá vé" },
       { type: "string", name: "tour_total_ticket", alias: "Tổng số vé" },
       { type: "string", name: "tour_total_ticket_available", alias: "Tổng số vé còn trống" },
-      { type: "string", name: "tour_description", alias: "Mô tả", length: 2000 },
+      { type: "string", name: "tour_description", alias: "Mô tả" },
       { type: "string", name: "tour_average_rating", alias: "Đánh giá" },
       { type: "string", name: "tour_total_rating", alias: "Tổng số đánh giá" },
       { type: "string", name: "tour_number_of_days", alias: "Số ngày" },
@@ -192,6 +194,89 @@ require([
     outFields: ["*"],
   });
   map.add(featureLayer);
+  let isUpdate = false;
+  const updateButton = document.querySelector(".update-btn");
+  updateButton.addEventListener("click", () => {
+    isUpdate = true;
+
+    viewDivContainer.style = 'cursor: url("/imgs/cursor-add-location.png"),auto';
+    // tourCheck.forEach((item, index) => {
+    //   if (item.checked) {
+    //     const tourRoute = tourRoutes[index];
+
+    //     // Tạo query để tìm feature dựa trên tour_id
+    //     const query = featureLayer.createQuery();
+    //     query.where = `tour_id = '${tourRoute.tour._id}'`;
+    //     query.returnGeometry = true;
+    //     query.outFields = ["*"];
+
+    //     // Thực hiện query để lấy feature
+    //     featureLayer.queryFeatures(query).then((result) => {
+    //       if (result.features.length > 0) {
+    //         const feature = result.features[0];
+    //         const center = feature.geometry.extent.center;
+    //         const zoomLevel = 14;
+
+    //         // Kiểm tra và tắt popup editor hiện tại nếu có
+    //         if (editor.viewModel.activeWorkflow) {
+    //           editor.viewModel.cancelWorkflow();
+    //         }
+
+    //         view.goTo({
+    //           target: center,
+    //           zoom: zoomLevel,
+    //         }).then(() => {
+    //           view.ui.add(editor, "top-right");
+    //           editor.startUpdateWorkflowAtFeatureEdit(feature);
+
+    //           tourId = tourIds[index].value
+    //         });
+    //       }
+    //     }).catch((error) => {
+    //       console.error("Error querying features: ", error);
+    //     });
+    //   }
+    // });
+  });
+
+  const deleteButton = document.querySelector(".delete-btn");
+  deleteButton.addEventListener('click', () => {
+    const tourChecked = []
+    tourCheck.forEach((item, index) => {
+      if (item.checked) {
+        tourChecked.push({ id: tourIds[index].value })
+      }
+    })
+    try {
+      fetch(`/admin/tour/destroy`, {
+        method: 'DELETE',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(tourChecked)
+      })
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Network response was not ok ' + response.statusText);
+          }
+          return response.json();
+        })
+        .then(data => {
+          console.log('Success:');
+          tourIds.forEach((tour, index) => {
+            if (tourChecked.some(item => item.id === tour.value)) {
+              tourItems[index].style.display = 'none';
+            }
+          })
+        })
+        .catch(error => {
+          console.error('There was a problem with the fetch operation:', error);
+
+        });
+    } catch (error) {
+      console.error('Error:', error);
+    }
+  })
 
   // Focus vào tour trên map và mở popup khi click vào item trên navbar
   tourRight.forEach((item, index) => {
@@ -203,34 +288,25 @@ require([
         item.parentElement.classList.add("tours-item-active");
 
         const tourRoute = tourRoutes[index];
+        const polylineGraphic = graphicsLayer.graphics.find(
+          (graphic) => graphic.attributes.tour_id === tourRoute.tour._id
+        );
 
-        // Sử dụng featureLayer.queryFeatures để tìm đối tượng trong featureLayer
-        featureLayer
-          .queryFeatures({
-            where: `tour_id = '${tourRoute.tour._id}'`,
-            returnGeometry: true,
-            outFields: ["*"],
-          })
-          .then((queryResult) => {
-            if (queryResult.features.length > 0) {
-              const feature = queryResult.features[0];
-              const center = feature.geometry.extent.center;
-              const zoomLevel = 14;
-              view.goTo({ target: center, zoom: zoomLevel }).then(() => {
-                view.popup.open({
-                  features: [feature],
-                  location: center,
-                });
+        if (polylineGraphic) {
+          const center = polylineGraphic.geometry.extent.center;
+          const zoomLevel = 14;
+          view
+            .goTo({
+              target: center,
+              zoom: zoomLevel,
+            })
+            .then(() => {
+              view.popup.open({
+                features: [polylineGraphic],
+                location: polylineGraphic.geometry.extent.center,
               });
-            } else {
-              console.warn(
-                `Không tìm thấy đối tượng với tour_id = '${tourRoute.tour._id}' trong featureLayer.`
-              );
-            }
-          })
-          .catch((error) => {
-            console.error("Lỗi khi truy vấn đối tượng từ featureLayer:", error);
-          });
+            });
+        }
       }
     });
   });
@@ -240,8 +316,10 @@ require([
     if (navbarAction) {
       view.hitTest(event).then((response) => {
         const results = response.results;
+
         if (results.length > 0) {
           const resultFilter = results.filter((result) => result.layer === featureLayer)[0];
+          console.log(resultFilter);
           const graphic = resultFilter?.graphic;
           if (graphic) {
             const tourId = graphic.attributes.tour_id;
@@ -252,22 +330,35 @@ require([
                   innerItem.classList.remove("tours-item-active");
                 });
                 tourItems[index].classList.add("tours-item-active");
-                const container = document.querySelector(".tours-list");
-                container.scrollTop = tourItems[index].offsetTop - container.offsetTop;
+
                 const center = graphic.geometry.extent.center;
                 const zoomLevel = 14;
 
-                view
-                  .goTo({
-                    target: center,
-                    zoom: zoomLevel,
-                  })
-                  .then(() => {
+                // Kiểm tra và tắt popup editor hiện tại nếu có
+                if (editor.viewModel.activeWorkflow) {
+                  editor.viewModel.cancelWorkflow();
+                }
+
+                view.goTo({
+                  target: center,
+                  zoom: zoomLevel,
+                }).then(() => {
+                  if (isUpdate) {
+                    isUpdate = false;
+                    viewDivContainer.style = "cursor: auto";
+                    view.popup.visible = false;
+                    view.popup.highlightOptions = true;
+                    console.log(123)
+                    view.ui.add(editor, "top-right");
+                    editor.startUpdateWorkflowAtFeatureEdit(graphic);
+                    tour_id = tourId;
+                  } else {
                     view.popup.open({
                       features: [graphic],
                       location: center,
                     });
-                  });
+                  }
+                });
               }
             });
           }
@@ -275,6 +366,20 @@ require([
       });
     }
   });
+
+
+  let tour_id = '';
+  let tour = {
+    tour_name: "",
+    tour_price: 0,
+    tour_starting_day: "",
+    tour_number_of_days: 0,
+    tour_number_of_nights: 0,
+    tour_description: "",
+    tour_total_ticket: 0,
+    tour_total_ticket_available: 0,
+  };
+
 
   let editor;
   view.when(() => {
@@ -287,7 +392,7 @@ require([
           container: document.createElement("div"),
           formTemplate: {
             elements: [
-              { type: "field", fieldName: "tour_id", label: "ID", editable: false },
+              { type: "field", fieldName: "tour_id", label: "ID" },
               { type: "field", fieldName: "tour_name", label: "Tên tour" },
               { type: "field", fieldName: "tour_price", label: "Giá vé" },
               { type: "field", fieldName: "tour_total_ticket", label: "Tổng số vé" },
@@ -296,12 +401,7 @@ require([
                 fieldName: "tour_total_ticket_available",
                 label: "Tổng số vé còn trống",
               },
-              {
-                type: "field",
-                fieldName: "tour_description",
-                label: "Mô tả",
-                input: { type: "text-area" },
-              },
+              { type: "field", fieldName: "tour_description", label: "Mô tả" },
               { type: "field", fieldName: "tour_average_rating", label: "Đánh giá" },
               { type: "field", fieldName: "tour_total_rating", label: "Tổng số đánh giá" },
               { type: "field", fieldName: "tour_number_of_days", label: "Số ngày" },
@@ -309,6 +409,7 @@ require([
               { type: "field", fieldName: "tour_starting_day", label: "Ngày khởi hành" },
             ],
           },
+
         },
       ],
     });
@@ -316,10 +417,15 @@ require([
     reactiveUtils.when(
       () => editor.viewModel.state === "ready",
       () => {
-        navbarAction = true;
-        view.ui.remove(editor);
+        try {
+          navbarAction = true;
+          view.ui.remove(editor);
 
-        view.openPopup({ fetchFeatures: true, shouldFocus: true });
+          view.openPopup({ fetchFeatures: true, shouldFocus: true })
+
+        } catch (e) {
+          console.error("Error processing editor state: ", e);
+        }
       }
     );
   });
@@ -335,38 +441,105 @@ require([
       }
     }
   );
-  featureLayer.on("apply-edits", () => {
-    view.ui.remove(editor);
-    features.forEach((feature) => {
-      feature.popupTemplate = {
-        title: "{location_name}",
-        content: [
-          { type: "text", text: "<b>Tour ID:</b> {tour_id}" },
-          { type: "text", text: "<b>Ngày khởi hành:</b> {tour_starting_day}" },
-          { type: "text", text: "<b>Giá vé: </b> {tour_price}đ" },
-          {
-            type: "text",
-            text: "<b>Số vé trống</b> {tour_total_ticket_available}/{tour_total_ticket}",
-          },
-          {
-            type: "text",
-            text: "<b>Đánh giá:</b> {tour_average_rating}/5 - {tour_total_rating} lượt",
-          },
-          {
-            type: "text",
-            text: "<b>Số ngày/Số đêm:</b> {tour_number_of_days}/{tour_number_of_nights}",
-          },
-          { type: "text", text: "<b>Ngày tạo:</b> {created_at}" },
-          { type: "text", text: "<b>Cập nhật:</b> {updated_at}" },
-        ],
-      };
-    });
 
-    if (features) {
-      view.openPopup({ features: features });
-    }
+  // Event listener for apply-edits
+  featureLayer.on("apply-edits", (event) => {
+    event.result
+      .then((result) => {
+        // Check if updateFeatures exists and is not empty
+        if (result.edits.updateFeatures && result.edits.updateFeatures.length > 0) {
+          const attributes = result.edits.updateFeatures[0].attributes;
+          tour.tour_name = attributes.tour_name;
+          tour.tour_price = parseInt(attributes.tour_price.replace(/\./g, ''));
+          tour.tour_starting_day = convertHourDayMonthYearToDate(attributes.tour_starting_day);
+          tour.tour_number_of_days = parseInt(attributes.tour_number_of_days);
+          tour.tour_number_of_nights = parseInt(attributes.tour_number_of_nights);
+          tour.tour_description = attributes.tour_description;
+          tour.tour_total_ticket = parseInt(attributes.tour_total_ticket);
+          tour.tour_total_ticket_available = parseInt(attributes.tour_total_ticket_available)
+          try {
+            fetch(`/admin/tour/edit/${tour_id}`, {
+              method: 'PATCH',
+              headers: {
+                'Content-Type': 'application/json'
+              },
+              body: JSON.stringify(tour)
+            })
+              .then(response => {
+                if (!response.ok) {
+                  throw new Error('Network response was not ok ' + response.statusText);
+                }
+                return response.json();
+              })
+              .then(data => {
+                console.log('Success:');
+                view.ui.remove(editor);
+                features.forEach((feature) => {
+                  feature.popupTemplate = {
+                    title: "{location_name}",
+                    content: [
+                      { type: "text", text: "<b>Tour ID:</b> {tour_id}" },
+                      { type: "text", text: "<b>Ngày khởi hành:</b> {tour_starting_day}" },
+                      { type: "text", text: "<b>Giá vé: </b> {tour_price}đ" },
+                      {
+                        type: "text",
+                        text: "<b>Số vé trống</b> {tour_total_ticket_available}/{tour_total_ticket}",
+                      },
+                      {
+                        type: "text",
+                        text: "<b>Đánh giá:</b> {tour_average_rating}/5 - {tour_total_rating} lượt",
+                      },
+                      {
+                        type: "text",
+                        text: "<b>Số ngày/Số đêm:</b> {tour_number_of_days}/{tour_number_of_nights}",
+                      },
+                      { type: "text", text: "<b>Ngày tạo:</b> {created_at}" },
+                      { type: "text", text: "<b>Cập nhật:</b> {updated_at}" },
+                    ],
+                  };
+                })
+                if (features) {
+                  view.openPopup({ features: features });
+                }
+                editor.viewModel.cancelWorkflow();
+              })
+              .catch(error => {
+                console.error('There was a problem with the fetch operation:', error);
 
-    editor.viewModel.cancelWorkflow();
+              });
+          } catch (error) {
+            console.error('Error:', error);
+          }
+        }
+        else if (result.edits.deleteFeatures && result.edits.deleteFeatures.length > 0) {
+          try {
+            fetch(`/admin/tour/delete/${tour_id}`, {
+              method: 'DELETE',
+              headers: {
+                'Content-Type': 'application/json'
+              },
+            })
+              .then(response => {
+                if (!response.ok) {
+                  throw new Error('Network response was not ok ' + response.statusText);
+                }
+                return response.json();
+              })
+              .then(data => {
+                console.log('Success:');
+              })
+              .catch(error => {
+                console.error('There was a problem with the fetch operation:', error);
+
+              });
+          } catch (error) {
+            console.error('Error:', error);
+          }
+        }
+      })
+      .catch((error) => {
+        console.error("Error in apply-edits promise:", error);
+      });
   });
 
   // Xử lý sự kiện action của popup
@@ -380,7 +553,12 @@ require([
         view.popup.highlightOptions = true;
         view.ui.add(editor, "top-right");
         editor.startUpdateWorkflowAtFeatureEdit(view.popup.selectedFeature);
+        const attributes = view.popup.selectedFeature.attributes;
+        tour_id = attributes.tour_id;
+        console.log(tour_id)
       }
     }
   );
+
 });
+
