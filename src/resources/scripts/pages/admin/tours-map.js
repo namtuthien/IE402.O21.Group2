@@ -4,7 +4,7 @@ import { convertDateToHourDayMonthYear, convertHourDayMonthYearToDate } from "/f
 const results = await getLinesOfTour();
 const tourRoutes = results.tourRoutes;
 const tours = results.tours;
-
+const deletePopup = document.getElementById('deletePopupContainer')
 const navbarBtn = document.querySelector(".navbar-btn");
 const navbarContent = document.querySelector(".navbar-content");
 const navbar = document.querySelector(".navbar");
@@ -204,6 +204,11 @@ require([
 
   const deleteButton = document.querySelector(".delete-btn");
   deleteButton.addEventListener('click', () => {
+    deletePopup.style.display = 'flex';
+  })
+
+  document.getElementById('submitDeleteButton').addEventListener('click', () => {
+    deletePopup.style.display = 'none';
     const tourChecked = []
     tourCheck.forEach((item, index) => {
       if (item.checked) {
@@ -231,6 +236,7 @@ require([
               tourItems[index].style.display = 'none';
             }
           })
+          alert("Xóa thành công")
         })
         .catch(error => {
           console.error('There was a problem with the fetch operation:', error);
@@ -449,6 +455,7 @@ require([
               })
               .then(data => {
                 console.log('Success:');
+                alert("Sửa thành công")
                 view.ui.remove(editor);
                 features.forEach((feature) => {
                   feature.popupTemplate = {
@@ -503,6 +510,7 @@ require([
               })
               .then(data => {
                 console.log('Success:');
+                alert("Xóa thành công")
               })
               .catch(error => {
                 console.error('There was a problem with the fetch operation:', error);
