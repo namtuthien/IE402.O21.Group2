@@ -4,7 +4,7 @@ import { convertDateToHourDayMonthYear, convertHourDayMonthYearToDate } from "/f
 const results = await getLinesOfTour();
 const tourRoutes = results.tourRoutes;
 const tours = results.tours;
-const deletePopup = document.getElementById('deletePopupContainer')
+const deletePopup = document.getElementById("deletePopupContainer");
 const navbarBtn = document.querySelector(".navbar-btn");
 const navbarContent = document.querySelector(".navbar-content");
 const navbar = document.querySelector(".navbar");
@@ -147,7 +147,7 @@ require([
     popupTemplate: {
       title: "{tour_name}",
       content: [
-        { type: "text", text: "<b>Tour ID:</b> {tour_id}" },
+        { type: "text", text: "<b>Mã Tour:</b> {tour_id}" },
         { type: "text", text: "<b>Ngày khởi hành:</b> {tour_starting_day}" },
         { type: "text", text: "<b>Giá vé: </b> {tour_price}đ" },
         {
@@ -168,12 +168,6 @@ require([
       actions: [
         // { title: "Thêm địa điểm", id: "action-add-info", className: "esri-icon-add" },
         { title: "Cập nhật thông tin", id: "action-edit-info", className: "esri-icon-edit" },
-        {
-          title: "Phóng to",
-          id: "action-zoom-out",
-          className: "esri-icon-zoom-out-magnifying-glass",
-        },
-        { title: "Thu nhỏ", id: "action-zoom-in", className: "esri-icon-zoom-in-magnifying-glass" },
       ],
       overwriteActions: true,
     },
@@ -203,49 +197,48 @@ require([
   });
 
   const deleteButton = document.querySelector(".delete-btn");
-  deleteButton.addEventListener('click', () => {
-    deletePopup.style.display = 'flex';
-  })
+  deleteButton.addEventListener("click", () => {
+    deletePopup.style.display = "flex";
+  });
 
-  document.getElementById('submitDeleteButton').addEventListener('click', () => {
-    deletePopup.style.display = 'none';
-    const tourChecked = []
+  document.getElementById("submitDeleteButton").addEventListener("click", () => {
+    deletePopup.style.display = "none";
+    const tourChecked = [];
     tourCheck.forEach((item, index) => {
       if (item.checked) {
-        tourChecked.push({ id: tourIds[index].value })
+        tourChecked.push({ id: tourIds[index].value });
       }
-    })
+    });
     try {
       fetch(`/admin/tour/destroy`, {
-        method: 'DELETE',
+        method: "DELETE",
         headers: {
-          'Content-Type': 'application/json'
+          "Content-Type": "application/json",
         },
-        body: JSON.stringify(tourChecked)
+        body: JSON.stringify(tourChecked),
       })
-        .then(response => {
+        .then((response) => {
           if (!response.ok) {
-            throw new Error('Network response was not ok ' + response.statusText);
+            throw new Error("Network response was not ok " + response.statusText);
           }
           return response.json();
         })
-        .then(data => {
-          console.log('Success:');
+        .then((data) => {
+          console.log("Success:");
           tourIds.forEach((tour, index) => {
-            if (tourChecked.some(item => item.id === tour.value)) {
-              tourItems[index].style.display = 'none';
+            if (tourChecked.some((item) => item.id === tour.value)) {
+              tourItems[index].style.display = "none";
             }
-          })
-          alert("Xóa thành công")
+          });
+          alert("Xóa thành công");
         })
-        .catch(error => {
-          console.error('There was a problem with the fetch operation:', error);
-
+        .catch((error) => {
+          console.error("There was a problem with the fetch operation:", error);
         });
     } catch (error) {
-      console.error('Error:', error);
+      console.error("Error:", error);
     }
-  })
+  });
 
   // Focus vào tour trên map và mở popup khi click vào item trên navbar
   tourRight.forEach((item, index) => {
@@ -316,26 +309,28 @@ require([
                   editor.viewModel.cancelWorkflow();
                 }
 
-                view.goTo({
-                  target: center,
-                  zoom: zoomLevel,
-                }).then(() => {
-                  if (isUpdate) {
-                    isUpdate = false;
-                    viewDivContainer.style = "cursor: auto";
-                    view.popup.visible = false;
-                    view.popup.highlightOptions = true;
-                    console.log(123)
-                    view.ui.add(editor, "top-right");
-                    editor.startUpdateWorkflowAtFeatureEdit(graphic);
-                    tour_id = tourId;
-                  } else {
-                    view.popup.open({
-                      features: [graphic],
-                      location: center,
-                    });
-                  }
-                });
+                view
+                  .goTo({
+                    target: center,
+                    zoom: zoomLevel,
+                  })
+                  .then(() => {
+                    if (isUpdate) {
+                      isUpdate = false;
+                      viewDivContainer.style = "cursor: auto";
+                      view.popup.visible = false;
+                      view.popup.highlightOptions = true;
+                      console.log(123);
+                      view.ui.add(editor, "top-right");
+                      editor.startUpdateWorkflowAtFeatureEdit(graphic);
+                      tour_id = tourId;
+                    } else {
+                      view.popup.open({
+                        features: [graphic],
+                        location: center,
+                      });
+                    }
+                  });
               }
             });
           }
@@ -344,8 +339,7 @@ require([
     }
   });
 
-
-  let tour_id = '';
+  let tour_id = "";
   let tour = {
     tour_name: "",
     tour_price: 0,
@@ -356,7 +350,6 @@ require([
     tour_total_ticket: 0,
     tour_total_ticket_available: 0,
   };
-
 
   let editor;
   view.when(() => {
@@ -369,7 +362,7 @@ require([
           container: document.createElement("div"),
           formTemplate: {
             elements: [
-              { type: "field", fieldName: "tour_id", label: "ID", editable: false },
+              { type: "field", fieldName: "tour_id", label: "Mã Tour", editable: false },
               { type: "field", fieldName: "tour_name", label: "Tên tour" },
               { type: "field", fieldName: "tour_price", label: "Giá vé" },
               { type: "field", fieldName: "tour_total_ticket", label: "Tổng số vé" },
@@ -384,14 +377,23 @@ require([
                 label: "Mô tả",
                 input: { type: "text-area" },
               },
-              { type: "field", fieldName: "tour_average_rating", label: "Đánh giá", editable: false },
-              { type: "field", fieldName: "tour_total_rating", label: "Tổng số đánh giá", editable: false },
+              {
+                type: "field",
+                fieldName: "tour_average_rating",
+                label: "Đánh giá",
+                editable: false,
+              },
+              {
+                type: "field",
+                fieldName: "tour_total_rating",
+                label: "Tổng số đánh giá",
+                editable: false,
+              },
               { type: "field", fieldName: "tour_number_of_days", label: "Số ngày" },
               { type: "field", fieldName: "tour_number_of_nights", label: "Số đêm" },
               { type: "field", fieldName: "tour_starting_day", label: "Ngày khởi hành" },
             ],
           },
-
         },
       ],
     });
@@ -403,8 +405,7 @@ require([
           navbarAction = true;
           view.ui.remove(editor);
 
-          view.openPopup({ fetchFeatures: true, shouldFocus: true })
-
+          view.openPopup({ fetchFeatures: true, shouldFocus: true });
         } catch (e) {
           console.error("Error processing editor state: ", e);
         }
@@ -432,30 +433,30 @@ require([
         if (result.edits.updateFeatures && result.edits.updateFeatures.length > 0) {
           const attributes = result.edits.updateFeatures[0].attributes;
           tour.tour_name = attributes.tour_name;
-          tour.tour_price = parseInt(attributes.tour_price.replace(/\./g, ''));
+          tour.tour_price = parseInt(attributes.tour_price.replace(/\./g, ""));
           tour.tour_starting_day = convertHourDayMonthYearToDate(attributes.tour_starting_day);
           tour.tour_number_of_days = parseInt(attributes.tour_number_of_days);
           tour.tour_number_of_nights = parseInt(attributes.tour_number_of_nights);
           tour.tour_description = attributes.tour_description;
           tour.tour_total_ticket = parseInt(attributes.tour_total_ticket);
-          tour.tour_total_ticket_available = parseInt(attributes.tour_total_ticket_available)
+          tour.tour_total_ticket_available = parseInt(attributes.tour_total_ticket_available);
           try {
             fetch(`/admin/tour/edit/${tour_id}`, {
-              method: 'PATCH',
+              method: "PATCH",
               headers: {
-                'Content-Type': 'application/json'
+                "Content-Type": "application/json",
               },
-              body: JSON.stringify(tour)
+              body: JSON.stringify(tour),
             })
-              .then(response => {
+              .then((response) => {
                 if (!response.ok) {
-                  throw new Error('Network response was not ok ' + response.statusText);
+                  throw new Error("Network response was not ok " + response.statusText);
                 }
                 return response.json();
               })
-              .then(data => {
-                console.log('Success:');
-                alert("Sửa thành công")
+              .then((data) => {
+                console.log("Success:");
+                alert("Sửa thành công");
                 view.ui.remove(editor);
                 features.forEach((feature) => {
                   feature.popupTemplate = {
@@ -480,44 +481,41 @@ require([
                       { type: "text", text: "<b>Cập nhật:</b> {updated_at}" },
                     ],
                   };
-                })
+                });
                 if (features) {
                   view.openPopup({ features: features });
                 }
                 editor.viewModel.cancelWorkflow();
               })
-              .catch(error => {
-                console.error('There was a problem with the fetch operation:', error);
-
+              .catch((error) => {
+                console.error("There was a problem with the fetch operation:", error);
               });
           } catch (error) {
-            console.error('Error:', error);
+            console.error("Error:", error);
           }
-        }
-        else if (result.edits.deleteFeatures && result.edits.deleteFeatures.length > 0) {
+        } else if (result.edits.deleteFeatures && result.edits.deleteFeatures.length > 0) {
           try {
             fetch(`/admin/tour/delete/${tour_id}`, {
-              method: 'DELETE',
+              method: "DELETE",
               headers: {
-                'Content-Type': 'application/json'
+                "Content-Type": "application/json",
               },
             })
-              .then(response => {
+              .then((response) => {
                 if (!response.ok) {
-                  throw new Error('Network response was not ok ' + response.statusText);
+                  throw new Error("Network response was not ok " + response.statusText);
                 }
                 return response.json();
               })
-              .then(data => {
-                console.log('Success:');
-                alert("Xóa thành công")
+              .then((data) => {
+                console.log("Success:");
+                alert("Xóa thành công");
               })
-              .catch(error => {
-                console.error('There was a problem with the fetch operation:', error);
-
+              .catch((error) => {
+                console.error("There was a problem with the fetch operation:", error);
               });
           } catch (error) {
-            console.error('Error:', error);
+            console.error("Error:", error);
           }
         }
       })
@@ -539,10 +537,8 @@ require([
         editor.startUpdateWorkflowAtFeatureEdit(view.popup.selectedFeature);
         const attributes = view.popup.selectedFeature.attributes;
         tour_id = attributes.tour_id;
-        console.log(tour_id)
+        console.log(tour_id);
       }
     }
   );
-
 });
-

@@ -6,7 +6,7 @@ const { getRouteById } = require("./route.controller");
 
 class TourController {
   // [GET] /tour/create
-  create(req, res, next) { }
+  create(req, res, next) {}
 
   // [GET] /tour/add
   showAddTourForm(req, res, next) {
@@ -69,9 +69,11 @@ class TourController {
   async destroy(req, res, next) {
     try {
       const tourIds = req.body;
-      await Promise.all(tourIds.map(async (tour) => {
-        return await Tour.deleteOne({ _id: tour.id });
-      }));
+      await Promise.all(
+        tourIds.map(async (tour) => {
+          return await Tour.deleteOne({ _id: tour.id });
+        })
+      );
       res.status(200).json({ message: "Tour đã được xóa thành công" });
     } catch (error) {
       console.error(error);
@@ -167,7 +169,7 @@ class TourController {
         routes.push(route);
       }
       //get lines of route
-      routes.forEach((route) => { });
+      routes.forEach((route) => {});
       for (var i = 0; i < routes.length; i++) {
         for (var j = 0; j < routes[i].lines.length; j++) {
           var line = await Line.findOne({ _id: routes[i].lines[j] });
