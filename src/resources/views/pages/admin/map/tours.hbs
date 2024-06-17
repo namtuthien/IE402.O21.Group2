@@ -1,4 +1,4 @@
-<div class="main">
+<div class="main position-relative">
   <div class="navbar">
     <div class="navbar-btn">
       <span class="material-icons-outlined" id="btn-icon">
@@ -16,6 +16,7 @@
         <li class="tours-item">
           <div class="tour-left">
             <input type="checkbox" class="tour-check" />
+              <input type="hidden" class="tour-id" value="{{this._id}}">
             <img src="/imgs/logo3D.png" alt="thumbnail" class="tour-thumbnail" />
           </div>
           <div class="tour-right">
@@ -61,7 +62,7 @@
       </div>
     </div>
   </div>
-
   <div id="viewDiv" style="position: relative;">
   </div>
+  {{> admin/deletePopup}}
 </div>

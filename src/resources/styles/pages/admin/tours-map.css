@@ -222,3 +222,6 @@ ul {
   display: flex;
   justify-content: center;
 }
+.tour-left{
+  position: relative;
+}
