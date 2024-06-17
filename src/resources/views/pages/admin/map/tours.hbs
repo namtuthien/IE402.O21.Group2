@@ -1,0 +1,67 @@
+<div class="main">
+  <div class="navbar">
+    <div class="navbar-btn">
+      <span class="material-icons-outlined" id="btn-icon">
+        menu
+      </span>
+    </div>
+    <div class="navbar-content">
+      <div class="heading">
+        <div class="heading-title">
+          Danh sách Tour
+        </div>
+      </div>
+      <ul class="tours-list">
+        {{#each tours}}
+        <li class="tours-item">
+          <div class="tour-left">
+            <input type="checkbox" class="tour-check" />
+            <img src="/imgs/logo3D.png" alt="thumbnail" class="tour-thumbnail" />
+          </div>
+          <div class="tour-right">
+            <div class="tour-name">
+              {{this.tour_name}}
+            </div>
+            <div class="tour-price">
+              {{formatPrice this.tour_price}}đ
+            </div>
+          </div>
+        </li>
+        {{/each}}
+      </ul>
+      <div class="navbar-func">
+        <div class="navbar-func-top">
+          <button class="navbar-func-btn update-btn">
+            <span class="material-icons-outlined">
+              edit
+            </span>
+            <div class="navbar-btn-text">
+              Cập nhật
+            </div>
+          </button>
+          <button class="navbar-func-btn delete-btn">
+            <span class="material-icons-outlined">
+              delete_forever
+            </span>
+            <div class="navbar-btn-text">
+              Xóa
+            </div>
+          </button>
+        </div>
+        <div class="navbar-func-bot">
+          <button class="navbar-func-btn add-btn">
+            <span class="material-icons-outlined">
+              add_location
+            </span>
+            <div class="navbar-btn-text">
+              Thêm Tour
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="viewDiv" style="position: relative;">
+  </div>
+</div>

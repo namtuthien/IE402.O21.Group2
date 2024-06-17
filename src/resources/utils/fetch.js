@@ -27,10 +27,10 @@ const getTours = async () => {
 };
 const getLinesOfTour = async (routes) => {
   try {
-    const res = await fetch(`/api/tour/getLinesOfTour/${JSON.stringify(routes)}`);
+    const res = await fetch(`/api/route/getTourRoutes`);
     if (!res.ok) alert("404");
     const jsonRes = await res.json();
-    const data = jsonRes.points;
+    const data = { tourRoutes: jsonRes.tourRoutes, tours: jsonRes.tours };
     return data;
   } catch (err) {
     console.log(err);

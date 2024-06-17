@@ -2,7 +2,7 @@
 const User = require("../models/user.model");
 
 class StaffController {
-  // [GET] /staff/customer/:user_id
+  // [GET] /staffs/customer/:user_id
   async getCustomerById(req, res, next) {
     const { user_id } = req.params;
     try {
@@ -16,6 +16,8 @@ class StaffController {
       res.status(500).json({ error: "Lỗi truy xuất người dùng" });
     }
   }
+
+  // [GET] /staffs
   async showStaffs(req, res, next) {
     try {
       const staffs = await User.find({ user_role: 'staff' });
@@ -36,7 +38,7 @@ class StaffController {
         style: "/pages/admin/staffs.css",
         script: "/pages/admin/staffs.js",
         layout: "main",
-        staffs: newStaffs
+        staffs: newStaffs,
       });
     } catch (err) {
       console.error(err); // Log the error for debugging
