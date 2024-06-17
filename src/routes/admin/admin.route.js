@@ -5,9 +5,11 @@ const TourController = require("../../app/controllers/tour.controller");
 const LocationController = require("../../app/controllers/location.controller");
 const AdminController = require("../../app/controllers/admin.controller");
 const StaffController = require("../../app/controllers/staff.controller");
+const BookingController = require("../../app/controllers/booking.controller");
 
 router.get("/tours", TourController.showTours);
 router.get("/locations", LocationController.showLocations);
+router.get("/bookings", BookingController.showBookings);
 router.get("/staffs", StaffController.showStaffs);
 router.get("/staff/addstaff", AdminController.showAddStaffForm);
 router.get("/staff/view/:id", AdminController.showEditStaffForm);

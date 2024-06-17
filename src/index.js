@@ -45,6 +45,9 @@ app.engine(
         return parseInt(index) + 1;
       },
       formatPrice: (price) => price.toLocaleString("de-DE"),
+      ifEquals: (arg1, arg2, options) => {
+        return (arg1 == arg2) ? options.fn(this) : options.inverse(this);
+      }
     },
     partialsDir: [
       path.join(__dirname, "resources", "views", "partials"),
