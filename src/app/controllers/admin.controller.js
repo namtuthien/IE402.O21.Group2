@@ -38,7 +38,7 @@ class Admin {
     });
   }
 
-  // [DELETE] /admin/staff/deleteStaff
+  // [DELETE] /admin/staff/deleteStaff/:id
   async deleteUser(req, res, next) {
     const { id } = req.params;
     try {

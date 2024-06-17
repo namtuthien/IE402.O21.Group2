@@ -26,10 +26,11 @@
 <body>
     <section class="container-fluid m-0 p-0 main d-flex">
         {{> admin/navbar }}
-        <div class="w-80">
+        <div class="w-80 position-relative">
             {{> admin/header }}
             {{{body}}}
             {{> admin/footer }}
+            {{> admin/deletePopup}}
         </div>
     </section>
 

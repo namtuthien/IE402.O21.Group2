@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const selectWardElement = document.getElementById("staff-ward");
     const inputStreetElement = document.getElementById("staff-street");
     const submitButtonElement = document.getElementById("staff__submit-button")
+    const deleteButtonElement = document.getElementById("staff__delete-button")
 
     fetch("https://vapi.vnappmob.com/api/province", {
         method: "GET",
@@ -175,6 +176,38 @@ document.addEventListener("DOMContentLoaded", function () {
             } catch (error) {
                 console.error('Error:', error);
             }
+        }
+    })
+
+    deleteButtonElement.addEventListener('click', () =>{
+        document.getElementById('deletePopupContainer').style.display = 'flex';
+    })
+
+    document.getElementById('submitDeleteButton').addEventListener('click', () => {
+        const user_id = currentPath.split("/").pop();
+        try {
+            fetch(`/admin/staff/deleteStaff/${user_id}`, {
+                method: 'DELETE',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+            })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok ' + response.statusText);
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    console.log('Success:');
+                    window.location.href = `/admin/staffs`
+                })
+                .catch(error => {
+                    console.error('There was a problem with the fetch operation:', error);
+
+                });
+        } catch (error) {
+            console.error('Error:', error);
         }
     })
 });
