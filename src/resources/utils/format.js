@@ -11,4 +11,23 @@ function convertDateToHourDayMonthYear(dateString) {
   return `${hours}:${minutes} - ${day}/${month}/${year}`;
 }
 
-export { convertDateToHourDayMonthYear };
+function convertHourDayMonthYearToDate(string) {
+  // Tách thời gian và ngày
+  let [time, date] = string.split(' - ');
+
+  // Tách giờ và phút
+  let [hours, minutes] = time.split(':');
+
+  // Tách ngày, tháng và năm
+  let [day, month, year] = date.split('/');
+
+  // Tạo đối tượng Date
+  let dateObj = new Date(Date.UTC(year, month - 1, day, hours, minutes));
+
+  // Chuyển đổi sang định dạng ISO 8601
+  let isoString = dateObj.toISOString();
+
+  return isoString;
+}
+
+export { convertDateToHourDayMonthYear, convertHourDayMonthYearToDate };

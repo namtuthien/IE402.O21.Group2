@@ -1,0 +1,20 @@
+<div class="delete-popup__container" id="deletePopupContainer">
+    <div class="delete-popup__small-container">
+        <p id="handleRequestUrl" class="delete-popup__hidden-element">{{handleRequestUrl}}</p>
+        <div class="delete-popup__group delete-popup__popup-title">
+            <h2 class="delete-popup__text-title">Xóa</h2>
+            <i class="material-icons delete-popup__x-mark-icon" id="deletePopupXmarkIcon">close</i>
+        </div>
+        <div class="delete-popup__group delete-popup__popup-info">
+            {{#if message}}
+                <p class="delete-popup__text-info">{{message}}</p>
+            {{else}}
+                <p class="delete-popup__text-info">Bạn có chắc chắn không?</p>
+            {{/if}}
+        </div>
+        <div class="delete-popup__group delete-popup__popup-button">
+            <button type="button" class="delete-popup__button delete-popup__cancel-button" id="cancelDeleteButton">Không</button>
+            <button type="button" class="delete-popup__button delete-popup__submit-button" id="submitDeleteButton">Có</button>
+        </div>
+    </div>
+</div>

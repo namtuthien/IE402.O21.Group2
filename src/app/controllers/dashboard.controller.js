@@ -2,25 +2,36 @@ const paymentModel = require("../models/payment.model");
 const userModel = require("../models/user.model");
 const bookingModel = require("../models/booking.model");
 const ratingModel = require("../models/rating.model");
+const tourModel = require("../models/tour.model");
 
 class DashboardController {
   //[GET] /admin/dashboard
   async show(req, res, next) {
-    const totalCustomers = await this.getTotalCustomers();
-    const totalBookings = await this.getTotalBookings();
-    const totalRatings = await this.getTotalRatings();
-    const totalRevenue = await this.calculateTotalRevenue();
-    res.render('pages/admin/dashboard', {
-      pageTitle: "Bảng điều khiển",
-      style: "/pages/admin/dashboard.css",
-      script: "/pages/admin/dashboard.js",
-      totalCustomers: totalCustomers.toLocaleString("de-DE"),
-      totalBookings: totalBookings.toLocaleString("de-DE"),
-      totalRatings: totalRatings.toLocaleString("de-DE"),
-      totalRevenue: totalRevenue.toLocaleString("de-DE"),
-      // layout: "main"
-    });
+    try {
+      const totalCustomers = await this.getTotalCustomers();
+      const totalBookings = await this.getTotalBookings();
+      const totalRatings = await this.getTotalRatings();
+      const totalRevenue = await this.calculateTotalRevenue();
+      const topBookingTours = await this.getToursByBookingCount();
+      const topRevenueTours = await this.getToursByBookingTotalPrice();
+
+      res.render("pages/admin/dashboard/index", {
+        pageTitle: "Bảng điều khiển",
+        style: "/pages/admin/dashboard.css",
+        script: "/pages/admin/dashboard.js",
+        totalCustomers: totalCustomers.toLocaleString("de-DE"),
+        totalBookings: totalBookings.toLocaleString("de-DE"),
+        totalRatings: totalRatings.toLocaleString("de-DE"),
+        totalRevenue: totalRevenue.toLocaleString("de-DE"),
+        top5BookingTours: topBookingTours.splice(0, 5),
+        top5RevenueTours: topRevenueTours.splice(0, 5),
+        layout: "main",
+      });
+    } catch (error) {
+      console.log(error);
+    }
   }
+
   // [GET] /admin/dashboard/createStatistical
   async createStatistical(req, res, next) {
     try {
@@ -174,6 +185,83 @@ class DashboardController {
       return 0;
     }
   }
+
+  async getToursByBookingCount() {
+    try {
+      const tours = await bookingModel.aggregate([
+        {
+          $group: {
+            _id: "$tour", // Group by tour
+            bookingCount: { $sum: "$booking_amount" } // Count the number of bookings
+          }
+        },
+        {
+          $sort: { bookingCount: -1 } // Sort by bookingCount in descending order
+        },
+        {
+          $lookup: {
+            from: "tours", // Assuming your tour collection name is 'tours'
+            localField: "_id",
+            foreignField: "_id",
+            as: "tourDetails"
+          }
+        },
+        {
+          $unwind: "$tourDetails" // Unwind the tourDetails array to get the tour objects
+        },
+        {
+          $project: {
+            _id: 0,
+            tour: "$tourDetails",
+            bookingCount: 1
+          }
+        }
+      ]);
+
+      return tours;
+    } catch (err) {
+      console.error(err);
+    }
+  }
+
+  async getToursByBookingTotalPrice() {
+    try {
+      const tours = await bookingModel.aggregate([
+        {
+          $group: {
+            _id: "$tour", // Group by tour
+            bookingRevenue: { $sum: "$booking_total_price" } // Count the number of bookings
+          }
+        },
+        {
+          $sort: { bookingRevenue: -1 } // Sort by bookingCount in descending order
+        },
+        {
+          $lookup: {
+            from: "tours", // Assuming your tour collection name is 'tours'
+            localField: "_id",
+            foreignField: "_id",
+            as: "tourDetails"
+          }
+        },
+        {
+          $unwind: "$tourDetails" // Unwind the tourDetails array to get the tour objects
+        },
+        {
+          $project: {
+            _id: 0,
+            tour: "$tourDetails",
+            bookingRevenue: 1
+          }
+        }
+      ]);
+
+      return tours;
+    } catch (err) {
+      console.error(err);
+    }
+  }
+
 }
 
 module.exports = new DashboardController();

@@ -91,13 +91,13 @@
 .search-box__search-location {
     width: 100%;
     display: grid;
-    grid-template-columns: 30% 70%;
+    grid-template-columns: 30% calc(70% - 1rem);
     gap: 1rem;
 }
 
 .search-box__input-field {
     height: 48px;
-    padding: 0 1rem;
+    padding-left: 1rem;
     border-radius: 0.5rem;
     outline: 1px solid var(--outline1);
     position: relative;
