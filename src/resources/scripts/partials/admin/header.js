@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   if (
     currentPath.includes("dashboard") ||
     currentPath.includes("bookings") ||
-    currentPath.includes("staffs") ||
+    currentPath.includes("staff") ||
     currentPath.includes("customers") ||
     currentPath.includes("ratings")
   ) {
