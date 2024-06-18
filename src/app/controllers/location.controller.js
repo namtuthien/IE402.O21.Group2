@@ -31,11 +31,22 @@ class LocationController {
   }
 
   // [GET] /admin/map/locations
-  showLocationsMap(req, res, next) {
+  async showLocationsMap(req, res, next) {
+    const locations = await Location.find();
+    if (!locations) {
+      return res.status(404).json({
+        message: "Location not found!",
+      });
+    }
+    var newLocations = [];
+    locations.forEach((tour) => {
+      newLocations.push(tour.toObject());
+    });
     res.render("./pages/admin/map/locations", {
       pageTitle: "Location",
       style: "/pages/admin/locations-map.css",
       script: "/pages/admin/locations-map.js",
+      locations: newLocations,
       layout: "map",
     });
   }
