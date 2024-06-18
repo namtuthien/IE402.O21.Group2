@@ -3,27 +3,26 @@
     <div class="row d-flex justify-content-center align-items-center h-100">
       <div class="col-md-9 col-lg-6 col-xl-4 d-flex flex-column  justify-content-center align-items-center">
         <img src="/imgs/logo3D.png" class="img-fluid login-img-logo" alt="Logo 3D" />
-       
+
       </div>
       <div class="col-md-6 col-lg-5 col-xl-3-5">
-       
+
         <form id="formLogin" method="post" class="formlogin bg-white p-4">
-           <h1 class="formlogin__title">Đăng nhập</h1>
+          <h1 class="formlogin__title">Đăng nhập</h1>
           <div class=" flex-row align-items-center justify-content-center justify-content-lg-start">
             {{#if message}}
             <p class="text-danger ">{{message}}</p>
             {{/if}}
             <!-- Email input -->
             <div class="form-outline mb-4">
-              <label class="form-label fs-5" for="form3Example3">Email <span class="text-danger">*</span></label>
+              <label class="form-label " for="form3Example3">Email <span class="text-danger">*</span></label>
               <input name="email" type="text" id="form3Example3" class="form-control form-control-lg bg-white"
                 placeholder="Nhập địa chỉ email" />
-
             </div>
 
             <!-- Password input -->
             <div class="form-outline mb-3 formlogin__field-password">
-              <label class="form-label fs-5" for="form3Example4">Mật khẩu <span class="text-danger">*</span></label>
+              <label class="form-label " for="form3Example4">Mật khẩu <span class="text-danger">*</span></label>
               <input name="password" type="password" id="form3Example4" class="form-control form-control-lg bg-white"
                 placeholder="Nhập mật khẩu" />
               <span class="material-icons-outlined formlogin__icon-visibility formlogin__icon-eye">
@@ -33,26 +32,28 @@
 
             <div class="d-flex justify-content-between align-items-center">
               <!-- Checkbox -->
-              <div class="form-check mb-0 d-flex align-items-center">
-                <input class="form-check-input me-2 p-2 border border-dark" type="checkbox" value="on" id="form2Example3" name="remember" />
-                <label class="form-check-label fs-5 text-body" for="form2Example3">
+              <button class="form-check mb-0 d-flex align-items-center" type="button">
+                <input class="form-check-input me-2 p-2 border" type="checkbox" value="on" id="form2Example3"
+                  name="remember" />
+                <label class="form-check-label  text-body" for="form2Example3">
                   Ghi nhớ
                 </label>
-              </div>
-              <a href="#!" class="fs-5 text-primary">Bạn quên mật khẩu?</a>
+              </button>
+              <a href="#!" class=" text-primary">Bạn quên mật khẩu?</a>
             </div>
 
             <div class="text-center text-lg-start mt-4 pt-2">
-              <button type="submit" class="btn btn-primary btn-lg btn-login w-100 fs-4 fw-semibold pb-2">Đăng nhập</button>
-              <div class="border border-primary d-flex justify-content-center align-items-center mt-3 rounded p-2">
-                  <div class="small fw-medium fs-5 me-2">Bạn chưa có tài khoản? </div>
-                  <a href="#!" class="text-decoration-none fs-5 fw-semibold text-primary">Đăng ký ngay</a>
-              </div>
+              <button type="submit" class="btn btn-primary btn-lg btn-login w-100 fs-4 fw-semibold pb-2">Đăng
+                nhập</button>
+              <button type="button"
+                class="register-btn border border-primary d-flex justify-content-center align-items-center mt-3 rounded p-2">
+                <div class="small fw-medium  me-2">Bạn chưa có tài khoản? </div>
+                <a href="#!" class="text-decoration-none  fw-semibold text-primary">Đăng ký ngay</a>
+              </button>
             </div>
         </form>
       </div>
     </div>
     <h1 class="text-center text-white slogan">PICK A TOUR. POUR A JOY!</h1>
   </div>
-
 </section>

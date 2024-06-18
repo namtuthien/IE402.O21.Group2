@@ -6,12 +6,12 @@ const dashboardRouter = require("./dashboard.route");
 const adminRouter = require("./admin.route");
 const userRouter = require("./user.route");
 const customerRouter = require("./customer.route");
-
 const locationRouter = require("./location.route");
-router.use("/staff", userRouter);
+
 router.use("/map", mapRouter);
+router.use("/locations", locationRouter);
+router.use("/staffs", userRouter);
 router.use("/dashboard", dashboardRouter);
-router.use("/location", locationRouter);
 router.use("/", adminRouter);
 router.use("/customer", customerRouter);
 

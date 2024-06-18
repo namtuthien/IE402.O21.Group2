@@ -5,45 +5,50 @@
   height: 1px;
   background: #eee;
 }
+
 .h-custom {
   height: calc(100% - 73px);
 }
+
 @media (max-width: 450px) {
   .h-custom {
     height: 100%;
   }
 }
-/* -------------------------------------------- */
-/* .formContainer {
-  background-color: #fff;
-  padding: ;
-} */
-.form-control{
-  font-size: 1.34rem;
+
+.form-control {
+  font-size: 1rem;
 }
+
 .form-control:focus {
   box-shadow: 0 0 0 0.25rem #c8ede8;
 }
+
 .form-label {
   color: #000;
   font-weight: 600;
 }
+
 .btn-primary {
   background-color: #087264;
   border: 1px solid #087264;
 }
+
 .forgot-password-txt {
   color: red !important;
 }
+
 .btn:hover {
   color: #fff;
   background-color: #058c7f;
   border-color: #058c7f;
 }
-.btn:disabled{
+
+.btn:disabled {
   background-color: #058c7f;
-    opacity: 0.5;
+  opacity: 0.5;
 }
+
 .main {
   width: 100%;
   background-image: url("/imgs/home/background-login.webp");
@@ -52,20 +57,25 @@
   /* height: 650px;
   padding-top: 30px; */
 }
+
 .formlogin {
+  width: 500px;
   border-radius: 16px;
 }
+
 .formlogin__field-password {
-  position:relative;
+  position: relative;
 }
+
 .formlogin__icon-visibility {
   position: absolute;
   content: "";
-  top: 50px;
+  top: 55%;
   right: 10px;
   color: #087264;
 }
-.formlogin__icon-visibility:hover{
+
+.formlogin__icon-visibility:hover {
   cursor: pointer;
 }
 
@@ -76,17 +86,32 @@
   color: #087264;
   margin-bottom: 20px;
 }
+
+.form-check {
+  background-color: transparent;
+  border: none;
+}
+
 .form-check-input {
   background-color: #fff;
-  
+
 }
+
 .slogan {
   font-size: 76px;
   margin-bottom: 70px;
+  font-weight: 700;
 }
+
+.register-btn {
+  border: none;
+  background-color: transparent;
+  width: 100%;
+}
+
 @media (min-width: 1200px) {
   .col-xl-3-5 {
-      flex: 0 0 auto;
-      width: 31%;
+    flex: 0 0 auto;
+    width: 31%;
   }
 }

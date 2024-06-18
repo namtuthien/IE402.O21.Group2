@@ -1,15 +1,6 @@
 const User = require("../models/user.model");
 
 class Admin {
-  // [GET] /admin/map
-  show(req, res, next) {
-    res.render("./pages/admin/map/index", {
-      pageTitle: "Location",
-      style: "/pages/admin/map.css",
-      script: "/pages/admin/map.js",
-      layout: "map",
-    });
-  }
   // [GET] /admin/customer
   async showCustomers(req, res, next) {
     try {
