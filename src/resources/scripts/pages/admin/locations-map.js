@@ -39,6 +39,7 @@ navbarBtn.addEventListener("click", () => {
     }, 200);
   }
 });
+
 // ArcGIS
 require([
   "esri/Map",
