@@ -23,3 +23,9 @@ singleChecks.forEach((singleCheck) => {
     checkAllElement.checked = allChecked;
   });
 });
+
+const addButton = document.getElementById("add-button");
+const deleteButton = document.getElementById("delete-button");
+
+addButton.classList.add("hidden-important");
+deleteButton.classList.add("hidden-important");

@@ -23,3 +23,10 @@ singleChecks.forEach((singleCheck) => {
     checkAllElement.checked = allChecked;
   });
 });
+
+
+const addButton = document.getElementById("add-button");
+
+addButton.addEventListener("click", () => {
+  window.location.href = "/admin/staffs/addstaff"
+})
