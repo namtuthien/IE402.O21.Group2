@@ -71,38 +71,29 @@
           </th>
           <th class="tourTable-heading_title"
             scope="col">
-            Mã Tour
+            Tour
           </th>
           <th class="tourTable-heading_title"
             scope="col">
-            Tên Tour
+            Khách hàng
           </th>
           <th class="tourTable-heading_title"
             scope="col">
-            Giá vé
+            Điểm
           </th>
           <th class="tourTable-heading_title"
             scope="col">
-            Ngày khởi hành
+            Nội dung đánh giá
           </th>
+
           <th class="tourTable-heading_title"
             scope="col">
-            Ngày/Đêm
-          </th>
-          <th class="tourTable-heading_title"
-            scope="col">
-            Vé trống
-          </th>
-          <th class="tourTable-heading_title"
-            scope="col">
-            <span class="material-icons-outlined">
-              more_vert
-            </span>
+
           </th>
         </tr>
       </thead>
       <tbody id="toursTableBody">
-        {{#each tours}}
+        {{#each ratings}}
           <tr>
             <td class="">
               <input type="checkbox"
@@ -114,41 +105,30 @@
               </p>
             </td>
             <td class="">
-              <p class="toursTable-data tourId">
-                {{this._id}}
-
+              <p class="toursTable-data tourName">
+                {{this.tour.tour_name}}
+              </p>
+            </td>
+            <td class="">
+              <p class="toursTable-data">
+                {{this.customer.user_name}}
+              </p>
+            </td>
+            <td class="">
+              <p class="toursTable-data">
+                {{this.rating_score}}
               </p>
             </td>
             <td class="">
               <p class="toursTable-data tourName">
-                {{this.tour_name}}
-              </p>
-            </td>
-            <td class="">
-              <p class="toursTable-data">
-                {{this.tour_price}}
-              </p>
-            </td>
-            <td class="">
-              <p class="toursTable-data">
-                {{convertDateToDay this.tour_starting_day}}
-              </p>
-            </td>
-            <td class="">
-              <p class="toursTable-data">
-                {{this.tour_number_of_days}}/{{this.tour_number_of_nights}}
+                {{this.rating_detail}}
               </p>
             </td>
 
             <td class="">
-              <p class="toursTable-data">
-                {{this.tour_total_ticket_available}}
-              </p>
-            </td>
-            <td class="">
               <div class="toursAction_container">
-                <span class="material-icons toursAction-icon">
-                  more_vert
+                <span class="material-icons-outlined  toursAction-icon">
+                  reply
                 </span>
               </div>
             </td>
@@ -157,4 +137,61 @@
       </tbody>
     </table>
   </div>
+  <div class="reply-popup">
+    <div class="reply-popup-background">
+      <div class="reply-popup-modal">
+        <div class="modal-heading">Phản hồi đánh giá</div>
+        <div class="modal-feedback-container">
+          <div class="modal-user">
+            <div class="modal-avt">
+              <span class="material-icons-outlined userAvt">
+                account_circle
+              </span>
+
+            </div>
+            <div class="modal-userName">Truong Huynh</div>
+            <div class="modal-rating">
+              <div class="modal-rating-score"></div>
+              <span class="material-icons-outlined star">
+                star
+              </span>
+
+            </div>
+          </div>
+
+          <div class="modal-feedback">
+          </div>
+        </div>
+        <div class="modal-reply-container">
+
+          <div class="modal-user">
+            <span class="material-icons-outlined">
+              subdirectory_arrow_right
+            </span>
+            <div class="modal-avt">
+              <img class="modal-avt-img"
+                src="/imgs/logo3D.png"
+                alt="">
+            </div>
+            <div class="modal-userName">You</div>
+          </div>
+          <div class="modal-reply-input-container">
+            <textarea type="textarea"
+              wrap="soft"
+              placeholder="Nhập phản hồi..."
+              class="modal-reply-input"></textarea>
+          </div>
+        </div>
+        <div class="modal-btns">
+          <div class="sendBtn">
+            <span class="material-icons-outlined send">
+              send
+            </span>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
 </section>

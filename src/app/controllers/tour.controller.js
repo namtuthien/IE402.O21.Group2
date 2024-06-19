@@ -1,6 +1,8 @@
 // import models
 const Tour = require("../models/tour.model");
 const Route = require("../models/route.model");
+const Rating = require("../models/rating.model");
+
 const Line = require("../models/line.model");
 const { getRouteById } = require("./route.controller");
 
@@ -108,7 +110,32 @@ class TourController {
       });
     }
   }
-
+  // [GET] /admin/ratings
+  async showRatings(req, res, next) {
+    try {
+      const ratings = await Rating.find().populate("customer").populate("tour");
+      if (!ratings) {
+        return res.status(404).json({
+          message: "Tour not found!",
+        });
+      }
+      var newTours = [];
+      ratings.forEach((tour) => {
+        newTours.push(tour.toObject());
+      });
+      return res.status(200).render("pages/admin/ratings/index", {
+        pageTitle: "Danh sách đánh giá",
+        style: "/pages/admin/ratings.css",
+        script: "/pages/admin/ratings.js",
+        ratings: newTours,
+        layout: "main",
+      });
+    } catch (err) {
+      res.status(500).json({
+        message: "Internal server error",
+      });
+    }
+  }
   // [GET] /map/tours
   async showToursMap(req, res, next) {
     try {

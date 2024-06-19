@@ -7,11 +7,34 @@ class CustomerController {
     const user_id = req.user_id || "661fe62db3060de4f1801e2e";
     try {
       const user = await User.findOne({ _id: user_id }).select("-user_password");
-      if (user.user_role !== "staff") {
+      if (user.user_role !== "admin") {
         return res.status(403).json("Unathorized action!");
       } else {
-        const listRatings = await Rating.find({});
-        res.status(200).json(listRatings);
+        const listRatings = await Rating.find().populate("customer").populate("tour");
+        let newRatings = [];
+        listRatings.forEach((tour) => {
+          newRatings.push(tour.toObject());
+        });
+        res.status(200).json({ newRatings });
+      }
+    } catch (error) {
+      res.status(500).json(error);
+    }
+  }
+  async getTourRating(req, res, next) {
+    const user_id = req.user_id;
+    const tour_id = req.query.tourId;
+    try {
+      const user = await User.findOne({ _id: user_id }).select("-user_password");
+      if (user.user_role !== "admin") {
+        return res.status(403).json("Unathorized action!");
+      } else {
+        const listRatings = await Rating.find({ tour: tour_id });
+        let newRatings = [];
+        listRatings.forEach((tour) => {
+          newRatings.push(tour.toObject());
+        });
+        res.status(200).json({ newRatings });
       }
     } catch (error) {
       res.status(500).json(error);
