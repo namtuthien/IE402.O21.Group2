@@ -1,6 +1,7 @@
-const bcrypt = require("bcryptjs")
+const bcrypt = require("bcryptjs");
 
-const User = require("../models/user.model")
+const User = require("../models/user.model");
+const Location = require("../models/location.model");
 
 class Admin {
   // [GET] /admin/customer
@@ -35,17 +36,17 @@ class Admin {
       const id = req.params.id;
       const staff = await User.findById(id);
       if (!staff) {
-        return res.status(404).send('Nhân viên không tồn tại');
-        }
-        const formattedStaff = {
-          ...staff.toObject(),
-          user_birthday: staff.user_birthday.toISOString().split('T')[0]
+        return res.status(404).send("Nhân viên không tồn tại");
+      }
+      const formattedStaff = {
+        ...staff.toObject(),
+        user_birthday: staff.user_birthday.toISOString().split("T")[0],
       };
       res.render("pages/admin/crud-staff", {
         pageTitle: "Chỉnh sửa thông tin nhân viên",
         style: "/pages/admin/crud-staff.css",
         script: "/pages/admin/crud-staff.js",
-        staff: formattedStaff
+        staff: formattedStaff,
         // layout: "main",
       });
     } catch (err) {

@@ -5,6 +5,40 @@ import { getLocations } from "/fetch.js";
 // Lấy dữ liệu
 const locations = await getLocations();
 
+//Xử lý sự kiện navbar
+const navbarBtn = document.querySelector(".navbar-btn");
+const navbarContent = document.querySelector(".navbar-content");
+const navbar = document.querySelector(".navbar");
+const navbarBtnIcon = document.querySelector("#btn-icon");
+const tourItems = document.querySelectorAll(".tours-item");
+const tourRight = document.querySelectorAll(".tour-right");
+let navbarAction = true;
+let navbarStatus = false;
+navbarBtn.addEventListener("click", () => {
+  if (navbarStatus) {
+    navbarStatus = false;
+    navbarContent.style.display = "none";
+    navbar.style.width = 0;
+    navbarBtn.style.left = 40;
+    navbarBtn.style.width = 60;
+    navbarBtn.style.boxShadow = "0px 0px 8px rgba(0, 0, 0, 0.5)";
+    navbarBtnIcon.innerHTML = "menu";
+    navbarBtn.style.borderTopLeftRadius = "100%";
+    navbarBtn.style.borderBottomLeftRadius = "100%";
+  } else {
+    navbarStatus = true;
+    navbar.style.width = 360;
+    navbarBtn.style.left = 360;
+    navbarBtn.style.borderTopLeftRadius = 0;
+    navbarBtn.style.borderBottomLeftRadius = 0;
+    setTimeout(() => {
+      navbarBtn.style.width = 60;
+      navbarBtn.style.boxShadow = "2px 0px 4px rgba(0, 0, 0, 0.2)";
+      navbarContent.style.display = "block";
+      navbarBtnIcon.innerHTML = "arrow_back_ios";
+    }, 200);
+  }
+});
 // ArcGIS
 require([
   "esri/Map",
@@ -393,7 +427,90 @@ require([
       }
     }
   );
+  // Focus vào tour trên map và mở popup khi click vào item trên navbar
+  tourRight.forEach((item, index) => {
+    item.addEventListener("click", () => {
+      if (navbarAction) {
+        tourItems.forEach((innerItem) => {
+          innerItem.classList.remove("tours-item-active");
+        });
+        item.parentElement.classList.add("tours-item-active");
 
+        const location = locations[index];
+
+        // Sử dụng featureLayer.queryFeatures để tìm đối tượng trong featureLayer
+        featureLayer
+          .queryFeatures({
+            where: `location_id = '${location._id}'`,
+            returnGeometry: true,
+            outFields: ["*"],
+          })
+          .then((queryResult) => {
+            if (queryResult.features.length > 0) {
+              const feature = queryResult.features[0];
+              console.log(feature.geometry);
+
+              const center = feature.geometry;
+              const zoomLevel = 14;
+
+              view.goTo({ target: center, zoom: zoomLevel }).then(() => {
+                view.popup.open({
+                  features: [feature],
+                  location: center,
+                });
+              });
+            } else {
+              console.warn(
+                `Không tìm thấy đối tượng với location_id = '${location.location._id}' trong featureLayer.`
+              );
+            }
+          })
+          .catch((error) => {
+            console.error("Lỗi khi truy vấn đối tượng từ featureLayer:", error);
+          });
+      }
+    });
+  });
+
+  // Focus đúng item trên navbar khi click vào tour trên map
+  view.on("click", (event) => {
+    if (navbarAction) {
+      view.hitTest(event).then((response) => {
+        const results = response.results;
+        if (results.length > 0) {
+          const resultFilter = results.filter((result) => result.layer === featureLayer)[0];
+          const graphic = resultFilter?.graphic;
+          if (graphic) {
+            const locationId = graphic.attributes.location_id;
+            tourItems.forEach((item, index) => {
+              if (locations[index]._id === locationId) {
+                tourItems.forEach((innerItem) => {
+                  innerItem.classList.remove("tours-item-active");
+                });
+                tourItems[index].classList.add("tours-item-active");
+                const container = document.querySelector(".tours-list");
+                container.scrollTop = tourItems[index].offsetTop - container.offsetTop;
+                const center = graphic.geometry;
+                const zoomLevel = 14;
+
+                view
+                  .goTo({
+                    target: center,
+                    zoom: zoomLevel,
+                  })
+                  .then(() => {
+                    view.popup.open({
+                      features: [graphic],
+                      location: center,
+                    });
+                  });
+              }
+            });
+          }
+        }
+      });
+    }
+  });
   // GET longitue, latitude when click to map
   // var list_points = [];
   // var string_points = "";
