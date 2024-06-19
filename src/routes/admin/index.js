@@ -9,10 +9,10 @@ const customerRouter = require("./customer.route");
 const locationRouter = require("./location.route");
 
 router.use("/map", mapRouter);
+router.use("/dashboard", dashboardRouter);
 router.use("/locations", locationRouter);
 router.use("/staffs", userRouter);
-router.use("/dashboard", dashboardRouter);
+router.use("/customers", customerRouter);
 router.use("/", adminRouter);
-router.use("/customer", customerRouter);
 
 module.exports = router;

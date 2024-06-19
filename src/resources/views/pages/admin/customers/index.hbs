@@ -1,3 +1,4 @@
+{{>admin/dataActionButtons}}
 <section class="tourHeading-section">
   <div class="tourHeading">
     <div class="tourHeadingLeft">
@@ -94,55 +95,55 @@
       </thead>
       <tbody id="toursTableBody">
         {{#each customers}}
-          <tr>
-            <td class="">
-              <input type="checkbox" class="singleCheck" />
-            </td>
-            <td class="">
-              <p class="toursTable-data">
-                {{tourIndex @index}}
-              </p>
-            </td>
-            <td class="">
-              <p class="toursTable-data tourId">
-                {{this._id}}
-              </p>
-            </td>
+        <tr>
+          <td class="">
+            <input type="checkbox" class="singleCheck" />
+          </td>
+          <td class="">
+            <p class="toursTable-data">
+              {{getIndex @index}}
+            </p>
+          </td>
+          <td class="">
+            <p class="toursTable-data tourId">
+              {{this._id}}
+            </p>
+          </td>
 
-            <td class="">
-              <p class="toursTable-data">
-                {{this.user_name}}
-              </p>
-            </td>
-            <td class="">
-              <p class="toursTable-data">
-                {{this.user_email}}
-              </p>
-            </td>
-            <td class="">
-              <p class="toursTable-data">
-                {{address this.user_address}}
-              </p>
-            </td>
+          <td class="">
+            <p class="toursTable-data">
+              {{this.user_name}}
+            </p>
+          </td>
+          <td class="">
+            <p class="toursTable-data">
+              {{this.user_email}}
+            </p>
+          </td>
+          <td class="">
+            <p class="toursTable-data">
+              {{address this.user_address}}
+            </p>
+          </td>
 
-            <td class="">
-              <p class="toursTable-data">
-                {{this.user_phone_number}}
-              </p>
-            </td>
-            <td class="">
-              <p class="toursTable-data">
-                {{gender this.user_gender}}
-              </p>
-            </td>
-            <td class="">
-              <div class="toursAction_container">
-                <span class="material-icons toursAction-icon">
-                  more_vert
-                </span>
-              </div>
-            </td>
-          </tr>
+          <td class="">
+            <p class="toursTable-data">
+              {{this.user_phone_number}}
+            </p>
+          </td>
+          <td class="">
+            <p class="toursTable-data gender">
+              {{gender this.user_gender}}
+            </p>
+          </td>
+          <td class="">
+            <div class="toursAction_container">
+              <span class="material-icons toursAction-icon">
+                more_vert
+              </span>
+            </div>
+          </td>
+        </tr>
         {{/each}}
       </tbody>
     </table>
