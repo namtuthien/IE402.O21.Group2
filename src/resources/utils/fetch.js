@@ -26,7 +26,30 @@ const getTours = async () => {
     alert("error");
   }
 };
-
+const getTourRatings = async (tourId) => {
+  try {
+    const res = await fetch(`/api/rating/getTourRating?tourId=${tourId.trim()}`);
+    if (!res.ok) alert("404");
+    const jsonRes = await res.json();
+    const data = jsonRes.newRatings;
+    return data;
+  } catch (err) {
+    console.log(err);
+    alert("error");
+  }
+};
+const getRatings = async (tourId) => {
+  try {
+    const res = await fetch(`/api/rating/ratings`);
+    if (!res.ok) alert("404");
+    const jsonRes = await res.json();
+    const data = jsonRes.newRatings;
+    return data;
+  } catch (err) {
+    console.log(err);
+    alert("error");
+  }
+};
 const getLinesOfTour = async (routes) => {
   try {
     const res = await fetch(`/api/route/getTourRoutes`);
@@ -40,4 +63,4 @@ const getLinesOfTour = async (routes) => {
   }
 };
 
-export { getLocations, getTours, getLinesOfTour };
+export { getLocations, getTours, getLinesOfTour, getTourRatings, getRatings };
