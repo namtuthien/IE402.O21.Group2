@@ -12,20 +12,20 @@
     </div>
     <ul class="tours-list">
       {{#each locations}}
-        <li class="tours-item">
-          <div class="tour-left">
-            <input type="checkbox" class="tour-check" />
-            <img src="/imgs/logo3D.png" alt="thumbnail" class="tour-thumbnail" />
+      <li class="tours-item">
+        <div class="tour-left">
+          <input type="checkbox" class="tour-check" />
+          <img src="/imgs/logo3D.png" alt="thumbnail" class="tour-thumbnail" />
+        </div>
+        <div class="tour-right">
+          <div class="tour-name">
+            {{this.location_name}}
           </div>
-          <div class="tour-right">
-            <div class="tour-name">
-              {{this.location_name}}
-            </div>
-            <div class="tour-price">
-              {{this.location_type}}
-            </div>
+          <div class="tour-price">
+            {{this.location_type}}
           </div>
-        </li>
+        </div>
+      </li>
       {{/each}}
     </ul>
     <div class="navbar-func">
@@ -61,9 +61,9 @@
   </div>
 </div>
 <div id="viewDiv" style="position: relative;">
-  <button id="btn-add-location">
+  {{!-- <button id="btn-add-location">
     Thêm địa điểm
-  </button>
+  </button> --}}
   {{! cfl = creation-form-location }}
   <div class="modal_overlay" id="modal_form_add_location">
     <div class="cfl__container p-3">
@@ -82,13 +82,8 @@
                 *
               </span>
             </label>
-            <input
-              type="text"
-              name="location_name"
-              class="form-control bg-white"
-              id="inputEmail4"
-              placeholder="Nhập tên địa chỉ"
-            />
+            <input type="text" name="location_name" class="form-control bg-white" id="inputEmail4"
+              placeholder="Nhập tên địa chỉ" />
           </div>
           <div class="form-group col-md-6">
             <label class="text-dark fw-bold" for="inputPassword4">
@@ -97,13 +92,8 @@
                 *
               </span>
             </label>
-            <input
-              type="text"
-              name="location_address"
-              class="form-control bg-white"
-              id="inputPassword4"
-              placeholder="Nhập địa chỉ"
-            />
+            <input type="text" name="location_address" class="form-control bg-white" id="inputPassword4"
+              placeholder="Nhập địa chỉ" />
           </div>
         </div>
         <div class="row my-4">
@@ -111,27 +101,15 @@
             <label class="text-dark fw-bold" for="inputEmail4">
               Kinh độ
             </label>
-            <input
-              type="text"
-              name="location_coordinate_longitude"
-              readonly
-              class="form-control bg-white"
-              id="inputEmail4"
-              placeholder="11.023921381411023124"
-            />
+            <input type="text" name="location_coordinate_longitude" readonly class="form-control bg-white"
+              id="inputEmail4" placeholder="11.023921381411023124" />
           </div>
           <div class="form-group col-md-6">
             <label class="text-dark fw-bold" for="inputPassword4">
               Vĩ độ
             </label>
-            <input
-              type="text"
-              name="location_coordinate_latitude"
-              readonly
-              class="form-control bg-white"
-              id="inputPassword4"
-              placeholder="123.3912938813213"
-            />
+            <input type="text" name="location_coordinate_latitude" readonly class="form-control bg-white"
+              id="inputPassword4" placeholder="123.3912938813213" />
           </div>
         </div>
 
@@ -143,37 +121,22 @@
                 *
               </span>
             </label>
-            <input
-              type="text"
-              name="location_type"
-              class="form-control bg-white"
-              id="inputEmail4"
-              placeholder="Chọn loại địa điểm..."
-            />
+            <input type="text" name="location_type" class="form-control bg-white" id="inputEmail4"
+              placeholder="Chọn loại địa điểm..." />
           </div>
           <div class="form-group col-sm">
             <label class="text-dark fw-bold" for="inputPassword4">
               Số điện thoại
             </label>
-            <input
-              type="text"
-              name="location_phone_number"
-              class="form-control bg-white"
-              id="inputPassword4"
-              placeholder="Nhập số điện thoại..."
-            />
+            <input type="text" name="location_phone_number" class="form-control bg-white" id="inputPassword4"
+              placeholder="Nhập số điện thoại..." />
           </div>
           <div class="form-group col-sm">
             <label class="text-dark fw-bold" for="inputPassword4">
               Website
             </label>
-            <input
-              type="text"
-              name="location_website"
-              class="form-control bg-white"
-              id="inputPassword4"
-              placeholder="Nhập website..."
-            />
+            <input type="text" name="location_website" class="form-control bg-white" id="inputPassword4"
+              placeholder="Nhập website..." />
           </div>
         </div>
 
@@ -182,13 +145,8 @@
             <label class="text-dark fw-bold" for="inputEmail4">
               Mô tả địa điểm
             </label>
-            <input
-              type="text"
-              name="location_description"
-              class="form-control bg-white"
-              id="inputEmail4"
-              placeholder="Nhập mô tả địa điểm..."
-            />
+            <input type="text" name="location_description" class="form-control bg-white" id="inputEmail4"
+              placeholder="Nhập mô tả địa điểm..." />
           </div>
         </div>
         <div class="row my-4 d-flex align-items-center justify-content-between">
@@ -198,11 +156,7 @@
             </label>
           </div>
           <div class="form-group col-sm d-flex justify-content-end">
-            <button
-              type="button"
-              class="btn btn-danger d-flex align-items-center"
-              id="delete_activity"
-            >
+            <button type="button" class="btn btn-danger d-flex align-items-center" id="delete_activity">
               <span class="material-icons-outlined">
                 delete_forever
               </span>
@@ -218,12 +172,7 @@
               <tr>
                 <th scope="col">
                   <div class="form-check">
-                    <input
-                      class="form-check-input"
-                      type="checkbox"
-                      value=""
-                      id="select_all_activity"
-                    />
+                    <input class="form-check-input" type="checkbox" value="" id="select_all_activity" />
                   </div>
                 </th>
                 <th scope="col">

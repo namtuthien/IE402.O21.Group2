@@ -12,6 +12,7 @@ const Rating = new Schema({
     ref: "Tour",
     required: true,
   },
+  reply: { type: Array, default: [] },
   rating_score: { type: Number, default: 5 },
   rating_detail: { type: String },
   created_at: { type: Date, default: () => Date.now() },
