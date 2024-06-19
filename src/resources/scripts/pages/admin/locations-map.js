@@ -14,31 +14,6 @@ const tourItems = document.querySelectorAll(".tours-item");
 const tourRight = document.querySelectorAll(".tour-right");
 let navbarAction = true;
 let navbarStatus = false;
-navbarBtn.addEventListener("click", () => {
-  if (navbarStatus) {
-    navbarStatus = false;
-    navbarContent.style.display = "none";
-    navbar.style.width = 0;
-    navbarBtn.style.left = 40;
-    navbarBtn.style.width = 60;
-    navbarBtn.style.boxShadow = "0px 0px 8px rgba(0, 0, 0, 0.5)";
-    navbarBtnIcon.innerHTML = "menu";
-    navbarBtn.style.borderTopLeftRadius = "100%";
-    navbarBtn.style.borderBottomLeftRadius = "100%";
-  } else {
-    navbarStatus = true;
-    navbar.style.width = 360;
-    navbarBtn.style.left = 360;
-    navbarBtn.style.borderTopLeftRadius = 0;
-    navbarBtn.style.borderBottomLeftRadius = 0;
-    setTimeout(() => {
-      navbarBtn.style.width = 60;
-      navbarBtn.style.boxShadow = "2px 0px 4px rgba(0, 0, 0, 0.2)";
-      navbarContent.style.display = "block";
-      navbarBtnIcon.innerHTML = "arrow_back_ios";
-    }, 200);
-  }
-});
 
 // ArcGIS
 require([
@@ -78,6 +53,16 @@ require([
   // Nút thêm địa điểm
   const btnAddLocation = document.querySelector("#btn-add-location");
   btnAddLocation.onclick = function () {
+    navbarStatus = false;
+    navbarContent.style.display = "none";
+    navbar.style.width = 0;
+    navbarBtn.style.left = 40;
+    navbarBtn.style.width = 60;
+    navbarBtn.style.boxShadow = "0px 0px 8px rgba(0, 0, 0, 0.5)";
+    navbarBtnIcon.innerHTML = "menu";
+    navbarBtn.style.borderTopLeftRadius = "100%";
+    navbarBtn.style.borderBottomLeftRadius = "100%";
+
     isAddingLocation = true;
     viewDivContainer.style = 'cursor: url("/imgs/cursor-add-location.png"),auto';
   };
@@ -428,6 +413,38 @@ require([
       }
     }
   );
+
+  //Xử lý action navbar
+  navbarBtn.addEventListener("click", () => {
+    if (navbarStatus) {
+      navbarStatus = false;
+      navbarContent.style.display = "none";
+      navbar.style.width = 0;
+      navbarBtn.style.left = 40;
+      navbarBtn.style.width = 60;
+      navbarBtn.style.boxShadow = "0px 0px 8px rgba(0, 0, 0, 0.5)";
+      navbarBtnIcon.innerHTML = "menu";
+      navbarBtn.style.borderTopLeftRadius = "100%";
+      navbarBtn.style.borderBottomLeftRadius = "100%";
+    } else {
+      if (isAddingLocation) {
+        isAddingLocation = false;
+        viewDivContainer.style = "cursor: auto";
+      }
+
+      navbarStatus = true;
+      navbar.style.width = 360;
+      navbarBtn.style.left = 360;
+      navbarBtn.style.borderTopLeftRadius = 0;
+      navbarBtn.style.borderBottomLeftRadius = 0;
+      setTimeout(() => {
+        navbarBtn.style.width = 60;
+        navbarBtn.style.boxShadow = "2px 0px 4px rgba(0, 0, 0, 0.2)";
+        navbarContent.style.display = "block";
+        navbarBtnIcon.innerHTML = "arrow_back_ios";
+      }, 200);
+    }
+  });
   // Focus vào tour trên map và mở popup khi click vào item trên navbar
   tourRight.forEach((item, index) => {
     item.addEventListener("click", () => {
