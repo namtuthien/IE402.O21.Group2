@@ -84,9 +84,11 @@ ul {
 .tours-list {
   margin-top: 16px;
   height: 76vh;
+  
+}
+.scroll{
   overflow-y: scroll;
 }
-
 .tours-item {
   margin-bottom: 0.5rem;
   padding: 0.5rem !important;

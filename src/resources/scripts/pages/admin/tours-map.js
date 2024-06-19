@@ -3,18 +3,22 @@ import { convertDateToHourDayMonthYear, convertHourDayMonthYearToDate } from "/f
 
 const results = await getLinesOfTour();
 const tourRoutes = results.tourRoutes;
-const tours = results.tours;
 const deletePopup = document.getElementById("deletePopupContainer");
 const navbarBtn = document.querySelector(".navbar-btn");
 const navbarContent = document.querySelector(".navbar-content");
 const navbar = document.querySelector(".navbar");
 const navbarBtnIcon = document.querySelector("#btn-icon");
 const tourItems = document.querySelectorAll(".tours-item");
+const tourList = document.querySelector(".tours-list");
+
 const tourRight = document.querySelectorAll(".tour-right");
 const tourCheck = document.querySelectorAll(".tour-check");
 const tourIds = document.querySelectorAll(".tour-id");
 let navbarAction = true;
 let navbarStatus = false;
+if (tourRoutes.length >= 9) {
+  tourList.classList.add("scroll");
+}
 navbarBtn.addEventListener("click", () => {
   if (navbarStatus) {
     navbarStatus = false;
