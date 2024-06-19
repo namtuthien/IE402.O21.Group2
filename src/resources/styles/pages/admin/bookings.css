@@ -122,6 +122,7 @@
   
   .bookingsAction-icon {
     color: var(--primary3);
+    text-decoration: none;
   }
   
   .bookingsAction-icon:hover {
