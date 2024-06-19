@@ -20,7 +20,7 @@ class StaffController {
   async showRealTimeLocation(req,res,next) {
     res.render("./pages/staff/test", {
       pageTitle: "Xem vị trí",
-      style: "/pages/admin/map.css",
+      style: "/pages/admin/locations-map.css",
       script: "/pages/staff/map.js",
       layout: "map",
     });
