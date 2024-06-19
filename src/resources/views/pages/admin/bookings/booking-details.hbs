@@ -1,0 +1,90 @@
+<body class="booking-details__body">
+    <div class="booking-details">
+        <form class="booking-details__form" id="bookingDetailsForm">
+            <div class="booking-details__flex-group">
+                <div class="booking-details__form-group">
+                    <label for="booking-details-booking-id" class="booking-details__label">Mã Đặt Tour</label>
+                    <input type="text" id="booking-details-booking-id" name="booking-details-booking-id" class="booking-details__input booking-details__id-input" value="{{booking._id}}" readonly>
+                </div>
+                <div class="booking-details__form-group">
+                    <label for="booking-details-customer-id" class="booking-details__label">Mã Khách hàng</label>
+                    <input type="text" id="booking-details-customer-id" name="booking-details-customer-id" class="booking-details__input booking-details__id-input" value="{{booking.customer}}" readonly>
+                </div>
+                <div class="booking-details__form-group">
+                    <label for="booking-details-tour-id" class="booking-details__label">Mã Tour</label>
+                    <input type="text" id="booking-details-tour-id" name="booking-details-tour-id" class="booking-details__input booking-details__id-input" value="{{booking.tour}}" readonly>
+                </div>
+                <div class="booking-details__form-group">
+                    <label for="booking-details-staff-id" class="booking-details__label">Mã Nhân viên</label>
+                    <input type="text" id="booking-details-staff-id" name="booking-details-staff-id" class="booking-details__input booking-details__id-input" value="{{booking.staff}}" readonly>
+                </div>
+                <div class="booking-details__form-group">
+                    <label for="booking-details-payment-id" class="booking-details__label">Mã Thanh toán</label>
+                    <input type="text" id="booking-details-payment-id" name="booking-details-payment-id" class="booking-details__input booking-details__id-input" value="{{booking.payment_id._id}}" readonly>
+                </div>
+            </div>
+            <div class="booking-details__flex-group">
+              <div class="booking-details__form-group">
+                  <label for="booking-amount" class="booking-details__label">Số vé</label>
+                  <input type="number" id="booking-amount" name="booking-amount" class="booking-details__input" value="{{booking.booking_amount}}">
+              </div>
+            </div>
+            <div class="booking-details__flex-group">
+              <div class="booking-details__form-group">
+                  <label for="booking-total-price" class="booking-details__label">Tổng tiền</label>
+                  <input type="text" id="booking-total-price" name="booking-total-price" class="booking-details__input" placeholder="Nhập tổng tiền..." value="{{booking.booking_total_price}}">
+              </div>
+            </div>
+            <div class="booking-details__flex-group">
+              <div class="booking-details__form-group">
+                  <label for="booking-create-date" class="booking-details__label">Ngày đặt Tour</label>
+                  <input type="date" id="booking-create-date" name="booking-create-date" class="booking-details__input" value="{{convertDateToDayStandardFormat booking.created_at}}">
+              </div>
+            </div>
+            <div class="booking-details__flex-group">
+                <div class="booking-details__form-group">
+                    <label for="booking-status" class="booking-details__label">Trạng thái</label>
+                    <select id="booking-status" name="booking-status" class="booking-details__input">
+                    {{#if (eq booking.booking_status "false")}}
+                        <option value="canceled" selected>Đã hủy</option>
+                        <option value="paid">Đã thanh toán</option>
+                        <option value="unpaid">Chưa thanh toán</option>
+                    {{else}}
+                        {{#if (eq booking.payment_id.payment_status "true")}}
+                            <option value="canceled">Đã hủy</option>
+                            <option value="paid" selected>Đã thanh toán</option>
+                            <option value="unpaid">Chưa thanh toán</option>
+                        {{else}}
+                            <option value="canceled">Đã hủy</option>
+                            <option value="paid">Đã thanh toán</option>
+                            <option value="unpaid" selected>Chưa thanh toán</option>
+                        {{/if}}
+                    {{/if}}
+                    </select>
+                </div>
+            </div>
+            <div class="booking-details__form-group">
+                <label for="booking-description" class="booking-details__label">Ghi chú</label>
+                <textarea id="booking-description" name="booking-description" class="booking-details__textarea" placeholder="Nhập ghi chú...">{{booking.booking_note}}</textarea>
+            </div>
+            <div class="booking-details__form-group booking-details__form-group--submit">
+                {{#if booking.booking_removed}}
+                    <div class="booking-details__submit-button booking-details__remove-submit-button">
+                    {{!-- <i class="material-icons">delete_forever</i> --}}
+                        Đã bị xóa
+                    </div>
+                {{else}}
+                    <button type="button" class="booking-details__submit-button" id="updateBookingButton">
+                        <i class="material-icons">save</i>
+                        Cập nhật
+                    </button>
+                    <button type="button" class="booking-details__submit-button booking-details__remove-submit-button" id="removeBookingButton">
+                    <i class="material-icons">delete_forever</i>
+                        Xóa Đặt Tour
+                    </button>
+                {{/if}}
+                {{> admin/deletePopup message="Bạn có muốn xóa Booking này không?" handleRequestUrl="/admin/bookings/delete/" elementId=booking._id}}
+            </div>
+        </form>
+    </div>
+</body>

@@ -47,7 +47,28 @@ app.engine(
       formatPrice: (price) => price.toLocaleString("de-DE"),
       ifEquals: (arg1, arg2, options) => {
         return (arg1 == arg2) ? options.fn(this) : options.inverse(this);
-      }
+      },
+      convertDateToDayStandardFormat: (tour_starting_day) => {
+        var timestampStr = tour_starting_day;
+        var date = new Date(timestampStr);
+        var day = date.getDate();
+        var month = date.getMonth() + 1;
+        var year = date.getFullYear();
+        var formattedDate;
+        if (month < 10 && day < 10) {
+          formattedDate = year + "-0" + month + "-0" + day;
+        }
+        else if (month < 10 && day >= 10) {
+          formattedDate = year + "-0" + month + "-" + day;
+        }
+        else if (month >= 10 && day < 10) {
+          formattedDate = year + "-" + month + "-0" + day;
+        }
+        else {
+          formattedDate = year + "-" + month + "-" + day;
+        }
+        return formattedDate;
+      },
     },
     partialsDir: [
       path.join(__dirname, "resources", "views", "partials"),
