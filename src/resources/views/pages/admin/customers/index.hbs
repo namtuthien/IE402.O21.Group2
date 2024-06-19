@@ -4,7 +4,9 @@
     <div class="tourHeadingLeft">
       <div class="searchBar">
         <div class="searchBar-input">
-          <input type="text" class="searchInput" placeholder="Tìm khách hàng..." />
+          <input type="text"
+            class="searchInput"
+            placeholder="Tìm khách hàng..." />
         </div>
         <div class="line">
         </div>
@@ -61,32 +63,42 @@
       </caption> }}
       <thead id="toursTable-heading">
         <tr class="toursTable-heading_row">
-          <th class="tourTable-heading_title" scope="col">
-            <input type="checkbox" class="allCheck" />
+          <th class="tourTable-heading_title"
+            scope="col">
+            <input type="checkbox"
+              class="allCheck" />
           </th>
-          <th class="tourTable-heading_title" scope="col">
+          <th class="tourTable-heading_title"
+            scope="col">
             STT
           </th>
-          <th class="tourTable-heading_title" scope="col">
+          <th class="tourTable-heading_title"
+            scope="col">
             Mã KH
           </th>
-          <th class="tourTable-heading_title" scope="col">
+          <th class="tourTable-heading_title"
+            scope="col">
             Tên KH
           </th>
-          <th class="tourTable-heading_title" scope="col">
+          <th class="tourTable-heading_title"
+            scope="col">
             Email
           </th>
-          <th class="tourTable-heading_title" scope="col">
+          <th class="tourTable-heading_title"
+            scope="col">
             Địa chỉ
           </th>
-          <th class="tourTable-heading_title" scope="col">
+          <th class="tourTable-heading_title"
+            scope="col">
             SĐT
           </th>
-          <th class="tourTable-heading_title" scope="col">
+          <th class="tourTable-heading_title"
+            scope="col">
             Giới tính
           </th>
 
-          <th class="tourTable-heading_title" scope="col">
+          <th class="tourTable-heading_title"
+            scope="col">
             <span class="material-icons-outlined">
               more_vert
             </span>
@@ -95,58 +107,60 @@
       </thead>
       <tbody id="toursTableBody">
         {{#each customers}}
-        <tr>
-          <td class="">
-            <input type="checkbox" class="singleCheck" />
-          </td>
-          <td class="">
-            <p class="toursTable-data">
-              {{getIndex @index}}
-            </p>
-          </td>
-          <td class="">
-            <p class="toursTable-data tourId">
-              {{this._id}}
-            </p>
-          </td>
+          <tr>
+            <td class="">
+              <input type="checkbox"
+                class="singleCheck" />
+            </td>
+            <td class="">
+              <p class="toursTable-data">
+                {{getIndex @index}}
+              </p>
+            </td>
+            <td class="">
+              <p class="toursTable-data tourId">
+                {{this._id}}
+              </p>
+            </td>
 
-          <td class="">
-            <p class="toursTable-data">
-              {{this.user_name}}
-            </p>
-          </td>
-          <td class="">
-            <p class="toursTable-data">
-              {{this.user_email}}
-            </p>
-          </td>
-          <td class="">
-            <p class="toursTable-data">
-              {{address this.user_address}}
-            </p>
-          </td>
+            <td class="">
+              <p class="toursTable-data">
+                {{this.user_name}}
+              </p>
+            </td>
+            <td class="">
+              <p class="toursTable-data">
+                {{this.user_email}}
+              </p>
+            </td>
+            <td class="">
+              <p class="toursTable-data">
+                {{address this.user_address}}
+              </p>
+            </td>
 
-          <td class="">
-            <p class="toursTable-data">
-              {{this.user_phone_number}}
-            </p>
-          </td>
-          <td class="">
-            <p class="toursTable-data gender">
-              {{gender this.user_gender}}
-            </p>
-          </td>
-          <td class="">
-            <div class="toursAction_container">
-              <span class="material-icons toursAction-icon">
-                more_vert
-              </span>
-            </div>
-          </td>
-        </tr>
+            <td class="">
+              <p class="toursTable-data">
+                {{this.user_phone_number}}
+              </p>
+            </td>
+            <td class="">
+              <p class="toursTable-data gender">
+                {{gender this.user_gender}}
+              </p>
+            </td>
+            <td class="">
+              <div class="toursAction_container">
+                <span class="material-icons toursAction-icon">
+                  more_vert
+                </span>
+              </div>
+            </td>
+          </tr>
         {{/each}}
       </tbody>
     </table>
   </div>
 </section>
-<script src="./helper.js" type="script"></script>
+<script src="./helper.js"
+  type="script"></script>

@@ -1,6 +1,8 @@
 // import models
 const Tour = require("../models/tour.model");
 const Route = require("../models/route.model");
+const Rating = require("../models/rating.model");
+
 const Line = require("../models/line.model");
 const { getRouteById } = require("./route.controller");
 
