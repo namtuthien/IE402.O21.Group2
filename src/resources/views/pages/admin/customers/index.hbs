@@ -1,9 +1,12 @@
+{{>admin/dataActionButtons}}
 <section class="tourHeading-section">
   <div class="tourHeading">
     <div class="tourHeadingLeft">
       <div class="searchBar">
         <div class="searchBar-input">
-          <input type="text" class="searchInput" placeholder="Tìm khách hàng..." />
+          <input type="text"
+            class="searchInput"
+            placeholder="Tìm khách hàng..." />
         </div>
         <div class="line">
         </div>
@@ -60,32 +63,42 @@
       </caption> }}
       <thead id="toursTable-heading">
         <tr class="toursTable-heading_row">
-          <th class="tourTable-heading_title" scope="col">
-            <input type="checkbox" class="allCheck" />
+          <th class="tourTable-heading_title"
+            scope="col">
+            <input type="checkbox"
+              class="allCheck" />
           </th>
-          <th class="tourTable-heading_title" scope="col">
+          <th class="tourTable-heading_title"
+            scope="col">
             STT
           </th>
-          <th class="tourTable-heading_title" scope="col">
+          <th class="tourTable-heading_title"
+            scope="col">
             Mã KH
           </th>
-          <th class="tourTable-heading_title" scope="col">
+          <th class="tourTable-heading_title"
+            scope="col">
             Tên KH
           </th>
-          <th class="tourTable-heading_title" scope="col">
+          <th class="tourTable-heading_title"
+            scope="col">
             Email
           </th>
-          <th class="tourTable-heading_title" scope="col">
+          <th class="tourTable-heading_title"
+            scope="col">
             Địa chỉ
           </th>
-          <th class="tourTable-heading_title" scope="col">
+          <th class="tourTable-heading_title"
+            scope="col">
             SĐT
           </th>
-          <th class="tourTable-heading_title" scope="col">
+          <th class="tourTable-heading_title"
+            scope="col">
             Giới tính
           </th>
 
-          <th class="tourTable-heading_title" scope="col">
+          <th class="tourTable-heading_title"
+            scope="col">
             <span class="material-icons-outlined">
               more_vert
             </span>
@@ -96,7 +109,8 @@
         {{#each customers}}
           <tr>
             <td class="">
-              <input type="checkbox" class="singleCheck" />
+              <input type="checkbox"
+                class="singleCheck" />
             </td>
             <td class="">
               <p class="toursTable-data">
@@ -131,7 +145,7 @@
               </p>
             </td>
             <td class="">
-              <p class="toursTable-data">
+              <p class="toursTable-data gender">
                 {{gender this.user_gender}}
               </p>
             </td>
@@ -148,4 +162,5 @@
     </table>
   </div>
 </section>
-<script src="./helper.js" type="script"></script>
+<script src="./helper.js"
+  type="script"></script>

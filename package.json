@@ -19,8 +19,9 @@
     "bootstrap": "^5.3.3",
     "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
+    "current-location-geo": "^1.1.5",
     "dotenv": "^16.4.5",
-    "express": "^4.18.2",
+    "express": "^4.19.2",
     "express-handlebars": "^7.1.2",
     "jsonwebtoken": "^9.0.2",
     "jwt-simple": "^0.5.6",
@@ -29,7 +30,8 @@
     "mongoose": "^8.2.1",
     "mongoose-delete": "^1.0.2",
     "mongoose-slug-generator": "^1.0.4",
-    "nodemon": "^3.1.0"
+    "nodemon": "^3.1.0",
+    "socket.io": "^4.7.5"
   },
   "devDependencies": {
     "husky": "^9.0.11",

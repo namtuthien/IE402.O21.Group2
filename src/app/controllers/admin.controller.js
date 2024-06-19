@@ -1,7 +1,6 @@
 const bcrypt = require("bcryptjs");
 
 const User = require("../models/user.model");
-const Location = require("../models/location.model");
 
 class Admin {
   // [GET] /admin/customer

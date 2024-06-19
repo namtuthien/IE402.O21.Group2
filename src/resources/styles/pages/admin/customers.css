@@ -1,143 +1,171 @@
-.toursTable-section{
+.toursTable-section {
   min-height: 73vh;
+  padding: 0 1rem;
 }
-.tourHeading-section{
+
+.tourHeading-section {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 16px;
+  padding: 0 1rem;
 }
-.tourHeading{
+
+.tourHeading {
   display: flex;
   align-items: center;
   justify-content: space-between;
   max-width: 1400px;
   flex: 1;
-  margin-top: 40px;
+}
 
-}
-.tourHeadingLeft{
-}
-.searchBar{
+.searchBar {
   display: flex;
   align-items: center;
   border: 1px solid gray;
   padding: 4px 8px;
   border-radius: 4px;
 }
-.line{
+
+.line {
   height: 30px;
   width: 0px;
   border-left: 1px solid gray;
-   margin: 0px 8px;
+  margin: 0px 8px;
 }
-.searchBar-icon:hover{
+
+.searchBar-icon:hover {
   cursor: pointer;
 }
-.searchInput{
+
+.searchInput {
   border: none;
   background-color: transparent;
-  outline: none ;
+  outline: none;
 }
-.tourHeadingRight{
-}
-.paginationBar{
+
+.tourHeadingRight {}
+
+.paginationBar {
   display: flex;
   align-items: center;
   border: 1px solid gray;
   align-items: center;
   border-radius: 4px;
 }
-.pageLine{
+
+.pageLine {
   height: 36px;
   width: 0px;
   border-left: 1px solid gray;
 
 }
-.paginationBar-btn{
+
+.paginationBar-btn {
   width: 36px;
   height: 36px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.current-page{
+
+.current-page {
   background-color: var(--primary3);
   color: aliceblue;
 }
-.paginationBar-btn:hover{
+
+.paginationBar-btn:hover {
   cursor: pointer;
 }
-.toursTable-section{
+
+.toursTable-section {
   display: flex;
-  align-items: center; 
+  align-items: center;
   flex-direction: column;
 }
-.toursTable-container{
+
+.toursTable-container {
   display: flex;
   justify-content: space-between;
   max-width: 1400px;
   width: 100%;
 
 }
-.toursTable{
+
+.toursTable {
   border-color: var(--primary1);
 
 }
+
 .toursTable {
-  td{
+  td {
     text-align: center;
-    
+
   }
-  th{
+
+  th {
     text-align: center;
     background-color: var(--primary1);
     border-color: var(--primary3);
     color: var(--white);
-    
+
   }
-  p{
+
+  p {
     margin-bottom: 0px;
     overflow: hidden;
   }
-  
+
 }
-.toursAction_container:hover{
+
+.toursAction_container:hover {
   cursor: pointer;
 }
-.toursAction-icon{
+
+.toursAction-icon {
   color: var(--primary3);
 }
-.toursAction-icon:hover{
+
+.toursAction-icon:hover {
   color: var(--primary1);
 }
-.addTourBtn-container{
+
+.addTourBtn-container {
   display: flex;
   width: 1200px;
   justify-content: flex-end;
   justify-self: center;
 }
-.toursTable-data{
-  max-width: 520px; 
+
+.toursTable-data {
+  max-width: 520px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.tourId:hover{
+
+.tourId:hover {
   cursor: pointer;
   color: var(--primary1);
   text-decoration: underline;
 }
 
-.singleCheck, .allCheck {
+.singleCheck,
+.allCheck {
   accent-color: var(--primary3);
   width: 16px;
   height: 16px;
 }
-.singleCheck:hover{
+
+.singleCheck:hover {
   accent-color: var(--primary1);
 }
+
 .allCheck:hover {
   accent-color: var(--primary1);
-  
+
+}
+
+.gender {
+  width: 80px;
 }

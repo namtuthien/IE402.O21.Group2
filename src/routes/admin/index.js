@@ -3,16 +3,16 @@ const router = express.Router();
 
 const mapRouter = require("./map.route");
 const dashboardRouter = require("./dashboard.route");
-const adminRouter = require("./admin.route");
-const userRouter = require("./user.route");
+const staffRouter = require("./staff.route");
 const customerRouter = require("./customer.route");
 const locationRouter = require("./location.route");
+const tourRouter = require("./tour.route");
 
 router.use("/map", mapRouter);
-router.use("/locations", locationRouter);
-router.use("/staffs", userRouter);
 router.use("/dashboard", dashboardRouter);
-router.use("/", adminRouter);
-router.use("/customer", customerRouter);
+router.use("/locations", locationRouter);
+router.use("/staffs", staffRouter);
+router.use("/customers", customerRouter);
+router.use("/tours", tourRouter);
 
 module.exports = router;

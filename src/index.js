@@ -6,6 +6,8 @@ const methodOverride = require("method-override");
 const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
 const path = require("path");
+const http = require("http");
+const { Server } = require("socket.io");
 
 // import configs
 const { HOST, PORT, db } = require("./config");
@@ -18,6 +20,8 @@ dotenv.config();
 
 // run app
 const app = express();
+const server = http.createServer(app); // Sử dụng HTTP server của Node.js
+const io = new Server(server); // Tạo đối tượng Socket.IO server
 
 // connect to DB
 db.connect();
@@ -79,5 +83,26 @@ app.use(methodOverride("_method"));
 // import router
 route(app);
 
+// Thiết lập các sự kiện Socket.IO
+let tourGuideLocations = [];
+
+io.on("connection", (socket) => {
+  console.log("A user connected");
+
+  // Gửi dữ liệu hiện tại cho client mới kết nối
+  socket.emit("location update", tourGuideLocations);
+
+  // Lắng nghe sự kiện 'location update'
+  socket.on("location update", (location) => {
+    tourGuideLocations.push(location);
+    io.emit("location update", tourGuideLocations); // Phát lại cho tất cả các client
+  });
+
+  // Sự kiện ngắt kết nối
+  socket.on("disconnect", () => {
+    console.log("User disconnected");
+  });
+});
+
 // start server
-app.listen(PORT, () => console.log(`Application is running at: http://${HOST}:${PORT}`));
+server.listen(PORT, () => console.log(`Application is running at: http://${HOST}:${PORT}`));

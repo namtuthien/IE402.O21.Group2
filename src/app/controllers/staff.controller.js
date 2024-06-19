@@ -43,8 +43,15 @@ class StaffController {
       });
     }
   }
-
-  // [GET] /staffs
+  // [GET] /staff/tourguides/location/show
+  async showRealTimeLocation(req, res, next) {
+    res.render("./pages/staff/test", {
+      pageTitle: "Xem vị trí",
+      style: "/pages/admin/locations-map.css",
+      script: "/pages/staff/map.js",
+      layout: "map",
+    });
+  }
   async showStaffs(req, res, next) {
     try {
       const staffs = await User.find({ user_role: "staff" });

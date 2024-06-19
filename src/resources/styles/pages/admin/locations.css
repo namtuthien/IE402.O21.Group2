@@ -162,6 +162,11 @@
     text-align: left;
 }
 
+
+.locationWebsite {
+    text-align: left;
+}
+
 .singleCheck,
 .allCheck {
     accent-color: var(--primary3);

@@ -214,7 +214,7 @@ require([
       }
     });
     try {
-      fetch(`/admin/tour/destroy`, {
+      fetch(`/api/tour/destroy`, {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",
@@ -445,7 +445,7 @@ require([
           tour.tour_total_ticket = parseInt(attributes.tour_total_ticket);
           tour.tour_total_ticket_available = parseInt(attributes.tour_total_ticket_available);
           try {
-            fetch(`/admin/tour/edit/${tour_id}`, {
+            fetch(`/api/tour/edit/${tour_id}`, {
               method: "PATCH",
               headers: {
                 "Content-Type": "application/json",
@@ -499,7 +499,7 @@ require([
           }
         } else if (result.edits.deleteFeatures && result.edits.deleteFeatures.length > 0) {
           try {
-            fetch(`/admin/tour/delete/${tour_id}`, {
+            fetch(`/api/tour/delete/${tour_id}`, {
               method: "DELETE",
               headers: {
                 "Content-Type": "application/json",
