@@ -7,6 +7,7 @@ const staffRouter = require("./staff.route");
 const customerRouter = require("./customer.route");
 const locationRouter = require("./location.route");
 const tourRouter = require("./tour.route");
+const bookingRouter = require("./booking.route");
 
 router.use("/map", mapRouter);
 router.use("/dashboard", dashboardRouter);
@@ -14,5 +15,6 @@ router.use("/locations", locationRouter);
 router.use("/staffs", staffRouter);
 router.use("/customers", customerRouter);
 router.use("/tours", tourRouter);
+router.use("/bookings", bookingRouter);
 
 module.exports = router;

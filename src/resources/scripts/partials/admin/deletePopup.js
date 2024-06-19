@@ -18,10 +18,13 @@ document.getElementById('submitDeleteButton').addEventListener('click', function
         })
         .then(response => response.json())
         .then(data => {
+            document.getElementById('deletePopupContainer').style.display = 'none';
             alert("Xóa thành công!");
+            location.reload();
         })
         .catch(error => {
             alert("Lỗi khi xóa!")
+            document.getElementById('deletePopupContainer').style.display = 'none';
         }) 
     }
     document.getElementById('deletePopupContainer').style.display = 'none';

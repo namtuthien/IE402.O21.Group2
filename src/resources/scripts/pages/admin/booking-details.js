@@ -19,7 +19,7 @@ document.getElementById('updateBookingButton').addEventListener('click', functio
         booking_note: formData.get('booking-description')
     };
     console.log(data);
-    fetch(`/admin/bookings/update/${data._id}`, {
+    fetch(`/api/bookings/update/${data._id}`, {
         method: 'PATCH',
         headers: {
             'Content-Type': 'application/json'
