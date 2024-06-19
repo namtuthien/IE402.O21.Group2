@@ -3,6 +3,32 @@ const bcrypt = require("bcryptjs")
 const User = require("../models/user.model")
 
 class Admin {
+  // [GET] /admin/customer
+  async showCustomers(req, res, next) {
+    try {
+      const customers = await User.find({ user_role: "customer" });
+      if (!customers) {
+        return res.status(404).json({
+          message: "Tour not found!",
+        });
+      }
+      var newCustomers = [];
+      customers.forEach((tour) => {
+        newCustomers.push(tour.toObject());
+      });
+      res.render("./pages/admin/customers/index", {
+        pageTitle: "Customer",
+        style: "/pages/admin/customers.css",
+        script: "/pages/admin/customers.js",
+        customers: newCustomers,
+        layout: "main",
+      });
+    } catch (err) {
+      res.status(500).json({
+        message: "Internal server error",
+      });
+    }
+  }
   // [GET] /admin/staff/view/:id
   async showEditStaffForm(req, res, next) {
     try {
