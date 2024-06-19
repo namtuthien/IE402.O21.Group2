@@ -1,25 +1,51 @@
-const bcrypt = require("bcryptjs")
+const bcrypt = require("bcryptjs");
 
-const User = require("../models/user.model")
+const User = require("../models/user.model");
 
 class Admin {
+  // [GET] /admin/customer
+  async showCustomers(req, res, next) {
+    try {
+      const customers = await User.find({ user_role: "customer" });
+      if (!customers) {
+        return res.status(404).json({
+          message: "Tour not found!",
+        });
+      }
+      var newCustomers = [];
+      customers.forEach((tour) => {
+        newCustomers.push(tour.toObject());
+      });
+      res.render("./pages/admin/customers/index", {
+        pageTitle: "Customer",
+        style: "/pages/admin/customers.css",
+        script: "/pages/admin/customers.js",
+        customers: newCustomers,
+        layout: "main",
+      });
+    } catch (err) {
+      res.status(500).json({
+        message: "Internal server error",
+      });
+    }
+  }
   // [GET] /admin/staff/view/:id
   async showEditStaffForm(req, res, next) {
     try {
       const id = req.params.id;
       const staff = await User.findById(id);
       if (!staff) {
-        return res.status(404).send('Nhân viên không tồn tại');
-        }
-        const formattedStaff = {
-          ...staff.toObject(),
-          user_birthday: staff.user_birthday.toISOString().split('T')[0]
+        return res.status(404).send("Nhân viên không tồn tại");
+      }
+      const formattedStaff = {
+        ...staff.toObject(),
+        user_birthday: staff.user_birthday.toISOString().split("T")[0],
       };
       res.render("pages/admin/crud-staff", {
         pageTitle: "Chỉnh sửa thông tin nhân viên",
         style: "/pages/admin/crud-staff.css",
         script: "/pages/admin/crud-staff.js",
-        staff: formattedStaff
+        staff: formattedStaff,
         // layout: "main",
       });
     } catch (err) {

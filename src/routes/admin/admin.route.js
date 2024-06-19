@@ -5,14 +5,9 @@ const TourController = require("../../app/controllers/tour.controller");
 const LocationController = require("../../app/controllers/location.controller");
 const AdminController = require("../../app/controllers/admin.controller");
 const StaffController = require("../../app/controllers/staff.controller");
-const BookingController = require("../../app/controllers/booking.controller");
 
 router.get("/tours", TourController.showTours);
 router.get("/locations", LocationController.showLocations);
-router.get("/bookings", BookingController.showBookings);
-router.get("/bookings/view/:id", BookingController.showBookingDetail);
-router.patch("/bookings/update/:id", BookingController.update);
-router.patch("/bookings/delete/:id", BookingController.delete);
 router.get("/staffs", StaffController.showStaffs);
 router.post('/tour/addtour', TourController.store)
 router.patch('/tour/edit/:id', TourController.update);

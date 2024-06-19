@@ -1,0 +1,171 @@
+.toursTable-section {
+  min-height: 73vh;
+  padding: 0 1rem;
+}
+
+.tourHeading-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  padding: 0 1rem;
+}
+
+.tourHeading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1400px;
+  flex: 1;
+}
+
+.searchBar {
+  display: flex;
+  align-items: center;
+  border: 1px solid gray;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.line {
+  height: 30px;
+  width: 0px;
+  border-left: 1px solid gray;
+  margin: 0px 8px;
+}
+
+.searchBar-icon:hover {
+  cursor: pointer;
+}
+
+.searchInput {
+  border: none;
+  background-color: transparent;
+  outline: none;
+}
+
+.tourHeadingRight {}
+
+.paginationBar {
+  display: flex;
+  align-items: center;
+  border: 1px solid gray;
+  align-items: center;
+  border-radius: 4px;
+}
+
+.pageLine {
+  height: 36px;
+  width: 0px;
+  border-left: 1px solid gray;
+
+}
+
+.paginationBar-btn {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.current-page {
+  background-color: var(--primary3);
+  color: aliceblue;
+}
+
+.paginationBar-btn:hover {
+  cursor: pointer;
+}
+
+.toursTable-section {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.toursTable-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1400px;
+  width: 100%;
+
+}
+
+.toursTable {
+  border-color: var(--primary1);
+
+}
+
+.toursTable {
+  td {
+    text-align: center;
+
+  }
+
+  th {
+    text-align: center;
+    background-color: var(--primary1);
+    border-color: var(--primary3);
+    color: var(--white);
+
+  }
+
+  p {
+    margin-bottom: 0px;
+    overflow: hidden;
+  }
+
+}
+
+.toursAction_container:hover {
+  cursor: pointer;
+}
+
+.toursAction-icon {
+  color: var(--primary3);
+}
+
+.toursAction-icon:hover {
+  color: var(--primary1);
+}
+
+.addTourBtn-container {
+  display: flex;
+  width: 1200px;
+  justify-content: flex-end;
+  justify-self: center;
+}
+
+.toursTable-data {
+  max-width: 520px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.tourId:hover {
+  cursor: pointer;
+  color: var(--primary1);
+  text-decoration: underline;
+}
+
+.singleCheck,
+.allCheck {
+  accent-color: var(--primary3);
+  width: 16px;
+  height: 16px;
+}
+
+.singleCheck:hover {
+  accent-color: var(--primary1);
+}
+
+.allCheck:hover {
+  accent-color: var(--primary1);
+
+}
+
+.gender {
+  width: 80px;
+}

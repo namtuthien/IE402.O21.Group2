@@ -84,6 +84,10 @@ ul {
 .tours-list {
   margin-top: 16px;
   height: 76vh;
+
+}
+
+.scroll {
   overflow-y: scroll;
 }
 
@@ -135,7 +139,6 @@ ul {
 }
 
 .tour-name {
-  height: 44px;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
@@ -154,6 +157,7 @@ ul {
 }
 
 .navbar-func {
+  background-color: white;
   width: 100%;
   padding: 0.75rem 1rem;
   border-top: 2px solid gray;
@@ -222,6 +226,7 @@ ul {
   display: flex;
   justify-content: center;
 }
-.tour-left{
+
+.tour-left {
   position: relative;
 }

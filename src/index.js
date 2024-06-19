@@ -45,6 +45,9 @@ app.engine(
         return parseInt(index) + 1;
       },
       formatPrice: (price) => price.toLocaleString("de-DE"),
+      address: (address) =>
+        `${address?.street}, ${address?.ward}, ${address?.district}, ${address?.province}`,
+      gender: (gender) => (gender ? "Nữ" : "Nam"),
       ifEquals: (arg1, arg2, options) => {
         return (arg1 == arg2) ? options.fn(this) : options.inverse(this);
       },
