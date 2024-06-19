@@ -8,10 +8,10 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 16px;
+  padding: 0 1rem;
 }
 
 .tourHeading {
-  padding: 0 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -43,6 +43,8 @@
   background-color: transparent;
   outline: none;
 }
+
+.tourHeadingRight {}
 
 .paginationBar {
   display: flex;
@@ -136,7 +138,7 @@
 }
 
 .toursTable-data {
-  max-width: 640px;
+  max-width: 520px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -146,29 +148,6 @@
   cursor: pointer;
   color: var(--primary1);
   text-decoration: underline;
-}
-
-.staff-email,
-.staff-name {
-  width: 200px;
-  white-space: wrap;
-  text-align: left;
-}
-
-.staff-address {
-  width: 300px;
-  white-space: wrap;
-  text-align: left;
-}
-
-.staff-phone {
-  width: 100px;
-}
-
-.locationAddress {
-  width: 500px;
-  white-space: wrap;
-  text-align: left;
 }
 
 .singleCheck,
@@ -185,4 +164,8 @@
 .allCheck:hover {
   accent-color: var(--primary1);
 
+}
+
+.gender {
+  width: 80px;
 }

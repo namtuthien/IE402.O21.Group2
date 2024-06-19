@@ -2,7 +2,7 @@
 const User = require("../models/user.model");
 
 class StaffController {
-  // [GET] /staff/customer/:user_id
+  // [GET] /staffs/customer/:user_id
   async getCustomerById(req, res, next) {
     const { user_id } = req.params;
     try {
@@ -27,32 +27,33 @@ class StaffController {
   }
   async showStaffs(req, res, next) {
     try {
-      const staffs = await User.find({user_role: 'staff'})
-      if (!staffs) {
+      const staffs = await User.find({ user_role: 'staff' });
+  
+      if (!staffs || staffs.length === 0) { 
         return res.status(404).json({
           message: "Staff not found!",
         });
       }
       
-      var newStaffs = [];
-      staffs.forEach((staff) => {
-        newStaffs.push(staff.toObject());
-      });
-      console.log(newStaffs)
+      const newStaffs = staffs.map((staff) => ({
+        ...staff.toObject(), 
+        user_birthday: staff.user_birthday ? staff.user_birthday.toISOString().split('T')[0] : null 
+      }));
+  
       return res.status(200).render("pages/admin/staffs", {
         pageTitle: "Danh sách nhân viên",
         style: "/pages/admin/staffs.css",
         script: "/pages/admin/staffs.js",
         layout: "main",
-        staffs: newStaffs
+        staffs: newStaffs,
       });
     } catch (err) {
-      res.status(500).json({
+      console.error(err); // Log the error for debugging
+      return res.status(500).json({
         message: "Internal server error",
       });
     }
   }
-
 }
 
 module.exports = new StaffController();

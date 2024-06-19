@@ -36,7 +36,7 @@ app.engine(
       gt: (a, b) => a > b,
       divide: (a, b) => a / b,
       eq: (a, b) => a === b,
-      tourGetStartingDay: (tour_starting_day) => {
+      convertDateToDay: (tour_starting_day) => {
         var timestampStr = tour_starting_day;
         var date = new Date(timestampStr);
         var day = date.getDate();
@@ -45,10 +45,13 @@ app.engine(
         var formattedDate = day + "/" + month + "/" + year;
         return formattedDate;
       },
-      tourIndex: (index) => {
+      getIndex: (index) => {
         return parseInt(index) + 1;
       },
       formatPrice: (price) => price.toLocaleString("de-DE"),
+      address: (address) =>
+        `${address?.street}, ${address?.ward}, ${address?.district}, ${address?.province}`,
+      gender: (gender) => (gender ? "Nữ" : "Nam"),
     },
     partialsDir: [
       path.join(__dirname, "resources", "views", "partials"),

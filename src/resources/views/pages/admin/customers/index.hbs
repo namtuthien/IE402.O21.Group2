@@ -4,7 +4,7 @@
     <div class="tourHeadingLeft">
       <div class="searchBar">
         <div class="searchBar-input">
-          <input type="text" class="searchInput" placeholder="Tìm địa điểm..." />
+          <input type="text" class="searchInput" placeholder="Tìm khách hàng..." />
         </div>
         <div class="line">
         </div>
@@ -56,7 +56,10 @@
 <section class="toursTable-section">
   <div class="table-responsive toursTable-container">
     <table class="table-bordered table toursTable">
-      <thead id="toursTable-heading ">
+      {{! <caption>
+        List of users
+      </caption> }}
+      <thead id="toursTable-heading">
         <tr class="toursTable-heading_row">
           <th class="tourTable-heading_title" scope="col">
             <input type="checkbox" class="allCheck" />
@@ -65,20 +68,24 @@
             STT
           </th>
           <th class="tourTable-heading_title" scope="col">
-            Họ và tên
+            Mã KH
+          </th>
+          <th class="tourTable-heading_title" scope="col">
+            Tên KH
           </th>
           <th class="tourTable-heading_title" scope="col">
             Email
           </th>
           <th class="tourTable-heading_title" scope="col">
-            Số điện thoại
-          </th>
-          <th class="tourTable-heading_title" scope="col">
             Địa chỉ
           </th>
           <th class="tourTable-heading_title" scope="col">
-            Ngày sinh
+            SĐT
           </th>
+          <th class="tourTable-heading_title" scope="col">
+            Giới tính
+          </th>
+
           <th class="tourTable-heading_title" scope="col">
             <span class="material-icons-outlined">
               more_vert
@@ -87,48 +94,53 @@
         </tr>
       </thead>
       <tbody id="toursTableBody">
-        {{#each staffs}}
+        {{#each customers}}
         <tr>
-          <td class="bg-white">
+          <td class="">
             <input type="checkbox" class="singleCheck" />
           </td>
-          <td class="bg-white">
+          <td class="">
             <p class="toursTable-data">
               {{getIndex @index}}
             </p>
           </td>
-          <td class="bg-white">
-            <p class="toursTable-data staff-name">
-              {{this.user_name}}
-            </p>
-          </td>
-          <td class="bg-white">
-            <p class="toursTable-data staff-email">
-              {{this.user_email}}
-            </p>
-          </td>
-          <td class="bg-white">
-            <p class="toursTable-data staff-phone">
-              {{this.user_phone_number}}
-            </p>
-          </td>
-          <td class="bg-white">
-            <p class="toursTable-data staff-address">
-              {{this.user_address.street}}, {{this.user_address.ward}}, {{this.user_address.district}},
-              {{this.user_address.province}}
-            </p>
-          </td>
-          <td class="bg-white">
-            <p class="toursTable-data">
-              {{convertDateToDay this.user_birthday}}
+          <td class="">
+            <p class="toursTable-data tourId">
+              {{this._id}}
             </p>
           </td>
 
-          <td class="bg-white">
+          <td class="">
+            <p class="toursTable-data">
+              {{this.user_name}}
+            </p>
+          </td>
+          <td class="">
+            <p class="toursTable-data">
+              {{this.user_email}}
+            </p>
+          </td>
+          <td class="">
+            <p class="toursTable-data">
+              {{address this.user_address}}
+            </p>
+          </td>
+
+          <td class="">
+            <p class="toursTable-data">
+              {{this.user_phone_number}}
+            </p>
+          </td>
+          <td class="">
+            <p class="toursTable-data gender">
+              {{gender this.user_gender}}
+            </p>
+          </td>
+          <td class="">
             <div class="toursAction_container">
-              <a class="material-icons toursAction-icon text-decoration-none" href="/admin/staff/view/{{this._id}}">
+              <span class="material-icons toursAction-icon">
                 more_vert
-                <a />
+              </span>
             </div>
           </td>
         </tr>
@@ -137,3 +149,4 @@
     </table>
   </div>
 </section>
+<script src="./helper.js" type="script"></script>

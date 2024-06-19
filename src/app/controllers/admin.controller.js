@@ -1,35 +1,56 @@
-const User = require("../models/user.model")
+const bcrypt = require("bcryptjs");
+
+const User = require("../models/user.model");
 
 class Admin {
-  // [GET] /admin/map
-  show(req, res, next) {
-    res.render("./pages/admin/map/index", {
-      pageTitle: "Location",
-      style: "/pages/admin/map.css",
-      script: "/pages/admin/map.js",
-      layout: "map",
-    });
+  // [GET] /admin/customer
+  async showCustomers(req, res, next) {
+    try {
+      const customers = await User.find({ user_role: "customer" });
+      if (!customers) {
+        return res.status(404).json({
+          message: "Tour not found!",
+        });
+      }
+      var newCustomers = [];
+      customers.forEach((tour) => {
+        newCustomers.push(tour.toObject());
+      });
+      res.render("./pages/admin/customers/index", {
+        pageTitle: "Customer",
+        style: "/pages/admin/customers.css",
+        script: "/pages/admin/customers.js",
+        customers: newCustomers,
+        layout: "main",
+      });
+    } catch (err) {
+      res.status(500).json({
+        message: "Internal server error",
+      });
+    }
   }
-
   // [GET] /admin/staff/view/:id
   async showEditStaffForm(req, res, next) {
     try {
       const id = req.params.id;
       const staff = await User.findById(id);
       if (!staff) {
-        return res.status(404).send('Nhân viên không tồn tại');
-        }
+        return res.status(404).send("Nhân viên không tồn tại");
+      }
+      const formattedStaff = {
+        ...staff.toObject(),
+        user_birthday: staff.user_birthday.toISOString().split("T")[0],
+      };
       res.render("pages/admin/crud-staff", {
         pageTitle: "Chỉnh sửa thông tin nhân viên",
         style: "/pages/admin/crud-staff.css",
         script: "/pages/admin/crud-staff.js",
-        staff: JSON.parse(JSON.stringify(staff))
+        staff: formattedStaff,
         // layout: "main",
       });
-    }
-    catch (err) {
+    } catch (err) {
       console.error(err);
-      res.status(500).send("Lỗi server")
+      res.status(500).send("Lỗi server");
     }
   }
 
@@ -43,21 +64,21 @@ class Admin {
     });
   }
 
-  // [DELETE] /admin/staff/deleteStaff
+  // [DELETE] /admin/staff/deleteStaff/:id
   async deleteUser(req, res, next) {
     const { id } = req.params;
     try {
       const user = await User.findByIdAndDelete(id);
 
       if (!user) {
-        return res.status(404).send("Không tìm thấy")
+        return res.status(404).send("Không tìm thấy");
       }
 
       res.status(200).json({
-        message: "Xóa thành công"
+        message: "Xóa thành công",
       });
     } catch (error) {
-      res.status(500).send("Có lỗi khi xóa")
+      res.status(500).send("Có lỗi khi xóa");
     }
   }
 
@@ -78,10 +99,13 @@ class Admin {
     }
   }
 
-  // [POST] /admin/addStaff
+  // [POST] /admin/staff/addStaff
   async addStaff(req, res, next) {
     try {
       const staffData = req.body;
+      const hashedPassword = await bcrypt.hash(staffData?.user_password, 8);
+      staffData.user_password = hashedPassword;
+      staffData.user_role = "staff";
       const newStaff = new User(staffData);
       const savedStaff = await newStaff.save();
       res.status(201).json(savedStaff);
@@ -91,12 +115,14 @@ class Admin {
     }
   }
 
-  // [PATCH] /admin/user/update/:id
+  // [PATCH] /admin/staff/update/:id
   async updateStaffInfo(req, res, next) {
     try {
       const userId = req.params.id;
       const updatedUserData = req.body;
-      const updatedUser = await User.findByIdAndUpdate(userId, updatedUserData, { new: true });
+      const hashedPassword = await bcrypt.hash(updatedUserData?.user_password, 8);
+      updatedUserData.user_password = hashedPassword;
+      const updatedUser = await User.findByIdAndUpdate(userId, updatedUserData);
       if (!updatedUser) {
         return res.status(404).json({ message: "Người dùng không tồn tại" });
       }

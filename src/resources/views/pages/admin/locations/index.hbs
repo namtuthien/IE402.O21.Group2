@@ -56,7 +56,7 @@
 <section class="toursTable-section">
   <div class="table-responsive toursTable-container">
     <table class="table-bordered table toursTable">
-      <thead id="toursTable-heading ">
+      <thead id="toursTable-heading">
         <tr class="toursTable-heading_row">
           <th class="tourTable-heading_title" scope="col">
             <input type="checkbox" class="allCheck" />
@@ -65,19 +65,25 @@
             STT
           </th>
           <th class="tourTable-heading_title" scope="col">
-            Họ và tên
+            Mã địa điểm
           </th>
           <th class="tourTable-heading_title" scope="col">
-            Email
+            Tên địa điểm
           </th>
           <th class="tourTable-heading_title" scope="col">
-            Số điện thoại
+            Loại địa điểm
           </th>
           <th class="tourTable-heading_title" scope="col">
             Địa chỉ
           </th>
           <th class="tourTable-heading_title" scope="col">
-            Ngày sinh
+            Mô tả
+          </th>
+          <th class="tourTable-heading_title" scope="col">
+            Số điện thoại
+          </th>
+          <th class="tourTable-heading_title" scope="col">
+            Website
           </th>
           <th class="tourTable-heading_title" scope="col">
             <span class="material-icons-outlined">
@@ -87,48 +93,57 @@
         </tr>
       </thead>
       <tbody id="toursTableBody">
-        {{#each staffs}}
+        {{#each locations}}
         <tr>
-          <td class="bg-white">
+          <td class="">
             <input type="checkbox" class="singleCheck" />
           </td>
-          <td class="bg-white">
+          <td class="">
             <p class="toursTable-data">
               {{getIndex @index}}
             </p>
           </td>
-          <td class="bg-white">
-            <p class="toursTable-data staff-name">
-              {{this.user_name}}
+          <td class="">
+            <p class="toursTable-data tourId">
+              {{this._id}}
             </p>
           </td>
-          <td class="bg-white">
-            <p class="toursTable-data staff-email">
-              {{this.user_email}}
+          <td class="">
+            <p class="toursTable-data locationName">
+              {{this.location_name}}
             </p>
           </td>
-          <td class="bg-white">
-            <p class="toursTable-data staff-phone">
-              {{this.user_phone_number}}
+          <td class="">
+            <p class="toursTable-data locationType">
+              {{this.location_type}}
             </p>
           </td>
-          <td class="bg-white">
-            <p class="toursTable-data staff-address">
-              {{this.user_address.street}}, {{this.user_address.ward}}, {{this.user_address.district}},
-              {{this.user_address.province}}
+          <td class="">
+            <p class="toursTable-data locationAddress">
+              {{this.location_address}}
             </p>
           </td>
-          <td class="bg-white">
-            <p class="toursTable-data">
-              {{convertDateToDay this.user_birthday}}
+          <td class="">
+            <p class="toursTable-data locationDescription">
+              {{this.location_description}}
             </p>
           </td>
 
-          <td class="bg-white">
+          <td class="">
+            <p class="toursTable-data">
+              {{this.location_phone_number}}
+            </p>
+          </td>
+          <td class="">
+            <p class="toursTable-data locationWebsite">
+              {{this.location_website}}
+            </p>
+          </td>
+          <td class="">
             <div class="toursAction_container">
-              <a class="material-icons toursAction-icon text-decoration-none" href="/admin/staff/view/{{this._id}}">
+              <span class="material-icons toursAction-icon">
                 more_vert
-                <a />
+              </span>
             </div>
           </td>
         </tr>
