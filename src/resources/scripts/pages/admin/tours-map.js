@@ -3,18 +3,22 @@ import { convertDateToHourDayMonthYear, convertHourDayMonthYearToDate } from "/f
 
 const results = await getLinesOfTour();
 const tourRoutes = results.tourRoutes;
-const tours = results.tours;
 const deletePopup = document.getElementById("deletePopupContainer");
 const navbarBtn = document.querySelector(".navbar-btn");
 const navbarContent = document.querySelector(".navbar-content");
 const navbar = document.querySelector(".navbar");
 const navbarBtnIcon = document.querySelector("#btn-icon");
 const tourItems = document.querySelectorAll(".tours-item");
+const tourList = document.querySelector(".tours-list");
+
 const tourRight = document.querySelectorAll(".tour-right");
 const tourCheck = document.querySelectorAll(".tour-check");
 const tourIds = document.querySelectorAll(".tour-id");
 let navbarAction = true;
 let navbarStatus = false;
+if (tourRoutes.length >= 9) {
+  tourList.classList.add("scroll");
+}
 navbarBtn.addEventListener("click", () => {
   if (navbarStatus) {
     navbarStatus = false;
@@ -270,7 +274,7 @@ require([
       }
     });
     try {
-      fetch(`/admin/tour/destroy`, {
+      fetch(`/api/tour/destroy`, {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",
@@ -616,7 +620,7 @@ require([
           tour.tour_total_ticket = parseInt(attributes.tour_total_ticket);
           tour.tour_total_ticket_available = parseInt(attributes.tour_total_ticket_available);
           try {
-            fetch(`/admin/tour/edit/${tour_id}`, {
+            fetch(`/api/tour/edit/${tour_id}`, {
               method: "PATCH",
               headers: {
                 "Content-Type": "application/json",
@@ -670,7 +674,7 @@ require([
           }
         } else if (result.edits.deleteFeatures && result.edits.deleteFeatures.length > 0) {
           try {
-            fetch(`/admin/tour/delete/${tour_id}`, {
+            fetch(`/api/tour/delete/${tour_id}`, {
               method: "DELETE",
               headers: {
                 "Content-Type": "application/json",
