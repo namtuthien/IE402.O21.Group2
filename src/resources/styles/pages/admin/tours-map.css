@@ -16,7 +16,7 @@ ul {
 
 .navbar {
   position: absolute;
-  width: 240px;
+  width: 0px;
   height: 100vh;
   z-index: 10;
   background-color: white;
@@ -221,4 +221,7 @@ ul {
   margin-top: 0.5rem;
   display: flex;
   justify-content: center;
+}
+.tour-left{
+  position: relative;
 }

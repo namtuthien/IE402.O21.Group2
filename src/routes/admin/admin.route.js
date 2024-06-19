@@ -14,6 +14,10 @@ router.get("/bookings/view/:id", BookingController.showBookingDetail);
 router.patch("/bookings/update/:id", BookingController.update);
 router.patch("/bookings/delete/:id", BookingController.delete);
 router.get("/staffs", StaffController.showStaffs);
+router.post('/tour/addtour', TourController.store)
+router.patch('/tour/edit/:id', TourController.update);
+router.delete('/tour/delete/:id', TourController.delete);
+router.delete('/tour/destroy', TourController.destroy);
 router.get("/staff/addstaff", AdminController.showAddStaffForm);
 router.get("/staff/view/:id", AdminController.showEditStaffForm);
 

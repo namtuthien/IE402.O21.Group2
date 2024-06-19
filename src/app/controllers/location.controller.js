@@ -61,6 +61,7 @@ class LocationController {
       });
     }
   }
+
   // [POST] /location/store
   async store(req, res, next) {
     try {
@@ -89,6 +90,38 @@ class LocationController {
       res.status(201).json({ success: "Location store successfully!" });
     } catch (error) {
       res.status(500).json({ failed: "Location store failed!", error });
+    }
+  }
+
+  // [POST] /api/location/updateLocation
+  async updateLocation(req, res, next) {
+    try {
+      const location = req.body.location;
+
+      await Location.findByIdAndUpdate(location._id, location);
+
+      res.status(200).json({ success: "Location update successfully!" });
+    } catch (err) {
+      console.error(err);
+      res.status(500).json({
+        message: "Internal server error",
+      });
+    }
+  }
+
+  // [DELETE] /api/location/deleteLocation
+  async deleteLocation(req, res, next) {
+    try {
+      const locationId = req.body._id;
+
+      await Location.findByIdAndDelete(locationId);
+
+      res.status(200).json({ success: "Location update successfully!" });
+    } catch (err) {
+      console.error(err);
+      res.status(500).json({
+        message: "Internal server error",
+      });
     }
   }
 }

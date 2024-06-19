@@ -30,7 +30,6 @@ class RouteController {
             });
           }
         }
-        console.log("-------------------");
 
         tourRoutes.push({ lines: routeLines, tour: tours[i] });
       }

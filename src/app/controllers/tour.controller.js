@@ -41,26 +41,43 @@ class TourController {
       });
   }
 
-  // [PATCH] /tour/update/:id
+  // [PATCH] /admin/tour/edit/:id
   async update(req, res, next) {
     try {
       const tourId = req.params.id;
       const updatedTourData = req.body;
       await Tour.findByIdAndUpdate(tourId, updatedTourData);
-      res.status(200).send("Cập nhật tour thành công");
+      res.status(200).json("Cập nhật tour thành công");
     } catch (error) {
-      res.status(500).send("Cập nhật tour thất bại");
+      res.status(500).json("Cập nhật tour thất bại");
     }
   }
 
-  // [PATCH] /tour/delete/:id
+  // [DELETE] /admin/tour/delete/:id
   async delete(req, res, next) {
     try {
       const tourId = req.params.id;
-      await Tour.findByIdAndUpdate(tourId, { is_active: false });
-      res.status(200).send("Tour đã được đánh dấu không hoạt động");
+      await Tour.deleteOne({ _id: tourId });
+      res.status(200).json({ message: "Tour đã được xóa thành công" });
     } catch (error) {
-      res.status(500).send("Đánh dấu tour không hoạt động thất bại");
+      console.error(error);
+      res.status(500).json({ message: "Xóa tour thất bại" });
+    }
+  }
+
+  // [DELETE] /admin/tour/destroy
+  async destroy(req, res, next) {
+    try {
+      const tourIds = req.body;
+      await Promise.all(
+        tourIds.map(async (tour) => {
+          return await Tour.deleteOne({ _id: tour.id });
+        })
+      );
+      res.status(200).json({ message: "Tour đã được xóa thành công" });
+    } catch (error) {
+      console.error(error);
+      res.status(500).json({ message: "Xóa tour thất bại" });
     }
   }
 

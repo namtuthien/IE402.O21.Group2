@@ -74,87 +74,25 @@
                 </a>
             </div>
             <hr>
-            <div>
+            <div id="topBookingTours">
+                {{#each top5BookingTours}}
                 <div class="d-flex justify-content-between align-items-center pb-2 dashboard__tour">
                     <div class="dashboard__tour-ranking fw-bold">
                         <span>
-                            #1
+                            #{{getIndex @index}}
                         </span>
                     </div>
                     <div class="col-md-8">
-                        Hoa Son Village Da Lat
+                        {{this.tour.tour_name}}
                     </div>
                     <div>
                         <span class="fw-bold">
-                            1000
+                            {{this.bookingCount}}
                         </span>
                         lượt
                     </div>
                 </div>
-                <div class="d-flex justify-content-between align-items-center pb-2 dashboard__tour">
-                    <div class="dashboard__tour-ranking fw-bold">
-                        <span>
-                            #1
-                        </span>
-                    </div>
-                    <div class="col-md-8">
-                        Hoa Son Village Da Lat
-                    </div>
-                    <div>
-                        <span class="fw-bold">
-                            1000
-                        </span>
-                        lượt
-                    </div>
-                </div>
-                <div class="d-flex justify-content-between align-items-center pb-2 dashboard__tour">
-                    <div class="dashboard__tour-ranking fw-bold">
-                        <span>
-                            #1
-                        </span>
-                    </div>
-                    <div class="col-md-8">
-                        Hoa Son Village Da Lat
-                    </div>
-                    <div>
-                        <span class="fw-bold">
-                            1000
-                        </span>
-                        lượt
-                    </div>
-                </div>
-                <div class="d-flex justify-content-between align-items-center pb-2 dashboard__tour">
-                    <div class="dashboard__tour-ranking fw-bold">
-                        <span>
-                            #1
-                        </span>
-                    </div>
-                    <div class="col-md-8">
-                        Hoa Son Village Da Lat
-                    </div>
-                    <div>
-                        <span class="fw-bold">
-                            1000
-                        </span>
-                        lượt
-                    </div>
-                </div>
-                <div class="d-flex justify-content-between align-items-center pb-2 dashboard__tour">
-                    <div class="dashboard__tour-ranking fw-bold">
-                        <span>
-                            #1
-                        </span>
-                    </div>
-                    <div class="col-md-8">
-                        Hoa Son Village Da Lat
-                    </div>
-                    <div>
-                        <span class="fw-bold">
-                            1000
-                        </span>
-                        lượt
-                    </div>
-                </div>
+                {{/each}}
             </div>
         </div>
         <div class="bg-white w-50  rounded-3 p-3">
@@ -172,87 +110,25 @@
                 </a>
             </div>
             <hr>
-            <div>
+            <div id="topRevenueTours">
+                {{#each top5RevenueTours}}
                 <div class="d-flex justify-content-between align-items-center pb-2 dashboard__tour">
                     <div class="dashboard__tour-ranking fw-bold">
                         <span>
-                            #1
+                            #{{getIndex @index}}
                         </span>
                     </div>
                     <div class="col-md-8">
-                        Hoa Son Village Da Lat
+                        {{this.tour.tour_name}}
                     </div>
                     <div>
                         <span>
-                            1.5 tỷ
+                            {{this.bookingRevenue}}
                         </span>
                         VND
                     </div>
                 </div>
-                <div class="d-flex justify-content-between align-items-center pb-2 dashboard__tour">
-                    <div class="dashboard__tour-ranking fw-bold">
-                        <span>
-                            #1
-                        </span>
-                    </div>
-                    <div class="col-md-8">
-                        Hoa Son Village Da Lat
-                    </div>
-                    <div>
-                        <span>
-                            1.5 tỷ
-                        </span>
-                        VND
-                    </div>
-                </div>
-                <div class="d-flex justify-content-between align-items-center pb-2 dashboard__tour">
-                    <div class="dashboard__tour-ranking fw-bold">
-                        <span>
-                            #1
-                        </span>
-                    </div>
-                    <div class="col-md-8">
-                        Hoa Son Village Da Lat
-                    </div>
-                    <div>
-                        <span>
-                            1.5 tỷ
-                        </span>
-                        VND
-                    </div>
-                </div>
-                <div class="d-flex justify-content-between align-items-center pb-2 dashboard__tour">
-                    <div class="dashboard__tour-ranking fw-bold">
-                        <span>
-                            #1
-                        </span>
-                    </div>
-                    <div class="col-md-8">
-                        Hoa Son Village Da Lat
-                    </div>
-                    <div>
-                        <span>
-                            1.5 tỷ
-                        </span>
-                        VND
-                    </div>
-                </div>
-                <div class="d-flex justify-content-between align-items-center pb-2 dashboard__tour">
-                    <div class="dashboard__tour-ranking fw-bold">
-                        <span>
-                            #1
-                        </span>
-                    </div>
-                    <div class="col-md-8">
-                        Hoa Son Village Da Lat
-                    </div>
-                    <div>
-                        <span>
-                            1.5 tỷ
-                        </span>
-                        VND
-                    </div>
-                </div>
+                {{/each}}
             </div>
         </div>
     </div>

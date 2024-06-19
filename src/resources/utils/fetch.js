@@ -13,6 +13,7 @@ const getLocations = async () => {
     alert("error");
   }
 };
+
 const getTours = async () => {
   try {
     const res = await fetch(`/api/tour/getTours`);
@@ -25,6 +26,7 @@ const getTours = async () => {
     alert("error");
   }
 };
+
 const getLinesOfTour = async (routes) => {
   try {
     const res = await fetch(`/api/route/getTourRoutes`);
@@ -37,4 +39,5 @@ const getLinesOfTour = async (routes) => {
     alert("error");
   }
 };
+
 export { getLocations, getTours, getLinesOfTour };
