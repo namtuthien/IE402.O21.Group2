@@ -1,5 +1,6 @@
 // import models
 const User = require("../models/user.model");
+const Tour = require("../models/tour.model");
 
 class StaffController {
   // [GET] /staffs/customer/:user_id
@@ -69,6 +70,33 @@ class StaffController {
     } catch (err) {
       console.error(err); // Log the error for debugging
       return res.status(500).json({
+        message: "Internal server error",
+      });
+    }
+  }
+  // [GET] /staff/tours
+  async showTours(req, res, next) {
+    try {
+      const tours = await Tour.find();
+      if (!tours) {
+        return res.status(404).json({
+          message: "Tour not found!",
+        });
+      }
+      var newTours = [];
+      tours.forEach((tour) => {
+        newTours.push(tour.toObject());
+      });
+      return res.status(200).render("pages/staff/tours/index", {
+        pageTitle: "Danh sách tour",
+        style: "/pages/staff/tours.css",
+        script: "/pages/staff/tours.js",
+        tours: newTours,
+        mapLink: "/staff/map/tours",
+        layout: "main",
+      });
+    } catch (err) {
+      res.status(500).json({
         message: "Internal server error",
       });
     }

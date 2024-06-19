@@ -6,6 +6,7 @@ const RatingController = require("../../app/controllers/rating.controller");
 // [GET] one customer
 router.get("/customer/:user_id", StaffController.getCustomerById);
 router.get("/customers", StaffController.getCustomers);
+router.get("/tours", StaffController.showTours);
 
 // [GET] all ratings
 router.get("/rating/get-all", RatingController.index);
