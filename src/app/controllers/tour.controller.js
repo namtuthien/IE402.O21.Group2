@@ -1,6 +1,8 @@
 // import models
 const Tour = require("../models/tour.model");
 const Route = require("../models/route.model");
+const Rating = require("../models/rating.model");
+
 const Line = require("../models/line.model");
 const { getRouteById } = require("./route.controller");
 
@@ -41,29 +43,47 @@ class TourController {
       });
   }
 
-  // [PATCH] /tour/update/:id
+  // [PATCH] /admin/tour/edit/:id
   async update(req, res, next) {
     try {
       const tourId = req.params.id;
       const updatedTourData = req.body;
       await Tour.findByIdAndUpdate(tourId, updatedTourData);
-      res.status(200).send("Cập nhật tour thành công");
+      res.status(200).json("Cập nhật tour thành công");
     } catch (error) {
-      res.status(500).send("Cập nhật tour thất bại");
+      res.status(500).json("Cập nhật tour thất bại");
     }
   }
 
-  // [PATCH] /tour/delete/:id
+  // [DELETE] /admin/tour/delete/:id
   async delete(req, res, next) {
     try {
       const tourId = req.params.id;
-      await Tour.findByIdAndUpdate(tourId, { is_active: false });
-      res.status(200).send("Tour đã được đánh dấu không hoạt động");
+      await Tour.deleteOne({ _id: tourId });
+      res.status(200).json({ message: "Tour đã được xóa thành công" });
     } catch (error) {
-      res.status(500).send("Đánh dấu tour không hoạt động thất bại");
+      console.error(error);
+      res.status(500).json({ message: "Xóa tour thất bại" });
     }
   }
-  // [GET] /tour/get-tours
+
+  // [DELETE] /admin/tour/destroy
+  async destroy(req, res, next) {
+    try {
+      const tourIds = req.body;
+      await Promise.all(
+        tourIds.map(async (tour) => {
+          return await Tour.deleteOne({ _id: tour.id });
+        })
+      );
+      res.status(200).json({ message: "Tour đã được xóa thành công" });
+    } catch (error) {
+      console.error(error);
+      res.status(500).json({ message: "Xóa tour thất bại" });
+    }
+  }
+
+  // [GET] /admin/tours
   async showTours(req, res, next) {
     try {
       const tours = await Tour.find();
@@ -76,12 +96,40 @@ class TourController {
       tours.forEach((tour) => {
         newTours.push(tour.toObject());
       });
-      return res.status(200).render("pages/admin/tours", {
+      return res.status(200).render("pages/admin/tours/index", {
         pageTitle: "Danh sách tour",
         style: "/pages/admin/tours.css",
         script: "/pages/admin/tours.js",
         tours: newTours,
+        mapLink: "/admin/map/tours",
         layout: "main",
+      });
+    } catch (err) {
+      res.status(500).json({
+        message: "Internal server error",
+      });
+    }
+  }
+
+  // [GET] /map/tours
+  async showToursMap(req, res, next) {
+    try {
+      const tours = await Tour.find();
+      if (!tours) {
+        return res.status(404).json({
+          message: "Tour not found!",
+        });
+      }
+      var newTours = [];
+      tours.forEach((tour) => {
+        newTours.push(tour.toObject());
+      });
+      return res.status(200).render("pages/admin/map/tours", {
+        pageTitle: "Danh sách tour",
+        style: "/pages/admin/tours-map.css",
+        script: "/pages/admin/tours-map.js",
+        tours: newTours,
+        layout: "map",
       });
     } catch (err) {
       res.status(500).json({

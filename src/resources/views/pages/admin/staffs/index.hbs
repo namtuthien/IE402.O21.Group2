@@ -1,9 +1,10 @@
+{{>admin/dataActionButtons}}
 <section class="tourHeading-section">
   <div class="tourHeading">
     <div class="tourHeadingLeft">
       <div class="searchBar">
         <div class="searchBar-input">
-          <input type="text" class="searchInput" placeholder="Tìm tour..." />
+          <input type="text" class="searchInput" placeholder="Tìm địa điểm..." />
         </div>
         <div class="line">
         </div>
@@ -55,10 +56,7 @@
 <section class="toursTable-section">
   <div class="table-responsive toursTable-container">
     <table class="table-bordered table toursTable">
-      {{! <caption>
-        List of users
-      </caption> }}
-      <thead id="toursTable-heading">
+      <thead id="toursTable-heading ">
         <tr class="toursTable-heading_row">
           <th class="tourTable-heading_title" scope="col">
             <input type="checkbox" class="allCheck" />
@@ -79,7 +77,7 @@
             Địa chỉ
           </th>
           <th class="tourTable-heading_title" scope="col">
-            Lương
+            Ngày sinh
           </th>
           <th class="tourTable-heading_title" scope="col">
             <span class="material-icons-outlined">
@@ -89,53 +87,53 @@
         </tr>
       </thead>
       <tbody id="toursTableBody">
-        {{#each tours}}
-          <tr>
-            <td class="">
-              <input type="checkbox" class="singleCheck" />
-            </td>
-            <td class="">
-              <p class="toursTable-data">
-                {{tourIndex @index}}
-              </p>
-            </td>
-            <td class="">
-              <p class="toursTable-data tourId">
-                {{this._id}}
-              </p>
-            </td>
-            <td class="">
-              <p class="toursTable-data">
-                {{this.tour_name}}
-              </p>
-            </td>
-            <td class="">
-              <p class="toursTable-data">
-                {{this.tour_price}}
-              </p>
-            </td>
-            <td class="">
-              <p class="toursTable-data">
-                {{tourGetStartingDay this.tour_starting_day}}
-              </p>
-            </td>
-            <td class="">
-              <p class="toursTable-data">
-                {{this.tour_number_of_days}}/{{this.tour_number_of_nights}}
-              </p>
-            </td>
+        {{#each staffs}}
+        <tr>
+          <td class="bg-white">
+            <input type="checkbox" class="singleCheck" />
+          </td>
+          <td class="bg-white">
+            <p class="toursTable-data">
+              {{getIndex @index}}
+            </p>
+          </td>
+          <td class="bg-white">
+            <p class="toursTable-data staff-name">
+              {{this.user_name}}
+            </p>
+          </td>
+          <td class="bg-white">
+            <p class="toursTable-data staff-email">
+              {{this.user_email}}
+            </p>
+          </td>
+          <td class="bg-white">
+            <p class="toursTable-data staff-phone">
+              {{this.user_phone_number}}
+            </p>
+          </td>
+          <td class="bg-white">
+            <p class="toursTable-data staff-address">
+              {{this.user_address.street}}, {{this.user_address.ward}}, {{this.user_address.district}},
+              {{this.user_address.province}}
+            </p>
+          </td>
+          <td class="bg-white">
+            <p class="toursTable-data">
+              {{convertDateToDay this.user_birthday}}
+            </p>
+          </td>
 
-            <td class="">
-              <div class="toursAction_container">
-                <span class="material-icons toursAction-icon">
-                  more_vert
-                </span>
-              </div>
-            </td>
-          </tr>
+          <td class="bg-white">
+            <div class="toursAction_container">
+              <a class="material-icons toursAction-icon text-decoration-none" href="/admin/staffs/view/{{this._id}}">
+                more_vert
+                <a />
+            </div>
+          </td>
+        </tr>
         {{/each}}
       </tbody>
     </table>
   </div>
 </section>
-<script src="./helper.js" type="script"></script>

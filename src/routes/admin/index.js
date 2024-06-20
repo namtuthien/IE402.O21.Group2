@@ -3,12 +3,20 @@ const router = express.Router();
 
 const mapRouter = require("./map.route");
 const dashboardRouter = require("./dashboard.route");
-const adminRouter = require("./admin.route");
-const userRouter = require("./user.route")
-const locationRouter = require("./location.route")
-router.use("/staff", userRouter);
+const staffRouter = require("./staff.route");
+const customerRouter = require("./customer.route");
+const locationRouter = require("./location.route");
+const tourRouter = require("./tour.route");
+const ratingRouter = require("./rating.route");
+const bookingRouter = require("./booking.route");
+
 router.use("/map", mapRouter);
 router.use("/dashboard", dashboardRouter);
-router.use("/location", locationRouter);
-router.use("/", adminRouter);
+router.use("/locations", locationRouter);
+router.use("/staffs", staffRouter);
+router.use("/customers", customerRouter);
+router.use("/tours", tourRouter);
+router.use("/ratings", ratingRouter);
+router.use("/bookings", bookingRouter);
+
 module.exports = router;

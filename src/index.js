@@ -6,6 +6,8 @@ const methodOverride = require("method-override");
 const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
 const path = require("path");
+const http = require("http");
+const { Server } = require("socket.io");
 
 // import configs
 const { HOST, PORT, db } = require("./config");
@@ -18,6 +20,8 @@ dotenv.config();
 
 // run app
 const app = express();
+const server = http.createServer(app); // Sử dụng HTTP server của Node.js
+const io = new Server(server); // Tạo đối tượng Socket.IO server
 
 // connect to DB
 db.connect();
@@ -32,7 +36,7 @@ app.engine(
       gt: (a, b) => a > b,
       divide: (a, b) => a / b,
       eq: (a, b) => a === b,
-      tourGetStartingDay: (tour_starting_day) => {
+      convertDateToDay: (tour_starting_day) => {
         var timestampStr = tour_starting_day;
         var date = new Date(timestampStr);
         var day = date.getDate();
@@ -41,8 +45,36 @@ app.engine(
         var formattedDate = day + "/" + month + "/" + year;
         return formattedDate;
       },
-      tourIndex: (index) => {
+      getIndex: (index) => {
         return parseInt(index) + 1;
+      },
+      formatPrice: (price) => price.toLocaleString("de-DE"),
+      address: (address) =>
+        `${address?.street}, ${address?.ward}, ${address?.district}, ${address?.province}`,
+      gender: (gender) => (gender ? "Nữ" : "Nam"),
+      ifEquals: (arg1, arg2, options) => {
+        return (arg1 == arg2) ? options.fn(this) : options.inverse(this);
+      },
+      convertDateToDayStandardFormat: (tour_starting_day) => {
+        var timestampStr = tour_starting_day;
+        var date = new Date(timestampStr);
+        var day = date.getDate();
+        var month = date.getMonth() + 1;
+        var year = date.getFullYear();
+        var formattedDate;
+        if (month < 10 && day < 10) {
+          formattedDate = year + "-0" + month + "-0" + day;
+        }
+        else if (month < 10 && day >= 10) {
+          formattedDate = year + "-0" + month + "-" + day;
+        }
+        else if (month >= 10 && day < 10) {
+          formattedDate = year + "-" + month + "-0" + day;
+        }
+        else {
+          formattedDate = year + "-" + month + "-" + day;
+        }
+        return formattedDate;
       },
     },
     partialsDir: [
@@ -75,5 +107,26 @@ app.use(methodOverride("_method"));
 // import router
 route(app);
 
+// Thiết lập các sự kiện Socket.IO
+let tourGuideLocations = [];
+
+io.on("connection", (socket) => {
+  console.log("A user connected");
+
+  // Gửi dữ liệu hiện tại cho client mới kết nối
+  socket.emit("location update", tourGuideLocations);
+
+  // Lắng nghe sự kiện 'location update'
+  socket.on("location update", (location) => {
+    tourGuideLocations.push(location);
+    io.emit("location update", tourGuideLocations); // Phát lại cho tất cả các client
+  });
+
+  // Sự kiện ngắt kết nối
+  socket.on("disconnect", () => {
+    console.log("User disconnected");
+  });
+});
+
 // start server
-app.listen(PORT, () => console.log(`Application is running at: http://${HOST}:${PORT}`));
+server.listen(PORT, () => console.log(`Application is running at: http://${HOST}:${PORT}`));

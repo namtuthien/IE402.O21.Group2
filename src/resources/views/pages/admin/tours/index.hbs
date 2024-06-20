@@ -1,9 +1,12 @@
+{{>admin/dataActionButtons}}
 <section class="tourHeading-section">
   <div class="tourHeading">
     <div class="tourHeadingLeft">
       <div class="searchBar">
         <div class="searchBar-input">
-          <input type="text" class="searchInput" placeholder="Tìm tour..." />
+          <input type="text"
+            class="searchInput"
+            placeholder="Tìm tour..." />
         </div>
         <div class="line">
         </div>
@@ -55,36 +58,43 @@
 <section class="toursTable-section">
   <div class="table-responsive toursTable-container">
     <table class="table-bordered table toursTable">
-      {{! <caption>
-        List of users
-      </caption> }}
       <thead id="toursTable-heading">
         <tr class="toursTable-heading_row">
-          <th class="tourTable-heading_title" scope="col">
-            <input type="checkbox" class="allCheck" />
+          <th class="tourTable-heading_title"
+            scope="col">
+            <input type="checkbox"
+              class="allCheck" />
           </th>
-          <th class="tourTable-heading_title" scope="col">
+          <th class="tourTable-heading_title"
+            scope="col">
             STT
           </th>
-          <th class="tourTable-heading_title" scope="col">
+          <th class="tourTable-heading_title"
+            scope="col">
             Mã Tour
           </th>
-          <th class="tourTable-heading_title" scope="col">
+          <th class="tourTable-heading_title"
+            scope="col">
             Tên Tour
           </th>
-          <th class="tourTable-heading_title" scope="col">
+          <th class="tourTable-heading_title"
+            scope="col">
             Giá vé
           </th>
-          <th class="tourTable-heading_title" scope="col">
+          <th class="tourTable-heading_title"
+            scope="col">
             Ngày khởi hành
           </th>
-          <th class="tourTable-heading_title" scope="col">
+          <th class="tourTable-heading_title"
+            scope="col">
             Ngày/Đêm
           </th>
-          <th class="tourTable-heading_title" scope="col">
+          <th class="tourTable-heading_title"
+            scope="col">
             Vé trống
           </th>
-          <th class="tourTable-heading_title" scope="col">
+          <th class="tourTable-heading_title"
+            scope="col">
             <span class="material-icons-outlined">
               more_vert
             </span>
@@ -95,20 +105,22 @@
         {{#each tours}}
           <tr>
             <td class="">
-              <input type="checkbox" class="singleCheck" />
+              <input type="checkbox"
+                class="singleCheck" />
             </td>
             <td class="">
               <p class="toursTable-data">
-                {{tourIndex @index}}
+                {{getIndex @index}}
               </p>
             </td>
             <td class="">
               <p class="toursTable-data tourId">
                 {{this._id}}
+
               </p>
             </td>
             <td class="">
-              <p class="toursTable-data">
+              <p class="toursTable-data tourName">
                 {{this.tour_name}}
               </p>
             </td>
@@ -119,7 +131,7 @@
             </td>
             <td class="">
               <p class="toursTable-data">
-                {{tourGetStartingDay this.tour_starting_day}}
+                {{convertDateToDay this.tour_starting_day}}
               </p>
             </td>
             <td class="">
@@ -146,4 +158,3 @@
     </table>
   </div>
 </section>
-<script src="./helper.js" type="script"></script>

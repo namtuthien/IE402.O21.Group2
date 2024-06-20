@@ -1,0 +1,326 @@
+#viewDiv {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.modal_overlay {
+  display: none;
+  position: absolute;
+  background-color: rgba(112, 114, 115, 0.1);
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 1000;
+}
+
+.cfl__container {
+  background-color: #fff;
+  margin: auto;
+  width: 50%;
+}
+
+.cfl__title {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.cursor-pointer {
+  float: right;
+  cursor: pointer;
+  color: red;
+}
+
+.table__activities {
+  background-color: #fff;
+}
+
+.table__activities tr {
+  border: 1px solid #087264;
+}
+
+.table__activities td {
+  border-right: 1px solid #087264;
+}
+
+.table__activities-thead {
+  background-color: #087264 !important;
+}
+
+.table__activities-thead th:first-child {
+
+  display: flex !important;
+  justify-content: center !important;
+}
+
+.table__activities-thead th {
+  color: #fff;
+  font-weight: 600;
+  text-align: center;
+}
+
+.table__activities-tbody {
+  color: #000;
+  font-weight: 500;
+  text-align: center;
+}
+
+.table__activities-tbody .form-control {
+  padding: 0;
+  border-radius: 0;
+  width: 100%;
+  text-align: center;
+  padding-left: 12px;
+}
+
+.table__activities-tbody tr td:first-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.table__activities-tbody tr:last-child td:first-child {
+  display: table-cell;
+}
+
+.table__action-add {
+  color: #087264;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Override */
+.form-check {
+  padding-left: 1.8rem;
+  margin-bottom: 0.2rem;
+}
+
+.form-check-input {
+  background-color: #fff;
+
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.esri-zoom {
+  display: none;
+}
+
+.navbar {
+  position: absolute;
+  width: 0px;
+  height: 100vh;
+  z-index: 10;
+  background-color: white;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  padding: 0.75rem 0;
+  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.5);
+  transition: all 0.5s;
+}
+
+.navbar-content {
+  height: 100%;
+  display: none;
+  transition: all 0.5s;
+  z-index: 10;
+}
+
+.heading {
+  width: 100%;
+  border-bottom: 2px solid gray;
+  padding-bottom: 0.75rem;
+}
+
+.heading-title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 26px;
+  color: var(--primary1);
+}
+
+.navbar-btn {
+  width: 60px;
+  height: 60px;
+  border-top-right-radius: 60px;
+  border-bottom-right-radius: 60px;
+  border-top-left-radius: 60px;
+  border-bottom-left-radius: 60px;
+  background-color: var(--primary3);
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 45px;
+  left: 10px;
+  user-select: none;
+  transition: left 0.5s ease, opacity 0.2s ease, box-shadow 0.2s ease, border-radius 0.5s ease;
+  z-index: 0;
+}
+
+.material-icons-outlined {
+  color: white;
+}
+
+.navbar-btn:hover {
+  cursor: pointer;
+  box-shadow: 0px 0 1px rgba(0, 0, 0, 0.5);
+}
+
+.navbar-btn:active {
+  opacity: 0.5;
+
+}
+
+.tours-list {
+  margin-top: 16px;
+  height: 76vh;
+  overflow-y: scroll;
+}
+
+.tours-item {
+  margin-bottom: 0.5rem;
+  padding: 0.5rem !important;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.1s;
+  padding: 0px 6px 0px 10px;
+  transition: background-color 0.15s;
+}
+
+.tours-item:hover {
+  cursor: pointer;
+  background-color: var(--primary5);
+  color: white;
+}
+
+.tour-left {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.tour-right:active {
+  .tour-name {
+    opacity: 0.2;
+  }
+}
+
+.tours-item-active {
+  background-color: var(--primary5);
+  color: white;
+}
+
+.tour-check {
+  position: absolute;
+  top: 0;
+  accent-color: var(--primary5);
+  width: 18px;
+  height: 18px;
+}
+
+.tour-thumbnail {
+  width: 50px;
+  height: 50px;
+}
+
+.tour-name {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: 600;
+  line-height: 22px;
+  user-select: none;
+  transition: all 0.2s;
+}
+
+.tour-price {
+  height: 20px;
+  user-select: none;
+
+}
+
+.navbar-func {
+  background-color: white;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-top: 2px solid gray;
+  position: absolute;
+  bottom: 0.5rem;
+}
+
+.navbar-func-top {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.navbar-func-btn {
+  height: 40px;
+  border-radius: 6px;
+  border: none;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s;
+  user-select: none;
+}
+
+.navbar-func-top .navbar-func-btn {
+  width: 50%;
+}
+
+.navbar-func-bot .navbar-func-btn {
+  width: 100%;
+}
+
+.navbar-func-btn:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5);
+}
+
+.navbar-func-btn:active {
+  opacity: 0.5;
+}
+
+.navbar-btn-text {
+  vertical-align: middle;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  user-select: none;
+}
+
+.update-btn {
+  background-color: var(--primary1);
+}
+
+.delete-btn {
+  background-color: var(--red);
+}
+
+.add-btn {
+  background-color: var(--primary5);
+  width: 160px;
+}
+
+.navbar-func-bot {
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.tour-left {
+  position: relative;
+}

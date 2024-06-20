@@ -13,6 +13,7 @@ const getLocations = async () => {
     alert("error");
   }
 };
+
 const getTours = async () => {
   try {
     const res = await fetch(`/api/tour/getTours`);
@@ -25,16 +26,41 @@ const getTours = async () => {
     alert("error");
   }
 };
-const getLinesOfTour = async (routes) => {
+const getTourRatings = async (tourId) => {
   try {
-    const res = await fetch(`/api/tour/getLinesOfTour/${JSON.stringify(routes)}`);
+    const res = await fetch(`/api/rating/getTourRating?tourId=${tourId.trim()}`);
     if (!res.ok) alert("404");
     const jsonRes = await res.json();
-    const data = jsonRes.points;
+    const data = jsonRes.newRatings;
     return data;
   } catch (err) {
     console.log(err);
     alert("error");
   }
 };
-export { getLocations, getTours, getLinesOfTour };
+const getRatings = async (tourId) => {
+  try {
+    const res = await fetch(`/api/rating/ratings`);
+    if (!res.ok) alert("404");
+    const jsonRes = await res.json();
+    const data = jsonRes.newRatings;
+    return data;
+  } catch (err) {
+    console.log(err);
+    alert("error");
+  }
+};
+const getLinesOfTour = async (routes) => {
+  try {
+    const res = await fetch(`/api/route/getTourRoutes`);
+    if (!res.ok) alert("404");
+    const jsonRes = await res.json();
+    const data = { tourRoutes: jsonRes.tourRoutes, tours: jsonRes.tours };
+    return data;
+  } catch (err) {
+    console.log(err);
+    alert("error");
+  }
+};
+
+export { getLocations, getTours, getLinesOfTour, getTourRatings, getRatings };

@@ -2,6 +2,55 @@
 const Location = require("../models/location.model");
 
 class LocationController {
+  // [GET] /admin/locations
+  async showLocations(req, res, next) {
+    try {
+      const locations = await Location.find();
+      if (!locations) {
+        return res.status(404).json({
+          message: "Location not found!",
+        });
+      }
+      var newLocations = [];
+      locations.forEach((tour) => {
+        newLocations.push(tour.toObject());
+      });
+      return res.status(200).render("pages/admin/locations/index", {
+        pageTitle: "Danh sách tour",
+        style: "/pages/admin/locations.css",
+        script: "/pages/admin/locations.js",
+        locations: newLocations,
+        mapLink: "/admin/map/locations",
+        layout: "main",
+      });
+    } catch (err) {
+      res.status(500).json({
+        message: "Internal server error",
+      });
+    }
+  }
+
+  // [GET] /admin/map/locations
+  async showLocationsMap(req, res, next) {
+    const locations = await Location.find();
+    if (!locations) {
+      return res.status(404).json({
+        message: "Location not found!",
+      });
+    }
+    var newLocations = [];
+    locations.forEach((tour) => {
+      newLocations.push(tour.toObject());
+    });
+    res.render("./pages/admin/map/locations", {
+      pageTitle: "Location",
+      style: "/pages/admin/locations-map.css",
+      script: "/pages/admin/locations-map.js",
+      locations: newLocations,
+      layout: "map",
+    });
+  }
+
   // [GET] /api/location/getLocations
   async getLocations(req, res, next) {
     try {
@@ -23,6 +72,7 @@ class LocationController {
       });
     }
   }
+
   // [POST] /location/store
   async store(req, res, next) {
     try {
@@ -53,13 +103,38 @@ class LocationController {
       res.status(500).json({ failed: "Location store failed!", error });
     }
   }
+
+  // [POST] /api/location/updateLocation
+  async updateLocation(req, res, next) {
+    try {
+      const location = req.body.location;
+
+      await Location.findByIdAndUpdate(location._id, location);
+
+      res.status(200).json({ success: "Location update successfully!" });
+    } catch (err) {
+      console.error(err);
+      res.status(500).json({
+        message: "Internal server error",
+      });
+    }
+  }
+
+  // [DELETE] /api/location/deleteLocation
+  async deleteLocation(req, res, next) {
+    try {
+      const locationId = req.body._id;
+
+      await Location.findByIdAndDelete(locationId);
+
+      res.status(200).json({ success: "Location update successfully!" });
+    } catch (err) {
+      console.error(err);
+      res.status(500).json({
+        message: "Internal server error",
+      });
+    }
+  }
 }
 
 module.exports = new LocationController();
-
-
-{
-  activity_name:"test"
-  activity_time:"10/06/2024"
-  activity_desc:"test"
-}

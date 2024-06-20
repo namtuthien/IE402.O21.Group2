@@ -1,5 +1,5 @@
 <div class="w-20">
-    <nav class="position-fixed w-20 bg-navbar min-vh-100 overflow-hidden p-4">
+    <nav class="position-fixed w-20 bg-navbar min-vh-100 overflow-hidden p-3">
         <div class="user d-flex flex-column align-items-center">
             <div>
                 <img src="/imgs/admin/2Touradmin.png" class="" alt="logo navbar">
@@ -8,10 +8,10 @@
                 <img src="/imgs/home/vietnam-flag.webp" class="user__avatar img-fluid" alt="user avatar">
             </div>
             <div class="fw-bold text-white my-1">
-                <span>{{user_name}}</span>
+                <span>{{user.user_name}}</span>
             </div>
             <div class="user__role text-capitalize bg-white fst-italic rounded-pill py-1 px-2 my-1">
-                {{user_role}}
+                {{user.user_role}}
             </div>
         </div>
         <div class="nav flex-column position-relative">
@@ -28,8 +28,8 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link w-100 my-1 d-flex align-items-center p-1 position-relative rounded-1" aria-current="page"
-                        href="#">
+                    <a class="nav-link w-100 my-1 d-flex align-items-center p-1 position-relative rounded-1"
+                        aria-current="page" href="/admin/tours">
                         <i class="material-icons mx-2">
                             flag
                         </i>
@@ -39,8 +39,8 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link w-100 my-1 d-flex align-items-center p-1 position-relative rounded-1" aria-current="page"
-                        href="#">
+                    <a class="nav-link w-100 my-1 d-flex align-items-center p-1 position-relative rounded-1"
+                        aria-current="page" href="/admin/locations">
                         <i class="material-icons mx-2">
                             public
                         </i>
@@ -50,8 +50,8 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link w-100 my-1 d-flex align-items-center p-1 position-relative rounded-1" aria-current="page"
-                        href="#">
+                    <a class="nav-link w-100 my-1 d-flex align-items-center p-1 position-relative rounded-1"
+                        aria-current="page" href="/admin/bookings">
                         <i class="material-icons mx-2">
                             local_mall
                         </i>
@@ -61,8 +61,8 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link w-100 my-1 d-flex align-items-center p-1 position-relative rounded-1" aria-current="page"
-                        href="#">
+                    <a class="nav-link w-100 my-1 d-flex align-items-center p-1 position-relative rounded-1"
+                        aria-current="page" href="/admin/staffs">
                         <i class="material-icons mx-2">
                             person
                         </i>
@@ -72,8 +72,8 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link w-100 my-1 d-flex align-items-center p-1 position-relative rounded-1" aria-current="page"
-                        href="#">
+                    <a class="nav-link w-100 my-1 d-flex align-items-center p-1 position-relative rounded-1"
+                        aria-current="page" href="/admin/customers">
                         <i class="material-icons mx-2">
                             groups
                         </i>
@@ -83,8 +83,8 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link w-100 my-1 d-flex align-items-center p-1 position-relative rounded-1" aria-current="page"
-                        href="#">
+                    <a class="nav-link w-100 my-1 d-flex align-items-center p-1 position-relative rounded-1"
+                        aria-current="page" href="/admin/ratings">
                         <i class="material-icons mx-2">
                             star
                         </i>
@@ -95,8 +95,8 @@
                 </li>
                 <hr class="border border-white border-2 opacity-100">
                 <li class="nav-item">
-                    <a class="nav-link w-100 my-1 d-flex align-items-center p-1 position-relative rounded-1" aria-current="page"
-                        href="#">
+                    <a class="nav-link w-100 my-1 d-flex align-items-center p-1 position-relative rounded-1"
+                        aria-current="page" href="#">
                         <i class="material-icons mx-2">
                             settings
                         </i>
@@ -106,8 +106,8 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link w-100 my-1 d-flex align-items-center p-1 position-relative rounded-1" aria-current="page"
-                        href="#">
+                    <a class="nav-link w-100 my-1 d-flex align-items-center p-1 position-relative rounded-1"
+                        aria-current="page" href="#">
                         <i class="material-icons mx-2">
                             logout
                         </i>

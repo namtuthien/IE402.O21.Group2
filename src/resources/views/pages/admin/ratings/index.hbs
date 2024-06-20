@@ -1,0 +1,197 @@
+{{>admin/dataActionButtons}}
+<section class="tourHeading-section">
+  <div class="tourHeading">
+    <div class="tourHeadingLeft">
+      <div class="searchBar">
+        <div class="searchBar-input">
+          <input type="text"
+            class="searchInput"
+            placeholder="Tìm tour..." />
+        </div>
+        <div class="line">
+        </div>
+        <div class="searchBar-icon">
+          <span class="material-icons-outlined">
+            search
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="tourHeadingRight">
+      <div class="paginationBar">
+        <div class="paginationBar-btn">
+          <span class="material-icons-outlined">
+            chevron_left
+          </span>
+        </div>
+        <div class="pageLine"></div>
+        <div class="paginationBar-btn current-page">
+          1
+        </div>
+        <div class="pageLine"></div>
+        <div class="paginationBar-btn">
+          2
+        </div>
+        <div class="pageLine"></div>
+        <div class="paginationBar-btn">
+          ...
+        </div>
+        <div class="pageLine"></div>
+        <div class="paginationBar-btn">
+          5
+        </div>
+        <div class="pageLine"></div>
+        <div class="paginationBar-btn">
+          6
+        </div>
+        <div class="pageLine"></div>
+        <div class="paginationBar-btn">
+          <span class="material-icons-outlined">
+            chevron_right
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="toursTable-section">
+  <div class="table-responsive toursTable-container">
+    <table class="table-bordered table toursTable">
+      <thead id="toursTable-heading">
+        <tr class="toursTable-heading_row">
+          <th class="tourTable-heading_title"
+            scope="col">
+            <input type="checkbox"
+              class="allCheck" />
+          </th>
+          <th class="tourTable-heading_title"
+            scope="col">
+            STT
+          </th>
+          <th class="tourTable-heading_title"
+            scope="col">
+            Tour
+          </th>
+          <th class="tourTable-heading_title"
+            scope="col">
+            Khách hàng
+          </th>
+          <th class="tourTable-heading_title"
+            scope="col">
+            Điểm
+          </th>
+          <th class="tourTable-heading_title"
+            scope="col">
+            Nội dung đánh giá
+          </th>
+
+          <th class="tourTable-heading_title"
+            scope="col">
+
+          </th>
+        </tr>
+      </thead>
+      <tbody id="toursTableBody">
+        {{#each ratings}}
+          <tr>
+            <td class="">
+              <input type="checkbox"
+                class="singleCheck" />
+            </td>
+            <td class="">
+              <p class="toursTable-data">
+                {{getIndex @index}}
+              </p>
+            </td>
+            <td class="">
+              <p class="toursTable-data tourName">
+                {{this.tour.tour_name}}
+              </p>
+            </td>
+            <td class="">
+              <p class="toursTable-data">
+                {{this.customer.user_name}}
+              </p>
+            </td>
+            <td class="">
+              <p class="toursTable-data">
+                {{this.rating_score}}
+              </p>
+            </td>
+            <td class="">
+              <p class="toursTable-data tourName">
+                {{this.rating_detail}}
+              </p>
+            </td>
+
+            <td class="">
+              <div class="toursAction_container">
+                <span class="material-icons-outlined  toursAction-icon">
+                  reply
+                </span>
+              </div>
+            </td>
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+  <div class="reply-popup">
+    <div class="reply-popup-background">
+      <div class="reply-popup-modal">
+        <div class="modal-heading">Phản hồi đánh giá</div>
+        <div class="modal-feedback-container">
+          <div class="modal-user">
+            <div class="modal-avt">
+              <span class="material-icons-outlined userAvt">
+                account_circle
+              </span>
+
+            </div>
+            <div class="modal-userName">Truong Huynh</div>
+            <div class="modal-rating">
+              <div class="modal-rating-score"></div>
+              <span class="material-icons-outlined star">
+                star
+              </span>
+
+            </div>
+          </div>
+
+          <div class="modal-feedback">
+          </div>
+        </div>
+        <div class="modal-reply-container">
+
+          <div class="modal-user">
+            <span class="material-icons-outlined">
+              subdirectory_arrow_right
+            </span>
+            <div class="modal-avt">
+              <img class="modal-avt-img"
+                src="/imgs/logo3D.png"
+                alt="">
+            </div>
+            <div class="modal-userName">You</div>
+          </div>
+          <div class="modal-reply-input-container">
+            <textarea type="textarea"
+              wrap="soft"
+              placeholder="Nhập phản hồi..."
+              class="modal-reply-input"></textarea>
+          </div>
+        </div>
+        <div class="modal-btns">
+          <div class="sendBtn">
+            <span class="material-icons-outlined send">
+              send
+            </span>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>

@@ -46,6 +46,12 @@ async function checkToken(req, res, next) {
 
     req.user_id = userId;
     req.user_role = user.user_role;
+
+    res.locals.user = {
+      user_name: user.user_name,
+      user_role: user.user_role
+    };
+
     next();
   } catch (error) {
     return res.status(500).send({ "Internal Server Error": error.message });
@@ -54,24 +60,32 @@ async function checkToken(req, res, next) {
 async function isLoggedIn(req, res, next) {
   const token = req.cookies.token;
   if (token) {
-    const decodedToken = jwtDecode.decode(token, null, true);
-    const { userId } = decodedToken;
-    const user = await User.findById(userId);
-    switch (user.user_role) {
-      case "customer":
-        return res.redirect("/customer/dashboard");
-      case "staff":
-        return res.redirect("/staff/dashboard");
-      case "admin":
-        return res.redirect("/admin/dashboard");
-      case "tourguide":
-        return res.redirect("/tourguide/dashboard");
-      default:
-        return next(); // Allow access to other routes if user role is not recognized
+    try {
+      const decodedToken = jwtDecode.decode(token, null, true);
+      const { userId } = decodedToken;
+      const user = await User.findById(userId);
+
+      if (user) {
+        switch (user.user_role) {
+          case "staff":
+            return res.redirect("/staff/dashboard");
+          case "admin":
+            return res.redirect("/admin/dashboard");
+          case "tourguide":
+            return res.redirect("/tourguide/dashboard");
+          default:
+            return res.redirect("/");
+        }
+      }
+    } catch (error) {
+      console.error("Error decoding token or finding user:", error);
+      // Handle the error as needed, e.g., redirect to a login page
+      return res.redirect("/");
     }
   }
   next();
 }
+
 module.exports = {
   checkToken,
   isLoggedIn,
