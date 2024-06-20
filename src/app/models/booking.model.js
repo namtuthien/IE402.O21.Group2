@@ -26,6 +26,7 @@ const Booking = new Schema({
   booking_note: { type: String },
   // booking_date: { type: Date },
   booking_status: { type: String, required: true },
+  booking_removed: {type: Boolean, default: false, required: true},
   created_at: { type: Date, default: () => Date.now() },
   updated_at: { type: Date, default: () => Date.now() },
 });
