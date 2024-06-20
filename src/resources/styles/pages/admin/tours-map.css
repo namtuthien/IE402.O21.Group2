@@ -230,3 +230,272 @@ ul {
 .tour-left {
   position: relative;
 }
+
+
+/* =================================================================================================== */
+
+.tour-map__button-add {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  z-index: 2;
+}
+
+.tour-map__button-update {
+  position: absolute;
+  top: 40px;
+  right: 20px;
+  z-index: 2;
+}
+
+
+/* ================================================================================================== */
+.tour-map__div-update-tour,
+.tour-map__div-add-tour {
+  display: none;
+  position: absolute; 
+  background-color: rgba(112, 114, 115, 0.1);
+  top:0; 
+  right:0; 
+  left:0;
+  bottom:0; 
+}
+.tour-map__hidden-form-div {
+  font-size: 24px;
+  color: var(--red);
+  position: relative;
+  top:0; 
+  right:0; 
+  left:98%;
+  bottom:0; 
+  cursor: pointer;
+}
+/* ================================================================================================== */
+.tour-popup {
+  /* margin-left: 500px; */
+  /* width: 600px; */
+  /* width: 100%; */
+  background-color: var(--white);
+  padding: 20px;
+  /* border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+  /* height: 400px;
+  overflow-y: auto;  */
+  
+  background-color: #fff; 
+  margin:auto;
+  width: 50%;
+  height: 80%;
+  overflow-y: auto;
+}
+.tour-popup__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.tour-popup__form-group {
+  margin-bottom: 15px;
+}
+
+.tour-popup__flex-group {
+  display: flex;
+  gap: 1em;
+  flex-wrap: wrap;
+}
+
+.tour-popup__label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: 14px;
+  color: var(--gray1);
+}
+
+.tour-popup__input,
+.tour-popup__textarea {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid var(--black1);
+  border-radius: 4px;
+  font-size: 14px;
+  color: var(--gray1);
+}
+
+.tour-popup__textarea {
+  height: 100px;
+}
+
+.tour-popup__button {
+  display: block;
+  width: max-content;
+  height: max-content;
+  padding: 5px;
+  color: var(--primary5);
+  border: solid 2px var(--primary5);
+  border-radius: 5px;
+  background-color: var(--white);
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  /* margin-top: 10px; */
+}
+
+.tour__form-group--submit{
+  display: flex;
+  justify-content: space-between;
+}
+
+.tour-popup__submit-button {
+  display: flex;
+  gap: 0.2em;
+  width: max-content;
+  padding: 5px 15px;
+  background-color: var(--primary5);
+  color: var(--white);
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.tour-popup__submit-button:hover {
+  background-color: var(--outline4);
+}
+
+.tour-popup__remove-submit-button {
+  background-color: var(--red);
+}
+
+.tour-popup__tab {
+  width: max-content;
+  color: var(--black);
+  border: solid 1px var(--black1);
+  font-weight: normal;
+  display: flex;
+}
+
+.tour-popup__remove-button {
+  background-color: var(--white);
+  color: var(--black);
+  border: none;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 14px;
+  height: 14px;
+  margin-left: 0.5em;
+}
+
+.tour-popup__area-tabs,
+.tour-popup__location-tabs,
+.tour-popup__tab-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+.tour-popup__form-group--image {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.tour-popup__image-group,
+.tour-popup__all-image-div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+.tour-popup__image-button {
+  width: 100px;
+  height: 100px;
+  border: 2px solid var(--primary5);
+  border-radius: 5px;
+  background-color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.tour-popup__image-placeholder {
+  /* max-width: 100%;
+  max-height: 100%; */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.tour-popup__add-image-icon {
+  color: var(--primary5);
+  font-size: 85px;
+}
+
+.tour-popup__image {
+  border: none;
+}
+
+.tour-popup__hidden-input {
+  display: none;
+}
+
+.tour-popup__form-group--submit {
+  display: flex;
+  justify-content: flex-start;
+}
+
+
+/* =========================================CSS của Danh sách địa điểm===================================================== */
+.tour-popup__all-area-div,
+.tour-popup__all-location-div {
+  display: none;
+  z-index: 999;
+  border: solid 1px var(--black1);
+  border-radius: 5px;
+  padding: 1em;
+  /* width: max-content; */
+  width: 200px;
+  /* overflow-x: auto; */
+  height: max-content;
+  max-height: 400px;
+  overflow-y: auto;
+  position: absolute;
+  background-color: var(--white);
+}
+
+.tour-popup__hidden-div {
+  font-size: 20px;
+  position: relative;
+  left: 95%;
+  bottom: 95%;
+  cursor: pointer;
+}
+
+.tour-popup__hidden-tab {
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.tour-popup__all-area-ul,
+.tour-popup__all-location-ul {
+  display: flex;
+  flex-direction: column;
+  width: max-content;
+  height: max-content;
+  list-style-type: none;
+}
+.tour-popup__area,
+.tour-popup__location {
+  border: solid 1px var(--black1);
+  border-radius: 5px;
+  width: max-content;
+  height: auto;
+  padding: 5px;
+  cursor: pointer;
+}
+/* ================================================================================================== */
