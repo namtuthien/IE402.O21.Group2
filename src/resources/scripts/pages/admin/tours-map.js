@@ -84,12 +84,12 @@ require([
   reactiveUtils,
   FormTemplate,
 
-  route, 
-  RouteParameters, 
-  FeatureSet, 
+  route,
+  RouteParameters,
+  FeatureSet,
   webMercatorUtils
 ) => {
-  
+
   // Point the URL to a valid routing service
   const routeUrl = "https://route-api.arcgis.com/arcgis/rest/services/World/Route/NAServer/Route_World";
 
@@ -100,7 +100,7 @@ require([
   const routeParams = new RouteParameters({
     // An authorization string used to access the routing service
     apiKey: "AAPK35e6fc8a720d45eb8c319c6b0cf5ddb1CAqeaYpeK-CG-rCiUfYFBhOGIbQq5m5UjPEw4tb9fWciTNaHvj6I6TaRS8KdGPKD"
-,
+    ,
     stops: new FeatureSet(),
     outSpatialReference: {
       // autocasts as new SpatialReference()
@@ -110,7 +110,7 @@ require([
 
   // Tạo mảng để lưu các routeResult đã thêm vào routeLayer -- sử dụng trong trường hợp muốn xóa đường đi trên map
   let routeResultAdded = [];
-  
+
 
   // Define the symbology used to display the stops
   const stopSymbol = {
@@ -255,9 +255,14 @@ require([
   let isUpdate = false;
   const updateButton = document.querySelector(".update-btn");
   updateButton.addEventListener("click", () => {
-    isUpdate = true;
-
-    viewDivContainer.style = 'cursor: url("/imgs/cursor-add-location.png"),auto';
+    if (!isUpdate) {
+      isUpdate = true;
+      viewDivContainer.style = 'cursor: url("/imgs/cursor-add-location.png"),auto';
+    }
+    else {
+      isUpdate = false;
+      viewDivContainer.style = "cursor: auto";
+    }
   });
 
   const deleteButton = document.querySelector(".delete-btn");
@@ -408,13 +413,13 @@ require([
 
   function addStop(event) {
     // Thêm địa điểm đã chọn vào routeLayer
-    view.hitTest(event).then(function(response) {
+    view.hitTest(event).then(function (response) {
       if (response.results.length) {
         // console.log(response.results.length);
-        const graphic = response.results.filter(function(result) {
+        const graphic = response.results.filter(function (result) {
           return result.graphic.layer === locationGraphicsLayer;
         })[0]?.graphic;
-    
+
         if (graphic && choosedLocations.indexOf(graphic) === -1) {
           // Thêm graphic vào routeLayer
           // routeLayer.add(graphic);
@@ -422,7 +427,7 @@ require([
           routeParams.stops.features.push(graphic);
           if (routeParams.stops.features.length >= 2) {
             route.solve(routeUrl, routeParams).then(showRoute);
-          }     
+          }
           // In ra thông tin của graphic được click
           // console.log("Graphic clicked: ", graphic.attributes);
           // console.log("Added to routeLayer: ", graphic);
@@ -435,8 +440,8 @@ require([
         }
       } else {
         console.error("No results found.");
-      } 
-    });  
+      }
+    });
   }
   function showRoute(data) {
     const routeResult = data.routeResults[0].route;
@@ -444,7 +449,7 @@ require([
     routeLayer.add(routeResult);
     routeResultAdded.push(routeResult);
     // console.log("Các tọa độ:");
-  
+
     if (routeResult.geometry && routeResult.geometry.paths && routeResult.geometry.paths[0]) {
       let locationCount = 0;
       passingLines = [];
@@ -452,8 +457,8 @@ require([
         //Thêm điểm đầu cho line - Chính là tọa độ Địa điểm được chọn
         let pointsPrepare = [];
         let firstPoint = {
-          longitude : choosedLocations[locationCount].attributes.location_longitude,
-          latitude : choosedLocations[locationCount].attributes.location_latitude
+          longitude: choosedLocations[locationCount].attributes.location_longitude,
+          latitude: choosedLocations[locationCount].attributes.location_latitude
         }
         pointsPrepare.push(firstPoint);
         //Duyệt các tọa độ của đường đi và push vào pointsPrepare
@@ -463,8 +468,8 @@ require([
           // console.log("[ ", geographicPoint, " ]");
           //Push tọa độ này vào pointsPrepare
           let onePoint = {
-            longitude : geographicPoint[0],
-            latitude : geographicPoint[1]
+            longitude: geographicPoint[0],
+            latitude: geographicPoint[1]
           }
           pointsPrepare.push(onePoint);
         });
@@ -472,8 +477,8 @@ require([
         locationCount++;
         //Thêm điểm cuối cho line - Chính là tọa độ Địa điểm được chọn
         let lastPoint = {
-          longitude : choosedLocations[locationCount].attributes.location_longitude,
-          latitude : choosedLocations[locationCount].attributes.location_latitude
+          longitude: choosedLocations[locationCount].attributes.location_longitude,
+          latitude: choosedLocations[locationCount].attributes.location_latitude
         }
         pointsPrepare.push(lastPoint);
         // debugger
@@ -485,7 +490,7 @@ require([
       console.error("No paths found in the route geometry.");
     }
   }
-  
+
 
   // Tạo graphic layer
   const locationGraphicsLayer = new GraphicsLayer({
@@ -723,7 +728,7 @@ require([
   // ===========================================================================================================================  //
   //DUyệt mảng và tạo thẻ các địa điểm đã chọn
   function getChoosedLocations() {
-    if(choosedLocations.length != 0) {
+    if (choosedLocations.length != 0) {
       //Xóa hết các địa điểm hiện tại trong thẻ
       document.getElementById('tour-popup__current-locations').innerHTML = "";
       choosedLocations.forEach(location => {
@@ -742,14 +747,14 @@ require([
   }
 
   //=======================================================================================================================
-  document.getElementById('addTourButton').addEventListener('click', function() {
+  document.getElementById('addTourButton').addEventListener('click', function () {
     document.getElementById('addTourDiv').style.display = 'flex';
     if (choosedLocations.length != prevChoosedLocationsLength) {
       getChoosedLocations();
     }
   })
-  
-  document.getElementById('hideAddDiv').addEventListener('click', function() {
+
+  document.getElementById('hideAddDiv').addEventListener('click', function () {
     routeLayer.removeAll();
     choosedLocations.forEach((choosedLocation) => {        // Tìm chỉ số của điểm dừng cần xóa
       const index = routeParams.stops.features.findIndex(feature => {
@@ -783,8 +788,8 @@ require([
     document.getElementById('allLocationDiv').style.display = 'none';
   })
   const allLocation = document.getElementsByClassName('tour-popup__location');
-  for (let i = 0; i< allLocation.length; i++) {
-    allLocation[i].addEventListener('click', function() {
+  for (let i = 0; i < allLocation.length; i++) {
+    allLocation[i].addEventListener('click', function () {
       const pElement = document.createElement('p');
       pElement.className = 'tour-popup__button tour-popup__tab';
       pElement.innerHTML = `
@@ -799,26 +804,26 @@ require([
   }
 
   // Sử dụng ủy quyền sự kiện để xóa các thẻ địa điểm
-  document.getElementById('tour-popup__current-locations').addEventListener('click', function(event) {
-    if(event.target.closest('.tour-popup__remove-button')) {
+  document.getElementById('tour-popup__current-locations').addEventListener('click', function (event) {
+    if (event.target.closest('.tour-popup__remove-button')) {
       const pElement = event.target.closest('p');
       const removedElementText = pElement.childNodes[0].nodeValue.trim();
       // TÌm index của địa điểm bị xóa trong mảng choosedLocations
-      let indexOfRemoved =  -1;
-      for (let index =  0; index < choosedLocations.length; index++){
+      let indexOfRemoved = -1;
+      for (let index = 0; index < choosedLocations.length; index++) {
         if (choosedLocations[index].attributes.location_name == removedElementText) {
           indexOfRemoved = index;
         }
       }
-      if(indexOfRemoved >= 0) {
+      if (indexOfRemoved >= 0) {
         // Xóa đường đi đã hiện trên map
         routeLayer.removeAll();
-  
+
         // Tìm chỉ số của điểm dừng cần xóa
         const index = routeParams.stops.features.findIndex(feature => {
           return feature.attributes.location_name === choosedLocations[indexOfRemoved].attributes.location_name;
         });
-  
+
         // Nếu tìm thấy điểm dừng, xóa nó
         if (index !== -1) {
           console.log("routeParams bị xóa: ", index);
@@ -828,7 +833,7 @@ require([
           route.solve(routeUrl, routeParams).then(showRoute);
         }
         // Xóa địa điểm đó trong mảng choosedLocations
-        choosedLocations.splice(indexOfRemoved,1);
+        choosedLocations.splice(indexOfRemoved, 1);
         //Giảm số lượng địa điểm đã chọn đi 1
         prevChoosedLocationsLength--;
 
@@ -839,29 +844,29 @@ require([
   });
 
   // JS Hiển thị ảnh khi nhấn chọn ảnh===============================================================================================================
-  document.getElementById("addImageButton").addEventListener('click', function() {
+  document.getElementById("addImageButton").addEventListener('click', function () {
     document.getElementById('imageInput').click()
   })
 
-  document.getElementById('imageInput').addEventListener('change', function(event) {
+  document.getElementById('imageInput').addEventListener('change', function (event) {
     const file = event.target.files[0]
-    if(file) {
+    if (file) {
       const reader = new FileReader();
-      reader.onload = function(e) {
-          // Hiển thị ảnh đã chọn (có thể thay đổi theo yêu cầu)
-          const imgElement = document.createElement('img');
-          imgElement.src = e.target.result;
-          imgElement.className = 'tour-popup__image-placeholder';
-          const divElement = document.createElement('div');
-          divElement.className = 'tour-popup__image-button tour-popup__image';
-          divElement.appendChild(imgElement);
-          document.querySelector('.tour-popup__all-image-div').appendChild(divElement);
+      reader.onload = function (e) {
+        // Hiển thị ảnh đã chọn (có thể thay đổi theo yêu cầu)
+        const imgElement = document.createElement('img');
+        imgElement.src = e.target.result;
+        imgElement.className = 'tour-popup__image-placeholder';
+        const divElement = document.createElement('div');
+        divElement.className = 'tour-popup__image-button tour-popup__image';
+        divElement.appendChild(imgElement);
+        document.querySelector('.tour-popup__all-image-div').appendChild(divElement);
       };
       reader.readAsDataURL(file);
     }
   })
 
-  document.getElementById('submitAddTourButton').addEventListener('click', function() {
+  document.getElementById('submitAddTourButton').addEventListener('click', function () {
     const addTourForm = document.getElementById('addTourForm');
     const formData = new FormData(addTourForm);
     const tourData = {
@@ -891,30 +896,30 @@ require([
         longitude: point.longitude,
         latitude: point.latitude
       }));
-      const lineStore = {points};
+      const lineStore = { points };
       console.log('lineStore:', lineStore);
       //Lưu line lên db
-      const fetchPromise = fetch("/api/line/add",{
+      const fetchPromise = fetch("/api/line/add", {
         method: 'POST',
         headers: {
-            'Content-Type': 'application/json'
+          'Content-Type': 'application/json'
         },
         body: JSON.stringify(lineStore)
       })
-      .then(response => response.json())
-      .then(data => {
+        .then(response => response.json())
+        .then(data => {
           //Thêm id của line vừa lưu lên db vào mảng 
           linesId.push(data._id);
           console.log('Success:', data);
-      })
-      .catch(error => {
+        })
+        .catch(error => {
           console.error('Error:', error);
-      });
+        });
 
       //Thêm promise vào mảng 
       promises.push(fetchPromise);
     });
-    
+
     // Kiểm tra các promise đã được trả về hết chưa
     Promise.all(promises).then(() => {
       // Cho mảng promisses về rỗng
@@ -922,29 +927,29 @@ require([
       //Tạo route lên db và lấy id của nó lưu vào mảng
       console.log("lineId: ", linesId)
       linesId.map((lineId) => {
-        const routeStore = {  
+        const routeStore = {
           route_name: "Tên của route",
           route_description: "Mô tả về route",
           route_length: 0,
           lines: [lineId]
         }
         //Lưu route lên db để lấy id của route
-        const fetchPromise = fetch('/api/route/add',{
+        const fetchPromise = fetch('/api/route/add', {
           method: 'POST',
           headers: {
-              'Content-Type': 'application/json'
+            'Content-Type': 'application/json'
           },
           body: JSON.stringify(routeStore)
         })
-        .then(response => response.json())
-        .then(data => {
+          .then(response => response.json())
+          .then(data => {
             //Thêm id của line vừa lưu lên db vào mảng 
             routesId.push(data._id);
             console.log('Success:', data);
-        })
-        .catch(error => {
+          })
+          .catch(error => {
             console.error('Error:', error);
-        });
+          });
 
         //Thêm promise vào mảng
         promises.push(fetchPromise);
@@ -957,43 +962,43 @@ require([
         console.log("routesId: ", routesId)
         console.log("choosedLocations: ", choosedLocations)
         const routesPrepare = [];
-        for(let i = 0; i < routesId.length; i++) {
+        for (let i = 0; i < routesId.length; i++) {
           const oneRoutePrepare = {
             start_coordinate: {
               longitude: choosedLocations[i].attributes.location_longitude,
               latitude: choosedLocations[i].attributes.location_latitude,
             },
             end_coordinate: {
-              longitude: choosedLocations[i+1].attributes.location_longitude,
-              latitude: choosedLocations[i+1].attributes.location_latitude,
+              longitude: choosedLocations[i + 1].attributes.location_longitude,
+              latitude: choosedLocations[i + 1].attributes.location_latitude,
             },
             route: routesId[i],
           };
           routesPrepare.push(oneRoutePrepare);
         }
-        console.log("routesPrepare: ",routesPrepare);
+        console.log("routesPrepare: ", routesPrepare);
         tourData.routes = routesPrepare;
         console.log("Dữ liệu: ", tourData);
         const fetchPromise = fetch('/api/tour/store', {
           method: 'POST',
           headers: {
-              'Content-Type': 'application/json'
+            'Content-Type': 'application/json'
           },
           body: JSON.stringify(tourData)
         })
-        .then(response => response.json())
-        .then(data => {
+          .then(response => response.json())
+          .then(data => {
             alert('Tạo Tour Thành công!')
             console.log('Successing Create Tour:', data);
-        })
-        .catch(error => {
+          })
+          .catch(error => {
             // console.error('Error:', error);
-        });
+          });
 
-        
+
         //Thêm promise vào mảng
         promises.push(fetchPromise);
-        
+
         // Kiểm tra các promise đã được trả về hết chưa
         Promise.all(promises).then(() => {
           // Ẩn popup sau khi thêm tour

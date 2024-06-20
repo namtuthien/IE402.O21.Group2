@@ -124,7 +124,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         if (currentPath.includes("addstaff") || currentPath.includes("addStaff")) {
             try {
-                fetch(`/admin/staff/addStaff`, {
+                fetch(`/api/staff/addStaff`, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
@@ -152,7 +152,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         else {
             try {
-                fetch(`/admin/staff/update/${user_id}`, {
+                fetch(`/api/staff/update/${user_id}`, {
                     method: 'PATCH',
                     headers: {
                         'Content-Type': 'application/json'
@@ -186,7 +186,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById('submitDeleteButton').addEventListener('click', () => {
         const user_id = currentPath.split("/").pop();
         try {
-            fetch(`/admin/staff/deleteStaff/${user_id}`, {
+            fetch(`/api/staff/deleteStaff/${user_id}`, {
                 method: 'DELETE',
                 headers: {
                     'Content-Type': 'application/json'
