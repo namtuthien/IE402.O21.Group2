@@ -4,7 +4,9 @@
     <div class="bookingHeadingLeft">
       <div class="searchBar">
         <div class="searchBar-input">
-          <input type="text" class="searchInput" placeholder="Tìm booking..." />
+          <input type="text"
+            class="searchInput"
+            placeholder="Tìm booking..." />
         </div>
         <div class="line">
         </div>
@@ -58,31 +60,41 @@
     <table class="table-bordered table bookingsTable">
       <thead id="bookingsTable-heading">
         <tr class="bookingsTable-heading_row">
-          <th class="bookingTable-heading_title" scope="col">
-            <input type="checkbox" class="allCheck" />
+          <th class="bookingTable-heading_title"
+            scope="col">
+            <input type="checkbox"
+              class="allCheck" />
           </th>
-          <th class="bookingTable-heading_title" scope="col">
+          <th class="bookingTable-heading_title"
+            scope="col">
             STT
           </th>
-          <th class="bookingTable-heading_title" scope="col">
+          <th class="bookingTable-heading_title"
+            scope="col">
             Mã Booking
           </th>
-          <th class="bookingTable-heading_title" scope="col">
+          <th class="bookingTable-heading_title"
+            scope="col">
             Tên Tour
           </th>
-          <th class="bookingTable-heading_title" scope="col">
+          <th class="bookingTable-heading_title"
+            scope="col">
             Tên KH
           </th>
-          <th class="bookingTable-heading_title" scope="col">
+          <th class="bookingTable-heading_title"
+            scope="col">
             Ngày tạo
           </th>
-          <th class="bookingTable-heading_title" scope="col">
+          <th class="bookingTable-heading_title"
+            scope="col">
             Tổng tiềng
           </th>
-          <th class="bookingTable-heading_title" scope="col">
+          <th class="bookingTable-heading_title"
+            scope="col">
             Trạng thái
           </th>
-          <th class="bookingTable-heading_title" scope="col">
+          <th class="bookingTable-heading_title"
+            scope="col">
             <span class="material-icons-outlined">
               more_vert
             </span>
@@ -91,58 +103,60 @@
       </thead>
       <tbody id="bookingsTableBody">
         {{#each bookings}}
-        <tr>
-          <td class="">
-            <input type="checkbox" class="singleCheck" />
-          </td>
-          <td class="">
-            <p class="bookingsTable-data">
-              {{getIndex @index}}
-            </p>
-          </td>
-          <td class="">
-            <p class="bookingsTable-data bookingId">
-              {{this._id}}
-            </p>
-          </td>
-          <td class="">
-            <p class="bookingsTable-data tourName">
-              {{this.tour.tour_name}}
-            </p>
-          </td>
-          <td class="">
-            <p class="bookingsTable-data">
-              {{this.customer.user_name}}
-            </p>
-          </td>
-          <td class="">
-            <p class="bookingsTable-data">
-              {{convertDateToDay this.created_at}}
-            </p>
-          </td>
-          <td class="">
-            <p class="bookingsTable-data">
-              {{this.booking_total_price}}
-            </p>
-          </td>
+          <tr>
+            <td class="">
+              <input type="checkbox"
+                class="singleCheck" />
+            </td>
+            <td class="">
+              <p class="bookingsTable-data">
+                {{getIndex @index}}
+              </p>
+            </td>
+            <td class="">
+              <p class="bookingsTable-data bookingId">
+                {{this._id}}
+              </p>
+            </td>
+            <td class="">
+              <p class="bookingsTable-data tourName">
+                {{this.tour.tour_name}}
+              </p>
+            </td>
+            <td class="">
+              <p class="bookingsTable-data">
+                {{this.customer.user_name}}
+              </p>
+            </td>
+            <td class="">
+              <p class="bookingsTable-data">
+                {{convertDateToDay this.created_at}}
+              </p>
+            </td>
+            <td class="">
+              <p class="bookingsTable-data">
+                {{formatPrice this.booking_total_price}}đ
+              </p>
+            </td>
 
-          <td class="">
-            <p class="bookingsTable-data">
+            <td class="">
+              <p class="bookingsTable-data">
                 {{#ifEquals this.booking_status "true"}}
-                    Đã thanh toán
-                {{else}}
-                    Chưa thanh toán
+                  Đã thanh toán
+        {{else}}
+          Chưa thanh toán
                 {{/ifEquals}}
-            </p>
-          </td>
-          <td class="">
-            <div class="bookingsAction_container">
-              <a href="/admin/bookings/view/{{this._id}}" class="material-icons bookingsAction-icon">
-                more_vert
-              </a>
-            </div>
-          </td>
-        </tr>
+              </p>
+            </td>
+            <td class="">
+              <div class="bookingsAction_container">
+                <a href="/admin/bookings/view/{{this._id}}"
+                  class="material-icons bookingsAction-icon">
+                  more_vert
+                </a>
+              </div>
+            </td>
+          </tr>
         {{/each}}
       </tbody>
     </table>

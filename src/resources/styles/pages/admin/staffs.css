@@ -148,28 +148,24 @@
   text-decoration: underline;
 }
 
-.staff-email,
+
 .staff-name {
   width: 200px;
   white-space: wrap;
-  text-align: left;
+  text-align: center;
 }
 
 .staff-address {
-  width: 300px;
-  white-space: wrap;
-  text-align: left;
+ max-width: 500px;
+ white-space: wrap;
 }
 
 .staff-phone {
-  width: 100px;
+  text-align: center;
+
 }
 
-.locationAddress {
-  width: 500px;
-  white-space: wrap;
-  text-align: left;
-}
+
 
 .singleCheck,
 .allCheck {
