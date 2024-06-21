@@ -1056,7 +1056,7 @@ require([
       guides: tourGuideIds[tourGuideIndex],
       vehicles: vehicleIds[vehicleIndex]
     };
-    if (tourData.tour_name && tourData.tour_price && tourData.tour_total_ticket && tourData.tour_total_ticket_available && choosedLocations.length !== 0) {
+    if (tourData.tour_name && tourData.tour_price && tourData.tour_total_ticket && tourData.tour_total_ticket_available && choosedLocations.length > 1) {
       const locationsId = [];
       choosedLocations.map((choosedLocation) => {
         locationsId.push(choosedLocation.attributes.location_id);
@@ -1084,7 +1084,7 @@ require([
           },
           body: JSON.stringify(lineStore),
         })
-          // .then((response) => response.json())
+          .then((response) => response.json())
           .then((data) => {
             //Thêm id của line vừa lưu lên db vào mảng
             linesId.push(data._id);
@@ -1119,7 +1119,7 @@ require([
             },
             body: JSON.stringify(routeStore),
           })
-            // .then((response) => response.json())
+            .then((response) => response.json())
             .then((data) => {
               //Thêm id của line vừa lưu lên db vào mảng
               routesId.push(data._id);
