@@ -4,9 +4,7 @@
     <div class="tourHeadingLeft">
       <div class="searchBar">
         <div class="searchBar-input">
-          <input type="text"
-            class="searchInput"
-            placeholder="Tìm tour..." />
+          <input type="text" class="searchInput" placeholder="Tìm tour..." />
         </div>
         <div class="line">
         </div>
@@ -60,41 +58,31 @@
     <table class="table-bordered table toursTable">
       <thead id="toursTable-heading">
         <tr class="toursTable-heading_row">
-          <th class="tourTable-heading_title"
-            scope="col">
-            <input type="checkbox"
-              class="allCheck" />
+          <th class="tourTable-heading_title" scope="col">
+            <input type="checkbox" class="allCheck" />
           </th>
-          <th class="tourTable-heading_title"
-            scope="col">
+          <th class="tourTable-heading_title" scope="col">
             STT
           </th>
-          <th class="tourTable-heading_title"
-            scope="col">
+          <th class="tourTable-heading_title" scope="col">
             Mã Tour
           </th>
-          <th class="tourTable-heading_title"
-            scope="col">
+          <th class="tourTable-heading_title" scope="col">
             Tên Tour
           </th>
-          <th class="tourTable-heading_title"
-            scope="col">
+          <th class="tourTable-heading_title" scope="col">
             Giá vé
           </th>
-          <th class="tourTable-heading_title"
-            scope="col">
+          <th class="tourTable-heading_title" scope="col">
             Ngày khởi hành
           </th>
-          <th class="tourTable-heading_title"
-            scope="col">
+          <th class="tourTable-heading_title" scope="col">
             Ngày/Đêm
           </th>
-          <th class="tourTable-heading_title"
-            scope="col">
+          <th class="tourTable-heading_title" scope="col">
             Vé trống
           </th>
-          <th class="tourTable-heading_title"
-            scope="col">
+          <th class="tourTable-heading_title" scope="col">
             <span class="material-icons-outlined">
               more_vert
             </span>
@@ -103,56 +91,55 @@
       </thead>
       <tbody id="toursTableBody">
         {{#each tours}}
-          <tr>
-            <td class="">
-              <input type="checkbox"
-                class="singleCheck" />
-            </td>
-            <td class="">
-              <p class="toursTable-data">
-                {{getIndex @index}}
-              </p>
-            </td>
-            <td class="">
-              <p class="toursTable-data tourId">
-                {{this._id}}
+        <tr>
+          <td class="">
+            <input type="checkbox" class="singleCheck" />
+          </td>
+          <td class="">
+            <p class="toursTable-data">
+              {{getIndex @index}}
+            </p>
+          </td>
+          <td class="">
+            <p class="toursTable-data tourId">
+              {{this._id}}
 
-              </p>
-            </td>
-            <td class="">
-              <p class="toursTable-data tourName">
-                {{this.tour_name}}
-              </p>
-            </td>
-            <td class="">
-              <p class="toursTable-data">
-                {{formatPrice this.tour_price}}đ
-              </p>
-            </td>
-            <td class="">
-              <p class="toursTable-data">
-                {{convertDateToDay this.tour_starting_day}}
-              </p>
-            </td>
-            <td class="">
-              <p class="toursTable-data">
-                {{this.tour_number_of_days}}/{{this.tour_number_of_nights}}
-              </p>
-            </td>
+            </p>
+          </td>
+          <td class="">
+            <p class="toursTable-data tourName">
+              {{this.tour_name}}
+            </p>
+          </td>
+          <td class="">
+            <p class="toursTable-data">
+              {{formatPrice this.tour_price}}đ
+            </p>
+          </td>
+          <td class="">
+            <p class="toursTable-data">
+              {{convertDateToDay this.tour_starting_day}}
+            </p>
+          </td>
+          <td class="">
+            <p class="toursTable-data">
+              {{this.tour_number_of_days}}/{{this.tour_number_of_nights}}
+            </p>
+          </td>
 
-            <td class="">
-              <p class="toursTable-data">
-                {{this.tour_total_ticket_available}}
-              </p>
-            </td>
-            <td class="">
-              <div class="toursAction_container">
-                <span class="material-icons toursAction-icon">
-                  more_vert
-                </span>
-              </div>
-            </td>
-          </tr>
+          <td class="">
+            <p class="toursTable-data">
+              {{this.tour_total_ticket_available}}
+            </p>
+          </td>
+          <td class="">
+            <div class="toursAction_container">
+              <span class="material-icons toursAction-icon">
+                more_vert
+              </span>
+            </div>
+          </td>
+        </tr>
         {{/each}}
       </tbody>
     </table>

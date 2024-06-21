@@ -86,11 +86,20 @@ class LocationController {
         longitude: data.location_coordinate_longitude,
         latitude: data.location_coordinate_latitude,
       };
-      const activities = data.activity_no.map((stt, index) => ({
-        activity_name: data.activity_name[index],
-        activity_time: data.activity_time[index],
-        activity_desc: data.activity_desc[index],
-      }));
+      let activities = [];
+      if (Array.isArray(data.activity_no)) {
+        activities = data.activity_no.map((stt, index) => ({
+          activity_name: data.activity_name[index],
+          activity_time: data.activity_time[index],
+          activity_desc: data.activity_desc[index],
+        }));
+      } else {
+        activities.push({
+          activity_name: data.activity_name,
+          activity_time: data.activity_time,
+          activity_desc: data.activity_desc,
+        });
+      }
       const newLocation = new Location({
         location_name: data.location_name,
         location_address: data.location_address,
@@ -102,7 +111,8 @@ class LocationController {
         activities,
       });
       await newLocation.save();
-      res.status(201).json({ success: "Location store successfully!" });
+    
+      res.status(201).redirect("/admin/map/locations");
     } catch (error) {
       res.status(500).json({ failed: "Location store failed!", error });
     }

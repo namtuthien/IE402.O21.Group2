@@ -68,7 +68,7 @@ async function isLoggedIn(req, res, next) {
       if (user) {
         switch (user.user_role) {
           case "staff":
-            return res.redirect("/staff/dashboard");
+            return res.redirect("/staff/tours");
           case "admin":
             return res.redirect("/admin/dashboard");
           case "tourguide":

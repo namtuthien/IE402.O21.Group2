@@ -6,5 +6,6 @@ const LocationController = require("../../app/controllers/location.controller");
 router.get("/getLocations", LocationController.getLocations);
 router.post("/updateLocation", LocationController.updateLocation);
 router.delete("/deleteLocation", LocationController.deleteLocation);
+router.post("/store", LocationController.store);
 
 module.exports = router;

@@ -53,7 +53,7 @@ class AuthController {
   determinePageToRender(res, user) {
     switch (user.user_role) {
       case "staff":
-        return "/staff/dashboard";
+        return "/staff/tours";
       case "admin":
         return "/admin/dashboard";
       case "tourguide":
