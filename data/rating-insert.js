@@ -1,14 +1,15 @@
-// const dotenv = require("dotenv");
-// const Rating = require("../src/app/models/rating.model");
-// dotenv.config();
+const dotenv = require("dotenv");
+const Rating = require("../src/app/models/rating.model");
+dotenv.config();
 
-// const { db } = require("../src/config");
+const { db } = require("../src/config");
+db.connect();
 const mongoose = require("mongoose");
 
 const tourIds = [
-    '665f420afcfd5cb5dab5c07f',
-    '665f420afcfd5cb5dab5c08c',
-    '665f420afcfd5cb5dab5c085',
+    '66699ec8a689576a4e9c4ac0',
+    '66699ec8a689576a4e9c4aca',
+    '66699ec8a689576a4e9c4ac4',
 ]
 
 const customerIds = [
@@ -36,8 +37,8 @@ const createRating = () => {
     for (let i = 0; i < tourIds.length; i++) {
         for (let j = i * 3; j < i * 3 + 3; j++) {
             let rating = {
-                customer: new mongoose.Types.ObjectId(tourIds[i]),
-                tour: new mongoose.Types.ObjectId(customerIds[j]),
+                customer: new mongoose.Types.ObjectId(customerIds[j]),
+                tour: new mongoose.Types.ObjectId(tourIds[i]),
                 rating_score: Math.floor(3 + Math.random() * 3),
                 rating_detail: ratingDetail,
             }
@@ -48,4 +49,10 @@ const createRating = () => {
 }
 
 const ratings = createRating();
-console.log(ratings)
+Rating.create(ratings)
+  .then((data) => {
+    console.log("Thành công. Rating đã được thêm vào cơ sở dữ liệu", data);
+  })
+  .catch((err) => {
+    console.log("Lỗi.", err);
+  });
