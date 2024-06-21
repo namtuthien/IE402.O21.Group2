@@ -563,30 +563,88 @@ require([
       })
     );
   });
+  // map.add(locationGraphicsLayer);
 
-  const locationFeaturesLayer = new FeatureLayer({
-    source: locationGraphicsLayer.graphics,
+  const locationFeatureLayer = new FeatureLayer({
     fields: [
-      { name: "location_longitude", type: "double" },
-      { name: "location_latitude", type: "double" },
-      { name: "location_id", type: "string" },
-      { name: "location_name", type: "string" },
-      { name: "location_type", type: "string" },
-      { name: "location_address", type: "string" },
-      { name: "location_description", type: "string" },
-      { name: "location_rating", type: "double" },
-      { name: "location_total_rating", type: "double" },
-      { name: "location_phone_number", type: "string" },
-      { name: "location_website", type: "string" },
-      { name: "created_at", type: "string" },
-      { name: "updated_at", type: "string" }
+      { type: "string", name: "location_id", alias: "Mã địa điểm" },
+      { type: "double", name: "location_longitude", alias: "Kinh độ" },
+      { type: "double", name: "location_latitude", alias: "Vĩ độ" },
+      { type: "string", name: "location_name", alias: "Tên địa điểm" },
+      { type: "string", name: "location_type", alias: "Loại địa điểm" },
+      { type: "string", name: "location_address", alias: "Địa chỉ" },
+      { type: "string", name: "location_description", alias: "Mô tả" },
+      { type: "string", name: "location_rating", alias: "Đánh giá" },
+      { type: "string", name: "location_total_rating", alias: "Số lượt đánh giá" },
+      { type: "string", name: "location_phone_number", alias: "Số điện thoại" },
+      { type: "string", name: "location_website", alias: "Website" },
+      { type: "string", name: "updated_at", alias: "Ngày cập nhật" },
+      { type: "string", name: "created_at", alias: "Ngày tạo" },
     ],
-    objectIdField: "locationId",
-    renderer: new SimpleRenderer({
-      symbol: stopSymbol
-    })
+    popupTemplate: {
+      title: "{location_name} : {location_id}",
+      content: [
+        { type: "text", text: "<b>Mã địa điểm:</b> {location_id}" },
+        { type: "text", text: "<b>Tọa độ: </b> [{location_longitude}, {location_latitude}]" },
+        { type: "text", text: "<b>Loại địa điểm:</b> {location_type}" },
+        { type: "text", text: "<b>Địa chỉ:</b> {location_address}" },
+        {
+          type: "text",
+          text: "<b>Đánh giá:</b> {location_rating}/5 - {location_total_rating} lượt",
+        },
+        { type: "text", text: "<b>Số điện thoại:</b> {location_phone_number}" },
+        { type: "text", text: "<b>Website:</b> {location_website}" },
+        { type: "text", text: "<b>Ngày tạo:</b> {created_at}" },
+        { type: "text", text: "<b>Cập nhật:</b> {updated_at}" },
+      ],
+      actions: [
+        { title: "Cập nhật thông tin", id: "action-edit-info", className: "esri-icon-edit" },
+      ],
+      overwriteActions: true,
+    },
+    source: locationGraphicsLayer.graphics,
+    objectIdField: "ID",
+    geometryType: "point",
+    spatialReference: { wkid: 4326 },
+    renderer: {
+      type: "simple",
+      symbol: {
+        type: "simple-marker",
+        color: [0, 153, 51],
+        outline: { color: [255, 255, 255], width: 1 },
+      },
+    },
+    outFields: ["*"],
   });
-  map.add(locationFeaturesLayer);
+  map.add(locationFeatureLayer);
+
+  let popupTimer;
+  let currentGraphic;
+
+  // Thêm sự kiện pointer-move vào bản đồ
+  view.on("pointer-move", (event) => {
+    clearTimeout(popupTimer);
+
+    popupTimer = setTimeout(() => {
+      view.hitTest(event).then((response) => {
+        if (response.results.length) {
+          const graphic = response.results.filter(
+            (result) => result.graphic.layer === locationFeatureLayer
+          )[0]?.graphic;
+          if (graphic && graphic !== currentGraphic) {
+            currentGraphic = graphic;
+            view.popup.open({
+              features: [graphic],
+              location: event.mapPoint,
+            });
+          }
+        } else {
+          view.popup.close();
+          currentGraphic = null;
+        }
+      });
+    }, 200);
+  });
 
   let tour_id = "";
   let tour = {
