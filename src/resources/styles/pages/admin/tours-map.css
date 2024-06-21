@@ -259,6 +259,7 @@ ul {
   right:0; 
   left:0;
   bottom:0; 
+  z-index: 1000;
 }
 .tour-map__hidden-form-div {
   font-size: 24px;

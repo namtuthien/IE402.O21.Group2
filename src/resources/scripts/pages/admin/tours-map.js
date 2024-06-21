@@ -746,6 +746,15 @@ require([
 
   //=======================================================================================================================
   document.getElementById("addTourButton").addEventListener("click", function () {
+    navbarStatus = false;
+    navbarContent.style.display = "none";
+    navbar.style.width = 0;
+    navbarBtn.style.left = 40;
+    navbarBtn.style.width = 60;
+    navbarBtn.style.boxShadow = "0px 0px 8px rgba(0, 0, 0, 0.5)";
+    navbarBtnIcon.innerHTML = "menu";
+    navbarBtn.style.borderTopLeftRadius = "100%";
+    navbarBtn.style.borderBottomLeftRadius = "100%";
     document.getElementById("addTourDiv").style.display = "flex";
     if (choosedLocations.length != prevChoosedLocationsLength) {
       getChoosedLocations();
