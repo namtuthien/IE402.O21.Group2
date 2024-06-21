@@ -73,6 +73,7 @@ require([
   "esri/rest/support/RouteParameters",
   "esri/rest/support/FeatureSet",
   "esri/geometry/support/webMercatorUtils",
+  "esri/renderers/SimpleRenderer",
 ], (
   Map,
   MapView,
@@ -87,7 +88,8 @@ require([
   route,
   RouteParameters,
   FeatureSet,
-  webMercatorUtils
+  webMercatorUtils,
+  SimpleRenderer
 ) => {
   // Point the URL to a valid routing service
   const routeUrl =
@@ -414,10 +416,14 @@ require([
       if (response.results.length) {
         // console.log(response.results.length);
         const graphic = response.results.filter(function (result) {
-          return result.graphic.layer === locationGraphicsLayer;
+          return result.graphic.layer === locationFeatureLayer;
         })[0]?.graphic;
 
         if (graphic && choosedLocations.indexOf(graphic) === -1) {
+          console.log("Graphic attributes:", graphic.attributes);
+          // Truy cập các thuộc tính cụ thể
+          console.log("Location Name:", graphic.attributes.location_name);
+          console.log("Location Address:", graphic.attributes.location_address);
           // Thêm graphic vào routeLayer
           // routeLayer.add(graphic);
           // Thêm graphic vào routeParams để vẽ đường đi
@@ -430,6 +436,15 @@ require([
           // console.log("Added to routeLayer: ", graphic);
 
           //Lưu địa điểm này vào mảng
+
+          // locationGraphicsLayer.graphics.forEach((item, index) => {
+          //   console.log("item.attributes.locationId: ", item.attributes.locationId);
+          //   console.log("graphic.attributes.locationId: ", graphic.attributes.locationId);
+          //   if(item.attributes.locationId===graphic.attributes.locationId) {
+          //     graphic.attributes=item.attributes
+          //   }
+          // });
+
           choosedLocations.push(graphic);
           console.log("Các địa điểm đã chọn: ", choosedLocations);
         } else {
@@ -491,35 +506,146 @@ require([
   }
 
   // Tạo graphic layer
-  const locationGraphicsLayer = new GraphicsLayer({
-    graphics: locations.map(
-      (location) =>
-        new Graphic({
-          geometry: {
-            type: "point",
-            longitude: location.location_coordinate.longitude,
-            latitude: location.location_coordinate.latitude,
-          },
-          symbol: stopSymbol,
-          attributes: {
-            location_longitude: location.location_coordinate.longitude,
-            location_latitude: location.location_coordinate.latitude,
-            location_id: location._id,
-            location_name: location.location_name,
-            location_type: location.location_type,
-            location_address: location.location_address,
-            location_description: location.location_description ?? "Không có",
-            location_rating: location.location_rating ?? "0",
-            location_total_rating: location.location_total_rating ?? "0",
-            location_phone_number: location.location_phone_number ?? "Không có",
-            location_website: location.location_website ?? "Không có",
-            created_at: convertDateToHourDayMonthYear(location.created_at),
-            updated_at: convertDateToHourDayMonthYear(location.updated_at),
-          },
-        })
-    ),
+  // const locationGraphicsLayer = new GraphicsLayer({
+  //   graphics: locations.map(
+  //     (location) =>
+  //       new Graphic({
+  //         geometry: {
+  //           type: "point",
+  //           longitude: location.location_coordinate.longitude,
+  //           latitude: location.location_coordinate.latitude,
+  //         },
+  //         symbol: stopSymbol,
+  //         attributes: {
+  //           location_longitude: location.location_coordinate.longitude,
+  //           location_latitude: location.location_coordinate.latitude,
+  //           location_id: location._id,
+  //           location_name: location.location_name,
+  //           location_type: location.location_type,
+  //           location_address: location.location_address,
+  //           location_description: location.location_description ?? "Không có",
+  //           location_rating: location.location_rating ?? "0",
+  //           location_total_rating: location.location_total_rating ?? "0",
+  //           location_phone_number: location.location_phone_number ?? "Không có",
+  //           location_website: location.location_website ?? "Không có",
+  //           created_at: convertDateToHourDayMonthYear(location.created_at),
+  //           updated_at: convertDateToHourDayMonthYear(location.updated_at),
+  //         },
+  //       })
+  //   ),
+  // });
+  // map.add(locationGraphicsLayer);
+
+
+  const locationGraphicsLayer = new GraphicsLayer();
+  locations.forEach((location) => {
+    locationGraphicsLayer.add(
+      new Graphic({
+        geometry: {
+          type: "point",
+          longitude: location.location_coordinate.longitude,
+          latitude: location.location_coordinate.latitude,
+        },
+        attributes: {
+          location_id: location._id,
+          location_longitude: location.location_coordinate.longitude,
+          location_latitude: location.location_coordinate.latitude,
+          location_name: location.location_name,
+          location_type: location.location_type,
+          location_address: location.location_address,
+          location_description: location.location_description ?? "Không có",
+          location_rating: location.location_rating ?? "0",
+          location_total_rating: location.location_total_rating ?? "0",
+          location_phone_number: location.location_phone_number ?? "Không có",
+          location_website: location.location_website ?? "Không có",
+          created_at: convertDateToHourDayMonthYear(location.created_at),
+          updated_at: convertDateToHourDayMonthYear(location.updated_at),
+        },
+      })
+    );
   });
-  map.add(locationGraphicsLayer);
+  // map.add(locationGraphicsLayer);
+
+  const locationFeatureLayer = new FeatureLayer({
+    fields: [
+      { type: "string", name: "location_id", alias: "Mã địa điểm" },
+      { type: "double", name: "location_longitude", alias: "Kinh độ" },
+      { type: "double", name: "location_latitude", alias: "Vĩ độ" },
+      { type: "string", name: "location_name", alias: "Tên địa điểm" },
+      { type: "string", name: "location_type", alias: "Loại địa điểm" },
+      { type: "string", name: "location_address", alias: "Địa chỉ" },
+      { type: "string", name: "location_description", alias: "Mô tả" },
+      { type: "string", name: "location_rating", alias: "Đánh giá" },
+      { type: "string", name: "location_total_rating", alias: "Số lượt đánh giá" },
+      { type: "string", name: "location_phone_number", alias: "Số điện thoại" },
+      { type: "string", name: "location_website", alias: "Website" },
+      { type: "string", name: "updated_at", alias: "Ngày cập nhật" },
+      { type: "string", name: "created_at", alias: "Ngày tạo" },
+    ],
+    popupTemplate: {
+      title: "{location_name} : {location_id}",
+      content: [
+        { type: "text", text: "<b>Mã địa điểm:</b> {location_id}" },
+        { type: "text", text: "<b>Tọa độ: </b> [{location_longitude}, {location_latitude}]" },
+        { type: "text", text: "<b>Loại địa điểm:</b> {location_type}" },
+        { type: "text", text: "<b>Địa chỉ:</b> {location_address}" },
+        {
+          type: "text",
+          text: "<b>Đánh giá:</b> {location_rating}/5 - {location_total_rating} lượt",
+        },
+        { type: "text", text: "<b>Số điện thoại:</b> {location_phone_number}" },
+        { type: "text", text: "<b>Website:</b> {location_website}" },
+        { type: "text", text: "<b>Ngày tạo:</b> {created_at}" },
+        { type: "text", text: "<b>Cập nhật:</b> {updated_at}" },
+      ],
+      actions: [
+        { title: "Cập nhật thông tin", id: "action-edit-info", className: "esri-icon-edit" },
+      ],
+      overwriteActions: true,
+    },
+    source: locationGraphicsLayer.graphics,
+    objectIdField: "ID",
+    geometryType: "point",
+    spatialReference: { wkid: 4326 },
+    renderer: {
+      type: "simple",
+      symbol: {
+        type: "simple-marker",
+        color: [0, 153, 51],
+        outline: { color: [255, 255, 255], width: 1 },
+      },
+    },
+    outFields: ["*"],
+  });
+  map.add(locationFeatureLayer);
+
+  let popupTimer;
+  let currentGraphic;
+
+  // Thêm sự kiện pointer-move vào bản đồ
+  view.on("pointer-move", (event) => {
+    clearTimeout(popupTimer);
+
+    popupTimer = setTimeout(() => {
+      view.hitTest(event).then((response) => {
+        if (response.results.length) {
+          const graphic = response.results.filter(
+            (result) => result.graphic.layer === locationFeatureLayer
+          )[0]?.graphic;
+          if (graphic && graphic !== currentGraphic) {
+            currentGraphic = graphic;
+            view.popup.open({
+              features: [graphic],
+              location: event.mapPoint,
+            });
+          }
+        } else {
+          view.popup.close();
+          currentGraphic = null;
+        }
+      });
+    }, 200);
+  });
 
   let tour_id = "";
   let tour = {
@@ -746,6 +872,15 @@ require([
 
   //=======================================================================================================================
   document.getElementById("addTourButton").addEventListener("click", function () {
+    navbarStatus = false;
+    navbarContent.style.display = "none";
+    navbar.style.width = 0;
+    navbarBtn.style.left = 40;
+    navbarBtn.style.width = 60;
+    navbarBtn.style.boxShadow = "0px 0px 8px rgba(0, 0, 0, 0.5)";
+    navbarBtnIcon.innerHTML = "menu";
+    navbarBtn.style.borderTopLeftRadius = "100%";
+    navbarBtn.style.borderBottomLeftRadius = "100%";
     document.getElementById("addTourDiv").style.display = "flex";
     if (choosedLocations.length != prevChoosedLocationsLength) {
       getChoosedLocations();

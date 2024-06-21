@@ -2,7 +2,13 @@
     <nav class="position-fixed w-20 bg-navbar min-vh-100 overflow-hidden p-3">
         <div class="user d-flex flex-column align-items-center">
             <div>
-                <img src="/imgs/admin/2Touradmin.png" class="" alt="logo navbar">
+                {{#if (eq user.user_role 'admin')}}
+                <img class="navbar-logo" src="/imgs/admin/2Touradmin.png" class="" alt="logo navbar">
+                {{/if}}
+
+                {{#if (eq user.user_role 'staff')}}
+                <img class="navbar-logo" src="/imgs/admin/2Tourstaff.png" class="" alt="logo navbar">
+                {{/if}}
             </div>
             <div class="user__avatar rounded-circle w-100 d-flex justify-content-center">
                 <img src="/imgs/home/vietnam-flag.webp" class="user__avatar img-fluid" alt="user avatar">
@@ -16,6 +22,8 @@
         </div>
         <div class="nav flex-column position-relative">
             <div class="position-relative">
+                {{#if (eq user.user_role 'admin')}}
+
                 <li class="nav-item">
                     <a class="nav-link w-100 my-1 d-flex align-items-center p-1 position-relative active rounded-1"
                         aria-current="page" href="/admin/dashboard">
@@ -27,9 +35,11 @@
                         </div>
                     </a>
                 </li>
+                {{/if}}
+
                 <li class="nav-item">
                     <a class="nav-link w-100 my-1 d-flex align-items-center p-1 position-relative rounded-1"
-                        aria-current="page" href="/admin/tours">
+                        aria-current="page" href="/{{user.user_role}}/tours">
                         <i class="material-icons mx-2">
                             flag
                         </i>
@@ -38,9 +48,10 @@
                         </div>
                     </a>
                 </li>
+                {{#if (eq user.user_role 'admin')}}
                 <li class="nav-item">
                     <a class="nav-link w-100 my-1 d-flex align-items-center p-1 position-relative rounded-1"
-                        aria-current="page" href="/admin/locations">
+                        aria-current="page" href="/{{user.user_role}}/locations">
                         <i class="material-icons mx-2">
                             public
                         </i>
@@ -49,9 +60,10 @@
                         </div>
                     </a>
                 </li>
+                {{/if}}
                 <li class="nav-item">
                     <a class="nav-link w-100 my-1 d-flex align-items-center p-1 position-relative rounded-1"
-                        aria-current="page" href="/admin/bookings">
+                        aria-current="page" href="/{{user.user_role}}/bookings">
                         <i class="material-icons mx-2">
                             local_mall
                         </i>
@@ -60,6 +72,7 @@
                         </div>
                     </a>
                 </li>
+                {{#if (eq user.user_role 'admin')}}
                 <li class="nav-item">
                     <a class="nav-link w-100 my-1 d-flex align-items-center p-1 position-relative rounded-1"
                         aria-current="page" href="/admin/staffs">
@@ -71,9 +84,11 @@
                         </div>
                     </a>
                 </li>
+                {{/if}}
+
                 <li class="nav-item">
                     <a class="nav-link w-100 my-1 d-flex align-items-center p-1 position-relative rounded-1"
-                        aria-current="page" href="/admin/customers">
+                        aria-current="page" href="/{{user.user_role}}/customers">
                         <i class="material-icons mx-2">
                             groups
                         </i>
@@ -84,12 +99,23 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link w-100 my-1 d-flex align-items-center p-1 position-relative rounded-1"
-                        aria-current="page" href="/admin/ratings">
+                        aria-current="page" href="/{{user.user_role}}/ratings">
                         <i class="material-icons mx-2">
                             star
                         </i>
                         <div class="mx-2">
                             Đánh giá
+                        </div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link w-100 my-1 d-flex align-items-center p-1 position-relative rounded-1"
+                        aria-current="page" href="/tracking/tourguides">
+                        <i class="material-icons mx-2">
+                            location_on
+                        </i>
+                        <div class="mx-2">
+                            Theo dõi lịch trình
                         </div>
                     </a>
                 </li>
@@ -107,11 +133,11 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link w-100 my-1 d-flex align-items-center p-1 position-relative rounded-1"
-                        aria-current="page" href="#">
+                        aria-current="page" id="btn-logout">
                         <i class="material-icons mx-2">
                             logout
                         </i>
-                        <div class="mx-2" id="btn-logout">
+                        <div class="mx-2">
                             Đăng xuất
                         </div>
                     </a>
