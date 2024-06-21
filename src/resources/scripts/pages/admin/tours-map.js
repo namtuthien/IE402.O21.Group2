@@ -574,6 +574,34 @@ require([
   });
   map.add(locationFeatureLayer);
 
+  let popupTimer;
+  let currentGraphic;
+
+  // Thêm sự kiện pointer-move vào bản đồ
+  view.on("pointer-move", (event) => {
+    clearTimeout(popupTimer);
+
+    popupTimer = setTimeout(() => {
+      view.hitTest(event).then((response) => {
+        if (response.results.length) {
+          const graphic = response.results.filter(
+            (result) => result.graphic.layer === locationFeatureLayer
+          )[0]?.graphic;
+          if (graphic && graphic !== currentGraphic) {
+            currentGraphic = graphic;
+            view.popup.open({
+              features: [graphic],
+              location: event.mapPoint,
+            });
+          }
+        } else {
+          view.popup.close();
+          currentGraphic = null;
+        }
+      });
+    }, 200);
+  });
+
   let tour_id = "";
   let tour = {
     tour_name: "",
