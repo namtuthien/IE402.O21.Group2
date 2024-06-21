@@ -300,8 +300,11 @@ ul {
   background-color: #fff; 
   margin:auto;
   width: 50%;
-  height: 80%;
+
   overflow-y: auto;
+}
+.tour-popup_title {
+  text-align: center;
 }
 .tour-popup__form {
   display: flex;

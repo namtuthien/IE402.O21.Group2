@@ -183,7 +183,7 @@ require([
       const btnSave = document.querySelector("#btn_save");
       // Lưu địa điểm
       btnSave.onclick = function () {
-        storeForm.action = "/admin/location/store";
+        storeForm.action = "/api/location/store";
         storeForm.submit();
       };
       // Lấy cái nút tắt form
@@ -418,9 +418,12 @@ require([
               return response.json();
             })
             .then((data) => {
+             
               alert("Cập nhật địa điểm thành công");
+              window.location.reload();
               view.ui.remove(editor);
               editor.viewModel.cancelWorkflow();
+             
             });
         } catch (error) {
           console.error("There was a problem with the fetch operation:", error);
@@ -445,6 +448,7 @@ require([
             })
             .then((data) => {
               alert("Xóa địa điểm thành công");
+              window.location.reload();
               view.ui.remove(editor);
               editor.viewModel.cancelWorkflow();
             });
