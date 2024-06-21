@@ -233,28 +233,24 @@ require([
     width: "36px",
     height: "36px",
   }
+
+  var hotel_symbol = {
+    type: "picture-marker",
+    url: "/imgs/symbols/hotel.png",
+    width: "36px",
+    height: "36px",
+  }
+
+  var default_symbol = {
+    type: "simple-marker",
+    color: [0, 153, 51],
+    outline: { color: [255, 255, 255], width: 1 },
+  };
   // Chuyển đổi location thành graphic cho feature layer
   let graphics = [];
   let boundaryGraphicsLayer = new GraphicsLayer();
 
   locations.forEach((location) => {
-    let symbol;
-    switch (location.location_type.toLowerCase()) {
-      case "công viên nghỉ mát":
-        symbol = park_symbol;
-        break;
-      case "điểm thu hút khách du lịch":
-        symbol = attraction_symbol;
-        break;
-      case "khu cắm trại":
-        symbol = camping_symbol;
-        break;
-      case "thắng cảnh":
-        symbol = beauty_spots_symbol;
-        break;
-      default:
-        symbol = home_stay_symbol;
-    }
     graphics.push(
       new Graphic({
         geometry: {
@@ -262,7 +258,6 @@ require([
           longitude: location.location_coordinate.longitude,
           latitude: location.location_coordinate.latitude,
         },
-        symbol: symbol,
         attributes: {
           location_id: location._id,
           location_longitude: location.location_coordinate.longitude,
@@ -382,6 +377,14 @@ require([
           symbol: park_symbol,
         },
         {
+          value: "Công viên sinh thái",
+          symbol: park_symbol,
+        },
+        {
+          value: "Khách sạn",
+          symbol: hotel_symbol,
+        },
+        {
           value: "Điểm thu hút khách du lịch",
           symbol: attraction_symbol,
         },
@@ -398,6 +401,7 @@ require([
           symbol: home_stay_symbol,
         },
       ],
+      defaultSymbol: default_symbol,
     },
     outFields: ["*"],
   });
@@ -500,12 +504,12 @@ require([
               return response.json();
             })
             .then((data) => {
-             
+
               alert("Cập nhật địa điểm thành công");
               window.location.reload();
               view.ui.remove(editor);
               editor.viewModel.cancelWorkflow();
-             
+
             });
         } catch (error) {
           console.error("There was a problem with the fetch operation:", error);
