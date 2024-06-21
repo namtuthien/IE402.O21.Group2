@@ -31,7 +31,7 @@
 .cursor-pointer {
   float: right;
   cursor: pointer;
-  color: red;
+  color: red !important;
 }
 
 .table__activities {
