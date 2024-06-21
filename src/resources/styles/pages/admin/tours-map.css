@@ -38,6 +38,19 @@ ul {
   width: 100%;
   border-bottom: 2px solid gray;
   padding-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+}
+.homeBtn-icon{
+  color: var(--primary5);
+ font-size: 28px;
+  user-select: none;
+  margin-left: 16px;
+}
+.homeBtn-icon:hover{
+  cursor: pointer;
 }
 
 .heading-title {
@@ -259,6 +272,7 @@ ul {
   right:0; 
   left:0;
   bottom:0; 
+  z-index: 1000;
 }
 .tour-map__hidden-form-div {
   font-size: 24px;
