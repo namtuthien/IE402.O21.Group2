@@ -519,7 +519,60 @@ require([
         })
     ),
   });
-  map.add(locationGraphicsLayer);
+  // map.add(locationGraphicsLayer);
+
+  const locationFeatureLayer = new FeatureLayer({
+    fields: [
+      { type: "string", name: "location_id", alias: "Mã địa điểm" },
+      { type: "double", name: "location_longitude", alias: "Kinh độ" },
+      { type: "double", name: "location_latitude", alias: "Vĩ độ" },
+      { type: "string", name: "location_name", alias: "Tên địa điểm" },
+      { type: "string", name: "location_type", alias: "Loại địa điểm" },
+      { type: "string", name: "location_address", alias: "Địa chỉ" },
+      { type: "string", name: "location_description", alias: "Mô tả" },
+      { type: "string", name: "location_rating", alias: "Đánh giá" },
+      { type: "string", name: "location_total_rating", alias: "Số lượt đánh giá" },
+      { type: "string", name: "location_phone_number", alias: "Số điện thoại" },
+      { type: "string", name: "location_website", alias: "Website" },
+      { type: "string", name: "updated_at", alias: "Ngày cập nhật" },
+      { type: "string", name: "created_at", alias: "Ngày tạo" },
+    ],
+    popupTemplate: {
+      title: "{location_name} : {location_id}",
+      content: [
+        { type: "text", text: "<b>Mã địa điểm:</b> {location_id}" },
+        { type: "text", text: "<b>Tọa độ: </b> [{location_longitude}, {location_latitude}]" },
+        { type: "text", text: "<b>Loại địa điểm:</b> {location_type}" },
+        { type: "text", text: "<b>Địa chỉ:</b> {location_address}" },
+        {
+          type: "text",
+          text: "<b>Đánh giá:</b> {location_rating}/5 - {location_total_rating} lượt",
+        },
+        { type: "text", text: "<b>Số điện thoại:</b> {location_phone_number}" },
+        { type: "text", text: "<b>Website:</b> {location_website}" },
+        { type: "text", text: "<b>Ngày tạo:</b> {created_at}" },
+        { type: "text", text: "<b>Cập nhật:</b> {updated_at}" },
+      ],
+      actions: [
+        { title: "Cập nhật thông tin", id: "action-edit-info", className: "esri-icon-edit" },
+      ],
+      overwriteActions: true,
+    },
+    source: locationGraphicsLayer.graphics,
+    objectIdField: "ID",
+    geometryType: "point",
+    spatialReference: { wkid: 4326 },
+    renderer: {
+      type: "simple",
+      symbol: {
+        type: "simple-marker",
+        color: [0, 153, 51],
+        outline: { color: [255, 255, 255], width: 1 },
+      },
+    },
+    outFields: ["*"],
+  });
+  map.add(locationFeatureLayer);
 
   let tour_id = "";
   let tour = {
