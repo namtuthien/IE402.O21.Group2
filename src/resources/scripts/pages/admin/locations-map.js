@@ -33,6 +33,8 @@ require([
     basemap: "streets-relief-vector",
   });
 
+
+
   // Kích hoạt sự kiện chuột trên bản đồ
   map.on("load", function () {
     map.graphics.enableMouseEvents();
@@ -115,9 +117,8 @@ require([
             </td>
             <td scope="row" class="col-md-1">
               <div class="form-group">
-                <input type="number" readonly min="1" value=${
-                  listNoActivity.length + 1
-                } name="activity_no" class="form-control bg-white">
+                <input type="number" readonly min="1" value=${listNoActivity.length + 1
+          } name="activity_no" class="form-control bg-white">
               </div>
             </td>
             <td>
@@ -198,10 +199,62 @@ require([
     }
   });
 
+  var park_symbol = {
+    type: "picture-marker",
+    url: "/imgs/symbols/park.png",
+    width: "36px",
+    height: "36px",
+  };
+
+  var beauty_spots_symbol = {
+    type: "picture-marker",
+    url: "/imgs/symbols/beauty-spots.png",
+    width: "36px",
+    height: "36px",
+  };
+
+  var home_stay_symbol = {
+    type: "picture-marker",
+    url: "/imgs/symbols/home-stay.png",
+    width: "36px",
+    height: "36px",
+  };
+
+  var attraction_symbol = {
+    type: "picture-marker",
+    url: "/imgs/symbols/attraction.png",
+    width: "36px",
+    height: "36px",
+  };
+
+  var camping_symbol = {
+    type: "picture-marker",
+    url: "/imgs/symbols/camping.png",
+    width: "36px",
+    height: "36px",
+  }
   // Chuyển đổi location thành graphic cho feature layer
   let graphics = [];
   let boundaryGraphicsLayer = new GraphicsLayer();
+
   locations.forEach((location) => {
+    let symbol;
+    switch (location.location_type.toLowerCase()) {
+      case "công viên nghỉ mát":
+        symbol = park_symbol;
+        break;
+      case "điểm thu hút khách du lịch":
+        symbol = attraction_symbol;
+        break;
+      case "khu cắm trại":
+        symbol = camping_symbol;
+        break;
+      case "thắng cảnh":
+        symbol = beauty_spots_symbol;
+        break;
+      default:
+        symbol = home_stay_symbol;
+    }
     graphics.push(
       new Graphic({
         geometry: {
@@ -209,6 +262,7 @@ require([
           longitude: location.location_coordinate.longitude,
           latitude: location.location_coordinate.latitude,
         },
+        symbol: symbol,
         attributes: {
           location_id: location._id,
           location_longitude: location.location_coordinate.longitude,
@@ -320,16 +374,44 @@ require([
     geometryType: "point",
     spatialReference: { wkid: 4326 },
     renderer: {
-      type: "simple",
-      symbol: {
-        type: "simple-marker",
-        color: [0, 153, 51],
-        outline: { color: [255, 255, 255], width: 1 },
-      },
+      type: "unique-value",
+      field: "location_type",
+      uniqueValueInfos: [
+        {
+          value: "Công viên nghỉ mát",
+          symbol: park_symbol,
+        },
+        {
+          value: "Điểm thu hút khách du lịch",
+          symbol: attraction_symbol,
+        },
+        {
+          value: "Khu cắm trại",
+          symbol: camping_symbol,
+        },
+        {
+          value: "Thắng cảnh",
+          symbol: beauty_spots_symbol,
+        },
+        {
+          value: "Khách sạn nghỉ dưỡng",
+          symbol: home_stay_symbol,
+        },
+      ],
     },
     outFields: ["*"],
   });
   map.add(featureLayer);
+
+  featureLayer.visible = false;
+  var minZoomToShowPoints = 12;
+  view.watch("zoom", function (newValue, oldValue, propertyName, target) {
+    if (newValue >= minZoomToShowPoints) {
+      featureLayer.visible = true;
+    } else if (newValue < minZoomToShowPoints) {
+      featureLayer.visible = false;
+    }
+  });
 
   // Tạo id mapping
   let idMapping = new Array(graphics.length);
@@ -611,10 +693,10 @@ require([
         string_points += "[" + event.mapPoint.longitude + ", " + event.mapPoint.latitude + "],";
         copyTextToClipboard(
           '{"longitude":' +
-            event.mapPoint.longitude +
-            ', "latitude":' +
-            event.mapPoint.latitude +
-            "},"
+          event.mapPoint.longitude +
+          ', "latitude":' +
+          event.mapPoint.latitude +
+          "},"
         );
       }
     });
