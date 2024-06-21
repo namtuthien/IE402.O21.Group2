@@ -73,6 +73,7 @@ require([
   "esri/rest/support/RouteParameters",
   "esri/rest/support/FeatureSet",
   "esri/geometry/support/webMercatorUtils",
+  "esri/renderers/SimpleRenderer",
 ], (
   Map,
   MapView,
@@ -87,7 +88,8 @@ require([
   route,
   RouteParameters,
   FeatureSet,
-  webMercatorUtils
+  webMercatorUtils,
+  SimpleRenderer
 ) => {
   // Point the URL to a valid routing service
   const routeUrl =
@@ -414,10 +416,14 @@ require([
       if (response.results.length) {
         // console.log(response.results.length);
         const graphic = response.results.filter(function (result) {
-          return result.graphic.layer === locationGraphicsLayer;
+          return result.graphic.layer === locationFeaturesLayer;
         })[0]?.graphic;
 
         if (graphic && choosedLocations.indexOf(graphic) === -1) {
+          console.log("Graphic attributes:", graphic.attributes);
+          // Truy cập các thuộc tính cụ thể
+          console.log("Location Name:", graphic.attributes.location_name);
+          console.log("Location Address:", graphic.attributes.location_address);
           // Thêm graphic vào routeLayer
           // routeLayer.add(graphic);
           // Thêm graphic vào routeParams để vẽ đường đi
@@ -430,8 +436,16 @@ require([
           // console.log("Added to routeLayer: ", graphic);
 
           //Lưu địa điểm này vào mảng
+
+        locationGraphicsLayer.graphics.forEach((item, index) => {
+    if(item.attributes.locationId===graphic.attributes.locationId)
+        graphic.attributes=item.attributes
+
+      });
+
           choosedLocations.push(graphic);
-          // console.log("Các địa điểm đã chọn: ", choosedLocations);
+          console.log("Các địa điểm đã chọn: ", choosedLocations);
+          console.log("graphic: ", graphic);
         } else {
           console.error(
             "No graphic found in the graphicsLayer or this location is already choosed."
@@ -491,35 +505,88 @@ require([
   }
 
   // Tạo graphic layer
-  const locationGraphicsLayer = new GraphicsLayer({
-    graphics: locations.map(
-      (location) =>
-        new Graphic({
-          geometry: {
-            type: "point",
-            longitude: location.location_coordinate.longitude,
-            latitude: location.location_coordinate.latitude,
-          },
-          symbol: stopSymbol,
-          attributes: {
-            location_longitude: location.location_coordinate.longitude,
-            location_latitude: location.location_coordinate.latitude,
-            location_id: location._id,
-            location_name: location.location_name,
-            location_type: location.location_type,
-            location_address: location.location_address,
-            location_description: location.location_description ?? "Không có",
-            location_rating: location.location_rating ?? "0",
-            location_total_rating: location.location_total_rating ?? "0",
-            location_phone_number: location.location_phone_number ?? "Không có",
-            location_website: location.location_website ?? "Không có",
-            created_at: convertDateToHourDayMonthYear(location.created_at),
-            updated_at: convertDateToHourDayMonthYear(location.updated_at),
-          },
-        })
-    ),
+  // const locationGraphicsLayer = new GraphicsLayer({
+  //   graphics: locations.map(
+  //     (location) =>
+  //       new Graphic({
+  //         geometry: {
+  //           type: "point",
+  //           longitude: location.location_coordinate.longitude,
+  //           latitude: location.location_coordinate.latitude,
+  //         },
+  //         symbol: stopSymbol,
+  //         attributes: {
+  //           location_longitude: location.location_coordinate.longitude,
+  //           location_latitude: location.location_coordinate.latitude,
+  //           location_id: location._id,
+  //           location_name: location.location_name,
+  //           location_type: location.location_type,
+  //           location_address: location.location_address,
+  //           location_description: location.location_description ?? "Không có",
+  //           location_rating: location.location_rating ?? "0",
+  //           location_total_rating: location.location_total_rating ?? "0",
+  //           location_phone_number: location.location_phone_number ?? "Không có",
+  //           location_website: location.location_website ?? "Không có",
+  //           created_at: convertDateToHourDayMonthYear(location.created_at),
+  //           updated_at: convertDateToHourDayMonthYear(location.updated_at),
+  //         },
+  //       })
+  //   ),
+  // });
+  // map.add(locationGraphicsLayer);
+
+
+  const locationGraphicsLayer = new GraphicsLayer();
+  locations.forEach((location) => {
+    locationGraphicsLayer.add(
+      new Graphic({
+        geometry: {
+          type: "point",
+          longitude: location.location_coordinate.longitude,
+          latitude: location.location_coordinate.latitude,
+        },
+        attributes: {
+          location_id: location._id,
+          location_longitude: location.location_coordinate.longitude,
+          location_latitude: location.location_coordinate.latitude,
+          location_name: location.location_name,
+          location_type: location.location_type,
+          location_address: location.location_address,
+          location_description: location.location_description ?? "Không có",
+          location_rating: location.location_rating ?? "0",
+          location_total_rating: location.location_total_rating ?? "0",
+          location_phone_number: location.location_phone_number ?? "Không có",
+          location_website: location.location_website ?? "Không có",
+          created_at: convertDateToHourDayMonthYear(location.created_at),
+          updated_at: convertDateToHourDayMonthYear(location.updated_at),
+        },
+      })
+    );
   });
-  map.add(locationGraphicsLayer);
+
+  const locationFeaturesLayer = new FeatureLayer({
+    source: locationGraphicsLayer.graphics,
+    fields: [
+      { name: "location_longitude", type: "double" },
+      { name: "location_latitude", type: "double" },
+      { name: "location_id", type: "string" },
+      { name: "location_name", type: "string" },
+      { name: "location_type", type: "string" },
+      { name: "location_address", type: "string" },
+      { name: "location_description", type: "string" },
+      { name: "location_rating", type: "double" },
+      { name: "location_total_rating", type: "double" },
+      { name: "location_phone_number", type: "string" },
+      { name: "location_website", type: "string" },
+      { name: "created_at", type: "string" },
+      { name: "updated_at", type: "string" }
+    ],
+    objectIdField: "locationId",
+    renderer: new SimpleRenderer({
+      symbol: stopSymbol
+    })
+  });
+  map.add(locationFeaturesLayer);
 
   let tour_id = "";
   let tour = {
