@@ -447,7 +447,6 @@ require([
 
           choosedLocations.push(graphic);
           console.log("Các địa điểm đã chọn: ", choosedLocations);
-          console.log("graphic: ", graphic);
         } else {
           console.error(
             "No graphic found in the graphicsLayer or this location is already choosed."
@@ -1007,6 +1006,42 @@ require([
   });
 
   document.getElementById("submitAddTourButton").addEventListener("click", function () {
+    const tourGuideIds = [
+      "661fe62db3060de4f1801e31",
+      "661fe62db3060de4f1801e33",
+      "661fe62db3060de4f1801e35",
+      "661fe62db3060de4f1801e32",
+      "661fe62db3060de4f1801e34"
+    ]
+    const vehicleIds = [
+      "665c97937d8b0969909dcc07",
+      "665c97937d8b0969909dcc0a",
+      "665c97937d8b0969909dcc0b",
+      "665c97937d8b0969909dcc0c",
+      "665c97937d8b0969909dcc0d",
+      "665c97937d8b0969909dcc08",
+      "665c97937d8b0969909dcc10",
+      "665c97937d8b0969909dcc09",
+      "665c97937d8b0969909dcc11",
+      "665c97937d8b0969909dcc12",
+      "665c97937d8b0969909dcc13",
+      "665c97937d8b0969909dcc14",
+      "665c97937d8b0969909dcc15",
+      "665c97937d8b0969909dcc17",
+      "665c97937d8b0969909dcc16",
+      "665c97937d8b0969909dcc19",
+      "665c97937d8b0969909dcc18",
+      "665c97937d8b0969909dcc1a",
+      "665c97937d8b0969909dcc1b",
+      "665c97937d8b0969909dcc1c",
+      "665c97937d8b0969909dcc1d",
+      "665c97937d8b0969909dcc0f",
+      "665c97937d8b0969909dcc0e",
+      "665c97937d8b0969909dcc1e",
+      "665c97937d8b0969909dcc1f"
+    ]
+    const tourGuideIndex = Math.floor(Math.random() * tourGuideIds.length);
+    const vehicleIndex = Math.floor(Math.random() * vehicleIds.length);
     const addTourForm = document.getElementById("addTourForm");
     const formData = new FormData(addTourForm);
     const tourData = {
@@ -1016,136 +1051,143 @@ require([
       tour_total_ticket_available: formData.get("tour-popup-available-tickets"),
       tour_starting_day: formData.get("tour-popup-start-date"),
       tour_number_of_days: formData.get("tour-popup-days"),
-      tour_number_of_nights: formData.get("tour-popup-days"),
+      tour_number_of_nights: formData.get("tour-popup-nights"),
       tour_description: formData.get("tour-popup-description"),
+      guides: tourGuideIds[tourGuideIndex],
+      vehicles: vehicleIds[vehicleIndex]
     };
-    const locationsId = [];
-    choosedLocations.map((choosedLocation) => {
-      locationsId.push(choosedLocation.attributes.location_id);
-    });
-    tourData.destinations = locationsId;
-    // Tạo line lên db và lấy id của line trên db
-    // Tạo mảng để lưu các promise cần chờ
-    let promises = [];
-    const linesId = [];
-    const routesId = [];
-    // Duyệt qua tất cả các line
-    passingLines.map((line) => {
-      // Duyệt qua từng point trong 1 line
-      const points = line.map((point) => ({
-        longitude: point.longitude,
-        latitude: point.latitude,
-      }));
-      const lineStore = { points };
-      console.log("lineStore:", lineStore);
-      //Lưu line lên db
-      const fetchPromise = fetch("/api/line/add", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(lineStore),
-      })
-        .then((response) => response.json())
-        .then((data) => {
-          //Thêm id của line vừa lưu lên db vào mảng
-          linesId.push(data._id);
-          console.log("Success:", data);
-        })
-        .catch((error) => {
-          console.error("Error:", error);
-        });
-
-      //Thêm promise vào mảng
-      promises.push(fetchPromise);
-    });
-
-    // Kiểm tra các promise đã được trả về hết chưa
-    Promise.all(promises).then(() => {
-      // Cho mảng promisses về rỗng
-      promises = [];
-      //Tạo route lên db và lấy id của nó lưu vào mảng
-      console.log("lineId: ", linesId);
-      linesId.map((lineId) => {
-        const routeStore = {
-          route_name: "Tên của route",
-          route_description: "Mô tả về route",
-          route_length: 0,
-          lines: [lineId],
-        };
-        //Lưu route lên db để lấy id của route
-        const fetchPromise = fetch("/api/route/add", {
+    if (tourData.tour_name && tourData.tour_price && tourData.tour_total_ticket && tourData.tour_total_ticket_available && choosedLocations.length > 1) {
+      const locationsId = [];
+      choosedLocations.map((choosedLocation) => {
+        locationsId.push(choosedLocation.attributes.location_id);
+      });
+      tourData.destinations = locationsId;
+      // Tạo line lên db và lấy id của line trên db
+      // Tạo mảng để lưu các promise cần chờ
+      let promises = [];
+      const linesId = [];
+      const routesId = [];
+      // Duyệt qua tất cả các line
+      passingLines.map((line) => {
+        // Duyệt qua từng point trong 1 line
+        const points = line.map((point) => ({
+          longitude: point.longitude,
+          latitude: point.latitude,
+        }));
+        const lineStore = { points };
+        console.log("lineStore:", lineStore);
+        //Lưu line lên db
+        const fetchPromise = fetch("/api/line/add", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify(routeStore),
+          body: JSON.stringify(lineStore),
         })
           .then((response) => response.json())
           .then((data) => {
             //Thêm id của line vừa lưu lên db vào mảng
-            routesId.push(data._id);
+            linesId.push(data._id);
             console.log("Success:", data);
           })
           .catch((error) => {
             console.error("Error:", error);
           });
-
+  
         //Thêm promise vào mảng
         promises.push(fetchPromise);
       });
-
+  
       // Kiểm tra các promise đã được trả về hết chưa
       Promise.all(promises).then(() => {
         // Cho mảng promisses về rỗng
         promises = [];
-        console.log("routesId: ", routesId);
-        console.log("choosedLocations: ", choosedLocations);
-        const routesPrepare = [];
-        for (let i = 0; i < routesId.length; i++) {
-          const oneRoutePrepare = {
-            start_coordinate: {
-              longitude: choosedLocations[i].attributes.location_longitude,
-              latitude: choosedLocations[i].attributes.location_latitude,
-            },
-            end_coordinate: {
-              longitude: choosedLocations[i + 1].attributes.location_longitude,
-              latitude: choosedLocations[i + 1].attributes.location_latitude,
-            },
-            route: routesId[i],
+        //Tạo route lên db và lấy id của nó lưu vào mảng
+        console.log("lineId: ", linesId);
+        linesId.map((lineId) => {
+          const routeStore = {
+            route_name: "Tên của route",
+            route_description: "Mô tả về route",
+            route_length: 0,
+            lines: [lineId],
           };
-          routesPrepare.push(oneRoutePrepare);
-        }
-        console.log("routesPrepare: ", routesPrepare);
-        tourData.routes = routesPrepare;
-        console.log("Dữ liệu: ", tourData);
-        const fetchPromise = fetch("/api/tour/store", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(tourData),
-        })
-          .then((response) => response.json())
-          .then((data) => {
-            alert("Tạo Tour Thành công!");
-            console.log("Successing Create Tour:", data);
+          //Lưu route lên db để lấy id của route
+          const fetchPromise = fetch("/api/route/add", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(routeStore),
           })
-          .catch((error) => {
-            // console.error('Error:', error);
-          });
-
-        //Thêm promise vào mảng
-        promises.push(fetchPromise);
-
+            .then((response) => response.json())
+            .then((data) => {
+              //Thêm id của line vừa lưu lên db vào mảng
+              routesId.push(data._id);
+              console.log("Success:", data);
+            })
+            .catch((error) => {
+              console.error("Error:", error);
+            });
+  
+          //Thêm promise vào mảng
+          promises.push(fetchPromise);
+        });
+  
         // Kiểm tra các promise đã được trả về hết chưa
         Promise.all(promises).then(() => {
-          // Ẩn popup sau khi thêm tour
-          document.getElementById("hideAddDiv").click();
-          // Reload lại trang sau khi thêm Tour
-          // window.location.reload();
+          // Cho mảng promisses về rỗng
+          promises = [];
+          console.log("routesId: ", routesId);
+          console.log("choosedLocations: ", choosedLocations);
+          const routesPrepare = [];
+          for (let i = 0; i < routesId.length; i++) {
+            const oneRoutePrepare = {
+              start_coordinate: {
+                longitude: choosedLocations[i].attributes.location_longitude,
+                latitude: choosedLocations[i].attributes.location_latitude,
+              },
+              end_coordinate: {
+                longitude: choosedLocations[i + 1].attributes.location_longitude,
+                latitude: choosedLocations[i + 1].attributes.location_latitude,
+              },
+              route: routesId[i],
+            };
+            routesPrepare.push(oneRoutePrepare);
+          }
+          console.log("routesPrepare: ", routesPrepare);
+          tourData.routes = routesPrepare;
+          console.log("Dữ liệu: ", tourData);
+          const fetchPromise = fetch("/api/tour/store", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(tourData),
+          })
+            // .then((response) => response.json())
+            .then((data) => {
+              alert("Tạo Tour Thành công!");
+              console.log("Successing Create Tour:", data);
+            })
+            .catch((error) => {
+              // console.error('Error:', error);
+            });
+  
+          //Thêm promise vào mảng
+          promises.push(fetchPromise);
+  
+          // Kiểm tra các promise đã được trả về hết chưa
+          Promise.all(promises).then(() => {
+            // Ẩn popup sau khi thêm tour
+            document.getElementById("hideAddDiv").click();
+            // Reload lại trang sau khi thêm Tour
+            // window.location.reload();
+          });
         });
       });
-    });
+    }
+    else {
+      alert("Vui lòng nhập đủ thông tin!");
+    }
   });
 });
