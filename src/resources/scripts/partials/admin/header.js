@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   const currentPath = window.location.pathname;
+  const button = document.getElementById("open-map-button");
   if (
     currentPath.includes("dashboard") ||
     currentPath.includes("bookings") ||
@@ -7,7 +8,6 @@ document.addEventListener("DOMContentLoaded", function () {
     currentPath.includes("customers") ||
     currentPath.includes("ratings")
   ) {
-    const button = document.getElementById("open-map-button");
     if (button) {
       button.classList.add("hidden");
     }
@@ -15,4 +15,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const logo = document.getElementById("header-logo");
     logo.classList.add("hidden");
   }
+  button.addEventListener("click", () => {
+    if (currentPath.includes("tour")) {
+      window.location.href = "/admin/map/tours"
+    }
+    else {
+      window.location.href = "/admin/map/locations"
+    }
+  })
 });

@@ -253,9 +253,13 @@ require([
   let isUpdate = false;
   const updateButton = document.querySelector(".update-btn");
   updateButton.addEventListener("click", () => {
-    isUpdate = true;
-
-    viewDivContainer.style = 'cursor: url("/imgs/cursor-add-location.png"),auto';
+    if (!isUpdate) {
+      isUpdate = true;
+      viewDivContainer.style = 'cursor: url("/imgs/cursor-add-location.png"),auto';
+    } else {
+      isUpdate = false;
+      viewDivContainer.style = "cursor: auto";
+    }
   });
 
   const deleteButton = document.querySelector(".delete-btn");

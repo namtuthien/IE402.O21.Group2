@@ -4,7 +4,9 @@
     <div class="tourHeadingLeft">
       <div class="searchBar">
         <div class="searchBar-input">
-          <input type="text" class="searchInput" placeholder="Tìm địa điểm..." />
+          <input type="text"
+            class="searchInput"
+            placeholder="Tìm địa điểm..." />
         </div>
         <div class="line">
         </div>
@@ -58,28 +60,37 @@
     <table class="table-bordered table toursTable">
       <thead id="toursTable-heading ">
         <tr class="toursTable-heading_row">
-          <th class="tourTable-heading_title" scope="col">
-            <input type="checkbox" class="allCheck" />
+          <th class="tourTable-heading_title"
+            scope="col">
+            <input type="checkbox"
+              class="allCheck" />
           </th>
-          <th class="tourTable-heading_title" scope="col">
+          <th class="tourTable-heading_title"
+            scope="col">
             STT
           </th>
-          <th class="tourTable-heading_title" scope="col">
+          <th class="tourTable-heading_title"
+            scope="col">
             Họ và tên
           </th>
-          <th class="tourTable-heading_title" scope="col">
+          <th class="tourTable-heading_title"
+            scope="col">
             Email
           </th>
-          <th class="tourTable-heading_title" scope="col">
+          <th class="tourTable-heading_title"
+            scope="col">
             Số điện thoại
           </th>
-          <th class="tourTable-heading_title" scope="col">
+          <th class="tourTable-heading_title"
+            scope="col">
             Địa chỉ
           </th>
-          <th class="tourTable-heading_title" scope="col">
+          <th class="tourTable-heading_title"
+            scope="col">
             Ngày sinh
           </th>
-          <th class="tourTable-heading_title" scope="col">
+          <th class="tourTable-heading_title"
+            scope="col">
             <span class="material-icons-outlined">
               more_vert
             </span>
@@ -88,50 +99,52 @@
       </thead>
       <tbody id="toursTableBody">
         {{#each staffs}}
-        <tr>
-          <td class="bg-white">
-            <input type="checkbox" class="singleCheck" />
-          </td>
-          <td class="bg-white">
-            <p class="toursTable-data">
-              {{getIndex @index}}
-            </p>
-          </td>
-          <td class="bg-white">
-            <p class="toursTable-data staff-name">
-              {{this.user_name}}
-            </p>
-          </td>
-          <td class="bg-white">
-            <p class="toursTable-data staff-email">
-              {{this.user_email}}
-            </p>
-          </td>
-          <td class="bg-white">
-            <p class="toursTable-data staff-phone">
-              {{this.user_phone_number}}
-            </p>
-          </td>
-          <td class="bg-white">
-            <p class="toursTable-data staff-address">
-              {{this.user_address.street}}, {{this.user_address.ward}}, {{this.user_address.district}},
-              {{this.user_address.province}}
-            </p>
-          </td>
-          <td class="bg-white">
-            <p class="toursTable-data">
-              {{convertDateToDay this.user_birthday}}
-            </p>
-          </td>
+          <tr>
+            <td class="bg-white">
+              <input type="checkbox"
+                class="singleCheck" />
+            </td>
+            <td class="bg-white">
+              <p class="toursTable-data">
+                {{getIndex @index}}
+              </p>
+            </td>
+            <td class="bg-white">
+              <p class="toursTable-data staff-name">
+                {{this.user_name}}
+              </p>
+            </td>
+            <td class="bg-white">
+              <p class="toursTable-data staff-email">
+                {{this.user_email}}
+              </p>
+            </td>
+            <td class="bg-white">
+              <p class="toursTable-data staff-phone">
+                {{this.user_phone_number}}
+              </p>
+            </td>
+            <td class="bg-white">
+              <p class="toursTable-data staff-address">
+                {{this.user_address.street}}, {{this.user_address.ward}}, {{this.user_address.district}},
+                {{this.user_address.province}}
+              </p>
+            </td>
+            <td class="bg-white">
+              <p class="toursTable-data">
+                {{convertDateToDay this.user_birthday}}
+              </p>
+            </td>
 
-          <td class="bg-white">
-            <div class="toursAction_container">
-              <a class="material-icons toursAction-icon text-decoration-none" href="/admin/staff/view/{{this._id}}">
-                more_vert
-                <a />
-            </div>
-          </td>
-        </tr>
+            <td class="bg-white">
+              <div class="toursAction_container">
+                <a class="material-icons toursAction-icon text-decoration-none"
+                  href="/admin/staffs/view/{{this._id}}">
+                  more_vert
+                  <a />
+              </div>
+            </td>
+          </tr>
         {{/each}}
       </tbody>
     </table>

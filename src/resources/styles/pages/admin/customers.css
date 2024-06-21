@@ -169,3 +169,7 @@
 .gender {
   width: 80px;
 }
+
+.hidden-important {
+  display: none !important;
+}

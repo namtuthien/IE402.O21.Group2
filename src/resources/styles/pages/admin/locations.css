@@ -151,13 +151,13 @@
 .locationName,
 .loctionType,
 .locationDescription {
-    width: 250px;
+    width: 150px;
     white-space: wrap;
-    text-align: left;
+    text-align: center;
 }
 
 .locationAddress {
-    width: 500px;
+    width: 200px;
     white-space: wrap;
     text-align: left;
 }
@@ -165,6 +165,8 @@
 
 .locationWebsite {
     text-align: left;
+max-width: 100px;
+
 }
 
 .singleCheck,
