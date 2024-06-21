@@ -1,9 +1,11 @@
 // Import các module cần thiết
 import { convertDateToHourDayMonthYear } from "/format.js";
-import { getLocations } from "/fetch.js";
+import { getLocations, getRegions } from "/fetch.js";
 
 // Lấy dữ liệu
 const locations = await getLocations();
+const regions = await getRegions();
+// console.log("reeeeee", regions);
 
 //Xử lý sự kiện navbar
 const navbarBtn = document.querySelector(".navbar-btn");
@@ -20,11 +22,12 @@ require([
   "esri/Map",
   "esri/views/MapView",
   "esri/Graphic",
+  "esri/layers/GraphicsLayer",
   "esri/widgets/Editor",
   "esri/layers/FeatureLayer",
   "esri/core/reactiveUtils",
-  "esri/form/FormTemplate",
-], (Map, MapView, Graphic, Editor, FeatureLayer, reactiveUtils, FormTemplate) => {
+  "esri/geometry/Polygon",
+], (Map, MapView, Graphic, GraphicsLayer, Editor, FeatureLayer, reactiveUtils, Polygon) => {
   // Tạo map
   const map = new Map({
     basemap: "streets-relief-vector",
@@ -196,8 +199,10 @@ require([
   });
 
   // Chuyển đổi location thành graphic cho feature layer
-  const graphics = locations.map(
-    (location) =>
+  let graphics = [];
+  let boundaryGraphicsLayer = new GraphicsLayer();
+  locations.forEach((location) => {
+    graphics.push(
       new Graphic({
         geometry: {
           type: "point",
@@ -220,7 +225,57 @@ require([
           updated_at: convertDateToHourDayMonthYear(location.updated_at),
         },
       })
-  );
+    );
+
+    if (location.boundary) {
+      if (location.boundary.points) {
+        let points = location.boundary.points.map((point) => [point.longitude, point.latitude]);
+        // boundaries.push(points);
+        boundaryGraphicsLayer.add(
+          new Graphic({
+            geometry: {
+              type: "polygon",
+              rings: points,
+            },
+            symbol: {
+              type: "simple-fill",
+              color: [150, 75, 0, 0.4],
+              outline: {
+                color: [255, 255, 255],
+                width: 1,
+              },
+            },
+          })
+        );
+      }
+    }
+  });
+  map.add(boundaryGraphicsLayer);
+
+  // Chuyển đổi region thành graphic layer
+  let regionGraphicsLayer = new GraphicsLayer();
+  regions.forEach((region) => {
+    let points = region.polygons.map((polygon) =>
+      polygon.points.map((point) => [point.longitude, point.latitude])
+    );
+    regionGraphicsLayer.add(
+      new Graphic({
+        geometry: {
+          type: "polygon",
+          rings: points,
+        },
+        symbol: {
+          type: "simple-fill",
+          color: [187, 233, 255, 0.2],
+          outline: {
+            color: [255, 255, 255],
+            width: 1,
+          },
+        },
+      })
+    );
+  });
+  map.add(regionGraphicsLayer);
 
   // Tạo feature layer
   const featureLayer = new FeatureLayer({
@@ -530,38 +585,38 @@ require([
     }
   });
   // GET longitue, latitude when click to map
-  // var list_points = [];
-  // var string_points = "";
+  var list_points = [];
+  var string_points = "";
 
-  // function copyTextToClipboard(text) {
-  //   if (!navigator.clipboard) {
-  //     fallbackCopyTextToClipboard(text);
-  //     return;
-  //   }
-  //   navigator.clipboard.writeText(text).then(
-  //     function () {
-  //       console.log("Async: Copying to clipboard was successful!");
-  //     },
-  //     function (err) {
-  //       console.error("Async: Could not copy text: ", err);
-  //     }
-  //   );
-  // }
+  function copyTextToClipboard(text) {
+    if (!navigator.clipboard) {
+      fallbackCopyTextToClipboard(text);
+      return;
+    }
+    navigator.clipboard.writeText(text).then(
+      function () {
+        console.log("Async: Copying to clipboard was successful!");
+      },
+      function (err) {
+        console.error("Async: Could not copy text: ", err);
+      }
+    );
+  }
 
-  // view.popup.autoOpenEnabled = true; // Disable the default popup behavior
-  // view.on("click", function (event) {
-  //   view.hitTest(event).then(function (hitTestResults) {
-  //     if (hitTestResults.results) {
-  //       list_points.push([event.mapPoint.longitude, event.mapPoint.latitude]);
-  //       string_points += "[" + event.mapPoint.longitude + ", " + event.mapPoint.latitude + "],";
-  //       copyTextToClipboard(
-  //         '{"longitude":' +
-  //           event.mapPoint.longitude +
-  //           ', "latitude":' +
-  //           event.mapPoint.latitude +
-  //           "},"
-  //       );
-  //     }
-  //   });
-  // });
+  view.popup.autoOpenEnabled = true; // Disable the default popup behavior
+  view.on("click", function (event) {
+    view.hitTest(event).then(function (hitTestResults) {
+      if (hitTestResults.results) {
+        list_points.push([event.mapPoint.longitude, event.mapPoint.latitude]);
+        string_points += "[" + event.mapPoint.longitude + ", " + event.mapPoint.latitude + "],";
+        copyTextToClipboard(
+          '{"longitude":' +
+            event.mapPoint.longitude +
+            ', "latitude":' +
+            event.mapPoint.latitude +
+            "},"
+        );
+      }
+    });
+  });
 });

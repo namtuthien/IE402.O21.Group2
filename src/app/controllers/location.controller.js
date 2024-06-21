@@ -1,5 +1,6 @@
 // import models
 const Location = require("../models/location.model");
+const Polygon = require("../models/polygon.model");
 
 class LocationController {
   // [GET] /admin/locations
@@ -54,7 +55,10 @@ class LocationController {
   // [GET] /api/location/getLocations
   async getLocations(req, res, next) {
     try {
-      const locations = await Location.find();
+      const locations = await Location.find().populate({
+        path: "boundary",
+        select: "points",
+      });
 
       if (!locations) {
         return res.status(404).json({
