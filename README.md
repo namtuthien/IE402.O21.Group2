@@ -43,8 +43,8 @@ $ npm start
 
 #### Bước 3: Tạo file .env:
 ```
-MONGO_CONNECTION_STRING=mongodb+srv://Nhom2Tour:Nhom2Tour@twotour.1szwhqn.mongodb.net/twotour?retryWrites=true&w=majority&appName=TwoTour
-SERP_API_KEY=b1ae1b2deb21e87e4e98f3a68674258eed59e61a
+MONGO_CONNECTION_STRING=mongodb+srv://your_url
+SERP_API_KEY=your_api_key
 JWT_SECRET=cfb4bd8f032da6bd340f709b2c8b298bfc12c6e8c232e2651f650e051c5b19f7   
 JWT_COOKIE_EXPIRES=7
 ```
