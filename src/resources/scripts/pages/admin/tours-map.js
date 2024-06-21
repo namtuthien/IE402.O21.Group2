@@ -416,7 +416,7 @@ require([
       if (response.results.length) {
         // console.log(response.results.length);
         const graphic = response.results.filter(function (result) {
-          return result.graphic.layer === locationFeaturesLayer;
+          return result.graphic.layer === locationFeatureLayer;
         })[0]?.graphic;
 
         if (graphic && choosedLocations.indexOf(graphic) === -1) {
@@ -437,11 +437,13 @@ require([
 
           //Lưu địa điểm này vào mảng
 
-        locationGraphicsLayer.graphics.forEach((item, index) => {
-    if(item.attributes.locationId===graphic.attributes.locationId)
-        graphic.attributes=item.attributes
-
-      });
+          // locationGraphicsLayer.graphics.forEach((item, index) => {
+          //   console.log("item.attributes.locationId: ", item.attributes.locationId);
+          //   console.log("graphic.attributes.locationId: ", graphic.attributes.locationId);
+          //   if(item.attributes.locationId===graphic.attributes.locationId) {
+          //     graphic.attributes=item.attributes
+          //   }
+          // });
 
           choosedLocations.push(graphic);
           console.log("Các địa điểm đã chọn: ", choosedLocations);
