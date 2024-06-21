@@ -15,8 +15,8 @@ document.addEventListener("DOMContentLoaded", function () {
     var view = new MapView({
       container: "viewDiv",
       map: map,
-      center: [106.01420668220486, 11.186269499842675], // Longitude, latitude
-      zoom: 15,
+      center: [106.80277787702147, 10.869795842182537], // Longitude, latitude
+      zoom: 17,
     });
 
     var graphicsLayer = new GraphicsLayer();
