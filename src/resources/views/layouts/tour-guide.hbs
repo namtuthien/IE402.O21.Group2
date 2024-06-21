@@ -7,21 +7,25 @@
 
     <title>2Tour. {{pageTitle}}</title>
 
-    <link rel="icon" type="image/x-icon" href="/image/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+    <link rel="stylesheet" href="/global.css">
     <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" />
     <link rel="stylesheet" href="{{style}}">
 
 </head>
 
 <body>
+
     <section class="container-fluid mt-3 p-0 main d-flex justify-content-center">
         {{{body}}}
     </section>
 
-
     <script type="module" src="{{script}}"></script>
+
     <script src="/js/bootstrap.bundle.min.js"></script>
     <script src="/socket.io/socket.io.js"></script>
+
 </body>
 
 </html>

@@ -57,3 +57,12 @@ html {
 body {
     position: relative;
 }
+
+.w-80 {
+    background-color: var(--white);
+}
+
+#toursTableBody tr td,
+#bookingsTableBody tr td {
+    background-color: var(--white);
+}
